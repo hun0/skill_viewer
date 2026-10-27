@@ -51,7 +51,14 @@
   .bm-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 13px; color: var(--muted); }
   .bm-head button { padding: 6px 10px; font-size: 12px; }
   .bm-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-  .bm-list li { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; background: #141416; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; }
+  .bm-list li { display: grid; grid-template-columns: auto auto 1fr auto; gap: 10px; align-items: center; background: #141416; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; }
+  .bm-list .th { width: 96px; aspect-ratio: 16 / 9; border-radius: 6px; background: #000 center / cover no-repeat; border: 1px solid var(--line); padding: 0; }
+  .bm-list .th.none { display: grid; place-items: center; font-size: 11px; color: var(--muted); background: #1a1a1d; }
+  .bm-list .sent { font-size: 11px; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; margin-left: 4px; white-space: nowrap; }
+  .bm-tools { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+  .bm-send { background: #22301f !important; border-color: #3f6a35 !important; color: #cfe8c4 !important; }
+  .cap-on { background: #3a1f1f !important; border-color: #9a3b3b !important; color: #ffd0d0 !important; }
+  @media (max-width: 560px) { .bm-list li { grid-template-columns: auto 1fr auto; } .bm-list .th { grid-row: span 2; width: 84px; } .bm-list .tc { grid-column: 2; } .bm-list .note { grid-column: 2; } .bm-list .x { grid-row: 1; grid-column: 3; } }
   .bm-list .tc { font-family: var(--mono); font-size: 13px; color: var(--accent); background: none; border: 0; padding: 4px 2px; text-align: left; }
   .bm-list .tc small { display: block; color: var(--muted); font-size: 11px; }
   .bm-list .note { font-size: 14px; line-height: 1.4; word-break: break-word; }
@@ -99,11 +106,11 @@
       <input type="text" id="bmNote" maxlength="200" placeholder="지금 위치에 메모 (예: 궁극기 임팩트 프레임)" aria-label="북마크 메모">
       <button type="submit">＋ 북마크</button>
     </form>
-    <div class="bm-head"><span id="bmTitle">이 영상 북마크</span><span><button type="button" id="bmAll" aria-pressed="false">전체 보기</button> <button type="button" id="bmCopy">목록 복사</button></span></div>
+    <div class="bm-head"><span id="bmTitle">이 영상 북마크</span><span class="bm-tools"><button type="button" id="capBtn" class="hide" title="이 탭 화면을 공유하면 북마크할 때 그 프레임을 썸네일로 떠요 (데스크톱 크롬)">📸 프레임 캡처 켜기</button><button type="button" id="bmAll" aria-pressed="false">전체 보기</button><button type="button" id="bmCopy">목록 복사</button><button type="button" id="bmSend" class="bm-send">라이브러리로 보내기</button></span></div>
     <ul class="bm-list" id="bmList"></ul>
     <p class="bm-empty" id="bmEmpty">아직 북마크가 없어요. 원하는 프레임에서 메모를 적고 ＋ 북마크를 누르세요.</p>
   </section>
-  <p class="help">영상 위를 좌우로 끌면 프레임 이동 · 탭하면 재생/정지<br>키보드: ← → 1프레임 (Shift 10), Space 재생, B 북마크 메모<br>북마크는 이 기기·브라우저에 저장돼요</p>
+  <p class="help">영상 위를 좌우로 끌면 프레임 이동 · 탭하면 재생/정지<br>키보드: ← → 1프레임 (Shift 10), Space 재생, B 북마크 메모<br>북마크는 이 기기에 저장돼요. ‘라이브러리로 보내기’를 누른 뒤 스킬 연출 라이브러리에서 붙여넣기(Ctrl+V)하면 캐릭터 줄 아래에 올라가요.<br><a href="bookmarklet.html" style="color:var(--muted)">유튜브에서 바로 북마크하는 버튼 설치하기</a></p>
 
   <div class="open">
     <input type="url" id="url" placeholder="유튜브 링크 붙여넣기" aria-label="유튜브 링크">
@@ -115,7 +122,7 @@
 
 <script>
 const $ = s => document.querySelector(s);
-const S = { mode: null, cur: 0, dur: 0, playing: false, fps: 30, rate: 1, sens: 8, a: null, b: null, yt: null, ytReady: false, pending: null, timer: null, raf: 0 };
+const S = { char: null, cap: null, mode: null, cur: 0, dur: 0, playing: false, fps: 30, rate: 1, sens: 8, a: null, b: null, yt: null, ytReady: false, pending: null, timer: null, raf: 0 };
 const vid = $("#vid");
 
 /* ---------- helpers ---------- */
@@ -202,7 +209,7 @@ async function openYT(id, start, title) {
   const vars = { controls: 0, playsinline: 1, rel: 0, modestbranding: 1, disablekb: 1, iv_load_policy: 3, fs: 0, start: start || 0 };
   if (S.yt) { S.yt.loadVideoById({ videoId: id, startSeconds: start || 0 }); setTimeout(() => S.yt.pauseVideo(), 600); return; }
   S.yt = new YT.Player("yt", { videoId: id, playerVars: vars, events: {
-    onReady: () => { S.ytReady = true; msg(""); S.yt.setPlaybackRate(S.rate); S.dur = S.yt.getDuration(); sync(); },
+    onReady: () => { S.ytReady = true; msg(""); S.yt.setPlaybackRate(S.rate); S.dur = S.yt.getDuration(); if (S.startAt) { const t0 = S.startAt; S.startAt = null; S.yt.seekTo(t0, true); S.cur = t0; setTimeout(() => { S.yt.pauseVideo(); S.cur = t0; sync(); }, 400); } sync(); },
     onStateChange: e => {
       S.playing = e.data === 1; if (S.playing) loop();
       S.dur = S.yt.getDuration() || S.dur; if (!S.playing) { S.cur = S.yt.getCurrentTime(); } sync();
@@ -269,16 +276,52 @@ let bmAllMode = false;
 function bmLoad() { try { return JSON.parse(localStorage.getItem(BMK) || "{}"); } catch { return {}; } }
 function bmSave(d) { try { localStorage.setItem(BMK, JSON.stringify(d)); return true; } catch { return false; } }
 function bmKey() { return S.mode === "yt" ? "yt:" + S.vid : S.mode === "file" ? "file:" + S.fileName : null; }
-function bmAdd(note) {
+async function grabThumb() {
+  const W = 224, H = 126;
+  const cv = document.createElement("canvas"); cv.width = W; cv.height = H;
+  const x = cv.getContext("2d"); x.fillStyle = "#000"; x.fillRect(0, 0, W, H);
+  try {
+    if (S.mode === "file" && vid.videoWidth) {
+      const s = Math.min(W / vid.videoWidth, H / vid.videoHeight), dw = vid.videoWidth * s, dh = vid.videoHeight * s;
+      x.drawImage(vid, (W - dw) / 2, (H - dh) / 2, dw, dh);
+      return cv.toDataURL("image/jpeg", 0.72);
+    }
+    if (S.mode === "yt" && S.cap && S.cap.v.videoWidth) {
+      const hudEl = $("#hud"), msgEl = $("#msg"); hudEl.classList.remove("on"); const mh = msgEl.classList.contains("hide"); msgEl.classList.add("hide");
+      await new Promise(r => setTimeout(r, 260));
+      const r = $("#stage").getBoundingClientRect(), cvw = S.cap.v.videoWidth, k = cvw / window.innerWidth;
+      x.drawImage(S.cap.v, r.left * k, r.top * k, r.width * k, r.height * k, 0, 0, W, H);
+      if (!mh) msgEl.classList.remove("hide");
+      return cv.toDataURL("image/jpeg", 0.72);
+    }
+  } catch {}
+  return null;
+}
+async function capToggle() {
+  if (S.cap) { S.cap.stream.getTracks().forEach(t => t.stop()); S.cap = null; capUI(); return; }
+  try {
+    const stream = await navigator.mediaDevices.getDisplayMedia({ video: { displaySurface: "browser", frameRate: 15 }, audio: false, preferCurrentTab: true, selfBrowserSurface: "include", surfaceSwitching: "exclude" });
+    const v = document.createElement("video"); v.muted = true; v.playsInline = true; v.srcObject = stream; await v.play();
+    S.cap = { stream, v };
+    stream.getVideoTracks()[0].addEventListener("ended", () => { S.cap = null; capUI(); });
+    hud("프레임 캡처 켜짐"); capUI();
+  } catch { hud("화면 공유가 취소됐어요"); }
+}
+function capUI() { const b = $("#capBtn"); b.textContent = S.cap ? "📸 캡처 중 (끄기)" : "📸 프레임 캡처 켜기"; b.classList.toggle("cap-on", !!S.cap); }
+if (navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia && !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) { $("#capBtn").classList.remove("hide"); $("#capBtn").onclick = capToggle; }
+async function bmAdd(note) {
   const k = bmKey(); if (!k) { hud("영상을 먼저 여세요"); return; }
+  if (S.playing) P.pause();
+  const t = +S.cur.toFixed(3), fps = S.fps, thumb = await grabThumb();
   const d = bmLoad();
   const e = d[k] || { title: $("#title").textContent, items: [] };
   e.title = $("#title").textContent;
-  e.items.push({ t: +S.cur.toFixed(3), fps: S.fps, note: note || "", at: Date.now() });
+  if (S.char && k.startsWith("yt:")) e.c = S.char;
+  e.items.push({ t, fps, note: note || "", at: Date.now(), thumb });
   e.items.sort((a, b) => a.t - b.t);
   d[k] = e;
-  if (!bmSave(d)) { hud("저장하지 못했어요"); return; }
-  hud("북마크 저장"); bmRender();
+  if (!bmSave(d)) { e.items.forEach(it => { if (it.at !== e.items[e.items.length - 1].at) delete it.thumb; }); if (!bmSave(d)) { hud("저장 공간이 부족해요"); return; } }
+  hud(thumb ? "북마크 저장 (썸네일 포함)" : "북마크 저장"); bmRender();
 }
 function bmDel(k, i) { const d = bmLoad(); if (!d[k]) return; d[k].items.splice(i, 1); if (!d[k].items.length) delete d[k]; bmSave(d); bmRender(); }
 function bmLink(k, t) { return k.startsWith("yt:") ? `${location.origin}${location.pathname}?v=${k.slice(3)}&t=${Math.floor(t)}` : ""; }
@@ -300,15 +343,21 @@ function bmRender() {
       }
       if (S.playing) P.pause(); seekTo(it.t);
     };
+    const th = document.createElement("button"); th.type = "button"; th.className = "th" + (it.thumb ? "" : " none"); th.setAttribute("aria-label", `${fmt(it.t)}로 이동`);
+    if (it.thumb) th.style.backgroundImage = `url("${it.thumb}")`; else th.textContent = k.startsWith("yt:") ? "썸네일 없음" : "파일";
+    th.onclick = () => tc.onclick();
     const note = document.createElement("div"); note.className = "note";
     if (bmAllMode) { const vt = document.createElement("span"); vt.className = "vt"; vt.textContent = d[k].title || k; note.appendChild(vt); }
     note.appendChild(document.createTextNode(it.note || "(메모 없음)"));
+    if (it.sent) { const sb = document.createElement("span"); sb.className = "sent"; sb.textContent = "보냄"; note.appendChild(sb); }
     const x = document.createElement("button"); x.type = "button"; x.className = "x"; x.textContent = "×"; x.setAttribute("aria-label", "북마크 삭제");
     x.onclick = () => bmDel(k, i);
-    li.append(tc, note, x); list.appendChild(li);
+    li.append(th, tc, note, x); list.appendChild(li);
   }));
   $("#bmEmpty").classList.toggle("hide", n > 0);
   $("#bmTitle").textContent = bmAllMode ? `전체 북마크 ${n}개` : `이 영상 북마크 ${n}개`;
+  const un = Object.entries(d).filter(([k]) => k.startsWith("yt:")).reduce((a, [, e]) => a + e.items.filter(it => !it.sent).length, 0);
+  $("#bmSend").textContent = un ? `라이브러리로 보내기 (${un})` : "라이브러리로 보내기";
 }
 $("#bmForm").onsubmit = e => { e.preventDefault(); bmAdd($("#bmNote").value.trim()); $("#bmNote").value = ""; $("#bmNote").blur(); };
 $("#bmAll").onclick = e => { bmAllMode = !bmAllMode; e.currentTarget.setAttribute("aria-pressed", String(bmAllMode)); bmRender(); };
@@ -320,9 +369,26 @@ $("#bmCopy").onclick = async () => {
   try { await navigator.clipboard.writeText(txt); hud("목록을 복사했어요"); } catch { hud("복사하지 못했어요"); }
 };
 
+/* ---------- send to library: copies a code the library page imports on paste ---------- */
+function b64url(str) { const b = new TextEncoder().encode(str); let s = ""; for (let i = 0; i < b.length; i += 0x8000) s += String.fromCharCode.apply(null, b.subarray(i, i + 0x8000)); return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); }
+$("#bmSend").onclick = async () => {
+  const d = bmLoad(), items = [];
+  Object.entries(d).forEach(([k, e]) => { if (!k.startsWith("yt:")) return; e.items.forEach(it => { if (!it.sent) items.push({ vid: k.slice(3), t: it.t, fps: it.fps, note: it.note, thumb: it.thumb || null, c: e.c || null, title: e.title || "", at: it.at }); }); });
+  if (!items.length) { hud(Object.keys(d).some(k => k.startsWith("file:")) ? "기기 영상 북마크는 보낼 수 없어요" : "보낼 새 북마크가 없어요"); return; }
+  const code = "HFXBM1:" + b64url(JSON.stringify({ v: 1, src: "viewer", items }));
+  try { await navigator.clipboard.writeText(code); }
+  catch { const ta = document.createElement("textarea"); ta.value = code; document.body.appendChild(ta); ta.select(); let ok = false; try { ok = document.execCommand("copy"); } catch {} ta.remove(); if (!ok) { hud("복사하지 못했어요"); return; } }
+  Object.values(d).forEach(e => e.items.forEach(it => { it.sent = true; }));
+  bmSave(d); bmRender();
+  msg(`북마크 ${items.length}개를 복사했어요. 라이브러리 페이지에서 Ctrl+V (모바일은 ‘북마크 붙여넣기’)로 올리세요.`);
+  setTimeout(() => msg(""), 5000);
+};
+
 /* ---------- boot from query string: ?v=ID&t=12&title=... or ?url=... ---------- */
 const q = new URLSearchParams(location.search);
 const y0 = q.get("v") ? { id: q.get("v"), t: parseInt(q.get("t") || "0", 10) || 0 } : ytIdFrom(q.get("url"));
+S.char = q.get("c") || null;
+S.startAt = parseFloat(q.get("at")) || null;
 if (y0) { $("#url").value = `https://www.youtube.com/watch?v=${y0.id}`; openYT(y0.id, y0.t, q.get("title")); }
 sync(); bmRender();
 </script>
