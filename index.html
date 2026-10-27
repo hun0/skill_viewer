@@ -44,6 +44,20 @@
   .open .row > * { flex: 1 1 140px; }
   .file { display: inline-flex; align-items: center; justify-content: center; background: var(--btn); border: 1px solid var(--line); border-radius: 10px; padding: 9px 11px; cursor: pointer; }
   .file input { display: none; }
+  .bm { max-width: 1280px; width: 100%; margin: 0 auto; display: grid; gap: 8px; }
+  .bm-add { display: flex; gap: 8px; width: 100%; min-width: 0; }
+  .bm-add input { flex: 1; min-width: 0; background: #151517; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+  .bm-add button { flex: none; white-space: nowrap; background: var(--accent); color: #111; border-color: var(--accent); }
+  .bm-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 13px; color: var(--muted); }
+  .bm-head button { padding: 6px 10px; font-size: 12px; }
+  .bm-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .bm-list li { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; background: #141416; border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; }
+  .bm-list .tc { font-family: var(--mono); font-size: 13px; color: var(--accent); background: none; border: 0; padding: 4px 2px; text-align: left; }
+  .bm-list .tc small { display: block; color: var(--muted); font-size: 11px; }
+  .bm-list .note { font-size: 14px; line-height: 1.4; word-break: break-word; }
+  .bm-list .vt { display: block; font-size: 11px; color: var(--muted); margin-bottom: 2px; }
+  .bm-list .x { padding: 6px 9px; font-size: 13px; color: var(--muted); }
+  .bm-empty { color: var(--muted); font-size: 13px; margin: 0; }
   .hide { display: none !important; }
 </style>
 </head>
@@ -80,7 +94,16 @@
     <span class="lbl">구간</span>
     <span class="seg"><button type="button" data-ab="a">A</button><button type="button" data-ab="b">B</button><button type="button" data-ab="x">해제</button></span>
   </div>
-  <p class="help">영상 위를 좌우로 끌면 프레임 이동 · 탭하면 재생/정지<br>키보드: ← → 1프레임 (Shift 10), Space 재생</p>
+  <section class="bm" aria-label="북마크">
+    <form class="bm-add" id="bmForm">
+      <input type="text" id="bmNote" maxlength="200" placeholder="지금 위치에 메모 (예: 궁극기 임팩트 프레임)" aria-label="북마크 메모">
+      <button type="submit">＋ 북마크</button>
+    </form>
+    <div class="bm-head"><span id="bmTitle">이 영상 북마크</span><span><button type="button" id="bmAll" aria-pressed="false">전체 보기</button> <button type="button" id="bmCopy">목록 복사</button></span></div>
+    <ul class="bm-list" id="bmList"></ul>
+    <p class="bm-empty" id="bmEmpty">아직 북마크가 없어요. 원하는 프레임에서 메모를 적고 ＋ 북마크를 누르세요.</p>
+  </section>
+  <p class="help">영상 위를 좌우로 끌면 프레임 이동 · 탭하면 재생/정지<br>키보드: ← → 1프레임 (Shift 10), Space 재생, B 북마크 메모<br>북마크는 이 기기·브라우저에 저장돼요</p>
 
   <div class="open">
     <input type="url" id="url" placeholder="유튜브 링크 붙여넣기" aria-label="유튜브 링크">
@@ -170,11 +193,11 @@ function loadYT() {
 }
 async function openYT(id, start, title) {
   closeFile();
-  S.mode = "yt"; S.ytReady = false; S.cur = start || 0; S.dur = 0; S.playing = false; S.a = S.b = null;
+  S.mode = "yt"; S.vid = id; S.ytReady = false; S.cur = start || 0; S.dur = 0; S.playing = false; S.a = S.b = null;
   $("#yt").classList.remove("hide");
   $("#title").textContent = title || "유튜브 영상";
   const ext = $("#ext"); ext.href = `https://www.youtube.com/watch?v=${id}${start ? "&t=" + start : ""}`; ext.classList.remove("hide");
-  msg("불러오는 중…");
+  msg("불러오는 중…"); bmRender();
   const YT = await loadYT();
   const vars = { controls: 0, playsinline: 1, rel: 0, modestbranding: 1, disablekb: 1, iv_load_policy: 3, fs: 0, start: start || 0 };
   if (S.yt) { S.yt.loadVideoById({ videoId: id, startSeconds: start || 0 }); setTimeout(() => S.yt.pauseVideo(), 600); return; }
@@ -196,9 +219,9 @@ function openFile(f) {
   if (S.yt && S.ytReady) S.yt.pauseVideo();
   $("#yt").classList.add("hide"); $("#ext").classList.add("hide");
   closeFile();
-  S.mode = "file"; S.cur = 0; S.dur = 0; S.playing = false; S.a = S.b = null;
+  S.mode = "file"; S.fileName = f.name; S.cur = 0; S.dur = 0; S.playing = false; S.a = S.b = null;
   vid.src = URL.createObjectURL(f); vid.classList.remove("hide"); vid.playbackRate = S.rate;
-  $("#title").textContent = f.name; msg("");
+  $("#title").textContent = f.name; msg(""); bmRender();
   vid.onloadedmetadata = () => { S.dur = vid.duration; sync(); };
   vid.onseeked = () => { if (!S.playing) { S.cur = vid.currentTime; sync(); } };
   vid.onpause = () => { S.playing = false; sync(); };
@@ -236,13 +259,72 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowLeft" || e.key === ",") { e.preventDefault(); step(e.shiftKey ? -10 : -1); }
   else if (e.key === "ArrowRight" || e.key === ".") { e.preventDefault(); step(e.shiftKey ? 10 : 1); }
   else if (e.key === " ") { e.preventDefault(); toggle(); }
+  else if (e.key === "b" || e.key === "B") { e.preventDefault(); $("#bmNote").focus(); }
 });
+
+
+/* ---------- bookmarks (saved in this browser) ---------- */
+const BMK = "skillviewer.bookmarks.v1";
+let bmAllMode = false;
+function bmLoad() { try { return JSON.parse(localStorage.getItem(BMK) || "{}"); } catch { return {}; } }
+function bmSave(d) { try { localStorage.setItem(BMK, JSON.stringify(d)); return true; } catch { return false; } }
+function bmKey() { return S.mode === "yt" ? "yt:" + S.vid : S.mode === "file" ? "file:" + S.fileName : null; }
+function bmAdd(note) {
+  const k = bmKey(); if (!k) { hud("영상을 먼저 여세요"); return; }
+  const d = bmLoad();
+  const e = d[k] || { title: $("#title").textContent, items: [] };
+  e.title = $("#title").textContent;
+  e.items.push({ t: +S.cur.toFixed(3), fps: S.fps, note: note || "", at: Date.now() });
+  e.items.sort((a, b) => a.t - b.t);
+  d[k] = e;
+  if (!bmSave(d)) { hud("저장하지 못했어요"); return; }
+  hud("북마크 저장"); bmRender();
+}
+function bmDel(k, i) { const d = bmLoad(); if (!d[k]) return; d[k].items.splice(i, 1); if (!d[k].items.length) delete d[k]; bmSave(d); bmRender(); }
+function bmLink(k, t) { return k.startsWith("yt:") ? `${location.origin}${location.pathname}?v=${k.slice(3)}&t=${Math.floor(t)}` : ""; }
+function bmRender() {
+  const d = bmLoad(), list = $("#bmList"); list.textContent = "";
+  const cur = bmKey();
+  const keys = bmAllMode ? Object.keys(d).sort((a, b) => Math.max(...d[b].items.map(x => x.at)) - Math.max(...d[a].items.map(x => x.at))) : (cur && d[cur] ? [cur] : []);
+  let n = 0;
+  keys.forEach(k => d[k].items.forEach((it, i) => {
+    n++;
+    const li = document.createElement("li");
+    const tc = document.createElement("button"); tc.type = "button"; tc.className = "tc";
+    tc.innerHTML = `${fmt(it.t)}<small>F ${Math.round(it.t * (it.fps || S.fps))}</small>`;
+    tc.onclick = () => {
+      if (k !== bmKey()) {
+        if (k.startsWith("yt:")) { history.replaceState(null, "", `?v=${k.slice(3)}`); openYT(k.slice(3), Math.floor(it.t), d[k].title); setTimeout(() => seekTo(it.t), 1500); }
+        else hud("기기 영상은 파일을 다시 열어 주세요");
+        return;
+      }
+      if (S.playing) P.pause(); seekTo(it.t);
+    };
+    const note = document.createElement("div"); note.className = "note";
+    if (bmAllMode) { const vt = document.createElement("span"); vt.className = "vt"; vt.textContent = d[k].title || k; note.appendChild(vt); }
+    note.appendChild(document.createTextNode(it.note || "(메모 없음)"));
+    const x = document.createElement("button"); x.type = "button"; x.className = "x"; x.textContent = "×"; x.setAttribute("aria-label", "북마크 삭제");
+    x.onclick = () => bmDel(k, i);
+    li.append(tc, note, x); list.appendChild(li);
+  }));
+  $("#bmEmpty").classList.toggle("hide", n > 0);
+  $("#bmTitle").textContent = bmAllMode ? `전체 북마크 ${n}개` : `이 영상 북마크 ${n}개`;
+}
+$("#bmForm").onsubmit = e => { e.preventDefault(); bmAdd($("#bmNote").value.trim()); $("#bmNote").value = ""; $("#bmNote").blur(); };
+$("#bmAll").onclick = e => { bmAllMode = !bmAllMode; e.currentTarget.setAttribute("aria-pressed", String(bmAllMode)); bmRender(); };
+$("#bmCopy").onclick = async () => {
+  const d = bmLoad(), cur = bmKey();
+  const keys = bmAllMode ? Object.keys(d) : (cur && d[cur] ? [cur] : []);
+  const txt = keys.map(k => `■ ${d[k].title || k}\n` + d[k].items.map(it => `  ${fmt(it.t)} (F ${Math.round(it.t * (it.fps || S.fps))}) ${it.note}${bmLink(k, it.t) ? "  " + bmLink(k, it.t) : ""}`).join("\n")).join("\n\n");
+  if (!txt) { hud("복사할 북마크가 없어요"); return; }
+  try { await navigator.clipboard.writeText(txt); hud("목록을 복사했어요"); } catch { hud("복사하지 못했어요"); }
+};
 
 /* ---------- boot from query string: ?v=ID&t=12&title=... or ?url=... ---------- */
 const q = new URLSearchParams(location.search);
 const y0 = q.get("v") ? { id: q.get("v"), t: parseInt(q.get("t") || "0", 10) || 0 } : ytIdFrom(q.get("url"));
 if (y0) { $("#url").value = `https://www.youtube.com/watch?v=${y0.id}`; openYT(y0.id, y0.t, q.get("title")); }
-sync();
+sync(); bmRender();
 </script>
 </body>
 </html>
