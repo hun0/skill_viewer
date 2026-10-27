@@ -21,6 +21,9 @@
   .stage { position: relative; width: 100%; max-width: 1280px; margin: 0 auto; aspect-ratio: 16 / 9; background: #000; border-radius: 10px; overflow: hidden; }
   body.fs .stage { max-width: none; }
   #yt, #vid { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  /* the YouTube player is three stages tall and shifted up one stage: the 16:9 picture sits exactly in the visible middle,
+     while YouTube's title bar, logo and "more videos" overlay fall into the cropped top/bottom bands */
+  #yt { top: -100%; height: 300%; bottom: auto; pointer-events: none; }
   #vid { object-fit: contain; background: #000; }
   .pad { position: absolute; inset: 0; touch-action: none; cursor: ew-resize; }
   .hud { position: absolute; left: 50%; top: 10px; transform: translateX(-50%); background: rgba(0,0,0,.7); padding: 4px 10px; border-radius: 6px; font-family: var(--mono); font-size: 13px; opacity: 0; transition: opacity .2s; pointer-events: none; }
@@ -217,16 +220,28 @@ async function openYT(id, start, title) {
   msg("불러오는 중…"); bmRender();
   const YT = await loadYT();
   const vars = { controls: 0, playsinline: 1, rel: 0, modestbranding: 1, disablekb: 1, iv_load_policy: 3, fs: 0, start: start || 0 };
-  if (S.yt) { S.ytReady = true; msg(""); S.yt.loadVideoById({ videoId: id, startSeconds: start || 0 }); setTimeout(() => { S.yt.pauseVideo(); S.dur = S.yt.getDuration() || 0; sync(); }, 600); return; }
+  if (S.yt) { S.ytReady = true; msg(""); warmUp(start || 0, id); return; }
   S.yt = new YT.Player("yt", { videoId: id, playerVars: vars, events: {
-    onReady: () => { S.ytReady = true; msg(""); S.yt.setPlaybackRate(S.rate); S.dur = S.yt.getDuration(); if (S.startAt) { const t0 = S.startAt; S.startAt = null; S.yt.seekTo(t0, true); S.cur = t0; setTimeout(() => { S.yt.pauseVideo(); S.cur = t0; sync(); }, 400); } sync(); },
+    onReady: () => { S.ytReady = true; msg(""); S.yt.setPlaybackRate(S.rate); S.dur = S.yt.getDuration(); const t0 = S.startAt || start || 0; S.startAt = null; warmUp(t0); sync(); },
     onStateChange: e => {
+      if (S.warming != null) {
+        if (e.data === 1) { const t0 = S.warming; S.warming = null; clearTimeout(S.warmT); S.yt.pauseVideo(); S.yt.seekTo(t0, true); S.cur = t0; setTimeout(() => { try { S.yt.unMute(); } catch {} }, 150); S.playing = false; sync(); }
+        return;
+      }
       S.playing = e.data === 1; if (S.playing) loop();
       S.dur = S.yt.getDuration() || S.dur; if (!S.playing) { S.cur = S.yt.getCurrentTime(); } sync();
     },
     onError: e => msg(e.data === 101 || e.data === 150 ? "이 영상은 퍼가기가 막혀 있어요. 위의 ‘유튜브 ↗’로 열어 주세요." : "영상을 재생할 수 없어요."),
     onPlaybackRateChange: e => { S.rate = e.data; sync(); }
   } });
+}
+
+/* start the clip muted for an instant so YouTube drops its poster and big play button, then park on the start frame */
+function warmUp(t, id) {
+  S.warming = t; clearTimeout(S.warmT);
+  try { S.yt.mute(); } catch {}
+  if (id) S.yt.loadVideoById({ videoId: id, startSeconds: t }); else { S.yt.seekTo(t, true); S.yt.playVideo(); }
+  S.warmT = setTimeout(() => { if (S.warming != null) { S.warming = null; try { S.yt.pauseVideo(); S.yt.unMute(); } catch {} } S.dur = S.yt.getDuration() || S.dur; sync(); }, 5000);
 }
 
 /* ---------- local file ---------- */
@@ -422,7 +437,7 @@ function fillUI(txt) {
 }
 async function grabAt(vid, t) {
   if (S.mode !== "yt" || S.vid !== vid) { openYT(vid, Math.floor(t), $("#title").textContent); }
-  if (!(await waitFor(() => S.ytReady && S.yt && S.yt.getVideoData && S.yt.getVideoData().video_id === vid && S.yt.getDuration() > 0, 15000))) return null;
+  if (!(await waitFor(() => S.warming == null && S.ytReady && S.yt && S.yt.getVideoData && S.yt.getVideoData().video_id === vid && S.yt.getDuration() > 0, 15000))) return null;
   try { S.yt.mute(); } catch {}
   S.yt.seekTo(t, true); S.yt.playVideo();
   await waitFor(() => S.yt.getPlayerState() === 1, 6000);
