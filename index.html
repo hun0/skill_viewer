@@ -422,7 +422,7 @@ function fillUI(txt) {
 }
 async function grabAt(vid, t) {
   if (S.mode !== "yt" || S.vid !== vid) { openYT(vid, Math.floor(t), $("#title").textContent); }
-  await waitFor(() => S.ytReady && S.yt && S.yt.getVideoData && S.yt.getVideoData().video_id === vid && S.yt.getDuration() > 0, 15000);
+  if (!(await waitFor(() => S.ytReady && S.yt && S.yt.getVideoData && S.yt.getVideoData().video_id === vid && S.yt.getDuration() > 0, 15000))) return null;
   try { S.yt.mute(); } catch {}
   S.yt.seekTo(t, true); S.yt.playVideo();
   await waitFor(() => S.yt.getPlayerState() === 1, 6000);
@@ -452,9 +452,10 @@ $("#fillGo").onclick = async () => {
   if (list.some(x => x.local)) { bmSave(d); bmRender(); }
   if (FILL.job) FILL.job = FILL.job.filter(x => !FILL.results.some(r => r.id === x.id));
   FILL.running = false;
-  fillUI(FILL.results.length
+  const fail = list.length - ok;
+  fillUI((fail ? `${fail}개는 영상을 불러오지 못해 건너뛰었어요. ` : "") + (FILL.results.length
     ? `<b>${ok}개</b> 채웠어요. ‘결과 복사’를 누르고 라이브러리에서 붙여넣으면 썸네일이 바뀌어요.`
-    : `<b>${ok}개</b> 채웠어요.${list.some(x => x.local) ? " ‘라이브러리로 보내기’로 올리세요." : ""}`);
+    : `<b>${ok}개</b> 채웠어요.${list.some(x => x.local) ? " ‘라이브러리로 보내기’로 올리세요." : ""}`));
 };
 $("#fillCopy").onclick = async () => {
   const code = "HFXBM1:" + b64url(JSON.stringify({ v: 1, src: "fill", items: FILL.results }));
