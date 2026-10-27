@@ -67,6 +67,11 @@
   .bm-list .vt { display: block; font-size: 11px; color: var(--muted); margin-bottom: 2px; }
   .bm-list .x { padding: 6px 9px; font-size: 13px; color: var(--muted); }
   .bm-empty { color: var(--muted); font-size: 13px; margin: 0; }
+  .fill { max-width: 1280px; width: 100%; margin: 0 auto; display: flex; gap: 8px 12px; align-items: center; flex-wrap: wrap; background: #1a1712; border: 1px solid #5a4a26; border-radius: 10px; padding: 10px 12px; font-size: 13px; }
+  .fill b { color: var(--accent); }
+  .fill .grow { flex: 1 1 220px; min-width: 0; line-height: 1.5; }
+  .fill button { background: var(--accent); color: #111; border-color: var(--accent); font-weight: 600; }
+  .fill button.ghost { background: var(--btn); color: var(--fg); border-color: var(--line); font-weight: 400; }
   .hide { display: none !important; }
 </style>
 </head>
@@ -105,6 +110,7 @@
     <span class="lbl">구간</span>
     <span class="seg"><button type="button" data-ab="a">A</button><button type="button" data-ab="b">B</button><button type="button" data-ab="x">해제</button></span>
   </div>
+  <div class="fill hide" id="fill"><span class="grow" id="fillTxt"></span><button type="button" id="fillGo">📸 한번에 채우기</button><button type="button" id="fillCopy" class="hide">결과 복사</button><button type="button" id="fillX" class="ghost">닫기</button></div>
   <section class="bm" aria-label="북마크">
     <form class="bm-add" id="bmForm">
       <input type="text" id="bmNote" maxlength="200" placeholder="지금 위치에 메모 (예: 궁극기 임팩트 프레임)" aria-label="북마크 메모">
@@ -211,7 +217,7 @@ async function openYT(id, start, title) {
   msg("불러오는 중…"); bmRender();
   const YT = await loadYT();
   const vars = { controls: 0, playsinline: 1, rel: 0, modestbranding: 1, disablekb: 1, iv_load_policy: 3, fs: 0, start: start || 0 };
-  if (S.yt) { S.yt.loadVideoById({ videoId: id, startSeconds: start || 0 }); setTimeout(() => S.yt.pauseVideo(), 600); return; }
+  if (S.yt) { S.ytReady = true; msg(""); S.yt.loadVideoById({ videoId: id, startSeconds: start || 0 }); setTimeout(() => { S.yt.pauseVideo(); S.dur = S.yt.getDuration() || 0; sync(); }, 600); return; }
   S.yt = new YT.Player("yt", { videoId: id, playerVars: vars, events: {
     onReady: () => { S.ytReady = true; msg(""); S.yt.setPlaybackRate(S.rate); S.dur = S.yt.getDuration(); if (S.startAt) { const t0 = S.startAt; S.startAt = null; S.yt.seekTo(t0, true); S.cur = t0; setTimeout(() => { S.yt.pauseVideo(); S.cur = t0; sync(); }, 400); } sync(); },
     onStateChange: e => {
@@ -366,6 +372,7 @@ function bmRender() {
   $("#bmTitle").textContent = bmAllMode ? `전체 북마크 ${n}개` : `이 영상 북마크 ${n}개`;
   const un = Object.entries(d).filter(([k]) => k.startsWith("yt:")).reduce((a, [, e]) => a + e.items.filter(it => !it.sent).length, 0);
   $("#bmSend").textContent = un ? `라이브러리로 보내기 (${un})` : "라이브러리로 보내기";
+  if (!FILL.running) fillUI();
 }
 $("#bmForm").onsubmit = e => { e.preventDefault(); bmAdd($("#bmNote").value.trim()); $("#bmNote").value = ""; $("#bmNote").blur(); };
 $("#bmAll").onclick = e => { bmAllMode = !bmAllMode; e.currentTarget.setAttribute("aria-pressed", String(bmAllMode)); bmRender(); };
@@ -391,6 +398,82 @@ $("#bmSend").onclick = async () => {
   msg(`북마크 ${items.length}개를 복사했어요. 라이브러리 페이지에서 Ctrl+V (모바일은 ‘북마크 붙여넣기’)로 올리세요.`);
   setTimeout(() => msg(""), 5000);
 };
+
+/* ---------- fill missing thumbnails in one go (desktop Chrome, uses tab capture) ---------- */
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+async function waitFor(fn, ms) { const t0 = Date.now(); while (Date.now() - t0 < ms) { try { if (fn()) return true; } catch {} await sleep(120); } return false; }
+const FILL = { job: null, results: [], running: false };
+function fillLocalList() {
+  const d = bmLoad(), out = [];
+  Object.entries(d).forEach(([k, e]) => { if (k.startsWith("yt:")) e.items.forEach(it => { if (!it.thumb) out.push({ local: k, at: it.at, vid: k.slice(3), t: it.t }); }); });
+  return out;
+}
+function fillList() { return FILL.job ? FILL.job : fillLocalList(); }
+function fillUI(txt) {
+  const box = $("#fill"), list = fillList();
+  const canCap = !!(navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia) && !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if (!list.length && !FILL.results.length) { box.classList.add("hide"); return; }
+  box.classList.remove("hide");
+  $("#fillTxt").innerHTML = txt || (FILL.job
+    ? `라이브러리에서 썸네일 없는 북마크 <b>${list.length}개</b>를 받아왔어요. ${canCap ? "‘한번에 채우기’를 누르고 <b>이 탭</b> 화면 공유를 허용하면 하나씩 이동하며 프레임을 떠요." : "PC 크롬에서 열어야 채울 수 있어요."}`
+    : `썸네일 없는 북마크 <b>${list.length}개</b>가 있어요. ${canCap ? "PC 크롬에서 한번에 채울 수 있어요." : "PC 크롬에서 이 페이지를 열면 한번에 채울 수 있어요."}`);
+  $("#fillGo").classList.toggle("hide", !canCap || FILL.running || !list.length);
+  $("#fillCopy").classList.toggle("hide", !FILL.results.length || FILL.running);
+}
+async function grabAt(vid, t) {
+  if (S.mode !== "yt" || S.vid !== vid) { openYT(vid, Math.floor(t), $("#title").textContent); }
+  await waitFor(() => S.ytReady && S.yt && S.yt.getVideoData && S.yt.getVideoData().video_id === vid && S.yt.getDuration() > 0, 15000);
+  try { S.yt.mute(); } catch {}
+  S.yt.seekTo(t, true); S.yt.playVideo();
+  await waitFor(() => S.yt.getPlayerState() === 1, 6000);
+  S.yt.pauseVideo(); await sleep(150);
+  S.yt.seekTo(t, true);
+  await waitFor(() => Math.abs(S.yt.getCurrentTime() - t) < 0.2, 3000);
+  await sleep(900);
+  S.cur = t; S.playing = false; sync();
+  return await grabThumb();
+}
+$("#fillGo").onclick = async () => {
+  if (FILL.running) return;
+  if (!S.cap) { await capToggle(); if (!S.cap) return; }
+  FILL.running = true; fillUI();
+  const list = [...fillList()]; let ok = 0;
+  const d = bmLoad();
+  for (let i = 0; i < list.length; i++) {
+    const it = list[i];
+    $("#fillTxt").innerHTML = `썸네일 뜨는 중 <b>${i + 1}/${list.length}</b> · 이 탭을 그대로 두세요`;
+    let th = null;
+    try { th = await grabAt(it.vid, it.t); } catch {}
+    if (!th) continue;
+    ok++;
+    if (it.local) { const e = d[it.local]; const b = e && e.items.find(x => x.at === it.at); if (b) { b.thumb = th; b.sent = false; } }
+    else FILL.results.push({ id: it.id, vid: it.vid, t: it.t, thumb: th });
+  }
+  if (list.some(x => x.local)) { bmSave(d); bmRender(); }
+  if (FILL.job) FILL.job = FILL.job.filter(x => !FILL.results.some(r => r.id === x.id));
+  FILL.running = false;
+  fillUI(FILL.results.length
+    ? `<b>${ok}개</b> 채웠어요. ‘결과 복사’를 누르고 라이브러리에서 붙여넣으면 썸네일이 바뀌어요.`
+    : `<b>${ok}개</b> 채웠어요.${list.some(x => x.local) ? " ‘라이브러리로 보내기’로 올리세요." : ""}`);
+};
+$("#fillCopy").onclick = async () => {
+  const code = "HFXBM1:" + b64url(JSON.stringify({ v: 1, src: "fill", items: FILL.results }));
+  try { await navigator.clipboard.writeText(code); FILL.results = []; fillUI("복사했어요. 라이브러리 페이지에서 Ctrl+V 하면 썸네일이 들어가요."); }
+  catch { hud("복사하지 못했어요. 다시 눌러 주세요"); }
+};
+$("#fillX").onclick = () => { FILL.job = null; FILL.results = []; $("#fill").classList.add("hide"); };
+(() => {
+  const m = location.hash.match(/job=([A-Za-z0-9_-]+)/);
+  if (!m) return;
+  try {
+    let b = m[1].replace(/-/g, "+").replace(/_/g, "/"); while (b.length % 4) b += "=";
+    const bin = atob(b), u = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
+    const j = JSON.parse(new TextDecoder().decode(u));
+    FILL.job = (j.items || []).filter(x => x && /^bm-[\w]+$/.test(x.i) && /^[\w-]{11}$/.test(x.v)).map(x => ({ id: x.i, vid: x.v, t: +x.t || 0 }));
+    history.replaceState(null, "", location.pathname + location.search);
+    if (FILL.job.length && !new URLSearchParams(location.search).get("v")) openYT(FILL.job[0].vid, Math.floor(FILL.job[0].t), "썸네일 채우기");
+  } catch {}
+})();
 
 /* ---------- boot from query string: ?v=ID&t=12&title=... or ?url=... ---------- */
 const q = new URLSearchParams(location.search);
