@@ -1,0 +1,362 @@
+{
+"note": "듀엣 나이트 어비스 플레이어블 캐릭터 전원(2026-10-28 기준, 1.7까지 출시분); ver는 출시된 게임 버전(1.0=2025-10-28 글로벌 출시), role은 근접 무기 종류.",
+"namu": [
+"https://namu.wiki/w/%EB%93%80%EC%97%A3%20%EB%82%98%EC%9D%B4%ED%8A%B8%20%EC%96%B4%EB%B9%84%EC%8A%A4/%EC%BA%90%EB%A6%AD%ED%84%B0",
+"https://namu.wiki/w/%EB%93%80%EC%97%A3%20%EB%82%98%EC%9D%B4%ED%8A%B8%20%EC%96%B4%EB%B9%84%EC%8A%A4/%EB%93%B1%EC%9E%A5%EC%9D%B8%EB%AC%BC%20%EB%B0%8F%20%EC%84%B8%EB%A0%A5"
+],
+"yt_tip": "공식 채널 'Duet Night Abyss'(@DuetNightAbyss)의 캐릭터 트레일러/데모 영상 — YouTube에서 'Duet Night Abyss <영문명> Character Trailer' 또는 'Character Demo'로 검색; 빌리빌리는 '二重螺旋 <중문명> 角色演示'.",
+"roster": [
+{
+"id": "dna-phoxhunter",
+"ko": "월석 사냥꾼",
+"en": "Phoxhunter",
+"zh": "狩月人",
+"rarity": "",
+"attr": "빛",
+"role": "한손검",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-berenica",
+"ko": "베레니카",
+"en": "Berenica",
+"zh": "贝蕾妮卡",
+"rarity": "",
+"attr": "어둠",
+"role": "한손검",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-sibylle",
+"ko": "시빌라",
+"en": "Sibylle",
+"zh": "西比尔",
+"rarity": "",
+"attr": "번개",
+"role": "칼날 채찍",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-outsider",
+"ko": "아웃사이더",
+"en": "Outsider",
+"zh": "奥特赛德",
+"rarity": "",
+"attr": "바람",
+"role": "쌍도",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-truffle-and-filbert",
+"ko": "트러플과 헤이즐넛",
+"en": "Truffle and Filbert",
+"zh": "松露与榛子",
+"rarity": "",
+"attr": "바람",
+"role": "장병기",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-rebecca",
+"ko": "레베카",
+"en": "Rebecca",
+"zh": "丽蓓卡",
+"rarity": "",
+"attr": "물",
+"role": "장병기",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-tabethe",
+"ko": "타비사",
+"en": "Tabethe",
+"zh": "塔比瑟",
+"rarity": "",
+"attr": "물",
+"role": "한손검",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-psyche",
+"ko": "프시케",
+"en": "Psyche",
+"zh": "赛琪",
+"rarity": "",
+"attr": "바람",
+"role": "장병기",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-lynn",
+"ko": "린",
+"en": "Lynn",
+"zh": "琳恩",
+"rarity": "",
+"attr": "불",
+"role": "대검",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-daphne",
+"ko": "다프네",
+"en": "Daphne",
+"zh": "达芙涅",
+"rarity": "",
+"attr": "바람",
+"role": "칼날 채찍",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-hellfire",
+"ko": "헬파이어",
+"en": "Hellfire",
+"zh": "海尔法",
+"rarity": "",
+"attr": "불",
+"role": "대검",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-phantasio",
+"ko": "환상",
+"en": "Phantasio",
+"zh": "幻景",
+"rarity": "",
+"attr": "어둠",
+"role": "대검",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-rhythm",
+"ko": "리듬",
+"en": "Rhythm",
+"zh": "黎瑟",
+"rarity": "",
+"attr": "번개",
+"role": "대도",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-randy",
+"ko": "랜디",
+"en": "Randy",
+"zh": "兰迪",
+"rarity": "",
+"attr": "번개",
+"role": "한손검",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-lisbell",
+"ko": "리사벨",
+"en": "Lisbell",
+"zh": "莉兹贝尔",
+"rarity": "",
+"attr": "빛",
+"role": "대검",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-yale-and-oliver",
+"ko": "예일과 올리버",
+"en": "Yale and Oliver",
+"zh": "耶尔与奥利弗",
+"rarity": "",
+"attr": "불",
+"role": "한손검",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-lady-nifle",
+"ko": "나이플 부인",
+"en": "Lady Nifle",
+"zh": "妮芙尔夫人",
+"rarity": "",
+"attr": "빛",
+"role": "대도",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-margie",
+"ko": "마르제",
+"en": "Margie",
+"zh": "玛尔洁",
+"rarity": "",
+"attr": "불",
+"role": "장병기",
+"ver": "1.0",
+"date": "2025-10-28"
+},
+{
+"id": "dna-fina",
+"ko": "피나",
+"en": "Fina",
+"zh": "菲娜",
+"rarity": "",
+"attr": "빛",
+"role": "한손검",
+"ver": "1.0",
+"date": "2025-11-25"
+},
+{
+"id": "dna-fushu",
+"ko": "부소",
+"en": "Fushu",
+"zh": "扶疏",
+"rarity": "",
+"attr": "물",
+"role": "칼날 채찍",
+"ver": "1.1",
+"date": "2025-12-23"
+},
+{
+"id": "dna-kezhou",
+"ko": "각주",
+"en": "Kezhou",
+"zh": "刻舟",
+"rarity": "",
+"attr": "빛",
+"role": "전 무기",
+"ver": "1.1",
+"date": "2026-01-20"
+},
+{
+"id": "dna-zhiliu",
+"ko": "지류",
+"en": "Zhiliu",
+"zh": "止流",
+"rarity": "",
+"attr": "번개",
+"role": "대검",
+"ver": "1.2",
+"date": "2026-02-10"
+},
+{
+"id": "dna-yuming",
+"ko": "욱명",
+"en": "Yuming",
+"zh": "煜明",
+"rarity": "",
+"attr": "번개",
+"role": "장병기",
+"ver": "1.2",
+"date": "2026-03-10"
+},
+{
+"id": "dna-su-yi",
+"ko": "소을",
+"en": "Su Yi",
+"zh": "苏乙",
+"rarity": "",
+"attr": "빛",
+"role": "장병기",
+"ver": "1.3",
+"date": "2026-04-07"
+},
+{
+"id": "dna-camilla",
+"ko": "카밀라",
+"en": "Camilla",
+"zh": "卡米拉",
+"rarity": "",
+"attr": "불",
+"role": "칼날 채찍",
+"ver": "1.3",
+"date": "2026-05-05"
+},
+{
+"id": "dna-flora",
+"ko": "플로라",
+"en": "Flora",
+"zh": "芙罗拉",
+"rarity": "",
+"attr": "어둠",
+"role": "한손검",
+"ver": "1.4",
+"date": "2026-06-02"
+},
+{
+"id": "dna-phoxhunter-umbro",
+"ko": "월석 사냥꾼·어둠",
+"en": "Phoxhunter (Umbro)",
+"zh": "狩月人",
+"rarity": "",
+"attr": "어둠",
+"role": "한손검",
+"ver": "1.4",
+"date": "2026-06-02"
+},
+{
+"id": "dna-hilda",
+"ko": "힐다",
+"en": "Hilda",
+"zh": "希尔妲",
+"rarity": "",
+"attr": "불",
+"role": "쌍도",
+"ver": "1.4",
+"date": "2026-06-30"
+},
+{
+"id": "dna-ada",
+"ko": "아이다",
+"en": "Ada",
+"zh": "艾达",
+"rarity": "",
+"attr": "물",
+"role": "장병기",
+"ver": "1.5",
+"date": "2026-07-28"
+},
+{
+"id": "dna-falsi",
+"ko": "펄시",
+"en": "Falsi",
+"zh": "法露茜",
+"rarity": "",
+"attr": "불",
+"role": "쌍도",
+"ver": "1.6",
+"date": "2026-09-08"
+},
+{
+"id": "dna-boy-girl-in-the-dream",
+"ko": "꿈속의 소년/소녀",
+"en": "The Boy/Girl in the Dream",
+"zh": "",
+"rarity": "",
+"attr": "물",
+"role": "한손검",
+"ver": "1.6",
+"date": "2026-09-08"
+},
+{
+"id": "dna-rhythm-flamewrought",
+"ko": "리듬·되살아난 불꽃",
+"en": "Rhythm: Flamewrought",
+"zh": "黎瑟·浴火",
+"rarity": "",
+"attr": "번개",
+"role": "한손검",
+"ver": "1.7",
+"date": "2026-10-20"
+}
+]
+}

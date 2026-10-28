@@ -29,7 +29,7 @@ bosses = [
 for b in bosses: b.update({"boss":True,"ver":"보스"})
 data = {"hsr": {"roster": hsr, "bosses": bosses,
   "src": '링크는 <a href="https://space.bilibili.com/47359729" target="_blank" rel="noopener">Citrus橘颜</a>의 스킬 참고 합집을 우선하고, 없으면 <a href="https://space.bilibili.com/258583859" target="_blank" rel="noopener">擒龙小师弟</a>의 「崩铁角色技能合集」입니다. 라벨이 업로더를 뜻해요.'}}
-for key in ["zzz","ww","nte","e7","gi","r99","pgr","nikke","ake","bd2"]:
+for key in ["zzz","ww","nte","e7","gi","r99","pgr","nikke","ake","bd2","hi3","dna","mgl","gbvs","kny"]:
     p = f"{B}/../games/{key}.json"
     if os.path.exists(p): data[key] = json.load(open(p, encoding="utf-8"))
 import glob, datetime

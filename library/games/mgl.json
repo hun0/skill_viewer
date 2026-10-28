@@ -1,0 +1,329 @@
+{
+ "note": "2026-04-15 글로벌 정식 출시(중국 제외) 후 2026-10-28까지 출시된 플레이어블 캐릭터 전원(발표만 된 미출시 캐릭터 없음), ver는 추가된 업데이트 버전(각 버전 후반 추가분 포함)이며 중국 서버가 없어 zh는 비움.",
+ "namu": [
+  "https://namu.wiki/w/%EB%AA%AC%EA%B8%B8:%20STAR%20DIVE",
+  "https://namu.wiki/w/%EB%AA%AC%EA%B8%B8:%20STAR%20DIVE/%EC%9D%B8%EA%B2%8C%EC%9E%84%20%EC%A0%95%EB%B3%B4"
+ ],
+ "yt_tip": "공식 채널 '몬길: STAR DIVE' (https://www.youtube.com/@Stardive_KR) — 영상 제목 패턴 '[몬길: STAR DIVE] {캐릭터명} 캐릭터 PV' (예: 미나 캐릭터 PV, 나래 캐릭터 PV)",
+ "roster": [
+  {
+   "id": "mgl-flare",
+   "ko": "플레아",
+   "en": "Flare",
+   "zh": "",
+   "rarity": 5,
+   "attr": "불",
+   "role": "파괴",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-ophelia",
+   "ko": "오필리아",
+   "en": "Ophelia",
+   "zh": "",
+   "rarity": 5,
+   "attr": "얼음",
+   "role": "난투",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-penny",
+   "ko": "페니",
+   "en": "Penny",
+   "zh": "",
+   "rarity": 5,
+   "attr": "번개",
+   "role": "난투",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-sangun",
+   "ko": "산군",
+   "en": "Sangun",
+   "zh": "",
+   "rarity": 5,
+   "attr": "바람",
+   "role": "난투",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-jiwon",
+   "ko": "지원",
+   "en": "Jiwon",
+   "zh": "",
+   "rarity": 5,
+   "attr": "바람",
+   "role": "지원",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-esther",
+   "ko": "에스데",
+   "en": "Esther",
+   "zh": "",
+   "rarity": 5,
+   "attr": "바람",
+   "role": "암살",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-gabi",
+   "ko": "가비",
+   "en": "Gabi",
+   "zh": "",
+   "rarity": 5,
+   "attr": "대지",
+   "role": "난투",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-verna",
+   "ko": "베르나",
+   "en": "Verna",
+   "zh": "",
+   "rarity": 4,
+   "attr": "불",
+   "role": "난투",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-leeho",
+   "ko": "이호",
+   "en": "Leeho",
+   "zh": "",
+   "rarity": 4,
+   "attr": "불",
+   "role": "암살",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-angel",
+   "ko": "엔젤",
+   "en": "Angel",
+   "zh": "",
+   "rarity": 4,
+   "attr": "불",
+   "role": "암살",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-cloud",
+   "ko": "클라우드",
+   "en": "Cloud",
+   "zh": "",
+   "rarity": 4,
+   "attr": "얼음",
+   "role": "파괴",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-sera",
+   "ko": "세라",
+   "en": "Sera",
+   "zh": "",
+   "rarity": 4,
+   "attr": "얼음",
+   "role": "난투",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-yeonhwa",
+   "ko": "연화",
+   "en": "Yeonhwa",
+   "zh": "",
+   "rarity": 4,
+   "attr": "번개",
+   "role": "암살",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-benjamin",
+   "ko": "벤자민",
+   "en": "Benjamin",
+   "zh": "",
+   "rarity": 4,
+   "attr": "번개",
+   "role": "암살",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-reina",
+   "ko": "레이나",
+   "en": "Reina",
+   "zh": "",
+   "rarity": 4,
+   "attr": "번개",
+   "role": "파괴",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-bonnie",
+   "ko": "보니",
+   "en": "Bonnie",
+   "zh": "",
+   "rarity": 4,
+   "attr": "바람",
+   "role": "지원",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-francis",
+   "ko": "프란시스",
+   "en": "Francis",
+   "zh": "",
+   "rarity": 4,
+   "attr": "대지",
+   "role": "지원",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-daisy",
+   "ko": "데이지",
+   "en": "Daisy",
+   "zh": "",
+   "rarity": 4,
+   "attr": "대지",
+   "role": "지원",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-ellie",
+   "ko": "엘리",
+   "en": "Ellie",
+   "zh": "",
+   "rarity": 4,
+   "attr": "대지",
+   "role": "파괴",
+   "ver": "1.0",
+   "date": "2026-04-15"
+  },
+  {
+   "id": "mgl-mina",
+   "ko": "미나",
+   "en": "Mina",
+   "zh": "",
+   "rarity": 5,
+   "attr": "불",
+   "role": "난투",
+   "ver": "1.0",
+   "date": "2026-04-29"
+  },
+  {
+   "id": "mgl-narae",
+   "ko": "나래",
+   "en": "Narae",
+   "zh": "",
+   "rarity": 5,
+   "attr": "얼음",
+   "role": "지원",
+   "ver": "1.1",
+   "date": "2026-05-27"
+  },
+  {
+   "id": "mgl-nagi",
+   "ko": "나기",
+   "en": "Nagi",
+   "zh": "",
+   "rarity": 5,
+   "attr": "바람",
+   "role": "파괴",
+   "ver": "1.1",
+   "date": "2026-06-17"
+  },
+  {
+   "id": "mgl-verna-summer-dive",
+   "ko": "베르나: 서머 다이브!",
+   "en": "Verna: Summer Dive!",
+   "zh": "",
+   "rarity": 5,
+   "attr": "불",
+   "role": "난투",
+   "ver": "1.2",
+   "date": "2026-07-08"
+  },
+  {
+   "id": "mgl-francis-summer-dive",
+   "ko": "프란시스: 서머 다이브!",
+   "en": "Francis: Summer Dive!",
+   "zh": "",
+   "rarity": 5,
+   "attr": "대지",
+   "role": "지원",
+   "ver": "1.2",
+   "date": "2026-07-08"
+  },
+  {
+   "id": "mgl-mabel",
+   "ko": "메이벨",
+   "en": "Mabel",
+   "zh": "",
+   "rarity": 5,
+   "attr": "번개",
+   "role": "파괴",
+   "ver": "1.2",
+   "date": "2026-07-29"
+  },
+  {
+   "id": "mgl-brisshell",
+   "ko": "브리셸",
+   "en": "Brisshell",
+   "zh": "",
+   "rarity": 5,
+   "attr": "대지",
+   "role": "암살",
+   "ver": "1.3",
+   "date": "2026-08-19"
+  },
+  {
+   "id": "mgl-vivian",
+   "ko": "비비안",
+   "en": "Vivian",
+   "zh": "",
+   "rarity": 5,
+   "attr": "불",
+   "role": "지원",
+   "ver": "1.3",
+   "date": "2026-09-09"
+  },
+  {
+   "id": "mgl-isabella",
+   "ko": "이자벨라",
+   "en": "Isabella",
+   "zh": "",
+   "rarity": 5,
+   "attr": "얼음",
+   "role": "파괴",
+   "ver": "1.4",
+   "date": "2026-09-30"
+  },
+  {
+   "id": "mgl-chloe",
+   "ko": "클로에",
+   "en": "Chloe",
+   "zh": "",
+   "rarity": 5,
+   "attr": "바람",
+   "role": "난투",
+   "ver": "1.4",
+   "date": "2026-10-21"
+  }
+ ]
+}

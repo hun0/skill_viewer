@@ -60,7 +60,32 @@ const GAMES = [
     attrLabel:"속성", roleLabel:"코스튬",
     yt: c => `Brown Dust 2 ${c.en.replace(" - ", " ")} skill`,
     colors:{ "불":"fire","물":"water","바람":"wind","빛":"imag","어둠":"dark" },
-    roles:["일반","스페셜","프레스티지"] }
+    roles:["일반","스페셜","프레스티지"] },
+  { key:"hi3", tab:"붕괴3rd", name:"붕괴3rd", bili:"崩坏3", file:"HI3", group:"ver",
+    attrLabel:"속성", roleLabel:"피해 유형",
+    yt: c => `Honkai Impact 3rd ${c.en.split(" - ").pop()} gameplay showcase`,
+    colors:{ "생물":"fire","이능":"ether","기계":"ice","양자":"quant","허수":"imag","성진":"wind" },
+    roles:["물리","화염","빙결","뇌전"] },
+  { key:"dna", tab:"듀나어", name:"듀엣 나이트 어비스", bili:"二重螺旋", file:"DNA", group:"ver",
+    attrLabel:"속성", roleLabel:"근접 무기",
+    yt: c => `Duet Night Abyss ${c.en.replace(/[():]/g,"")} skills showcase`,
+    colors:{ "빛":"imag","어둠":"dark","물":"water","불":"fire","번개":"light","바람":"wind" },
+    roles:["한손검","대검","대도","장병기","칼날 채찍","쌍도","전 무기"] },
+  { key:"mgl", tab:"몬길", name:"몬길: STAR DIVE", bili:"Mongil Star Dive", file:"MGL", group:"ver",
+    attrLabel:"속성", roleLabel:"클래스",
+    yt: c => `몬길 스타다이브 ${c.ko.replace(/[:!]/g,"")} 스킬`,
+    colors:{ "불":"fire","얼음":"ice","번개":"light","바람":"wind","대지":"imag" },
+    roles:["난투","파괴","암살","지원"] },
+  { key:"gbvs", tab:"그랑블루VS", name:"그랑블루 판타지 버서스 -라이징-", bili:"碧蓝幻想Versus 崛起", file:"GBVS", group:"year",
+    attrLabel:"원작 속성", roleLabel:"구분",
+    yt: c => `GBVSR ${c.en.replace(/[()]/g,"")} Skybound Art Super Skybound Art`,
+    colors:{ "불":"fire","물":"water","흙":"imag","바람":"wind","빛":"ether","어둠":"dark" },
+    roles:["기본","시즌1 DLC","시즌2 DLC","EX","단품 DLC"] },
+  { key:"kny", tab:"히노카미2", name:"귀멸의 칼날 히노카미 혈풍담 2", bili:"鬼灭之刃 火之神血风谭2", file:"KNY", group:"year",
+    attrLabel:"진영", roleLabel:"호흡·술법",
+    yt: c => `Hinokami Chronicles 2 ${c.en.replace(/[()&,]/g,"")} complete moveset`,
+    colors:{ "귀살대":"water","혈귀":"dark","기타":"imag" },
+    roles:["해의 호흡","물의 호흡","화염의 호흡","번개의 호흡","짐승의 호흡","벌레의 호흡","소리의 호흡","안개의 호흡","사랑의 호흡","뱀의 호흡","바람의 호흡","바위의 호흡","혈귀술","인술","기타"] }
 ].filter(g => DATA[g.key] && DATA[g.key].roster && DATA[g.key].roster.length);
 
 GAMES.forEach(g => {
@@ -80,7 +105,7 @@ const LS_KEY = "hsr-gameplay-links-v1";
 let db = null;
 
 const $ = s => document.querySelector(s);
-const verNum = v => String(v).split(".").map(Number).reduce((a,b,i)=> a + b * (i ? 1 : 100), 0);
+const verNum = v => String(v).split(".").map(x => Number(x) || 0).reduce((a,b,i)=> a + b * (i ? 1 : 100), 0);
 const sortKey = c => state.game.group === "year" ? (c.date || String(c.ver)) : verNum(c.ver);
 const cmp = (a, b) => { const x = sortKey(a), y = sortKey(b); return x < y ? -1 : x > y ? 1 : 0; };
 
@@ -207,9 +232,6 @@ function filtered() {
 function render() {
   const g = state.game;
   updateFilterCount();
-  const filled = g.roster.filter(c => !c.upcoming && (state.links[c.id] || []).length).length;
-  $("#count").innerHTML = `<b>${filled}</b> / ${g.released} 채움`;
-  $("#barFill").style.width = (g.released ? filled / g.released * 100 : 0) + "%";
 
   const main = $("#main");
   const focusId = document.activeElement && document.activeElement.id;
@@ -251,7 +273,7 @@ function render() {
       const gf = gr.items.filter(c => (state.links[c.id]||[]).length).length;
       const up = gr.items.some(c => c.upcoming) ? '<span class="upcoming">출시 예정</span>' : "";
       const h = document.createElement("h2");
-      h.innerHTML = (g.group === "year" ? `<span class="ver">${esc(gr.title)}</span>년 출시` : `버전 <span class="ver">${esc(gr.title)}</span>`) + up + `<span class="gfill">${gf}/${gr.items.length}</span>`;
+      h.innerHTML = (g.group === "year" ? `<span class="ver">${esc(gr.title)}</span>년 출시` : `버전 <span class="ver">${esc(gr.title)}</span>`) + up + `<span class="gfill">${gr.items.length}명</span>`;
       sec.appendChild(h);
     }
     const box = document.createElement("div"); box.className = "list";
@@ -262,7 +284,7 @@ function render() {
   if (bosses.length || canAddBoss) {
     const sec = document.createElement("section"); sec.className = "group";
     const gf = bosses.filter(b => (state.links[b.id]||[]).length).length;
-    sec.innerHTML = `<h2><span class="ver">보스 연출</span><span class="gfill">${gf}/${bosses.length}</span></h2>`;
+    sec.innerHTML = `<h2><span class="ver">보스 연출</span><span class="gfill">${bosses.length}</span></h2>`;
     if (bosses.length) {
       const box = document.createElement("div"); box.className = "list";
       bosses.forEach(b => box.appendChild(rowFor(b)));
@@ -805,6 +827,27 @@ $("#copyCsv").onclick = () => {
 };
 
 /* ---------- boot ---------- */
+/* horizontal strips: mouse wheel scrolls sideways, click-and-drag pans, a drag never counts as a click */
+function hScroll(el) {
+  el.classList.add("hscroll");
+  el.addEventListener("wheel", e => {
+    if (el.scrollWidth <= el.clientWidth || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+    e.preventDefault(); el.scrollLeft += e.deltaY;
+  }, { passive: false });
+  let d = null, moved = false;
+  el.addEventListener("pointerdown", e => { if (e.pointerType !== "mouse" || e.button !== 0) return; d = { x: e.clientX, s: el.scrollLeft, id: e.pointerId }; moved = false; });
+  el.addEventListener("pointermove", e => {
+    if (!d || e.pointerId !== d.id) return;
+    const dx = e.clientX - d.x;
+    if (!moved && Math.abs(dx) < 5) return;
+    if (!moved) { moved = true; el.classList.add("dragging"); try { el.setPointerCapture(d.id); } catch {} }
+    el.scrollLeft = d.s - dx;
+  });
+  const end = () => { if (!d) return; d = null; setTimeout(() => el.classList.remove("dragging"), 0); };
+  el.addEventListener("pointerup", end); el.addEventListener("pointercancel", end);
+  el.addEventListener("click", e => { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+}
+hScroll($("#tabs")); hScroll($("#chiprow"));
 $("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
 $("#smode").addEventListener("change", e => { state.smode = e.target.value; setPlaceholder(); render(); });
 $("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
