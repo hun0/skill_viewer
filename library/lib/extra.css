@@ -170,3 +170,9 @@ header.top .notice { margin-top: 2px; padding: 5px 10px; font-size: 12px; }
 .bm.hit .bm-n { color: var(--accent); }
 #smode { flex: none; }
 @media (max-width: 720px) { #smode { max-width: 72px; padding-inline: 6px; font-size: 13px; } }
+
+.fillbtn { flex: none; white-space: nowrap; text-decoration: none; border-color: var(--accent, #c4941c); color: var(--accent, #c4941c); }
+.fillbtn b { font-weight: 600; margin-left: 2px; }
+.fillbtn[hidden] { display: none; }
+.tools .minote { cursor: default; color: var(--muted, #888); font-size: 12.5px; }
+.tools .minote:hover { background: none; }

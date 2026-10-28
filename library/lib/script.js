@@ -636,13 +636,16 @@ function updateFillBtn() {
   const btn = $("#bmFillBtn"); if (!btn) return;
   const miss = [];
   Object.values(state.bms).forEach(l => l.forEach(b => { if (!b.thumb && b.vid) miss.push({ i: b.id, v: b.vid, t: +b.t || 0 }); }));
-  btn.hidden = state.readonly || state.mode !== "db" || !miss.length || IS_MOBILE;
+  const show = !state.readonly && state.mode === "db" && miss.length > 0;
+  btn.hidden = !show || IS_MOBILE;
+  const note = $("#bmFillNote");
+  if (note) { note.hidden = !show || !IS_MOBILE; note.textContent = `썸네일 없는 북마크 ${miss.length}개 · PC 크롬에서 채울 수 있어요`; }
   if (!miss.length) return;
+  btn.innerHTML = `썸네일 채우기 <b>${miss.length}</b>`;
   miss.sort((a, b) => a.v === b.v ? a.t - b.t : a.v < b.v ? -1 : 1);
   const json = JSON.stringify({ v: 1, items: miss.slice(0, 300) });
   const bytes = new TextEncoder().encode(json); let bin = ""; bytes.forEach(x => { bin += String.fromCharCode(x); });
   btn.href = `${VIEWER_URL}#job=${btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "")}`;
-  btn.textContent = `썸네일 채우기 (${miss.length})`;
 }
 async function removeBookmark(bm) {
   if (!db) return;

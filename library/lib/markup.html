@@ -26,11 +26,12 @@
         <option value="name">이름순</option>
       </select>
       <button class="btn fbtn" id="filterBtn" type="button" aria-expanded="false" aria-controls="chiprow">필터<span class="fcount" id="fcount" hidden></span></button>
+      <a class="btn fillbtn" id="bmFillBtn" target="_blank" rel="noopener" hidden title="썸네일 없는 북마크를 뷰어에서 한 번에 캡처해요">썸네일 채우기</a>
       <details class="tools" id="tools">
         <summary class="btn" aria-label="도구">도구 ▾</summary>
         <div class="menu">
           <button class="mi" id="bmPasteBtn" type="button" hidden>북마크 붙여넣기</button>
-          <a class="mi" id="bmFillBtn" target="_blank" rel="noopener" hidden>썸네일 채우기</a>
+          <span class="mi minote" id="bmFillNote" hidden></span>
           <button class="mi" id="copyCsv" type="button">CSV 복사</button>
         </div>
       </details>
