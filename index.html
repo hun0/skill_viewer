@@ -394,10 +394,10 @@ async function capToggle() {
     S.cap = { stream, v, cropped };
     if (!cropped) { const sf = stream.getVideoTracks()[0].getSettings().displaySurface; if (sf && sf !== "browser") hud("‘이 탭’을 골라야 정확히 잘려요"); }
     stream.getVideoTracks()[0].addEventListener("ended", () => { S.cap = null; capUI(); });
-    hud("프레임 캡처 켜짐"); capUI();
+    hud(S.cap.cropped ? "프레임 캡처 켜짐 · 플레이어 영역만 캡처" : "프레임 캡처 켜짐 · 이 탭을 골라야 정확해요"); capUI();
   } catch { hud("화면 공유가 취소됐어요"); }
 }
-function capUI() { const b = $("#capBtn"); b.textContent = S.cap ? "📸 캡처 중 (끄기)" : "📸 프레임 캡처 켜기"; b.classList.toggle("cap-on", !!S.cap); }
+function capUI() { const b = $("#capBtn"); b.textContent = S.cap ? (S.cap.cropped ? "📸 캡처 중 · 플레이어만 (끄기)" : "📸 캡처 중 (끄기)") : "📸 프레임 캡처 켜기"; b.classList.toggle("cap-on", !!S.cap); }
 if (navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia && !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) { $("#capBtn").classList.remove("hide"); $("#capBtn").onclick = capToggle; }
 async function bmAdd(note) {
   const k = bmKey(); if (!k) { hud("영상을 먼저 여세요"); return; }
