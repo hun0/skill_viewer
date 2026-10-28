@@ -328,6 +328,29 @@ let bmAllMode = false;
 function bmLoad() { try { return JSON.parse(localStorage.getItem(BMK) || "{}"); } catch { return {}; } }
 function bmSave(d) { try { localStorage.setItem(BMK, JSON.stringify(d)); return true; } catch { return false; } }
 function bmKey() { return S.mode === "yt" ? "yt:" + S.vid : S.mode === "file" ? "file:" + S.fileName : null; }
+/* get a fresh frame from the tab capture; a 1px corner pixel is nudged so even a paused page pushes a new frame */
+async function capBitmap() {
+  const st = $("#stage"); let tick = $("#capTick");
+  if (!tick) { tick = document.createElement("i"); tick.id = "capTick"; tick.style.cssText = "position:absolute;left:0;top:0;width:1px;height:1px;z-index:9;pointer-events:none"; st.appendChild(tick); }
+  tick.style.background = tick.style.background === "rgb(1, 1, 1)" ? "rgb(0, 0, 0)" : "rgb(1, 1, 1)";
+  const tr = S.cap.stream.getVideoTracks()[0];
+  if (window.ImageCapture) {
+    try {
+      const ic = new ImageCapture(tr);
+      return await Promise.race([ic.grabFrame(), new Promise((_, rej) => setTimeout(() => rej(new Error("timeout")), 1500))]);
+    } catch {}
+  }
+  await new Promise(r => setTimeout(r, 300));
+  return S.cap.v;
+}
+/* a frame whose upper part is pure black while the lower part has picture means the crop slipped */
+function halfBlack(x, W, H) {
+  try {
+    const d = x.getImageData(0, 0, W, H).data, row = y => { let s = 0; for (let i = 0; i < W; i += 4) { const o = (y * W + i) * 4; s += d[o] + d[o + 1] + d[o + 2]; } return s / (W / 4) / 3; };
+    let top = 0, bot = 0; for (let y = 0; y < H * 0.35; y += 3) top = Math.max(top, row(y)); for (let y = Math.floor(H * 0.65); y < H; y += 3) bot = Math.max(bot, row(y));
+    return top < 6 && bot > 25;
+  } catch { return false; }
+}
 async function grabThumb() {
   const W = 224, H = 126;
   const cv = document.createElement("canvas"); cv.width = W; cv.height = H;
@@ -340,9 +363,20 @@ async function grabThumb() {
     }
     if (S.mode === "yt" && S.cap && S.cap.v.videoWidth) {
       const hudEl = $("#hud"), msgEl = $("#msg"); hudEl.classList.remove("on"); const mh = msgEl.classList.contains("hide"); msgEl.classList.add("hide");
+      $("#stage").scrollIntoView({ block: "nearest" });
       await new Promise(r => setTimeout(r, 260));
-      const r = $("#stage").getBoundingClientRect(), cvw = S.cap.v.videoWidth, k = cvw / window.innerWidth;
-      x.drawImage(S.cap.v, r.left * k, r.top * k, r.width * k, r.height * k, 0, 0, W, H);
+      let ok = false;
+      for (let tries = 0; tries < 4 && !ok; tries++) {
+        const cvv = await capBitmap(), vw = cvv.videoWidth || cvv.width, vh = cvv.videoHeight || cvv.height;
+        x.fillStyle = "#000"; x.fillRect(0, 0, W, H);
+        if (S.cap.cropped) x.drawImage(cvv, 0, 0, vw, vh, 0, 0, W, H);
+        else {
+          const r = $("#stage").getBoundingClientRect(), kx = vw / window.innerWidth, ky = vh / window.innerHeight;
+          x.drawImage(cvv, r.left * kx, r.top * ky, r.width * kx, r.height * ky, 0, 0, W, H);
+        }
+        ok = !halfBlack(x, W, H);
+        if (!ok) await new Promise(r => setTimeout(r, 450));
+      }
       if (!mh) msgEl.classList.remove("hide");
       return cv.toDataURL("image/jpeg", 0.72);
     }
@@ -354,7 +388,11 @@ async function capToggle() {
   try {
     const stream = await navigator.mediaDevices.getDisplayMedia({ video: { displaySurface: "browser", frameRate: 15 }, audio: false, preferCurrentTab: true, selfBrowserSurface: "include", surfaceSwitching: "exclude" });
     const v = document.createElement("video"); v.muted = true; v.playsInline = true; v.srcObject = stream; await v.play();
-    S.cap = { stream, v };
+    /* crop the shared tab to the player area itself, so the frame never depends on page layout or zoom */
+    let cropped = false;
+    try { const tr = stream.getVideoTracks()[0]; if (window.CropTarget && tr.cropTo) { await tr.cropTo(await CropTarget.fromElement($("#stage"))); cropped = true; } } catch {}
+    S.cap = { stream, v, cropped };
+    if (!cropped) { const sf = stream.getVideoTracks()[0].getSettings().displaySurface; if (sf && sf !== "browser") hud("‘이 탭’을 골라야 정확히 잘려요"); }
     stream.getVideoTracks()[0].addEventListener("ended", () => { S.cap = null; capUI(); });
     hud("프레임 캡처 켜짐"); capUI();
   } catch { hud("화면 공유가 취소됐어요"); }
