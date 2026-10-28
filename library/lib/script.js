@@ -3,6 +3,7 @@ const DATA = /*__GAME_DATA__*/;
 const COLORS = { phys:"--e-phys", fire:"--e-fire", ice:"--e-ice", light:"--e-light", wind:"--e-wind", quant:"--e-quant", imag:"--e-imag", ether:"--e-ether", dark:"--e-dark", water:"--e-water", wood:"--e-wood" };
 const FALLBACK = ["--e-fire","--e-ice","--e-light","--e-wind","--e-imag","--e-dark","--e-ether","--e-phys","--e-quant","--e-wood","--e-water"];
 const VIEWER_URL = "https://hun0.github.io/skill_viewer/";
+const VCB = Math.floor(Date.now() / 60000).toString(36); /* cache-buster so the viewer is always the latest build */
 const BILI_KEYS = [["궁극기","大招"],["스킬모음","全技能"],["스킬플레이","实机"]];
 const BILI_KEYS_BOSS = [["보스전","boss战"],["연출","演出"]];
 
@@ -348,7 +349,7 @@ function rowFor(c) {
     const yv = ytId(it.url);
     if (yv) {
       const pv = document.createElement("a"); pv.className = "play"; pv.target = "_blank"; pv.rel = "noopener";
-      pv.href = `${VIEWER_URL}?v=${encodeURIComponent(yv.id)}${yv.t ? "&t=" + encodeURIComponent(String(yv.t).replace(/s$/, "")) : ""}&title=${encodeURIComponent(`${c.ko} · ${lbl}`)}&c=${encodeURIComponent(c.id)}`;
+      pv.href = `${VIEWER_URL}?_=${VCB}&v=${encodeURIComponent(yv.id)}${yv.t ? "&t=" + encodeURIComponent(String(yv.t).replace(/s$/, "")) : ""}&title=${encodeURIComponent(`${c.ko} · ${lbl}`)}&c=${encodeURIComponent(c.id)}`;
       pv.textContent = "▶"; pv.title = "프레임 뷰어로 보기";
       pv.setAttribute("aria-label", `${c.ko} ${lbl} 프레임 뷰어로 보기`);
       chip.appendChild(pv);
@@ -601,7 +602,7 @@ function setPlaceholder() { $("#q").placeholder = state.smode === "tag" ? "태�
 /* ---------- bookmarks: frame + note cards under each character ---------- */
 function fmtT(t) { t = Math.max(0, +t || 0); const m = Math.floor(t / 60), x = t - m * 60; return `${m}:${x.toFixed(2).padStart(5, "0")}`; }
 function viewerHref(vid, t, title, cid) {
-  return `${VIEWER_URL}?v=${encodeURIComponent(vid)}&t=${Math.max(0, Math.floor(+t || 0))}&title=${encodeURIComponent(title || "")}${cid ? "&c=" + encodeURIComponent(cid) : ""}&at=${encodeURIComponent(String(+t || 0))}`;
+  return `${VIEWER_URL}?_=${VCB}&v=${encodeURIComponent(vid)}&t=${Math.max(0, Math.floor(+t || 0))}&title=${encodeURIComponent(title || "")}${cid ? "&c=" + encodeURIComponent(cid) : ""}&at=${encodeURIComponent(String(+t || 0))}`;
 }
 function bmStrip(c, list) {
   const wrap = document.createElement("div"); wrap.className = "bms";
@@ -645,7 +646,7 @@ function updateFillBtn() {
   miss.sort((a, b) => a.v === b.v ? a.t - b.t : a.v < b.v ? -1 : 1);
   const json = JSON.stringify({ v: 1, items: miss.slice(0, 300) });
   const bytes = new TextEncoder().encode(json); let bin = ""; bytes.forEach(x => { bin += String.fromCharCode(x); });
-  btn.href = `${VIEWER_URL}#job=${btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "")}`;
+  btn.href = `${VIEWER_URL}?_=${VCB}#job=${btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "")}`;
 }
 async function removeBookmark(bm) {
   if (!db) return;
