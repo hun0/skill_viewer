@@ -1,0 +1,641 @@
+<title>스타레일 게임플레이 라이브러리</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbit&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one long roster grouped by patch version, like a stop list on a rail timetable; sticky filter bar on top */
+:root {
+  --bg: #f2f1f6;
+  --surface: #ffffff;
+  --line: #dddbe7;
+  --fg: #1c1b26;
+  --muted: #69667d;
+  --accent: #a87b1f;
+  --accent-soft: #f4ead2;
+  --danger: #c2412d;
+  --e-phys: #7d828c; --e-fire: #d9532f; --e-ice: #2f97c9; --e-light: #9a4fd6;
+  --e-wind: #239f78; --e-quant: #5156cc; --e-imag: #c4941c;
+  --font-display: "Orbit", "IBM Plex Sans KR", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12111a; --surface: #1b1a26; --line: #2d2b3c; --fg: #ecebf3; --muted: #9b98ae;
+    --accent: #e2b75c; --accent-soft: #2e2716; --danger: #f07a63;
+    --e-phys: #a9aeb8; --e-fire: #f2775a; --e-ice: #5cc0ec; --e-light: #bb85f0;
+    --e-wind: #4fcf9f; --e-quant: #8a8ef5; --e-imag: #ecc24f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12111a; --surface: #1b1a26; --line: #2d2b3c; --fg: #ecebf3; --muted: #9b98ae;
+  --accent: #e2b75c; --accent-soft: #2e2716; --danger: #f07a63;
+  --e-phys: #a9aeb8; --e-fire: #f2775a; --e-ice: #5cc0ec; --e-light: #bb85f0;
+  --e-wind: #4fcf9f; --e-quant: #8a8ef5; --e-imag: #ecc24f;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 14px; line-height: 1.5;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap {
+  max-width: 1080px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+header.top { padding-block: 28px 12px; display: grid; gap: 6px; }
+h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(24px, 4vw, 32px); margin: 0; letter-spacing: 0.01em; text-wrap: balance; }
+.sub { color: var(--muted); margin: 0; max-width: 62ch; }
+.progress { display: flex; align-items: center; gap: 12px; margin-top: 8px; flex-wrap: wrap; }
+.bar { flex: 1 1 220px; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; min-width: 0; }
+.bar > i { display: block; height: 100%; background: var(--accent); width: 0; transition: width .3s; }
+.count { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-size: 13px; color: var(--muted); }
+.count b { color: var(--fg); font-weight: 500; }
+.notice { margin: 8px 0 0; padding: 8px 12px; border: 1px solid var(--line); border-radius: 6px; color: var(--muted); font-size: 13px; }
+
+.filters {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--bg); border-bottom: 1px solid var(--line);
+  padding-block: 10px;
+}
+.filters .wrap { display: grid; gap: 8px; }
+.row1 { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.search { flex: 1 1 200px; min-width: 0; }
+input[type="search"], input[type="url"], input[type="text"], select {
+  font: inherit; color: var(--fg); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 6px; padding: 7px 10px; width: 100%;
+}
+select { width: auto; }
+input:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chip {
+  font: inherit; font-size: 12.5px; color: var(--muted); background: transparent;
+  border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.chip[aria-pressed="true"] { color: var(--fg); border-color: var(--fg); background: var(--surface); }
+.dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.btn {
+  font: inherit; font-size: 13px; border: 1px solid var(--line); background: var(--surface); color: var(--fg);
+  border-radius: 6px; padding: 6px 12px; cursor: pointer; white-space: nowrap;
+}
+.btn:hover { border-color: var(--muted); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+
+main { padding-block: 8px 48px; }
+.group { margin-top: 22px; }
+.group h2 {
+  display: flex; align-items: baseline; gap: 10px; margin: 0 0 8px;
+  font-family: var(--font-mono); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+}
+.group h2 .ver { font-family: var(--font-display); font-size: 20px; letter-spacing: 0; color: var(--fg); }
+.group h2 .gfill { margin-left: auto; font-variant-numeric: tabular-nums; }
+.list { border: 1px solid var(--line); border-radius: 8px; background: var(--surface); overflow: hidden; }
+.char {
+  display: grid; grid-template-columns: minmax(170px, 230px) 1fr auto; gap: 12px 16px;
+  padding: 12px 14px; border-top: 1px solid var(--line); align-items: start;
+}
+.char:first-child { border-top: 0; }
+.char.done .name::after { content: "✓"; color: var(--accent); margin-left: 6px; font-size: 13px; }
+.who { display: grid; grid-template-columns: 4px 1fr; gap: 0 10px; min-width: 0; }
+.stripe { border-radius: 2px; grid-row: span 2; }
+.name { font-weight: 600; font-size: 15px; }
+.meta { color: var(--muted); font-size: 12.5px; display: flex; gap: 8px; flex-wrap: wrap; }
+.meta .en { font-family: var(--font-mono); font-size: 11.5px; }
+.star { color: var(--accent); letter-spacing: -1px; }
+.star.four { color: var(--e-light); }
+.links { display: grid; gap: 6px; min-width: 0; }
+.linklist { display: flex; flex-wrap: wrap; gap: 6px; }
+.link {
+  display: inline-flex; align-items: center; gap: 6px; max-width: 100%;
+  border: 1px solid var(--line); border-radius: 6px; padding: 3px 4px 3px 8px; font-size: 12.5px; background: var(--bg);
+}
+.link a { color: var(--fg); text-decoration: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.link a:hover { text-decoration: underline; }
+.link .lbl { font-weight: 600; }
+.link .vid { font-family: var(--font-mono); color: var(--muted); font-size: 11.5px; }
+.link button { font: inherit; border: 0; background: none; color: var(--muted); cursor: pointer; padding: 0 4px; font-size: 14px; line-height: 1; }
+.link button:hover { color: var(--danger); }
+.addform { display: flex; gap: 6px; flex-wrap: wrap; }
+.addform input[type="url"] { flex: 1 1 220px; min-width: 0; }
+.addform input[type="text"] { flex: 0 1 110px; min-width: 0; }
+.empty-hint { color: var(--muted); font-size: 12.5px; }
+.err { color: var(--danger); font-size: 12.5px; }
+.side { display: flex; flex-direction: column; gap: 6px; align-items: stretch; }
+.yt { font-size: 12.5px; color: var(--muted); text-decoration: none; border: 1px dashed var(--line); border-radius: 6px; padding: 5px 10px; text-align: center; white-space: nowrap; }
+.yt:hover { color: var(--fg); border-color: var(--muted); }
+.bsearch { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; font-size: 12.5px; }
+.bsearch .bs-label { color: var(--muted); }
+.bsearch .zh { color: var(--muted); font-size: 12px; }
+.bsearch a { color: var(--e-ice); text-decoration: none; }
+.bsearch a:hover { text-decoration: underline; }
+.src a { color: var(--accent); }
+.dl { font: inherit; font-size: 12.5px; cursor: pointer; border: 1px solid var(--accent); color: var(--accent); background: transparent; border-radius: 6px; padding: 5px 10px; white-space: nowrap; }
+.dl:hover { background: var(--accent-soft); }
+.dlhelp { color: var(--muted); font-size: 12.5px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.dlhelp code { font-family: var(--font-mono); font-size: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; }
+.upcoming { font-family: var(--font-mono); font-size: 11px; color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0 5px; }
+.nores { color: var(--muted); padding: 40px 0; text-align: center; }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); background: var(--fg); color: var(--bg); padding: 8px 14px; border-radius: 6px; font-size: 13px; z-index: 20; }
+@media (max-width: 720px) {
+  .char { grid-template-columns: 1fr; }
+  .side { flex-direction: row; flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) { .bar > i { transition: none; } }
+</style>
+
+<header class="wrap top">
+  <h1>스타레일 게임플레이 라이브러리</h1>
+  <p class="sub">플레이어블 캐릭터 전체 목록 (4.6 기준 93명 + 4.7 예정 1명). 캐릭터마다 영상 링크를 붙여넣으면 저장됩니다.</p>
+  <p class="sub src">링크는 <a href="https://space.bilibili.com/47359729" target="_blank" rel="noopener">Citrus橘颜</a>의 스킬 참고 합집을 우선하고, 없으면 <a href="https://space.bilibili.com/258583859" target="_blank" rel="noopener">擒龙小师弟</a>의 「崩铁角色技能合集」입니다. 라벨이 업로더를 뜻해요.</p>
+  <div class="progress">
+    <div class="bar" aria-hidden="true"><i id="barFill"></i></div>
+    <span class="count" id="count"><b>0</b> / 93 채움</span>
+  </div>
+  <p class="notice" id="notice" hidden></p>
+</header>
+
+<div class="filters">
+  <div class="wrap">
+    <div class="row1">
+      <input class="search" id="q" type="search" placeholder="이름 검색 (한글·영문)" aria-label="이름 검색">
+      <select id="sort" aria-label="정렬">
+        <option value="ver-desc">버전 최신순</option>
+        <option value="ver-asc">버전 오래된순</option>
+        <option value="name">이름순</option>
+      </select>
+      <button class="chip" id="onlyEmpty" aria-pressed="false" type="button">링크 없는 캐릭터만</button>
+      <button class="btn" id="copyCsv" type="button">CSV 복사</button>
+    </div>
+    <div class="dlhelp">
+      <span>다운로드 버튼은 <code>yt-dlp</code> 명령어를 복사해요. 고화질 로그인 쿠키:</span>
+      <select id="cookie" aria-label="로그인 쿠키를 가져올 브라우저">
+        <option value="firefox">Firefox</option>
+        <option value="edge">Edge</option>
+        <option value="chrome">Chrome</option>
+        <option value="">안 씀 (저화질)</option>
+      </select>
+    </div>
+    <div class="chips" id="elemChips" aria-label="속성 필터"></div>
+    <div class="chips" id="pathChips" aria-label="운명의 길 필터"></div>
+  </div>
+</div>
+
+<main class="wrap" id="main"></main>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const ELEM = {
+  "물리": "--e-phys", "화염": "--e-fire", "얼음": "--e-ice", "번개": "--e-light",
+  "바람": "--e-wind", "양자": "--e-quant", "허수": "--e-imag"
+};
+const PATHS = ["파멸","수렵","지식","화합","공허","보존","풍요","기억","환락"];
+// [id, 한글명, English, 성급, 속성, 운명의 길, 출시 버전]
+const ROSTER = [
+["arlan","아를란","Arlan",4,"번개","파멸","1.0"],
+["asta","아스타","Asta",4,"화염","화합","1.0"],
+["bailu","백로","Bailu",5,"번개","풍요","1.0"],
+["bronya","브로냐","Bronya",5,"바람","화합","1.0"],
+["clara","클라라","Clara",5,"물리","파멸","1.0"],
+["dan-heng","단항","Dan Heng",4,"바람","수렵","1.0"],
+["gepard","게파드","Gepard",5,"얼음","보존","1.0"],
+["herta","헤르타","Herta",4,"얼음","지식","1.0"],
+["himeko","히메코","Himeko",5,"화염","지식","1.0"],
+["hook","후크","Hook",4,"화염","파멸","1.0"],
+["jing-yuan","경원","Jing Yuan",5,"번개","지식","1.0"],
+["march-7th","Mar. 7th","March 7th",4,"얼음","보존","1.0"],
+["natasha","나타샤","Natasha",4,"물리","풍요","1.0"],
+["pela","펠라","Pela",4,"얼음","공허","1.0"],
+["qingque","청작","Qingque",4,"양자","지식","1.0"],
+["sampo","샘포","Sampo",4,"바람","공허","1.0"],
+["seele","제레","Seele",5,"양자","수렵","1.0"],
+["serval","서벌","Serval",4,"번개","지식","1.0"],
+["sushang","소상","Sushang",4,"물리","수렵","1.0"],
+["tingyun","정운","Tingyun",4,"번개","화합","1.0"],
+["welt","웰트","Welt",5,"허수","공허","1.0"],
+["yanqing","연경","Yanqing",5,"얼음","수렵","1.0"],
+["tb-destruction","개척자·파멸","Trailblazer • Destruction",5,"물리","파멸","1.0"],
+["tb-preservation","개척자·보존","Trailblazer • Preservation",5,"화염","보존","1.0"],
+["silver-wolf","은랑","Silver Wolf",5,"양자","공허","1.1"],
+["luocha","나찰","Luocha",5,"허수","풍요","1.1"],
+["yukong","어공","Yukong",4,"허수","화합","1.1"],
+["blade","블레이드","Blade",5,"바람","파멸","1.2"],
+["kafka","카프카","Kafka",5,"번개","공허","1.2"],
+["luka","루카","Luka",4,"물리","공허","1.2"],
+["imbibitor-lunae","단항·음월","Dan Heng • Imbibitor Lunae",5,"허수","파멸","1.3"],
+["fu-xuan","부현","Fu Xuan",5,"양자","보존","1.3"],
+["lynx","링스","Lynx",4,"양자","풍요","1.3"],
+["jingliu","경류","Jingliu",5,"얼음","파멸","1.4"],
+["topaz","토파즈&카부","Topaz & Numby",5,"화염","수렵","1.4"],
+["guinaifen","계네빈","Guinaifen",4,"화염","공허","1.4"],
+["huohuo","곽향","Huohuo",5,"바람","풍요","1.5"],
+["argenti","아젠티","Argenti",5,"물리","지식","1.5"],
+["hanya","한아","Hanya",4,"물리","화합","1.5"],
+["ruan-mei","완·매","Ruan Mei",5,"얼음","화합","1.6"],
+["dr-ratio","Dr. 레이시오","Dr. Ratio",5,"허수","수렵","1.6"],
+["xueyi","설의","Xueyi",4,"양자","파멸","1.6"],
+["black-swan","블랙 스완","Black Swan",5,"바람","공허","2.0"],
+["sparkle","스파클","Sparkle",5,"양자","화합","2.0"],
+["misha","미샤","Misha",4,"얼음","파멸","2.0"],
+["acheron","아케론","Acheron",5,"번개","공허","2.1"],
+["aventurine","어벤츄린","Aventurine",5,"허수","보존","2.1"],
+["gallagher","갤러거","Gallagher",4,"화염","풍요","2.1"],
+["robin","로빈","Robin",5,"물리","화합","2.2"],
+["boothill","부트힐","Boothill",5,"물리","수렵","2.2"],
+["tb-harmony","개척자·화합","Trailblazer • Harmony",5,"허수","화합","2.2"],
+["firefly","반디","Firefly",5,"화염","파멸","2.3"],
+["jade","제이드","Jade",5,"양자","지식","2.3"],
+["yunli","운리","Yunli",5,"물리","파멸","2.4"],
+["jiaoqiu","초구","Jiaoqiu",5,"화염","공허","2.4"],
+["march-7th-hunt","Mar. 7th (수렵)","March 7th • The Hunt",4,"허수","수렵","2.4"],
+["feixiao","비소","Feixiao",5,"바람","수렵","2.5"],
+["lingsha","영사","Lingsha",5,"화염","풍요","2.5"],
+["moze","모제","Moze",4,"번개","수렵","2.5"],
+["rappa","라파","Rappa",5,"허수","지식","2.6"],
+["sunday","선데이","Sunday",5,"허수","화합","2.7"],
+["fugue","망귀인","Tingyun • Fugue",5,"화염","공허","2.7"],
+["the-herta","더 헤르타","The Herta",5,"얼음","지식","3.0"],
+["aglaea","아글라이아","Aglaea",5,"번개","기억","3.0"],
+["tb-remembrance","개척자·기억","Trailblazer • Remembrance",5,"얼음","기억","3.0"],
+["tribbie","트리비","Tribbie",5,"양자","화합","3.1"],
+["mydei","마이데이","Mydei",5,"허수","파멸","3.1"],
+["castorice","카스토리스","Castorice",5,"양자","기억","3.2"],
+["anaxa","아낙사","Anaxa",5,"바람","지식","3.2"],
+["hyacine","히아킨","Hyacine",5,"바람","기억","3.3"],
+["cipher","사이퍼","Cipher",5,"양자","공허","3.3"],
+["phainon","파이논","Phainon",5,"물리","파멸","3.4"],
+["saber","세이버","Saber",5,"바람","파멸","3.4"],
+["archer","아처","Archer",5,"양자","수렵","3.4"],
+["hysilens","히실렌스","Hysilens",5,"물리","공허","3.5"],
+["cerydra","케리드라","Cerydra",5,"바람","화합","3.5"],
+["evernight","장야월","March 7th • Evernight",5,"얼음","기억","3.6"],
+["dan-heng-pt","단항·등황","Dan Heng • Permansor Terrae",5,"물리","보존","3.6"],
+["cyrene","키레네","Cyrene",5,"얼음","기억","3.7"],
+["the-dahlia","달리아","The Dahlia",5,"화염","공허","3.8"],
+["sparxie","스파키","Sparxie",5,"화염","환락","4.0"],
+["yao-guang","효광","Yao Guang",5,"물리","환락","4.0"],
+["ashveil","애쉬베일","Ashveil",5,"번개","수렵","4.1"],
+["silver-wolf-999","은랑 LV.999","Silver Wolf LV.999",5,"허수","환락","4.2"],
+["evanescia","에바네시아","Evanescia",5,"물리","환락","4.2"],
+["tb-elation","개척자·환락","Trailblazer • Elation",5,"번개","환락","4.2"],
+["mortenax-blade","천야·블레이드","Mortenax Blade",5,"화염","공허","4.3"],
+["himeko-nova","히메코·노바","Himeko • Nova",5,"화염","지식","4.4"],
+["rin-tohsaka","토오사카 린","Rin Tohsaka",5,"양자","지식","4.4"],
+["gilgamesh","길가메시","Gilgamesh",5,"번개","파멸","4.4"],
+["robin-summeretto","로빈·서머레토","Robin • Summeretto",5,"바람","기억","4.5"],
+["aventurine-waveflair","어벤츄린·웨이브","Aventurine • Waveflair",5,"양자","환락","4.5"],
+["pearl","펄","Pearl",5,"얼음","환락","4.6"],
+["aha","아하","Aeon☆Aha",5,"양자","환락","4.7"]
+].map(r => ({ id:r[0], ko:r[1], en:r[2], rarity:r[3], elem:r[4], path:r[5], ver:r[6], upcoming: r[6] === "4.7" }));
+
+// 중국어 이름 (빌리빌리 검색용)
+const ZH = {
+"arlan":"阿兰","asta":"艾丝妲","bailu":"白露","bronya":"布洛妮娅","clara":"克拉拉","dan-heng":"丹恒","gepard":"杰帕德",
+"herta":"黑塔","himeko":"姬子","hook":"虎克","jing-yuan":"景元","march-7th":"三月七","natasha":"娜塔莎","pela":"佩拉",
+"qingque":"青雀","sampo":"桑博","seele":"希儿","serval":"希露瓦","sushang":"素裳","tingyun":"停云","welt":"瓦尔特",
+"yanqing":"彦卿","tb-destruction":"开拓者·毁灭","tb-preservation":"开拓者·存护","silver-wolf":"银狼","luocha":"罗刹",
+"yukong":"驭空","blade":"刃","kafka":"卡芙卡","luka":"卢卡","imbibitor-lunae":"丹恒·饮月","fu-xuan":"符玄","lynx":"玲可",
+"jingliu":"镜流","topaz":"托帕&账账","guinaifen":"桂乃芬","huohuo":"藿藿","argenti":"银枝","hanya":"寒鸦","ruan-mei":"阮•梅",
+"dr-ratio":"真理医生","xueyi":"雪衣","black-swan":"黑天鹅","sparkle":"花火","misha":"米沙","acheron":"黄泉","aventurine":"砂金",
+"gallagher":"加拉赫","robin":"知更鸟","boothill":"波提欧","tb-harmony":"开拓者·同谐","firefly":"流萤","jade":"翡翠","yunli":"云璃",
+"jiaoqiu":"椒丘","march-7th-hunt":"三月七·巡猎","feixiao":"飞霄","lingsha":"灵砂","moze":"貊泽","rappa":"乱破","sunday":"星期日",
+"fugue":"忘归人","the-herta":"大黑塔","aglaea":"阿格莱雅","tb-remembrance":"开拓者·记忆","tribbie":"缇宝","mydei":"万敌",
+"castorice":"遐蝶","anaxa":"那刻夏","hyacine":"风堇","cipher":"赛飞儿","phainon":"白厄","saber":"Saber","archer":"Archer",
+"hysilens":"海瑟音","cerydra":"刻律德菈","evernight":"长夜月","dan-heng-pt":"丹恒·腾荒","cyrene":"昔涟","the-dahlia":"大丽花",
+"sparxie":"火花","yao-guang":"爻光","ashveil":"不死途","silver-wolf-999":"银狼LV.999","evanescia":"绯英","tb-elation":"开拓者·欢愉",
+"mortenax-blade":"千冶•刃","himeko-nova":"姬子•启行","rin-tohsaka":"远坂凛","gilgamesh":"吉尔伽美什",
+"robin-summeretto":"知更鸟•晴歌","aventurine-waveflair":"砂金•戏浪","pearl":"真珠","aha":"星神★阿哈"
+};
+ROSTER.forEach(c => { c.zh = ZH[c.id] || ""; });
+
+// 보스 연출 (Citrus橘颜 「星穹铁道Boss技能参考」 합집 + 3.1 보스전 CG)
+const BOSSES = [
+  { id:"boss-flame-reaver", ko:"盗火行者", zh:"盗火行者", en:"Boss", dur:"0:39" },
+  { id:"boss-dead-dragon", ko:"死龙", zh:"死龙", en:"Boss", dur:"0:32" },
+  { id:"boss-sky", ko:"至高，至阳，天空的化身", zh:"天空的化身", en:"Boss", dur:"1:40" },
+  { id:"boss-feixiao", ko:"비소 (보스전)", zh:"飞霄", en:"Boss · 飞霄", dur:"1:00" },
+  { id:"boss-31-cg", ko:"3.1 보스전 CG", zh:"3.1 Boss战", en:"Boss · CG", dur:"3:11" }
+].map(b => ({ ...b, boss:true, ver:"보스", rarity:0, elem:null, path:null }));
+const BILI_KEYS_BOSS = [["보스전","boss战"],["연출","演出"]];
+const BILI_KEYS = [["궁극기","大招"],["스킬모음","全技能"],["스킬플레이","实机"]];
+
+const RELEASED = ROSTER.filter(c => !c.upcoming).length;
+const state = { q:"", sort:"ver-desc", onlyEmpty:false, elems:new Set(), paths:new Set(), links:{}, mode:"loading", readonly:false };
+const LS_KEY = "hsr-gameplay-links-v1";
+let db = null;
+
+const $ = s => document.querySelector(s);
+const verNum = v => v.split(".").map(Number).reduce((a,b,i)=> a + b * (i ? 1 : 100), 0);
+
+function ytInfo(url) {
+  try {
+    const u = new URL(url);
+    let id = null;
+    if (u.hostname.includes("youtu.be")) id = u.pathname.slice(1).split("/")[0];
+    else if (u.hostname.includes("youtube.com")) {
+      id = u.searchParams.get("v");
+      const m = u.pathname.match(/\/(shorts|embed|live)\/([^/?]+)/);
+      if (!id && m) id = m[2];
+    }
+    if (!id && (u.hostname.includes("bilibili.com") || u.hostname.includes("b23.tv"))) {
+      const m = u.pathname.match(/(BV[0-9A-Za-z]{10})/);
+      id = m ? m[1] : (u.hostname.includes("b23.tv") ? "b23.tv" + u.pathname : null);
+    }
+    const t = u.searchParams.get("t");
+    return { id, t, yt: !!id };
+  } catch { return { id:null, t:null, yt:false }; }
+}
+
+function toast(msg) {
+  const el = $("#toast"); el.textContent = msg; el.hidden = false;
+  clearTimeout(toast._t); toast._t = setTimeout(() => el.hidden = true, 1800);
+}
+
+/* ---------- filters ---------- */
+function buildChips() {
+  const ec = $("#elemChips");
+  Object.keys(ELEM).forEach(e => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.setAttribute("aria-pressed","false");
+    b.innerHTML = `<span class="dot" style="background:var(${ELEM[e]})"></span>${e}`;
+    b.onclick = () => { toggle(state.elems, e); b.setAttribute("aria-pressed", state.elems.has(e)); render(); };
+    ec.appendChild(b);
+  });
+  const pc = $("#pathChips");
+  PATHS.forEach(p => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.setAttribute("aria-pressed","false"); b.textContent = p;
+    b.onclick = () => { toggle(state.paths, p); b.setAttribute("aria-pressed", state.paths.has(p)); render(); };
+    pc.appendChild(b);
+  });
+}
+function toggle(set, v) { set.has(v) ? set.delete(v) : set.add(v); }
+
+/* ---------- render ---------- */
+function filtered() {
+  const q = state.q.trim().toLowerCase();
+  let list = ROSTER.filter(c => {
+    if (q && !(c.ko.toLowerCase().includes(q) || c.en.toLowerCase().includes(q))) return false;
+    if (state.elems.size && !state.elems.has(c.elem)) return false;
+    if (state.paths.size && !state.paths.has(c.path)) return false;
+    if (state.onlyEmpty && (state.links[c.id] || []).length) return false;
+    return true;
+  });
+  if (state.sort === "name") list.sort((a,b) => a.ko.localeCompare(b.ko, "ko"));
+  else if (state.sort === "ver-asc") list.sort((a,b) => verNum(a.ver) - verNum(b.ver));
+  else list.sort((a,b) => verNum(b.ver) - verNum(a.ver));
+  return list;
+}
+
+function render() {
+  const filled = ROSTER.filter(c => !c.upcoming && (state.links[c.id] || []).length).length;
+  $("#count").innerHTML = `<b>${filled}</b> / ${RELEASED} 채움`;
+  $("#barFill").style.width = (filled / RELEASED * 100) + "%";
+
+  const main = $("#main");
+  const focusId = document.activeElement && document.activeElement.id;
+  const drafts = {};
+  main.querySelectorAll("input").forEach(i => { if (i.value) drafts[i.id] = i.value; });
+  main.textContent = "";
+
+  const list = filtered();
+  const q = state.q.trim().toLowerCase();
+  const bosses = (state.elems.size || state.paths.size) ? [] : BOSSES.filter(b =>
+    (!q || b.ko.toLowerCase().includes(q) || b.zh.toLowerCase().includes(q) || "보스".includes(q) || q.includes("보스")) &&
+    !(state.onlyEmpty && (state.links[b.id] || []).length));
+  if (!list.length && !bosses.length) { main.innerHTML = `<p class="nores">조건에 맞는 캐릭터가 없어요.</p>`; return; }
+
+  const groups = [];
+  if (state.sort === "name") groups.push({ title:null, items:list });
+  else list.forEach(c => {
+    const last = groups[groups.length-1];
+    if (last && last.title === c.ver) last.items.push(c); else groups.push({ title:c.ver, items:[c] });
+  });
+
+  groups.forEach(g => {
+    const sec = document.createElement("section"); sec.className = "group";
+    if (g.title) {
+      const gf = g.items.filter(c => (state.links[c.id]||[]).length).length;
+      const h = document.createElement("h2");
+      h.innerHTML = `버전 <span class="ver">${g.title}</span>${g.title === "4.7" ? '<span class="upcoming">출시 예정</span>' : ""}<span class="gfill">${gf}/${g.items.length}</span>`;
+      sec.appendChild(h);
+    }
+    const box = document.createElement("div"); box.className = "list";
+    g.items.forEach(c => box.appendChild(rowFor(c)));
+    sec.appendChild(box); main.appendChild(sec);
+  });
+
+  if (bosses.length) {
+    const sec = document.createElement("section"); sec.className = "group";
+    const gf = bosses.filter(b => (state.links[b.id]||[]).length).length;
+    sec.innerHTML = `<h2><span class="ver">보스 연출</span><span class="gfill">${gf}/${bosses.length}</span></h2>`;
+    const box = document.createElement("div"); box.className = "list";
+    bosses.forEach(b => box.appendChild(rowFor(b)));
+    sec.appendChild(box); main.appendChild(sec);
+  }
+
+  Object.entries(drafts).forEach(([id,v]) => { const el = document.getElementById(id); if (el) el.value = v; });
+  if (focusId) { const el = document.getElementById(focusId); if (el) el.focus(); }
+}
+
+function rowFor(c) {
+  const items = state.links[c.id] || [];
+  const row = document.createElement("div");
+  row.className = "char" + (items.length ? " done" : "");
+
+  const who = document.createElement("div"); who.className = "who";
+  who.innerHTML = c.boss
+    ? `<span class="stripe" style="background:var(--danger)"></span>
+    <div class="name"></div>
+    <div class="meta"><span>보스 · ${c.dur}</span><span class="en"></span></div>`
+    : `<span class="stripe" style="background:var(${ELEM[c.elem]})"></span>
+    <div class="name"></div>
+    <div class="meta"><span class="star ${c.rarity === 4 ? "four" : ""}">${"★".repeat(c.rarity)}</span><span>${c.elem} · ${c.path}</span><span class="en"></span></div>`;
+  who.querySelector(".name").textContent = c.ko;
+  who.querySelector(".en").textContent = c.en;
+
+  const links = document.createElement("div"); links.className = "links";
+  const ll = document.createElement("div"); ll.className = "linklist";
+  if (!items.length) {
+    const e = document.createElement("span"); e.className = "empty-hint";
+    e.textContent = c.upcoming ? "4.7 출시 후 추가" : "아직 링크 없음"; ll.appendChild(e);
+  }
+  items.forEach((it, idx) => {
+    const info = ytInfo(it.url);
+    const chip = document.createElement("span"); chip.className = "link";
+    const a = document.createElement("a"); a.href = it.url; a.target = "_blank"; a.rel = "noopener";
+    const lbl = it.label || `영상 ${idx+1}`;
+    a.innerHTML = `<span class="lbl"></span> <span class="vid"></span>`;
+    a.querySelector(".lbl").textContent = lbl;
+    a.querySelector(".vid").textContent = info.yt ? info.id + (info.t ? ` @${info.t}` : "") : (() => { try { return new URL(it.url).hostname; } catch { return "링크"; } })();
+    a.title = it.url;
+    chip.appendChild(a);
+    if (!state.readonly) {
+      const x = document.createElement("button"); x.type = "button"; x.textContent = "×";
+      x.setAttribute("aria-label", `${c.ko} ${lbl} 삭제`);
+      x.onclick = () => removeLink(c, idx);
+      chip.appendChild(x);
+    }
+    ll.appendChild(chip);
+  });
+  links.appendChild(ll);
+
+  if (c.zh) {
+    const bs = document.createElement("div"); bs.className = "bsearch";
+    const term = c.zh.replace(/[·•]/g, " ");
+    bs.innerHTML = `<span class="bs-label">빌리빌리 검색</span><span class="zh"></span>` +
+      (c.boss ? BILI_KEYS_BOSS : BILI_KEYS).map(([ko, kw]) => `<a target="_blank" rel="noopener" href="https://search.bilibili.com/all?keyword=${encodeURIComponent(`崩坏星穹铁道 ${term} ${kw}`)}" title="${kw}">${ko} ↗</a>`).join("");
+    bs.querySelector(".zh").textContent = c.zh;
+    links.appendChild(bs);
+  }
+
+  if (!state.readonly) {
+    const f = document.createElement("form"); f.className = "addform";
+    f.innerHTML = `<input type="url" id="u-${c.id}" placeholder="유튜브 링크 붙여넣기" aria-label="${c.ko} 유튜브 링크" required>
+      <input type="text" id="l-${c.id}" placeholder="라벨 (선택)" aria-label="${c.ko} 링크 라벨" maxlength="20">
+      <button class="btn primary" type="submit">추가</button>
+      <span class="err" hidden></span>`;
+    f.onsubmit = e => { e.preventDefault(); addLink(c, f); };
+    links.appendChild(f);
+  }
+
+  const side = document.createElement("div"); side.className = "side";
+  const yq = encodeURIComponent(c.boss ? `星穹铁道 ${c.zh} boss` : `Honkai Star Rail ${c.en.replace("☆"," ")} skills ultimate showcase`);
+  side.innerHTML = `<a class="yt" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=${yq}">유튜브에서 찾기 ↗</a>`;
+  if (items.length) {
+    const d = document.createElement("button"); d.type = "button"; d.className = "dl";
+    d.textContent = "다운로드 명령 복사";
+    d.setAttribute("aria-label", `${c.ko} 영상 다운로드 명령어 복사`);
+    d.onclick = () => copyText(dlCommand(c, items), `${c.ko}: 다운로드 명령어를 복사했어요. 터미널에 붙여넣으세요`);
+    side.appendChild(d);
+  }
+
+  row.append(who, links, side);
+  return row;
+}
+
+/* ---------- storage ---------- */
+async function saveLinks(c, next) {
+  const prev = state.links[c.id] || [];
+  state.links[c.id] = next; render();
+  try {
+    if (state.mode === "db") {
+      const ref = db.collection("links").doc(c.id);
+      if (next.length) await ref.set({ items: next, ko: c.ko, en: c.en, ver: c.ver, updatedAt: new Date().toISOString() });
+      else await ref.delete();
+    } else {
+      try { localStorage.setItem(LS_KEY, JSON.stringify(state.links)); } catch {}
+    }
+    return true;
+  } catch (e) {
+    state.links[c.id] = prev; render();
+    if (e && e.code === "invalid_argument") { state.readonly = true; render(); toast("이 화면에서는 링크를 저장할 수 없어요"); }
+    else if (e && e.code === "quota_exceeded") toast("저장 공간이 가득 찼어요");
+    else toast("저장하지 못했어요. 잠시 후 다시 시도해 주세요");
+    return false;
+  }
+}
+
+async function addLink(c, form) {
+  const u = form.querySelector('input[type="url"]'), l = form.querySelector('input[type="text"]'), err = form.querySelector(".err");
+  const url = u.value.trim(); err.hidden = true;
+  if (!/^https?:\/\//i.test(url)) { err.textContent = "http로 시작하는 주소를 넣어 주세요"; err.hidden = false; return; }
+  const cur = state.links[c.id] || [];
+  if (cur.some(x => x.url === url)) { err.textContent = "이미 추가된 링크예요"; err.hidden = false; return; }
+  const next = [...cur.map(x => ({...x})), { url, label: l.value.trim() }];
+  u.value = ""; l.value = "";
+  if (await saveLinks(c, next)) toast(`${c.ko}: 링크 저장됨`);
+}
+
+async function removeLink(c, idx) {
+  const next = (state.links[c.id] || []).filter((_, i) => i !== idx).map(x => ({...x}));
+  if (await saveLinks(c, next)) toast(`${c.ko}: 링크 삭제됨`);
+}
+
+/* ---------- download ---------- */
+const COOKIE_KEY = "hsr-dl-cookie";
+try { const v = localStorage.getItem(COOKIE_KEY); if (v !== null) $("#cookie").value = v; } catch {}
+$("#cookie").addEventListener("change", e => { try { localStorage.setItem(COOKIE_KEY, e.target.value); } catch {} });
+
+function cleanUrl(url) {
+  try {
+    const u = new URL(url);
+    const bv = u.pathname.match(/(BV[0-9A-Za-z]{10})/);
+    if (u.hostname.includes("bilibili.com") && bv) {
+      const p = u.searchParams.get("p");
+      return `https://www.bilibili.com/video/${bv[1]}/` + (p && p !== "1" ? `?p=${p}` : "");
+    }
+    return url;
+  } catch { return url; }
+}
+function safeName(s) { return String(s).replace(/[<>:"/\\|?*\u0000-\u001f]/g, "").replace(/\s+/g, "_").slice(0, 60); }
+function dlCommand(c, items) {
+  const br = $("#cookie").value;
+  const cookie = br ? `--cookies-from-browser ${br} ` : "";
+  return items.map((it, i) => {
+    const name = `HSR_${c.ver}_${safeName(c.ko)}_${safeName(it.label || "영상" + (i + 1))}`;
+    return `yt-dlp ${cookie}-f "bv*+ba/b" --merge-output-format mp4 -o "${name}.%(ext)s" "${cleanUrl(it.url)}"`;
+  }).join("\n");
+}
+async function copyText(text, msg) {
+  try { await navigator.clipboard.writeText(text); toast(msg); }
+  catch {
+    const ta = document.createElement("textarea"); ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); toast(msg); } catch { toast("복사하지 못했어요"); }
+    ta.remove();
+  }
+}
+
+/* ---------- csv ---------- */
+$("#copyCsv").onclick = async () => {
+  const esc = v => `"${String(v ?? "").replace(/"/g,'""')}"`;
+  const lines = [["버전","한글명","English","성급","속성","운명의 길","라벨","링크"].join(",")];
+  [...[...ROSTER].sort((a,b)=>verNum(a.ver)-verNum(b.ver)), ...BOSSES].forEach(c => {
+    const items = state.links[c.id] || [];
+    if (!items.length) lines.push([c.ver,c.ko,c.en,c.rarity,c.elem,c.path,"",""].map(esc).join(","));
+    items.forEach(it => lines.push([c.ver,c.ko,c.en,c.rarity,c.elem,c.path,it.label,it.url].map(esc).join(",")));
+  });
+  const text = lines.join("\n");
+  try { await navigator.clipboard.writeText(text); toast("CSV를 클립보드에 복사했어요"); }
+  catch {
+    const ta = document.createElement("textarea"); ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); toast("CSV를 클립보드에 복사했어요"); } catch { toast("복사하지 못했어요"); }
+    ta.remove();
+  }
+};
+
+/* ---------- boot ---------- */
+$("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
+$("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
+$("#onlyEmpty").onclick = e => { state.onlyEmpty = !state.onlyEmpty; e.currentTarget.setAttribute("aria-pressed", state.onlyEmpty); render(); };
+buildChips();
+render();
+
+function useLocal(msg) {
+  state.mode = "local";
+  try { state.links = JSON.parse(localStorage.getItem(LS_KEY) || "{}") || {}; } catch { state.links = {}; }
+  const n = $("#notice"); n.textContent = msg; n.hidden = false;
+  render();
+}
+
+(async () => {
+  try { db = window.claude && claude.use ? await claude.use("db") : null; } catch { db = null; }
+  if (!db) { useLocal("지금은 공유 저장소에 연결되지 않아 링크가 이 브라우저에만 저장돼요."); return; }
+  try {
+    const user = await claude.use("user");
+    if (user && user.can) { const w = await user.can("data.write"); if (w === false) state.readonly = true; }
+  } catch {}
+  state.mode = "db";
+  db.collection("links").onSnapshot(snap => {
+    const m = {};
+    snap.docs.forEach(d => { const v = d.data(); if (v && Array.isArray(v.items)) m[d.id] = v.items; });
+    state.links = m; render();
+  }, () => { toast("링크를 불러오지 못했어요. 새로고침해 주세요"); });
+})();
+</script>

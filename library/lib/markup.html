@@ -1,0 +1,56 @@
+<header class="wrap top">
+  <div class="hrow">
+    <h1><span class="eyebrow">스킬 연출 라이브러리</span><span id="gname">붕괴: 스타레일</span></h1>
+    <div class="progress">
+      <div class="bar" aria-hidden="true"><i id="barFill"></i></div>
+      <span class="count" id="count"><b>0</b> / 0 채움</span>
+    </div>
+  </div>
+  <details class="about">
+    <summary><span id="gsub"></span></summary>
+    <p class="sub src" id="gsrc" hidden></p>
+    <p class="sub" id="gnote" hidden></p>
+  </details>
+  <p class="notice" id="notice" hidden></p>
+</header>
+
+<div class="filters" id="filters">
+  <div class="wrap">
+    <nav class="tabs" id="tabs" aria-label="게임 선택"></nav>
+    <div class="row1">
+      <input class="search" id="q" type="search" placeholder="이름 검색 (한글·영문·중문)" aria-label="이름 검색">
+      <select id="sort" aria-label="정렬">
+        <option value="ver-desc">최신순</option>
+        <option value="ver-asc">오래된순</option>
+        <option value="name">이름순</option>
+      </select>
+      <button class="btn fbtn" id="filterBtn" type="button" aria-expanded="false" aria-controls="chiprow">필터<span class="fcount" id="fcount" hidden></span></button>
+      <details class="tools" id="tools">
+        <summary class="btn" aria-label="도구">도구 ▾</summary>
+        <div class="menu">
+          <button class="mi" id="bmPasteBtn" type="button" hidden>북마크 붙여넣기</button>
+          <a class="mi" id="bmFillBtn" target="_blank" rel="noopener" hidden>썸네일 채우기</a>
+          <button class="mi" id="copyCsv" type="button">CSV 복사</button>
+        </div>
+      </details>
+    </div>
+    <div class="chiprow" id="chiprow">
+      <div class="chips" id="elemChips" aria-label="속성 필터"><span class="flabel" id="elemLabel">속성</span></div>
+      <div class="chips" id="pathChips" aria-label="역할 필터"><span class="flabel" id="pathLabel">역할</span></div>
+      <div class="chips"><button class="chip" id="onlyEmpty" aria-pressed="false" type="button">링크 없는 캐릭터만</button></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap" id="main"></main>
+<div class="toast" id="toast" hidden></div>
+<dialog id="bmPasteDlg" class="dlg" aria-labelledby="bmPasteTitle">
+  <h3 id="bmPasteTitle">북마크 붙여넣기</h3>
+  <p class="dlg-sub">프레임 뷰어의 ‘라이브러리로 보내기’나 유튜브 북마크 버튼의 ‘복사’로 복사한 코드를 아래에 붙여넣으세요. 데스크톱에서는 이 창 없이 페이지 아무 곳에서 Ctrl+V 해도 돼요.</p>
+  <textarea id="bmPaste" rows="3" placeholder="여기에 붙여넣기 (HFXBM1:…)" aria-label="북마크 코드"></textarea>
+  <div class="dlg-row"><a href="https://hun0.github.io/skill_viewer/bookmarklet.html" target="_blank" rel="noopener">유튜브 북마크 버튼 설치 ↗</a><button class="btn" type="button" data-close>닫기</button></div>
+</dialog>
+<dialog id="bmDlg" class="dlg" aria-label="북마크 캐릭터 고르기">
+  <div id="bmDlgBody"></div>
+  <div class="dlg-row"><span></span><button class="btn" type="button" data-close>닫기</button></div>
+</dialog>
