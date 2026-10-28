@@ -151,3 +151,18 @@ header.top .notice { margin-top: 2px; padding: 5px 10px; font-size: 12px; }
   .hrow .progress { flex: 1 1 100%; min-width: 0; }
   .hrow .bar { flex: 1 1 auto; min-width: 0; }
 }
+
+.tags { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; margin-top: 6px; min-width: 0; }
+.tag { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); font-size: 11.5px; line-height: 1; }
+.tag-t { font: inherit; color: var(--fg); background: none; border: 0; padding: 4px 8px; cursor: pointer; border-radius: 999px; }
+.tag-t::before { content: "#"; color: var(--muted); margin-right: 1px; }
+.tag-t:hover { color: var(--accent); }
+.tag-x { font: inherit; color: var(--muted); background: none; border: 0; padding: 4px 7px 4px 0; cursor: pointer; }
+.tag-x:hover { color: var(--danger); }
+.tag-add { font: inherit; font-size: 11.5px; color: var(--muted); background: none; border: 1px dashed var(--line); border-radius: 999px; padding: 3px 9px; cursor: pointer; }
+.tag-add:hover { color: var(--accent); border-color: var(--accent); }
+.tag-in { width: 120px !important; font-size: 12px !important; padding: 3px 8px !important; border-radius: 999px !important; }
+.bm.hit .bm-th { outline: 2px solid var(--accent); outline-offset: 1px; }
+.bm.hit .bm-n { color: var(--accent); }
+#smode { flex: none; }
+@media (max-width: 720px) { #smode { max-width: 72px; padding-inline: 6px; font-size: 13px; } }

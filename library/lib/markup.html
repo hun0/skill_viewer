@@ -18,7 +18,12 @@
   <div class="wrap">
     <nav class="tabs" id="tabs" aria-label="게임 선택"></nav>
     <div class="row1">
-      <input class="search" id="q" type="search" placeholder="이름 검색 (한글·영문·중문)" aria-label="이름 검색">
+      <select id="smode" aria-label="검색 기준">
+        <option value="name">이름</option>
+        <option value="tag">태그</option>
+        <option value="bm">북마크</option>
+      </select>
+      <input class="search" id="q" type="search" placeholder="이름 검색 (한글·영문·중문)" aria-label="검색어">
       <select id="sort" aria-label="정렬">
         <option value="ver-desc">최신순</option>
         <option value="ver-asc">오래된순</option>
@@ -43,6 +48,7 @@
 </div>
 
 <main class="wrap" id="main"></main>
+<datalist id="tagList"></datalist>
 <div class="toast" id="toast" hidden></div>
 <dialog id="bmPasteDlg" class="dlg" aria-labelledby="bmPasteTitle">
   <h3 id="bmPasteTitle">북마크 붙여넣기</h3>

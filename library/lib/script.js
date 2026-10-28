@@ -75,7 +75,7 @@ GAMES.forEach(g => {
 
 const SNAP = DATA.snapshot || { links:{}, thumbs:{}, at:"" };
 const SPRITES = DATA.sprites || {};
-const state = { game: GAMES[0], q:"", sort:"ver-desc", onlyEmpty:false, elems:new Set(), paths:new Set(), links: SNAP.links, thumbs: SNAP.thumbs, bosses: SNAP.bosses || {}, bms: SNAP.bookmarks || {}, me: null, armed:null, mode:"loading", readonly:true };
+const state = { game: GAMES[0], q:"", sort:"ver-desc", onlyEmpty:false, elems:new Set(), paths:new Set(), links: SNAP.links, thumbs: SNAP.thumbs, bosses: SNAP.bosses || {}, bms: SNAP.bookmarks || {}, tags: SNAP.tags || {}, smode: "name", me: null, armed:null, mode:"loading", readonly:true };
 const LS_KEY = "hsr-gameplay-links-v1";
 let db = null;
 
@@ -180,12 +180,21 @@ function toggle(set, v) { set.has(v) ? set.delete(v) : set.add(v); }
 function matches(c, q) {
   return [c.ko, c.en, c.zh, c.code].some(v => v && String(v).toLowerCase().includes(q));
 }
+function tagHit(c, q) { return (state.tags[c.id] || []).some(t => t.toLowerCase().includes(q)); }
+function bmHit(bm, q) { return [bm.note, bm.title].some(v => v && String(v).toLowerCase().includes(q)); }
+function crossSearch() { return state.smode !== "name" && !!state.q.trim(); }
+function searchHit(c, q) {
+  if (state.smode === "tag") return tagHit(c, q);
+  if (state.smode === "bm") return (state.bms[c.id] || []).some(b => bmHit(b, q));
+  return matches(c, q);
+}
 function filtered() {
   const q = state.q.trim().toLowerCase();
-  let list = state.game.roster.filter(c => {
-    if (q && !matches(c, q)) return false;
-    if (state.elems.size && !state.elems.has(c.attr)) return false;
-    if (state.paths.size && !state.paths.has(c.role)) return false;
+  const pool = crossSearch() ? GAMES.flatMap(g => [...g.roster, ...bossesOf(g)]) : state.game.roster;
+  let list = pool.filter(c => {
+    if (q && !searchHit(c, q)) return false;
+    if (!crossSearch() && state.elems.size && !state.elems.has(c.attr)) return false;
+    if (!crossSearch() && state.paths.size && !state.paths.has(c.role)) return false;
     if (state.onlyEmpty && (state.links[c.id] || []).length) return false;
     return true;
   });
@@ -210,8 +219,20 @@ function render() {
 
   const list = filtered();
   const q = state.q.trim().toLowerCase();
+  if (crossSearch()) {
+    if (!list.length) { main.innerHTML = `<p class="nores">${state.smode === "tag" ? "이 태그" : "이 메모"}가 달린 캐릭터가 없어요.</p>`; return; }
+    GAMES.forEach(gg => {
+      const its = list.filter(c => gameOf(c) === gg.key); if (!its.length) return;
+      const sec = document.createElement("section"); sec.className = "group";
+      const h = document.createElement("h2"); h.innerHTML = `<span class="ver"></span><span class="gfill">${its.length}명</span>`; h.querySelector(".ver").textContent = gg.tab;
+      sec.appendChild(h);
+      const box = document.createElement("div"); box.className = "list";
+      its.forEach(c => box.appendChild(rowFor(c))); sec.appendChild(box); main.appendChild(sec);
+    });
+    return;
+  }
   const bosses = (state.elems.size || state.paths.size) ? [] : bossesOf(g).filter(b =>
-    (!q || matches(b, q) || "보스".includes(q) || q.includes("보스")) &&
+    (!q || searchHit(b, q) || (state.smode === "name" && ("보스".includes(q) || q.includes("보스")))) &&
     !(state.onlyEmpty && (state.links[b.id] || []).length));
   const canAddBoss = !state.readonly && state.mode === "db" && !state.elems.size && !state.paths.size;
   if (!list.length && !bosses.length && !canAddBoss) { main.innerHTML = `<p class="nores">조건에 맞는 캐릭터가 없어요.</p>`; return; }
@@ -269,7 +290,7 @@ function rarityHTML(c) {
 }
 
 function rowFor(c) {
-  const g = state.game;
+  const g = GAMES.find(x => x.key === gameOf(c)) || state.game;
   const items = state.links[c.id] || [];
   const row = document.createElement("div");
   row.className = "char" + (items.length ? " done" : "");
@@ -284,6 +305,7 @@ function rowFor(c) {
   who.querySelector(".name").textContent = c.ko;
   who.querySelector(".en").textContent = c.en;
   who.prepend(thumbFor(c, c.boss ? "--danger" : (g.attrVar[c.attr] || "--muted")));
+  who.appendChild(tagRow(c));
 
   const links = document.createElement("div"); links.className = "links";
   const ll = document.createElement("div"); ll.className = "linklist";
@@ -510,6 +532,50 @@ async function clearThumb(c) {
   } catch { toast("썸네일을 지우지 못했어요"); }
 }
 
+/* ---------- effect tags under the thumbnail ---------- */
+function allTags() { const m = new Map(); Object.values(state.tags).forEach(l => (l || []).forEach(t => m.set(t, (m.get(t) || 0) + 1))); return [...m.entries()].sort((a, b) => b[1] - a[1]).map(x => x[0]); }
+function refreshTagList() { const dl = $("#tagList"); dl.textContent = ""; allTags().forEach(t => { const o = document.createElement("option"); o.value = t; dl.appendChild(o); }); }
+function tagRow(c) {
+  const wrap = document.createElement("div"); wrap.className = "tags";
+  const tags = state.tags[c.id] || [];
+  const editable = !state.readonly && state.mode === "db";
+  tags.forEach(t => {
+    const chip = document.createElement("span"); chip.className = "tag";
+    const b = document.createElement("button"); b.type = "button"; b.className = "tag-t"; b.textContent = t; b.title = `'${t}' 태그로 모든 게임 검색`;
+    b.onclick = () => searchFor("tag", t);
+    chip.appendChild(b);
+    if (editable) { const x = document.createElement("button"); x.type = "button"; x.className = "tag-x"; x.textContent = "×"; x.setAttribute("aria-label", `${c.ko} 태그 ${t} 지우기`); x.onclick = () => saveTags(c, tags.filter(v => v !== t)); chip.appendChild(x); }
+    wrap.appendChild(chip);
+  });
+  if (editable && state.tagEditing === c.id) {
+    const inp = document.createElement("input"); inp.type = "text"; inp.className = "tag-in"; inp.id = `tg-${c.id}`; inp.maxLength = 40; inp.setAttribute("list", "tagList"); inp.placeholder = "예: 번개, 검기"; inp.setAttribute("aria-label", `${c.ko} 태그 입력`);
+    const commit = () => { const vals = inp.value.split(/[,#]/).map(v => v.trim()).filter(Boolean); state.tagEditing = null; if (vals.length) saveTags(c, [...new Set([...tags, ...vals])]); else render(); };
+    inp.onkeydown = e => { if (e.key === "Enter") { e.preventDefault(); commit(); } else if (e.key === "Escape") { state.tagEditing = null; render(); } };
+    inp.onblur = () => setTimeout(() => { if (!inp.isConnected || state.tagEditing !== c.id || document.activeElement && document.activeElement.id === inp.id) return; if (inp.value.trim()) commit(); else { state.tagEditing = null; render(); } }, 150);
+    wrap.appendChild(inp);
+    setTimeout(() => { const el = document.getElementById(inp.id); if (el && document.activeElement !== el) el.focus(); }, 0);
+  } else if (editable) {
+    const add = document.createElement("button"); add.type = "button"; add.className = "tag-add"; add.textContent = tags.length ? "+" : "+ 태그"; add.setAttribute("aria-label", `${c.ko} 태그 추가`);
+    add.onclick = () => { state.tagEditing = c.id; render(); };
+    wrap.appendChild(add);
+  }
+  return wrap;
+}
+async function saveTags(c, next) {
+  if (!db) return;
+  const prev = state.tags[c.id] || [];
+  state.tags = { ...state.tags, [c.id]: next }; render();
+  try {
+    const ref = db.collection("tags").doc(c.id);
+    if (next.length) await ref.set({ tags: next, game: gameOf(c), ko: c.ko, updatedAt: new Date().toISOString() });
+    else await ref.delete();
+  } catch { state.tags = { ...state.tags, [c.id]: prev }; render(); toast("태그를 저장하지 못했어요"); }
+}
+function searchFor(mode, text) {
+  state.smode = mode; $("#smode").value = mode; state.q = text; $("#q").value = text; setPlaceholder(); render(); window.scrollTo(0, 0);
+}
+function setPlaceholder() { $("#q").placeholder = state.smode === "tag" ? "태그 검색 (모든 게임)" : state.smode === "bm" ? "북마크 메모 검색 (모든 게임)" : "이름 검색 (한글·영문·중문)"; }
+
 /* ---------- bookmarks: frame + note cards under each character ---------- */
 function fmtT(t) { t = Math.max(0, +t || 0); const m = Math.floor(t / 60), x = t - m * 60; return `${m}:${x.toFixed(2).padStart(5, "0")}`; }
 function viewerHref(vid, t, title, cid) {
@@ -521,7 +587,7 @@ function bmStrip(c, list) {
   wrap.appendChild(head);
   const strip = document.createElement("div"); strip.className = "bms-list";
   [...list].sort((a, b) => (a.vid === b.vid ? a.t - b.t : String(a.at).localeCompare(String(b.at)))).forEach(bm => {
-    const card = document.createElement("div"); card.className = "bm";
+    const card = document.createElement("div"); card.className = "bm" + (state.smode === "bm" && state.q.trim() && bmHit(bm, state.q.trim().toLowerCase()) ? " hit" : "");
     const a = document.createElement("a"); a.className = "bm-th"; a.target = "_blank"; a.rel = "noopener";
     a.href = viewerHref(bm.vid, bm.t, `${c.ko} · 북마크`, c.id);
     a.setAttribute("aria-label", `${c.ko} ${fmtT(bm.t)} 북마크 프레임 뷰어로 보기`);
@@ -740,6 +806,7 @@ $("#copyCsv").onclick = () => {
 
 /* ---------- boot ---------- */
 $("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
+$("#smode").addEventListener("change", e => { state.smode = e.target.value; setPlaceholder(); render(); });
 $("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
 $("#onlyEmpty").onclick = e => { state.onlyEmpty = !state.onlyEmpty; e.currentTarget.setAttribute("aria-pressed", state.onlyEmpty); render(); };
 $("#filterBtn").onclick = () => { const f = $("#filters"); const o = !f.classList.contains("open"); f.classList.toggle("open", o); $("#filterBtn").setAttribute("aria-expanded", o); };
@@ -788,6 +855,11 @@ function useSnapshot() {
     state.bosses = m; render();
   }, () => {});
   try { const u = await claude.use("user"); if (u && u.id) state.me = await u.id(); } catch {}
+  db.collection("tags").onSnapshot(snap => {
+    const m = {};
+    snap.docs.forEach(d => { const v = d.data(); if (v && Array.isArray(v.tags) && v.tags.length) m[d.id] = v.tags.map(String); });
+    state.tags = m; refreshTagList(); render();
+  }, () => {});
   db.collection("bookmarks").onSnapshot(snap => {
     const m = {};
     snap.docs.forEach(d => { const v = d.data(); if (v && v.char && v.vid) (m[v.char] = m[v.char] || []).push({ id: d.id, ...v }); });

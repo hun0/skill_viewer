@@ -19,7 +19,7 @@
    - 없는 캐릭터는 추가(id는 `게임키-영문-소문자-하이픈`, 스타레일은 접두어 없음)
    - 이미 있던 `upcoming` 캐릭터가 출시됐으면 `upcoming` 제거
    - 브더2는 코스튬 단위, 니케·퍼니싱·브더2·에픽세븐은 `ver`가 출시 연도
-2. **현재 DB 받기** — `ArtifactData list`로 `links`(1000개씩 cursor 페이징), `bookmarks`, `thumbs`, `bosses`를 `library/snap/` 아래에 out_dir로 저장. 응답에 찍힌 version은 이후 update의 `if_version`에 써요.
+2. **현재 DB 받기** — `ArtifactData list`로 `links`(1000개씩 cursor 페이징), `bookmarks`, `thumbs`, `bosses`, `tags`를 `library/snap/` 아래에 out_dir로 저장. 응답에 찍힌 version은 이후 update의 `if_version`에 써요.
 3. **스킬 영상 찾기** — 새로 출시된 캐릭터와 아직 `(자동생성) 스킬모음` 링크가 없는 캐릭터만 대상. 사용자의 데스크톱 앱 내장 브라우저로 youtube.com 탭을 열고 페이지 안에서 `fetch('/results?search_query=...&sp=EgIQAQ%253D%253D')`의 `ytInitialData`를 파싱해 후보를 고르면 빨라요. 기준:
    - 제목에 캐릭터 이름(이격·코스튬 이름까지)이 모두 들어가야 함, 같은 이름의 다른 버전 영상이면 제외
    - 가산: skill/showcase/gameplay/combat demo/burst/스킬/시연, 25초~10분

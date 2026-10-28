@@ -49,6 +49,10 @@ snap_bms = {}
 for f in glob.glob(f"{B}/../snap/bookmarks/*.json"):
     d = json.load(open(f, encoding="utf-8"))
     if d.get("char") and d.get("vid"): snap_bms.setdefault(d["char"], []).append({"id": os.path.basename(f)[:-5], **{k: d.get(k) for k in ["vid","t","fps","note","thumb","title","at"]}})
+snap_tags = {}
+for f in glob.glob(f"{B}/../snap/tags/*.json"):
+    d = json.load(open(f, encoding="utf-8"))
+    if d.get("tags"): snap_tags[os.path.basename(f)[:-5]] = [str(t) for t in d["tags"]]
 sprites = {}
 BLOBS = json.load(open(f"{B}/../sprites/blobs.json"))
 for f in glob.glob(f"{B}/../sprites/*.json"):
@@ -57,7 +61,7 @@ for f in glob.glob(f"{B}/../sprites/*.json"):
     ids = [("" if i in m.get("bad", []) else i) for i in m["ids"]]
     sprites[g] = {"file": f"/_blob/{BLOBS[g]}", "cols": m["cols"], "rows": m["rows"], "ids": ids}
 data["sprites"] = sprites
-data["snapshot"] = {"links": snap_links, "thumbs": snap_thumbs, "bosses": snap_bosses, "bookmarks": snap_bms, "at": datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).strftime("%m월 %d일 %H:%M")}
+data["snapshot"] = {"links": snap_links, "thumbs": snap_thumbs, "bosses": snap_bosses, "bookmarks": snap_bms, "tags": snap_tags, "at": datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).strftime("%m월 %d일 %H:%M")}
 print({k: len(v["roster"]) for k, v in data.items() if k not in ("snapshot","sprites")}, "snapshot links", len(snap_links), "thumbs", len(snap_thumbs))
 
 js = (open(f"{B}/script.js", encoding="utf-8").read() + "\n" + open(f"{B}/viewer.js", encoding="utf-8").read()).replace("/*__GAME_DATA__*/", json.dumps(data, ensure_ascii=False))
