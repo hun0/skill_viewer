@@ -2665,6 +2665,45 @@
 "date": "2026-10-22",
 "code": "067902",
 "collab": false
+},
+{
+"id": "bd2-valze-night-of-betrayal",
+"ko": "발제 - 배신의 밤",
+"en": "Valze - Night of Betrayal",
+"zh": "",
+"rarity": 5,
+"attr": "",
+"role": "일반",
+"ver": "2026",
+"date": "2026-11-05",
+"collab": false,
+"upcoming": true
+},
+{
+"id": "bd2-liatris-sweet-temptation",
+"ko": "리아트리스 - 달콤한 유혹",
+"en": "Liatris - Sweet Temptation",
+"zh": "",
+"rarity": 5,
+"attr": "불",
+"role": "스페셜",
+"ver": "2026",
+"date": "2026-11-05",
+"collab": false,
+"upcoming": true
+},
+{
+"id": "bd2-venaka-cheers-to-victory",
+"ko": "베나카 - 승리의 건배",
+"en": "Venaka - Cheers to Victory",
+"zh": "",
+"rarity": 5,
+"attr": "바람",
+"role": "일반",
+"ver": "2026",
+"date": "2026-11-19",
+"collab": false,
+"upcoming": true
 }
 ]
 }
