@@ -21,10 +21,11 @@
   .stage { position: relative; width: max(50%, min(100%, calc((100dvh - 300px) * 16 / 9))); max-width: 1280px; margin: 0 auto; aspect-ratio: 16 / 9; background: #000; border-radius: 10px; overflow: hidden; }
   body.fs .stage { max-width: none; }
   #yt, #vid { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-  /* the YouTube player is three stages tall and shifted up one stage: the 16:9 picture sits exactly in the visible middle,
-     while YouTube's title bar, logo and "more videos" overlay fall into the cropped top/bottom bands */
+  /* the YouTube player is 1920x1800 and shifted up 360px: the 16:9 picture sits exactly in the visible middle,
+     while YouTube's title bar, logo and "more videos" overlay fall into the cropped top/bottom bands.
+     (kept under 2048px tall: a taller layer gets split by the compositor and shows a thin seam line across the middle) */
   /* laid out at 1920 wide so YouTube serves full-HD streams, then scaled down to the stage by fitYT() */
-  #yt { inset: auto; left: 0; top: 0; width: 1920px; height: 3240px; transform-origin: 0 0; pointer-events: none; }
+  #yt { inset: auto; left: 0; top: 0; width: 1920px; height: 1800px; transform-origin: 0 0; pointer-events: none; }
   #vid { object-fit: contain; background: #000; }
   .pad { position: absolute; inset: 0; touch-action: none; cursor: ew-resize; }
   .hud { position: absolute; left: 50%; top: 10px; transform: translateX(-50%); background: rgba(0,0,0,.7); padding: 4px 10px; border-radius: 6px; font-family: var(--mono); font-size: 13px; opacity: 0; transition: opacity .2s; pointer-events: none; }
@@ -290,7 +291,7 @@ function warmDone() {
 function fitYT() {
   const f = document.getElementById("yt"), st = $("#stage"); if (!f || !st.clientWidth) return;
   const k = st.clientWidth / 1920;
-  f.style.transform = `translateY(${-st.clientHeight}px) scale(${k})`;
+  f.style.transform = `translateY(${-360 * k}px) scale(${k})`;
 }
 window.addEventListener("resize", fitYT);
 if (window.ResizeObserver) new ResizeObserver(() => fitYT()).observe(document.getElementById("stage"));
