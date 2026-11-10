@@ -1,0 +1,176 @@
+{
+ "note": "2026-12-14 글로벌 출시 예정. 1·2차 CBT(동일률·이분법 테스트)에 공개된 플레이어블 14명이며 모두 출시 예정으로 표시해요. 속성은 나무위키, 클래스는 팬 위키 기준이라 출시 후 바뀔 수 있어요. 링크는 CBT 영상이에요.",
+ "namu": [
+  "https://namu.wiki/w/%EC%8B%A4%EB%B2%84%20%ED%8C%B0%EB%A6%AC%EC%8A%A4/%ED%94%8C%EB%A0%88%EC%9D%B4%EC%96%B4%EB%B8%94%20%EC%BA%90%EB%A6%AD%ED%84%B0"
+ ],
+ "roster": [
+  {
+   "id": "sp-cinderella",
+   "ko": "신데렐라 (애슐리)",
+   "en": "Cinderella (Ashley)",
+   "zh": "",
+   "rarity": "",
+   "attr": "연소",
+   "role": "무법자",
+   "ver": "1.0",
+   "date": "2026-12-14",
+   "upcoming": true
+  },
+  {
+   "id": "sp-red-rose",
+   "ko": "붉은 장미",
+   "en": "Red Rose",
+   "zh": "",
+   "rarity": "",
+   "attr": "연소",
+   "role": "구원자",
+   "ver": "1.0",
+   "date": "2026-12-14",
+   "upcoming": true
+  },
+  {
+   "id": "sp-alf",
+   "ko": "알프",
+   "en": "Alf",
+   "zh": "",
+   "rarity": "",
+   "attr": "연소",
+   "role": "영웅",
+   "ver": "1.0",
+   "date": "2026-12-14",
+   "upcoming": true
+  },
+  {
+   "id": "sp-gratia",
+   "ko": "그라티아",
+   "en": "Gratia",
+   "zh": "",
+   "rarity": "",
+   "attr": "응결",
+   "role": "수호자",
+   "ver": "1.0",
+   "date": "2026-12-14",
+   "upcoming": true
+  },
+  {
+   "id": "sp-argos",
+   "ko": "아르고스",
+   "en": "Argos",
+   "zh": "",
+   "rarity": "",
+   "attr": "응결",
+   "role": "목격자",
+   "ver": "1.0",
+   "date": "2026-12-14",
+   "upcoming": true
+  },
+  {
+   "id": "sp-bentham",
+   "ko": "벤담",
+   "en": "Bentham",
+   "zh": "",
+   "rarity": "",
+   "attr": "응결",
+   "role": "무법자",
+   "ver": "1.0",
+   "date": "2026-12-14",
+   "upcoming": true
+  },
+  {
+   "id": "sp-detective",
+   "ko": "탐정 (후긴/무닌)",
+   "en": "The Detective (Hugin / Munin)",
+   "zh": "",
+   "rarity": "",
+   "attr": "중력",
+   "role": "영웅",
+   "ver": "1.0",
+   "date": "2026-12-14",
+   "upcoming": true
+  },
+  {
+   "id": "sp-rex",
+   "ko": "렉스",
+   "en": "Rex",
+   "zh": "",
+   "rarity": "",
+   "attr": "전격",
+   "role": "영웅",
+   "ver": "1.0",
+   "date": "2026-12-14",
+   "upcoming": true
+  },
+  {
+   "id": "sp-grimm",
+   "ko": "그림",
+   "en": "Grimm",
+   "zh": "",
+   "rarity": "",
+   "attr": "전격",
+   "role": "목격자",
+   "ver": "1.0",
+   "date": "2026-12-14",
+   "upcoming": true
+  },
+  {
+   "id": "sp-lorin",
+   "ko": "로른",
+   "en": "Lorin",
+   "zh": "",
+   "rarity": "",
+   "attr": "전격",
+   "role": "수호자",
+   "ver": "1.0",
+   "date": "2026-12-14",
+   "upcoming": true
+  },
+  {
+   "id": "sp-firtho",
+   "ko": "퍼소",
+   "en": "Firtho",
+   "zh": "",
+   "rarity": "",
+   "attr": "방사",
+   "role": "수호자",
+   "ver": "1.0",
+   "date": "2026-12-14",
+   "upcoming": true
+  },
+  {
+   "id": "sp-captain-kaboom",
+   "ko": "덜커덩 팀장",
+   "en": "Captain Kaboom",
+   "zh": "",
+   "rarity": "",
+   "attr": "방사",
+   "role": "구원자",
+   "ver": "1.0",
+   "date": "2026-12-14",
+   "upcoming": true
+  },
+  {
+   "id": "sp-cynthia-ii",
+   "ko": "신시아 2세",
+   "en": "Cynthia II",
+   "zh": "",
+   "rarity": "",
+   "attr": "정화",
+   "role": "목격자",
+   "ver": "1.0",
+   "date": "2026-12-14",
+   "upcoming": true
+  },
+  {
+   "id": "sp-gucia",
+   "ko": "구시아",
+   "en": "Gucia",
+   "zh": "",
+   "rarity": "",
+   "attr": "정화",
+   "role": "구원자",
+   "ver": "1.0",
+   "date": "2026-12-14",
+   "upcoming": true
+  }
+ ]
+}

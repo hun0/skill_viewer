@@ -16,6 +16,7 @@ const GI18N = {
   bd2:["BD2","Brown Dust 2","棕色尘埃2","棕色尘埃2"], hi3:["Honkai 3rd","Honkai Impact 3rd","崩坏3","崩坏3"],
   dna:["DNA","Duet Night Abyss","二重螺旋","二重螺旋"], mgl:["Mongil","Mongil: STAR DIVE","Mongil","Mongil: STAR DIVE"],
   gbvs:["GBVS","Granblue Fantasy Versus: Rising","碧蓝VS","碧蓝幻想Versus：Rising"], kny:["Hinokami 2","Demon Slayer: The Hinokami Chronicles 2","火之神2","鬼灭之刃 火之神血风谭2"],
+  ap:["Azur","Azur Promilia","蓝色星原","蓝色星原：旅谣"], sp:["Silver Palace","Silver Palace","白银之城","白银之城"],
   lol:["LoL","League of Legends","英雄联盟","英雄联盟"], tft:["TFT","Teamfight Tactics · Set 18","云顶","云顶之弈 · S18"],
   val:["VALORANT","VALORANT","无畏契约","无畏契约"], "2xko":["2XKO","2XKO","2XKO","2XKO"]
 };
@@ -100,6 +101,9 @@ const DICT = {
   "마법사":["Mage","法师"], "암살자":["Assassin","刺客"], "원거리 딜러":["Marksman","射手"], "탱커":["Tank","坦克"],
   "레전더리 스킨":["Legendary skins","传说皮肤"], "특별 스킨 (고귀·초월·얼티밋)":["Special skins (Exalted · Transcendent · Ultimate)","特殊皮肤（尊贵·超凡·终极）"],
   "대지":["Earth","大地"], "난투":["Brawler","乱斗"], "암살":["Assassin","暗杀"], "파괴":["Destroyer","破坏"],
+  "땅":["Earth","地"], "무":["Neutral","无"], "폭발":["Burst","爆发"], "증폭":["Amplify","增幅"], "부여":["Enhance","赋予"], "전투 역할군":["Combat role","战斗定位"], "미공개":["Unrevealed","未公开"],
+  "연소":["Ignis","燃烧"], "응결":["Glacies","凝结"], "중력":["Gravitas","引力"], "전격":["Fulmen","电击"], "방사":["Radiatio","辐射"], "정화":["Alba","净化"],
+  "영웅":["Hero","英雄"], "수호자":["Guardian","守护者"], "무법자":["Outlaw","法外者"], "목격자":["Witness","目击者"], "구원자":["Saviour","救赎者"],
   "감시자":["Sentinel","哨卫"], "전략가":["Controller","控场"], "척후대":["Initiator","先锋"], "타격대":["Duelist","决斗"]
 };
 /* per-game notes (keyed by the exact Korean text, so an edited note falls back to Korean) */
@@ -173,6 +177,7 @@ Object.assign(DICT, {
 "全部 SSR 妮姬（含异装与联动）。ver 为国际服首次上线年份，date 为已确认的国际服卡池开始日期（仅部分）。"
 ]
 });
+Object.assign(DICT, {"2026-11-26 한국·일본·대만·중국 출시 예정(넥슨 국내 서비스). CBT와 공식 공개로 확인된 플레이어블 26명이며 모두 출시 예정으로 표시해요. 속성·전투 역할군은 나무위키 기준, 영문명은 공식 발표가 없는 경우 로마자로 적었어요. 링크는 CBT·공식 영상이에요.": ["Launches 2026-11-26 in Korea, Japan, Taiwan and China (Nexon publishes in Korea). The 26 playable characters confirmed through CBTs and official reveals, all marked upcoming. Elements and combat roles follow Namu Wiki; English names are romanized where no official name exists. Links are CBT and official videos.", "2026-11-26 于韩国、日本、台湾和中国上线（韩国由 Nexon 运营）。收录 CBT 与官方公开确认的 26 名可玩角色，均标记为即将推出。属性与战斗定位依据 Namu Wiki，没有官方英文名的角色使用罗马字。链接为 CBT 与官方视频。"], "2026-12-14 글로벌 출시 예정. 1·2차 CBT(동일률·이분법 테스트)에 공개된 플레이어블 14명이며 모두 출시 예정으로 표시해요. 속성은 나무위키, 클래스는 팬 위키 기준이라 출시 후 바뀔 수 있어요. 링크는 CBT 영상이에요.": ["Global launch on 2026-12-14. The 14 playable characters shown in the first and second CBTs (Identity and Dichotomy tests), all marked upcoming. Elements follow Namu Wiki and classes a fan wiki, so they may change at launch. Links are CBT videos.", "2026-12-14 全球上线。收录第一、二次 CBT（同一律测试、二分法测试）中公开的 14 名可玩角色，均标记为即将推出。属性依据 Namu Wiki，职业依据玩家 wiki，上线后可能变动。链接为 CBT 视频。"]});
 /* the same Korean word means something else in some games */
 const GDICT = {
   gi: { "물":["Hydro","水"], "바람":["Anemo","风"], "불":["Pyro","火"], "번개":["Electro","雷"], "얼음":["Cryo","冰"] },
@@ -183,6 +188,7 @@ const GDICT = {
   kny: { "기타":["Other","其他"] },
   val: { "역할":["Role","职能"] },
   ake: { "자연":["Nature","自然"] },
+  ap: { "파괴":["Break","破坏"], "강공":["Assault","强攻"], "나무":["Wood","木"] },
   "2xko": { "챔피언":["Champion","角色"] }
 };
 const BREATH = { "물":["Water","水"], "바람":["Wind","风"], "바위":["Stone","岩"], "뱀":["Serpent","蛇"], "번개":["Thunder","雷"], "벌레":["Insect","虫"], "사랑":["Love","恋"], "소리":["Sound","音"], "안개":["Mist","霞"], "짐승":["Beast","兽"], "해":["Sun","日"], "화염":["Flame","炎"] };
