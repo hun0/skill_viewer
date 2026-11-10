@@ -7,6 +7,7 @@
 
 ## 폴더 구성
 - `lib/script.js`, `lib/extra.css`, `lib/markup.html`, `lib/viewer.js` — 페이지 코드
+- `lib/i18n.js` — 상단 언어 전환(한국어/English/中文). 코드의 한국어 문구를 화면에서 바꿔 끼우는 층이라, 새 문구·속성·역할 값이 생기면 `DICT`(공통), `GDICT`(게임마다 뜻이 다른 단어), `RULES`(숫자·이름이 섞인 문구), `GI18N`(게임 이름)에 영어·중국어를 추가해요. 게임 노트 번역은 노트 원문 그대로를 키로 쓰므로 노트를 고치면 번역도 다시 넣어야 해요(없으면 한국어로 표시)
 - `lib/hsr_source.html` — 스타레일 로스터와 기본 CSS. 캐릭터 행 형식: `["id","한글","English",등급,"속성","운명의 길","버전"]`, 중국어 이름은 같은 파일의 `const ZH = {...}`
 - `lib/build.py` — 페이지 생성. **스타레일 출시 예정 표시는 build.py 안의 `r[6]=="4.7"` 조건**이라, 새 버전이 나오면 이 숫자를 다음 예정 버전으로 바꿔요
 - `games/<게임>.json` — 나머지 19개 게임 로스터 (`zzz ww nte e7 gi r99 pgr nikke ake bd2 hi3 dna mgl gbvs kny lol tft val 2xko`). 항목: `id, ko, en, zh, rarity, attr, role, ver`, 선택 `date`, 출시 전이면 `"upcoming": true`

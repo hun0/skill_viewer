@@ -176,3 +176,15 @@ header.top .notice { margin-top: 2px; padding: 5px 10px; font-size: 12px; }
 .fillbtn[hidden] { display: none; }
 .tools .minote { cursor: default; color: var(--muted, #888); font-size: 12.5px; }
 .tools .minote:hover { background: none; }
+
+.lang { display: inline-flex; flex: 0 0 auto; border: 1px solid var(--line); border-radius: 999px; padding: 2px; gap: 2px; background: var(--bg); }
+.lang button { font: inherit; font-size: 12px; line-height: 1; padding: 6px 10px; min-height: 28px; border: 0; border-radius: 999px; background: transparent; color: var(--muted); cursor: pointer; }
+.lang button:hover { color: var(--fg); }
+.lang button[aria-pressed="true"] { background: var(--accent); color: var(--bg); font-weight: 600; }
+.lang button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+html[lang="en"] .about summary::after { content: " · details"; }
+html[lang="zh-CN"] .about summary::after { content: " · 详情"; }
+@media (max-width: 520px) {
+  .row1 { flex-wrap: wrap !important; }
+  .row1 .search { order: -1; flex: 1 1 100% !important; }
+}

@@ -89,13 +89,11 @@ const GAMES = [
     roles:["해의 호흡","물의 호흡","화염의 호흡","번개의 호흡","짐승의 호흡","벌레의 호흡","소리의 호흡","안개의 호흡","사랑의 호흡","뱀의 호흡","바람의 호흡","바위의 호흡","혈귀술","인술","기타"] },
   { key:"lol", tab:"롤", name:"리그 오브 레전드", bili:"英雄联盟", file:"LOL", group:"year",
     attrLabel:"구분", roleLabel:"역할군",
-    groupLabel: t => /^\d{4}$/.test(t) ? `<span class="ver">${t}</span>년 출시` : `<span class="ver">${t}</span>`,
     yt: c => c.attr === "챔피언" ? `${c.en} Champion Spotlight` : `${c.en} Skin Spotlight`,
     colors:{ "챔피언":"phys","레전더리":"imag","얼티밋":"ether","초월":"quant","고귀":"fire" },
     roles:["전사","마법사","암살자","원거리 딜러","탱커","서포터"] },
   { key:"tft", tab:"TFT", name:"전략적 팀 전투 · 세트 18", bili:"云顶之弈 S18", file:"TFT", group:"ver",
     attrLabel:"코스트", roleLabel:"코스트",
-    groupLabel: t => `<span class="ver">${t}</span>코스트`,
     yt: c => `3 Star ${c.en} TFT Set 18`,
     colors:{ "1코스트":"phys","2코스트":"wind","3코스트":"ice","4코스트":"quant","5코스트":"imag" },
     roles:["1코스트","2코스트","3코스트","4코스트","5코스트"] },
@@ -184,7 +182,7 @@ function buildTabs() {
   const nav = $("#tabs");
   GAMES.forEach(g => {
     const a = document.createElement("a");
-    a.href = "#" + g.key; a.className = "tab"; a.dataset.key = g.key; a.textContent = g.tab;
+    a.href = "#" + g.key; a.className = "tab"; a.dataset.key = g.key; a.textContent = gTab(g);
     nav.appendChild(a);
   });
 }
@@ -192,14 +190,28 @@ function selectGame(key) {
   const g = GAMES.find(x => x.key === key) || GAMES[0];
   state.game = g; state.elems.clear(); state.paths.clear(); state.q = ""; $("#q").value = "";
   document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-current", t.dataset.key === g.key ? "page" : "false"));
-  $("#gname").textContent = g.name;
-  $("#gsub").textContent = `플레이어블 캐릭터 ${g.released}명` + (g.roster.length > g.released ? ` + 출시 예정 ${g.roster.length - g.released}명` : "") + ". 캐릭터마다 영상 링크를 붙여넣으면 저장됩니다.";
-  const src = $("#gsrc"); src.innerHTML = g.src; src.hidden = !g.src;
-  const gn = $("#gnote"); gn.textContent = g.note; gn.hidden = !g.note;
-  $("#elemLabel").textContent = g.attrLabel; $("#pathLabel").textContent = g.roleLabel;
+  setHeader(g);
   buildChips(); render();
   window.scrollTo(0, 0);
   const cur = document.querySelector(`.tab[data-key="${g.key}"]`); if (cur) cur.scrollIntoView({ block: "nearest", inline: "nearest" });
+}
+
+function setHeader(g) {
+  $("#gname").textContent = gName(g);
+  const up = g.roster.length - g.released;
+  $("#gsub").textContent = L(`플레이어블 캐릭터 ${g.released}명` + (up > 0 ? ` + 출시 예정 ${up}명` : "") + ". 캐릭터마다 영상 링크를 붙여넣으면 저장됩니다.",
+    `${g.released} playable characters` + (up > 0 ? ` + ${up} upcoming` : "") + ". Paste a video link on any character to save it.",
+    `可玩角色 ${g.released} 名` + (up > 0 ? ` + 即将推出 ${up} 名` : "") + "。在角色上粘贴视频链接即可保存。");
+  const src = $("#gsrc"); src.innerHTML = g.src; src.hidden = !g.src;
+  const gn = $("#gnote"); gn.textContent = g.note; gn.hidden = !g.note;
+  $("#elemLabel").textContent = g.attrLabel; $("#pathLabel").textContent = g.roleLabel;
+}
+function grpHead(g, t) {
+  const v = `<span class="ver">${esc(t)}</span>`;
+  if (g.key === "tft") return L(`${v}코스트`, `${v}-cost`, `${v}费`);
+  if (/^\d{4}$/.test(t)) return L(`${v}년 출시`, `Released in ${v}`, `${v}年推出`);
+  if (g.group === "year") return v;
+  return L(`버전 ${v}`, `Version ${v}`, `版本 ${v}`);
 }
 
 /* ---------- filters ---------- */
@@ -246,7 +258,7 @@ function filtered() {
     if (state.onlyEmpty && (state.links[c.id] || []).length) return false;
     return true;
   });
-  if (state.sort === "name") list.sort((a,b) => a.ko.localeCompare(b.ko, "ko"));
+  if (state.sort === "name") list.sort((a,b) => nm(a).localeCompare(nm(b), LANG));
   else if (state.sort === "ver-asc") list.sort(cmp);
   else list.sort((a,b) => cmp(b,a));
   return list;
@@ -265,11 +277,11 @@ function render() {
   const list = filtered();
   const q = state.q.trim().toLowerCase();
   if (crossSearch()) {
-    if (!list.length) { main.innerHTML = `<p class="nores">${state.smode === "tag" ? "이 태그" : "이 메모"}가 달린 캐릭터가 없어요.</p>`; return; }
+    if (!list.length) { main.innerHTML = `<p class="nores">${state.smode === "tag" ? "이 태그가 달린 캐릭터가 없어요." : "이 메모가 달린 캐릭터가 없어요."}</p>`; return; }
     GAMES.forEach(gg => {
       const its = list.filter(c => gameOf(c) === gg.key); if (!its.length) return;
       const sec = document.createElement("section"); sec.className = "group";
-      const h = document.createElement("h2"); h.innerHTML = `<span class="ver"></span><span class="gfill">${its.length}명</span>`; h.querySelector(".ver").textContent = gg.tab;
+      const h = document.createElement("h2"); h.innerHTML = `<span class="ver"></span><span class="gfill">${its.length}명</span>`; h.querySelector(".ver").textContent = gTab(gg);
       sec.appendChild(h);
       const box = document.createElement("div"); box.className = "list";
       its.forEach(c => box.appendChild(rowFor(c))); sec.appendChild(box); main.appendChild(sec);
@@ -296,7 +308,7 @@ function render() {
       const gf = gr.items.filter(c => (state.links[c.id]||[]).length).length;
       const up = gr.items.some(c => c.upcoming) ? '<span class="upcoming">출시 예정</span>' : "";
       const h = document.createElement("h2");
-      h.innerHTML = (g.groupLabel ? g.groupLabel(esc(gr.title)) : g.group === "year" ? `<span class="ver">${esc(gr.title)}</span>년 출시` : `버전 <span class="ver">${esc(gr.title)}</span>`) + up + `<span class="gfill">${gr.items.length}명</span>`;
+      h.innerHTML = grpHead(g, gr.title) + up + `<span class="gfill">${gr.items.length}명</span>`;
       sec.appendChild(h);
     }
     const box = document.createElement("div"); box.className = "list";
@@ -338,7 +350,7 @@ function rowFor(c) {
   const g = GAMES.find(x => x.key === gameOf(c)) || state.game;
   const items = state.links[c.id] || [];
   const row = document.createElement("div");
-  row.className = "char" + (items.length ? " done" : "");
+  row.className = "char" + (items.length ? " done" : ""); row.dataset.g = g.key;
 
   const who = document.createElement("div"); who.className = "who";
   const tags = [c.attr, c.role].filter(Boolean).map(esc).join(" · ");
@@ -347,8 +359,8 @@ function rowFor(c) {
     <div class="meta"><span>보스${c.dur ? " · " + esc(c.dur) : ""}</span><span class="en"></span></div>`
     : `<div class="name"></div>
     <div class="meta">${rarityHTML(c)}${c.moonlight ? '<span class="ml">월광</span>' : ""}<span>${tags}</span><span class="en"></span>${c.code ? `<span class="code">${esc(c.code)}</span>` : ""}</div>`;
-  who.querySelector(".name").textContent = c.ko;
-  who.querySelector(".en").textContent = c.en;
+  who.querySelector(".name").textContent = nm(c);
+  who.querySelector(".en").textContent = sub(c) || "";
   who.prepend(thumbFor(c, c.boss ? "--danger" : (g.attrVar[c.attr] || "--muted")));
   who.appendChild(tagRow(c));
 
@@ -371,20 +383,20 @@ function rowFor(c) {
     const yv = ytId(it.url);
     if (yv) {
       const pv = document.createElement("a"); pv.className = "play"; pv.target = "_blank"; pv.rel = "noopener";
-      pv.href = `${VIEWER_URL}?_=${VCB}&v=${encodeURIComponent(yv.id)}${yv.t ? "&t=" + encodeURIComponent(String(yv.t).replace(/s$/, "")) : ""}&title=${encodeURIComponent(`${c.ko} · ${lbl}`)}&c=${encodeURIComponent(c.id)}`;
+      pv.href = `${VIEWER_URL}?_=${VCB}&v=${encodeURIComponent(yv.id)}${yv.t ? "&t=" + encodeURIComponent(String(yv.t).replace(/s$/, "")) : ""}&title=${encodeURIComponent(`${nm(c)} · ${lbl}`)}&c=${encodeURIComponent(c.id)}`;
       pv.textContent = "▶"; pv.title = "프레임 뷰어로 보기";
-      pv.setAttribute("aria-label", `${c.ko} ${lbl} 프레임 뷰어로 보기`);
+      pv.setAttribute("aria-label", `${nm(c)} ${lbl} 프레임 뷰어로 보기`);
       chip.appendChild(pv);
     }
     chip.appendChild(a);
     if (app) {
       const w = document.createElement("a"); w.className = "web"; w.href = app;
-      w.textContent = "앱"; w.setAttribute("aria-label", `${c.ko} ${lbl} 앱에서 열기`);
+      w.textContent = "앱"; w.setAttribute("aria-label", `${nm(c)} ${lbl} 앱에서 열기`);
       chip.appendChild(w);
     }
     if (!state.readonly) {
       const x = document.createElement("button"); x.type = "button"; x.textContent = "×";
-      x.setAttribute("aria-label", `${c.ko} ${lbl} 삭제`);
+      x.setAttribute("aria-label", `${nm(c)} ${lbl} 삭제`);
       x.onclick = () => removeLink(c, idx);
       chip.appendChild(x);
     }
@@ -403,8 +415,8 @@ function rowFor(c) {
 
   if (!state.readonly) {
     const f = document.createElement("form"); f.className = "addform";
-    f.innerHTML = `<input type="url" id="u-${c.id}" placeholder="영상 링크 붙여넣기" aria-label="${esc(c.ko)} 영상 링크" required>
-      <input type="text" id="l-${c.id}" placeholder="라벨 (선택)" aria-label="${esc(c.ko)} 링크 라벨" maxlength="20">
+    f.innerHTML = `<input type="url" id="u-${c.id}" placeholder="영상 링크 붙여넣기" aria-label="${esc(nm(c))} 영상 링크" required>
+      <input type="text" id="l-${c.id}" placeholder="라벨 (선택)" aria-label="${esc(nm(c))} 링크 라벨" maxlength="20">
       <button class="btn primary" type="submit">추가</button>
       <span class="err" hidden></span>`;
     f.onsubmit = e => { e.preventDefault(); addLink(c, f); };
@@ -426,8 +438,8 @@ function rowFor(c) {
   if (items.length) {
     const d = document.createElement("button"); d.type = "button"; d.className = "dl";
     d.textContent = "다운로드 명령 복사";
-    d.setAttribute("aria-label", `${c.ko} 영상 다운로드 명령어 복사`);
-    d.onclick = () => copyText(dlCommand(c, items), `${c.ko}: 다운로드 명령어를 복사했어요. 터미널에 붙여넣으세요`);
+    d.setAttribute("aria-label", `${nm(c)} 영상 다운로드 명령어 복사`);
+    d.onclick = () => copyText(dlCommand(c, items), `${nm(c)}: 다운로드 명령어를 복사했어요. 터미널에 붙여넣으세요`);
     side.appendChild(d);
   }
 
@@ -461,7 +473,7 @@ async function removeBoss(c) {
     if ((state.links[c.id] || []).length) { try { await db.collection("links").doc(c.id).delete(); } catch {} }
     if (state.thumbs[c.id]) { const a = state.thumbs[c.id]; try { await db.collection("thumbs").doc(c.id).delete(); if (assets) await assets.delete(a); } catch {} }
     const n = { ...state.bosses }; delete n[c.id]; state.bosses = n; render();
-    toast(`보스 '${c.ko}' 삭제됨`);
+    toast(`보스 '${nm(c)}' 삭제됨`);
   } catch { toast("보스를 삭제하지 못했어요"); }
 }
 
@@ -473,11 +485,11 @@ function thumbFor(c, colorVar) {
   const box = document.createElement(assets ? "button" : "div");
   box.className = "thumb" + (assetId ? " has" : "");
   box.style.borderLeftColor = `var(${colorVar})`;
-  if (assets) { box.type = "button"; box.id = `t-${c.id}`; box.dataset.cid = c.id; box.setAttribute("aria-label", `${c.ko} 썸네일 ${assetId ? "바꾸기" : "넣기"}`); }
+  if (assets) { box.type = "button"; box.id = `t-${c.id}`; box.dataset.cid = c.id; box.setAttribute("aria-label", `${nm(c)} 썸네일 ${assetId ? "바꾸기" : "넣기"}`); }
   if (assetId) {
     const img = document.createElement("img");
     img.src = "/_blob/" + assetId; img.alt = ""; img.loading = "lazy"; img.decoding = "async";
-    img.onerror = () => { img.remove(); box.classList.remove("has"); box.insertAdjacentHTML("beforeend", `<span class="ph">${esc(c.ko.slice(0, 1))}</span>`); };
+    img.onerror = () => { img.remove(); box.classList.remove("has"); box.insertAdjacentHTML("beforeend", `<span class="ph">${esc(nm(c).slice(0, 1))}</span>`); };
     box.appendChild(img);
   } else if (spriteFor(c)) {
     const sp = spriteFor(c), i = document.createElement("i");
@@ -487,7 +499,7 @@ function thumbFor(c, colorVar) {
     box.classList.add("has", "sp"); box.appendChild(i);
     if (assets) box.insertAdjacentHTML("beforeend", '<span class="plus">+</span>');
   } else {
-    box.innerHTML = `<span class="ph">${esc(c.ko.slice(0, 1))}</span>${assets ? '<span class="plus">+</span>' : ""}`;
+    box.innerHTML = `<span class="ph">${esc(nm(c).slice(0, 1))}</span>${assets ? '<span class="plus">+</span>' : ""}`;
   }
   if (!assets) return box;
   if (state.armed === c.id) box.classList.add("armed");
@@ -496,7 +508,7 @@ function thumbFor(c, colorVar) {
     state.armed = c.id;
     document.querySelectorAll(".thumb.armed").forEach(t => t.classList.remove("armed"));
     box.classList.add("armed");
-    toast(`${c.ko}: Ctrl+V로 붙여넣기 · 한 번 더 누르면 파일 선택`);
+    toast(`${nm(c)}: Ctrl+V로 붙여넣기 · 한 번 더 누르면 파일 선택`);
   };
   box.ondragover = e => { e.preventDefault(); box.classList.add("drop"); };
   box.ondragleave = () => box.classList.remove("drop");
@@ -554,13 +566,13 @@ async function setThumb(c, file) {
   if (!assets || !db) return;
   const old = state.thumbs[c.id];
   try {
-    toast(`${c.ko}: 썸네일 올리는 중…`);
+    toast(`${nm(c)}: 썸네일 올리는 중…`);
     let blob = file;
     try { blob = await shrink(file); } catch {}
     const res = await assets.upload(blob, { type: blob.type || "image/png" });
     await db.collection("thumbs").doc(c.id).set({ asset: res.id, game: state.game.key, updatedAt: new Date().toISOString() });
     state.thumbs[c.id] = res.id; state.armed = null; render();
-    toast(`${c.ko}: 썸네일 저장됨`);
+    toast(`${nm(c)}: 썸네일 저장됨`);
     if (old && old !== res.id) { try { await assets.delete(old); } catch {} }
   } catch (e) {
     const code = e && e.code;
@@ -573,7 +585,7 @@ async function clearThumb(c) {
     await db.collection("thumbs").doc(c.id).delete();
     delete state.thumbs[c.id]; render();
     try { await assets.delete(old); } catch {}
-    toast(`${c.ko}: 썸네일 지움`);
+    toast(`${nm(c)}: 썸네일 지움`);
   } catch { toast("썸네일을 지우지 못했어요"); }
 }
 
@@ -589,18 +601,18 @@ function tagRow(c) {
     const b = document.createElement("button"); b.type = "button"; b.className = "tag-t"; b.textContent = t; b.title = `'${t}' 태그로 모든 게임 검색`;
     b.onclick = () => searchFor("tag", t);
     chip.appendChild(b);
-    if (editable) { const x = document.createElement("button"); x.type = "button"; x.className = "tag-x"; x.textContent = "×"; x.setAttribute("aria-label", `${c.ko} 태그 ${t} 지우기`); x.onclick = () => saveTags(c, tags.filter(v => v !== t)); chip.appendChild(x); }
+    if (editable) { const x = document.createElement("button"); x.type = "button"; x.className = "tag-x"; x.textContent = "×"; x.setAttribute("aria-label", `${nm(c)} 태그 ${t} 지우기`); x.onclick = () => saveTags(c, tags.filter(v => v !== t)); chip.appendChild(x); }
     wrap.appendChild(chip);
   });
   if (editable && state.tagEditing === c.id) {
-    const inp = document.createElement("input"); inp.type = "text"; inp.className = "tag-in"; inp.id = `tg-${c.id}`; inp.maxLength = 40; inp.setAttribute("list", "tagList"); inp.placeholder = "예: 번개, 검기"; inp.setAttribute("aria-label", `${c.ko} 태그 입력`);
+    const inp = document.createElement("input"); inp.type = "text"; inp.className = "tag-in"; inp.id = `tg-${c.id}`; inp.maxLength = 40; inp.setAttribute("list", "tagList"); inp.placeholder = "예: 번개, 검기"; inp.setAttribute("aria-label", `${nm(c)} 태그 입력`);
     const commit = () => { const vals = inp.value.split(/[,#]/).map(v => v.trim()).filter(Boolean); state.tagEditing = null; if (vals.length) saveTags(c, [...new Set([...tags, ...vals])]); else render(); };
     inp.onkeydown = e => { if (e.key === "Enter") { e.preventDefault(); commit(); } else if (e.key === "Escape") { state.tagEditing = null; render(); } };
     inp.onblur = () => setTimeout(() => { if (!inp.isConnected || state.tagEditing !== c.id || document.activeElement && document.activeElement.id === inp.id) return; if (inp.value.trim()) commit(); else { state.tagEditing = null; render(); } }, 150);
     wrap.appendChild(inp);
     setTimeout(() => { const el = document.getElementById(inp.id); if (el && document.activeElement !== el) el.focus(); }, 0);
   } else if (editable) {
-    const add = document.createElement("button"); add.type = "button"; add.className = "tag-add"; add.textContent = tags.length ? "+" : "+ 태그"; add.setAttribute("aria-label", `${c.ko} 태그 추가`);
+    const add = document.createElement("button"); add.type = "button"; add.className = "tag-add"; add.textContent = tags.length ? "+" : "+ 태그"; add.setAttribute("aria-label", `${nm(c)} 태그 추가`);
     add.onclick = () => { state.tagEditing = c.id; render(); };
     wrap.appendChild(add);
   }
@@ -634,8 +646,8 @@ function bmStrip(c, list) {
   [...list].sort((a, b) => (a.vid === b.vid ? a.t - b.t : String(a.at).localeCompare(String(b.at)))).forEach(bm => {
     const card = document.createElement("div"); card.className = "bm" + (state.smode === "bm" && state.q.trim() && bmHit(bm, state.q.trim().toLowerCase()) ? " hit" : "");
     const a = document.createElement("a"); a.className = "bm-th"; a.target = "_blank"; a.rel = "noopener";
-    a.href = viewerHref(bm.vid, bm.t, `${c.ko} · 북마크`, c.id);
-    a.setAttribute("aria-label", `${c.ko} ${fmtT(bm.t)} 북마크 프레임 뷰어로 보기`);
+    a.href = viewerHref(bm.vid, bm.t, `${nm(c)} · 북마크`, c.id);
+    a.setAttribute("aria-label", `${nm(c)} ${fmtT(bm.t)} 북마크 프레임 뷰어로 보기`);
     if (bm.thumb && /^data:image\/(jpeg|png|webp);base64,/.test(bm.thumb)) { const img = document.createElement("img"); img.src = bm.thumb; img.alt = ""; img.loading = "lazy"; a.appendChild(img); }
     else { const ph = document.createElement("span"); ph.className = "bm-ph"; ph.textContent = "▶"; a.appendChild(ph); }
     const tc = document.createElement("span"); tc.className = "bm-t"; tc.textContent = fmtT(bm.t); a.appendChild(tc);
@@ -735,14 +747,14 @@ function askChar(list) {
     info.append(t1, document.createElement("br"), t2); top.appendChild(info);
     const q = document.createElement("input"); q.type = "search"; q.placeholder = "캐릭터 이름 검색"; q.setAttribute("aria-label", "캐릭터 이름 검색");
     const res = document.createElement("div"); res.className = "ask-res";
-    const pick = async c => { if (await saveBookmark(c, it)) toast(`${c.ko}에 북마크를 올렸어요`); idx++; step(); };
+    const pick = async c => { if (await saveBookmark(c, it)) toast(`${nm(c)}에 북마크를 올렸어요`); idx++; step(); };
     const draw = () => {
       res.textContent = "";
       const term = q.value.trim().toLowerCase();
       let pool = (it.cands && it.cands.length && !term) ? it.cands : [];
       if (term) GAMES.forEach(g => [...g.roster, ...bossesOf(g)].forEach(c => { if (pool.length < 30 && matches(c, term)) pool.push(c); }));
       if (!pool.length && !term) { const p = document.createElement("p"); p.className = "ask-hint"; p.textContent = "이 영상이 연결된 캐릭터가 없어요. 이름으로 찾아 주세요."; res.appendChild(p); }
-      pool.forEach(c => { const b = document.createElement("button"); b.type = "button"; b.className = "btn"; const g = GAMES.find(x => x.key === gameOf(c)); b.textContent = `${c.ko}${g ? " · " + g.tab : ""}`; b.onclick = () => pick(c); res.appendChild(b); });
+      pool.forEach(c => { const b = document.createElement("button"); b.type = "button"; b.className = "btn"; const g = GAMES.find(x => x.key === gameOf(c)); b.textContent = `${nm(c)}${g ? " · " + gTab(g) : ""}`; b.onclick = () => pick(c); res.appendChild(b); });
     };
     q.oninput = draw;
     const skip = document.createElement("button"); skip.type = "button"; skip.className = "btn"; skip.textContent = "이 북마크 건너뛰기"; skip.onclick = () => { idx++; step(); };
@@ -796,12 +808,12 @@ async function addLink(c, form) {
   if (cur.some(x => x.url === url)) { err.textContent = "이미 추가된 링크예요"; err.hidden = false; return; }
   const next = [...cur.map(x => ({...x})), { url, label: l.value.trim() }];
   u.value = ""; l.value = "";
-  if (await saveLinks(c, next)) toast(`${c.ko}: 링크 저장됨`);
+  if (await saveLinks(c, next)) toast(`${nm(c)}: 링크 저장됨`);
 }
 
 async function removeLink(c, idx) {
   const next = (state.links[c.id] || []).filter((_, i) => i !== idx).map(x => ({...x}));
-  if (await saveLinks(c, next)) toast(`${c.ko}: 링크 삭제됨`);
+  if (await saveLinks(c, next)) toast(`${nm(c)}: 링크 삭제됨`);
 }
 
 /* ---------- download ---------- */
@@ -886,6 +898,8 @@ buildTabs();
 const fromHash = () => (location.hash || "").replace("#", "");
 window.addEventListener("hashchange", () => selectGame(fromHash()));
 selectGame(fromHash());
+document.querySelectorAll(".lang button").forEach(b => b.onclick = () => setLang(b.dataset.lang));
+setLang(LANG);
 
 function useSnapshot() {
   state.mode = "snapshot"; state.readonly = true;

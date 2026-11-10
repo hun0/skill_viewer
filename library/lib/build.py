@@ -64,7 +64,7 @@ data["sprites"] = sprites
 data["snapshot"] = {"links": snap_links, "thumbs": snap_thumbs, "bosses": snap_bosses, "bookmarks": snap_bms, "tags": snap_tags, "at": datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).strftime("%m월 %d일 %H:%M")}
 print({k: len(v["roster"]) for k, v in data.items() if k not in ("snapshot","sprites")}, "snapshot links", len(snap_links), "thumbs", len(snap_thumbs))
 
-js = (open(f"{B}/script.js", encoding="utf-8").read() + "\n" + open(f"{B}/viewer.js", encoding="utf-8").read()).replace("/*__GAME_DATA__*/", json.dumps(data, ensure_ascii=False))
+js = (open(f"{B}/i18n.js", encoding="utf-8").read() + "\n" + open(f"{B}/script.js", encoding="utf-8").read() + "\n" + open(f"{B}/viewer.js", encoding="utf-8").read()).replace("/*__GAME_DATA__*/", json.dumps(data, ensure_ascii=False))
 head = '<title>스킬 연출 라이브러리</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbit&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">\n'
 out = head + "<style>" + css + "</style>\n\n" + open(f"{B}/markup.html", encoding="utf-8").read() + "\n<script>\n" + js + "</script>\n"
 open(f"{B}/../dist/library.html", "w", encoding="utf-8").write(out)
