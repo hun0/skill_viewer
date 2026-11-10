@@ -86,7 +86,29 @@ const GAMES = [
     attrLabel:"진영", roleLabel:"호흡·술법",
     yt: c => `Hinokami Chronicles 2 ${c.en.replace(/[()&,]/g,"")} complete moveset`,
     colors:{ "귀살대":"water","혈귀":"dark","기타":"imag" },
-    roles:["해의 호흡","물의 호흡","화염의 호흡","번개의 호흡","짐승의 호흡","벌레의 호흡","소리의 호흡","안개의 호흡","사랑의 호흡","뱀의 호흡","바람의 호흡","바위의 호흡","혈귀술","인술","기타"] }
+    roles:["해의 호흡","물의 호흡","화염의 호흡","번개의 호흡","짐승의 호흡","벌레의 호흡","소리의 호흡","안개의 호흡","사랑의 호흡","뱀의 호흡","바람의 호흡","바위의 호흡","혈귀술","인술","기타"] },
+  { key:"lol", tab:"롤", name:"리그 오브 레전드", bili:"英雄联盟", file:"LOL", group:"year",
+    attrLabel:"구분", roleLabel:"역할군",
+    groupLabel: t => /^\d{4}$/.test(t) ? `<span class="ver">${t}</span>년 출시` : `<span class="ver">${t}</span>`,
+    yt: c => c.attr === "챔피언" ? `${c.en} Champion Spotlight` : `${c.en} Skin Spotlight`,
+    colors:{ "챔피언":"phys","레전더리":"imag","얼티밋":"ether","초월":"quant","고귀":"fire" },
+    roles:["전사","마법사","암살자","원거리 딜러","탱커","서포터"] },
+  { key:"tft", tab:"TFT", name:"전략적 팀 전투 · 세트 18", bili:"云顶之弈 S18", file:"TFT", group:"ver",
+    attrLabel:"코스트", roleLabel:"코스트",
+    groupLabel: t => `<span class="ver">${t}</span>코스트`,
+    yt: c => `3 Star ${c.en} TFT Set 18`,
+    colors:{ "1코스트":"phys","2코스트":"wind","3코스트":"ice","4코스트":"quant","5코스트":"imag" },
+    roles:["1코스트","2코스트","3코스트","4코스트","5코스트"] },
+  { key:"val", tab:"발로란트", name:"발로란트", bili:"无畏契约", file:"VAL", group:"year",
+    attrLabel:"역할", roleLabel:"역할",
+    yt: c => `${c.en} abilities showcase VALORANT`,
+    colors:{ "타격대":"fire","척후대":"wind","감시자":"ice","전략가":"quant" },
+    roles:["타격대","척후대","감시자","전략가"] },
+  { key:"2xko", tab:"2XKO", name:"2XKO", bili:"2XKO", file:"2XKO", group:"year",
+    attrLabel:"구분", roleLabel:"구분",
+    yt: c => `2XKO ${c.en} all supers`,
+    colors:{ "챔피언":"fire" },
+    roles:["챔피언"] }
 ].filter(g => DATA[g.key] && DATA[g.key].roster && DATA[g.key].roster.length);
 
 GAMES.forEach(g => {
@@ -274,7 +296,7 @@ function render() {
       const gf = gr.items.filter(c => (state.links[c.id]||[]).length).length;
       const up = gr.items.some(c => c.upcoming) ? '<span class="upcoming">출시 예정</span>' : "";
       const h = document.createElement("h2");
-      h.innerHTML = (g.group === "year" ? `<span class="ver">${esc(gr.title)}</span>년 출시` : `버전 <span class="ver">${esc(gr.title)}</span>`) + up + `<span class="gfill">${gr.items.length}명</span>`;
+      h.innerHTML = (g.groupLabel ? g.groupLabel(esc(gr.title)) : g.group === "year" ? `<span class="ver">${esc(gr.title)}</span>년 출시` : `버전 <span class="ver">${esc(gr.title)}</span>`) + up + `<span class="gfill">${gr.items.length}명</span>`;
       sec.appendChild(h);
     }
     const box = document.createElement("div"); box.className = "list";

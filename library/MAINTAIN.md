@@ -9,7 +9,7 @@
 - `lib/script.js`, `lib/extra.css`, `lib/markup.html`, `lib/viewer.js` — 페이지 코드
 - `lib/hsr_source.html` — 스타레일 로스터와 기본 CSS. 캐릭터 행 형식: `["id","한글","English",등급,"속성","운명의 길","버전"]`, 중국어 이름은 같은 파일의 `const ZH = {...}`
 - `lib/build.py` — 페이지 생성. **스타레일 출시 예정 표시는 build.py 안의 `r[6]=="4.7"` 조건**이라, 새 버전이 나오면 이 숫자를 다음 예정 버전으로 바꿔요
-- `games/<게임>.json` — 나머지 15개 게임 로스터 (`zzz ww nte e7 gi r99 pgr nikke ake bd2 hi3 dna mgl gbvs kny`). 항목: `id, ko, en, zh, rarity, attr, role, ver`, 선택 `date`, 출시 전이면 `"upcoming": true`
+- `games/<게임>.json` — 나머지 19개 게임 로스터 (`zzz ww nte e7 gi r99 pgr nikke ake bd2 hi3 dna mgl gbvs kny lol tft val 2xko`). 항목: `id, ko, en, zh, rarity, attr, role, ver`, 선택 `date`, 출시 전이면 `"upcoming": true`
 - `sprites/<게임>.webp` + `<게임>.json` — 나무위키 이미지로 만든 캐릭터 썸네일 시트(80px 칸, 16열). json의 `ids` 순서가 칸 순서
 - `sprites/blobs.json` — 각 시트가 아티팩트에 올라가 있는 asset id
 - `tools/transfer_grab.py` — 브라우저 결과가 너무 커서 파일로 저장됐을 때 `@@TAG@@...@@END@@` 사이 JSON을 꺼내는 도우미
@@ -19,13 +19,14 @@
    - 없는 캐릭터는 추가(id는 `게임키-영문-소문자-하이픈`, 스타레일은 접두어 없음)
    - 이미 있던 `upcoming` 캐릭터가 출시됐으면 `upcoming` 제거
    - 브더2는 코스튬 단위, 니케·퍼니싱·브더2·에픽세븐·그랑블루VS·히노카미2는 `ver`가 출시 연도
+   - 라이엇 게임: 롤은 챔피언(`ver`=출시 연도) + 주요 스킨(레전더리·고귀·초월·얼티밋, `ver`는 `레전더리 스킨` 또는 `특별 스킨 (고귀·초월·얼티밋)`, id는 `lol-<챔피언>-skin-<번호>`), TFT는 **현재 세트 유닛만**(`ver`=코스트, 새 세트가 나오면 로스터를 통째로 교체하고 `lib/script.js`의 TFT `name`·`bili`·`yt` 세트 번호도 바꿈), 발로란트는 요원(`ver`=출시 연도), 2XKO는 챔피언(`ver`=출시 연도). 라이엇 CDN은 컨테이너에서 막혀 있어서 GitHub 미러(`InFinity54/LoL_DDragon`, `noxelisdev/TFT_DDragon`·`Valorant_DDragon`·`2XKO_DDragon`)의 raw 파일로 목록과 썸네일을 받아요
    - 붕괴3rd는 발키리 슈트 단위(`ko`는 `캐릭터 - 슈트명`, 3.8 이전은 `1.x/2.x/3.x`), 히노카미2는 버전 캐릭터(무한성·학원 등)를 따로, 그랑블루VS는 EX도 따로
 2. **현재 DB 받기** — `ArtifactData list`로 `links`(1000개씩 cursor 페이징), `bookmarks`, `thumbs`, `bosses`, `tags`를 `library/snap/` 아래에 out_dir로 저장. 응답에 찍힌 version은 이후 update의 `if_version`에 써요.
 3. **스킬 영상 찾기** — 새로 출시된 캐릭터와 아직 `(자동생성) 스킬모음` 링크가 없는 캐릭터만 대상. 사용자의 데스크톱 앱 내장 브라우저로 youtube.com 탭을 열고 페이지 안에서 `fetch('/results?search_query=...&sp=EgIQAQ%253D%253D')`의 `ytInitialData`를 파싱해 후보를 고르면 빨라요. 기준:
    - 제목에 캐릭터 이름(이격·코스튬 이름까지)이 모두 들어가야 함, 같은 이름의 다른 버전 영상이면 제외
    - 가산: skill/showcase/gameplay/combat demo/burst/스킬/시연, 25초~10분
    - 감점·제외: tier/guide/review/pull/summon/banner/reaction/fan animation/뉴스·정보 유출
-   - 게임별 좋은 출처: 에픽세븐 `Pixel Flow`의 "(Skills & Voice Lines)", 엔드필드 공식 "Operator Combat Demo", 원신 공식 "Character Demo", 니케 "Burst Skill Animation"·"Motion Demonstration", 몬길 `몬 자` 채널 "~도 이해하는 {이름} 가이드"와 공식 채널 "[몬길: STAR DIVE] {칭호} - {이름}", 히노카미2 `GameBurst` "Complete Moveset"·`고네` "오의 ... 모음"·SEGA Korea "캐릭터 소개 영상", 그랑블루VS `Cygames EN` "Gameplay Trailer"와 "Super Skybound Art" 영상, 듀나어 공식 "Character Trailer", 붕괴3rd 공식 "Battlesuit Trailer"
+   - 게임별 좋은 출처: 에픽세븐 `Pixel Flow`의 "(Skills & Voice Lines)", 엔드필드 공식 "Operator Combat Demo", 원신 공식 "Character Demo", 니케 "Burst Skill Animation"·"Motion Demonstration", 몬길 `몬 자` 채널 "~도 이해하는 {이름} 가이드"와 공식 채널 "[몬길: STAR DIVE] {칭호} - {이름}", 히노카미2 `GameBurst` "Complete Moveset"·`고네` "오의 ... 모음"·SEGA Korea "캐릭터 소개 영상", 그랑블루VS `Cygames EN` "Gameplay Trailer"와 "Super Skybound Art" 영상, 듀나어 공식 "Character Trailer", 붕괴3rd 공식 "Battlesuit Trailer", 롤 "{영문} Champion Spotlight"·"{스킨} Skin Spotlight"(SkinSpotlights), TFT "3 Star {영문}", 발로란트 공식 "Agent Trailer"·"abilities showcase", 2XKO `GameBurst` "Complete Moveset"·`StixFGC` "All Supers"·공식 "Champion Spotlight" (팬 리메이크·"all supers on X" 류는 제외)
    - 공식 트레일러는 `{"label":"공식 소개"}`로 스킬모음 뒤에 넣어요
    - 브라우저를 쓸 수 없으면 WebSearch로 `site:youtube.com` 검색해서 같은 기준으로 골라요
 4. **DB 쓰기** — 링크 문서 형식 `{items:[{url,label}], game, ko, en, ver, updatedAt}`. 새 영상은 `{"label":"(자동생성) 스킬모음"}`로 items 맨 앞에 넣고 기존 항목(공식 소개 등)은 유지. 기존 문서는 `update` + `if_version`, 없는 문서는 `set`. batch는 50개씩.
