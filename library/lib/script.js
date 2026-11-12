@@ -176,7 +176,7 @@ GAMES.forEach(g => {
 
 const SNAP = DATA.snapshot || { links:{}, thumbs:{}, at:"" };
 const SPRITES = DATA.sprites || {};
-const state = { game: GAMES[0], q:"", sort:"ver-desc", onlyEmpty:false, elems:new Set(), paths:new Set(), links: SNAP.links, thumbs: SNAP.thumbs, bosses: SNAP.bosses || {}, bms: SNAP.bookmarks || {}, tags: SNAP.tags || {}, smode: "name", view: (() => { try { return localStorage.getItem("hfx-lib-view") === "grid" ? "grid" : "list"; } catch { return "list"; } })(), me: null, armed:null, mode:"loading", readonly:true };
+const state = { game: GAMES[0], q:"", sort:"ver-desc", onlyEmpty:false, elems:new Set(), paths:new Set(), links: SNAP.links, thumbs: SNAP.thumbs, bosses: SNAP.bosses || {}, bms: SNAP.bookmarks || {}, tags: SNAP.tags || {}, smode: "name", view: (() => { try { return localStorage.getItem("hfx-lib-view") === "list" ? "list" : "grid"; } catch { return "grid"; } })(), me: null, armed:null, mode:"loading", readonly:true };
 const LS_KEY = "hsr-gameplay-links-v1";
 let db = null;
 
