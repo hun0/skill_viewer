@@ -101,6 +101,13 @@
     .side .open { margin: 0; }
   }
   .hide { display: none !important; }
+  /* fullscreen (F key / ⛶): video only, controls hidden — keys and the seek bar still work */
+  body.fs .side { display: none !important; }
+  body.fs .stage { width: min(100%, calc((100dvh - 110px) * 16 / 9)); }
+  @media (min-width: 640px) and (min-aspect-ratio: 5/4) {
+    body.fs { grid-template-columns: minmax(0, 1fr); }
+    body.fs .main .stage, body.fs .main #seek { width: min(100cqw, calc((100cqh - 64px) * 16 / 9)); }
+  }
 </style>
 </head>
 <body>
