@@ -87,6 +87,16 @@ const GAMES = [
     yt: c => `${c.en.split(" / ")[0]} All Moveset Skills Skybound Arts Granblue Fantasy Relink`,
     colors:{ "기본":"fire","무료 업데이트":"wind","Endless Ragnarok":"imag" },
     roles:["기본","무료 업데이트","Endless Ragnarok"] },
+  { key:"nrt", tab:"나루토", name:"나루토 모바일", bili:"火影忍者手游", file:"NRT", group:"year",
+    attrLabel:"소속", roleLabel:"형태",
+    yt: c => `火影忍者手游 ${c.zh.replace(/["\[\]]/g," ")} 技能`,
+    colors:{ "나뭇잎 마을":"wind","아카츠키·우치하":"fire","다른 마을 카게":"light","오오츠츠키":"imag","기타":"quant" },
+    roles:["일반","예토전생","콤비"] },
+  { key:"opa", tab:"원피스 앰비션", name:"원피스 앰비션", bili:"航海王壮志雄心", file:"OPA", group:"year",
+    attrLabel:"등급", roleLabel:"등급",
+    yt: c => `航海王壮志雄心 ${c.zh.replace(/「|」/g," ")} 技能`,
+    colors:{ "빨강":"fire","금색":"imag","보라":"light","파랑":"ice","신규 추가":"wind" },
+    roles:["빨강","금색","보라","파랑","신규 추가"] },
   { key:"gg", tab:"길티기어", name:"길티기어 -스트라이브-", bili:"罪恶装备 Strive", file:"GG", group:"year",
     attrLabel:"구분", roleLabel:"구분",
     yt: c => `GGST ${c.en} overdrives`,
@@ -235,7 +245,7 @@ function esc(s) { return String(s ?? "").replace(/[&<>"]/g, ch => ({ "&":"&amp;"
 /* ---------- game switching ---------- */
 const GAME_GROUPS = [
   ["수집형 RPG", ["hsr","zzz","ww","nte","gi","hi3","r99","pgr","nikke","ake","bd2","e7","dna","mgl","gbr","ap","sp"]],
-  ["대전 격투", ["gbvs","gg","db","bb","dnf","kny","mt","2xko"]],
+  ["대전 격투", ["gbvs","gg","db","bb","dnf","kny","mt","nrt","opa","2xko"]],
   ["MOBA·슈터·기타", ["lol","tft","val","mr","sn","er"]]
 ];
 function buildTabs() {
