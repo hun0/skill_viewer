@@ -117,6 +117,7 @@ const DICT = {
   "이름 검색 (모든 게임)":["Search names (all games)","搜索名称（全部游戏）"], "속성·역할 검색 (모든 게임) 예: 불, 탱커":["Search element / role (all games), e.g. fire, tank","搜索属性·定位（全部游戏），例：火、坦克"],
   "이 속성·역할의 캐릭터가 없어요.":["No characters with this element or role.","没有该属性或定位的角色。"],
   "수집형 RPG":["Collectible RPGs","收集型 RPG"], "대전 격투":["Fighting games","格斗游戏"], "MOBA·슈터·기타":["MOBA, shooters & more","MOBA·射击·其他"], "게임 선택":["Choose game","选择游戏"],
+  "자세히":["Detailed","详细"], "간략":["Compact","简略"], "▶ 보기":["▶ Watch","▶ 观看"], "열기 ↗":["Open ↗","打开 ↗"], "자세히 (링크·북마크까지)":["Detailed (links and bookmarks)","详细（含链接与书签）"], "간략 (썸네일·정보만)":["Compact (thumbnail and info only)","简略（仅缩略图与信息）"],
   "감시자":["Sentinel","哨卫"], "전략가":["Controller","控场"], "척후대":["Initiator","先锋"], "타격대":["Duelist","决斗"]
 };
 /* per-game notes (keyed by the exact Korean text, so an edited note falls back to Korean) */

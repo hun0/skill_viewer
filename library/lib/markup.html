@@ -32,6 +32,10 @@
         <option value="ver-asc">오래된순</option>
         <option value="name">이름순</option>
       </select>
+      <div class="viewsw" role="group" aria-label="보기 방식">
+        <button type="button" data-view="list" aria-pressed="true" title="자세히 (링크·북마크까지)">자세히</button>
+        <button type="button" data-view="grid" aria-pressed="false" title="간략 (썸네일·정보만)">간략</button>
+      </div>
       <button class="btn fbtn" id="filterBtn" type="button" aria-expanded="false" aria-controls="chiprow">필터<span class="fcount" id="fcount" hidden></span></button>
       <a class="btn fillbtn" id="bmFillBtn" target="_blank" rel="noopener" hidden title="썸네일 없는 북마크를 뷰어에서 한 번에 캡처해요">썸네일 채우기</a>
       <details class="tools" id="tools">

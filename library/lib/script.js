@@ -176,7 +176,7 @@ GAMES.forEach(g => {
 
 const SNAP = DATA.snapshot || { links:{}, thumbs:{}, at:"" };
 const SPRITES = DATA.sprites || {};
-const state = { game: GAMES[0], q:"", sort:"ver-desc", onlyEmpty:false, elems:new Set(), paths:new Set(), links: SNAP.links, thumbs: SNAP.thumbs, bosses: SNAP.bosses || {}, bms: SNAP.bookmarks || {}, tags: SNAP.tags || {}, smode: "name", me: null, armed:null, mode:"loading", readonly:true };
+const state = { game: GAMES[0], q:"", sort:"ver-desc", onlyEmpty:false, elems:new Set(), paths:new Set(), links: SNAP.links, thumbs: SNAP.thumbs, bosses: SNAP.bosses || {}, bms: SNAP.bookmarks || {}, tags: SNAP.tags || {}, smode: "name", view: (() => { try { return localStorage.getItem("hfx-lib-view") === "grid" ? "grid" : "list"; } catch { return "list"; } })(), me: null, armed:null, mode:"loading", readonly:true };
 const LS_KEY = "hsr-gameplay-links-v1";
 let db = null;
 
@@ -384,8 +384,8 @@ function render() {
       const sec = document.createElement("section"); sec.className = "group";
       const h = document.createElement("h2"); h.innerHTML = `<span class="ver"></span><span class="gfill">${its.length}명</span>`; h.querySelector(".ver").textContent = gTab(gg);
       sec.appendChild(h);
-      const box = document.createElement("div"); box.className = "list";
-      its.forEach(c => box.appendChild(rowFor(c))); sec.appendChild(box); main.appendChild(sec);
+      const box = document.createElement("div"); box.className = state.view === "grid" ? "list cards" : "list";
+      its.forEach(c => box.appendChild(itemFor(c))); sec.appendChild(box); main.appendChild(sec);
     });
     return;
   }
@@ -403,6 +403,7 @@ function render() {
     if (last && last.title === t) last.items.push(c); else groups.push({ title:t, items:[c] });
   });
 
+  if (state.view === "grid" && list.length) groups.splice(0, groups.length, { title:"", items:list });
   groups.forEach(gr => {
     const sec = document.createElement("section"); sec.className = "group";
     if (gr.title) {
@@ -412,8 +413,8 @@ function render() {
       h.innerHTML = grpHead(g, gr.title) + up + `<span class="gfill">${gr.items.length}명</span>`;
       sec.appendChild(h);
     }
-    const box = document.createElement("div"); box.className = "list";
-    gr.items.forEach(c => box.appendChild(rowFor(c)));
+    const box = document.createElement("div"); box.className = state.view === "grid" ? "list cards" : "list";
+    gr.items.forEach(c => box.appendChild(itemFor(c)));
     sec.appendChild(box); main.appendChild(sec);
   });
 
@@ -422,8 +423,8 @@ function render() {
     const gf = bosses.filter(b => (state.links[b.id]||[]).length).length;
     sec.innerHTML = `<h2><span class="ver">보스 연출</span><span class="gfill">${bosses.length}</span></h2>`;
     if (bosses.length) {
-      const box = document.createElement("div"); box.className = "list";
-      bosses.forEach(b => box.appendChild(rowFor(b)));
+      const box = document.createElement("div"); box.className = state.view === "grid" ? "list cards" : "list";
+      bosses.forEach(b => box.appendChild(itemFor(b)));
       sec.appendChild(box);
     }
     if (canAddBoss) {
@@ -447,6 +448,37 @@ function rarityHTML(c) {
   return "";
 }
 
+function itemFor(c) { return state.view === "grid" ? cardFor(c) : rowFor(c); }
+/* compact card: thumbnail, name, element/role and a play button for the first video; no bookmarks */
+function cardFor(c) {
+  const g = GAMES.find(x => x.key === gameOf(c)) || state.game;
+  const items = state.links[c.id] || [];
+  const card = document.createElement("div");
+  card.className = "card" + (items.length ? " done" : "") + (c.upcoming ? " up" : ""); card.dataset.g = g.key;
+  const th = thumbFor(c, c.boss ? "--danger" : (g.attrVar[c.attr] || "--muted"));
+  th.style.borderBottomColor = th.style.borderLeftColor; card.appendChild(th);
+  const body = document.createElement("div"); body.className = "cbody";
+  const tags = c.boss ? "보스" : [...new Set([c.attr, c.role].filter(Boolean))].map(esc).join(" · ");
+  body.innerHTML = `<div class="name"></div><div class="en"></div><div class="meta">${c.boss ? "" : rarityHTML(c)}<span>${tags}</span></div><div class="cfoot"></div>`;
+  body.querySelector(".name").textContent = nm(c);
+  body.querySelector(".en").textContent = sub(c) || "";
+  const foot = body.querySelector(".cfoot");
+  const first = items.map(it => ({ it, yv: ytId(it.url) })).find(x => x.yv);
+  if (first) {
+    const lbl = first.it.label || "영상 1";
+    const pv = document.createElement("a"); pv.className = "cplay"; pv.target = "_blank"; pv.rel = "noopener";
+    pv.href = `${VIEWER_URL}?_=${VCB}&v=${encodeURIComponent(first.yv.id)}${first.yv.t ? "&t=" + encodeURIComponent(String(first.yv.t).replace(/s$/, "")) : ""}&title=${encodeURIComponent(`${nm(c)} · ${lbl}`)}&c=${encodeURIComponent(c.id)}`;
+    pv.textContent = "▶ 보기"; pv.title = "프레임 뷰어로 보기";
+    foot.appendChild(pv);
+  } else if (items.length) {
+    const a = document.createElement("a"); a.className = "cplay"; a.href = items[0].url; a.target = "_blank"; a.rel = "noopener"; a.textContent = "열기 ↗"; foot.appendChild(a);
+  } else {
+    const e = document.createElement("span"); e.className = "empty-hint"; e.textContent = c.upcoming ? "출시 후 추가" : "아직 링크 없음"; foot.appendChild(e);
+  }
+  if (items.length > 1) { const n = document.createElement("span"); n.className = "cnum"; n.textContent = `+${items.length - 1}`; foot.appendChild(n); }
+  card.appendChild(body);
+  return card;
+}
 function rowFor(c) {
   const g = GAMES.find(x => x.key === gameOf(c)) || state.game;
   const items = state.links[c.id] || [];
@@ -1020,6 +1052,12 @@ const fromHash = () => (location.hash || "").replace("#", "");
 window.addEventListener("hashchange", () => selectGame(fromHash()));
 selectGame(fromHash());
 document.querySelectorAll(".lang button").forEach(b => b.onclick = () => setLang(b.dataset.lang));
+function setView(v) {
+  state.view = v; try { localStorage.setItem("hfx-lib-view", v); } catch {}
+  document.querySelectorAll(".viewsw button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.view === v)));
+  render();
+}
+document.querySelectorAll(".viewsw button").forEach(b => { b.onclick = () => setView(b.dataset.view); b.setAttribute("aria-pressed", String(b.dataset.view === state.view)); });
 setLang(LANG);
 
 function useSnapshot() {
