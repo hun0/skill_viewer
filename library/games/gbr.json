@@ -1,0 +1,291 @@
+{
+ "note": "그랑블루 판타지 리링크 플레이어블 26명(본편 19명 + 무료 업데이트 3명 + 「Endless Ragnarok」 4명). 주인공은 그랑/지타를 한 칸으로 묶었어요. 링크는 대부분 'All Moveset, Skills & Skybound Arts' 영상이에요. 썸네일은 나무위키 아이콘이에요.",
+ "roster": [
+  {
+   "id": "gbr-captain",
+   "ko": "그랑 / 지타",
+   "en": "Gran / Djeeta",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-99"
+  },
+  {
+   "id": "gbr-katalina",
+   "ko": "카타리나",
+   "en": "Katalina",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-98"
+  },
+  {
+   "id": "gbr-rackam",
+   "ko": "라캄",
+   "en": "Rackam",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-97"
+  },
+  {
+   "id": "gbr-io",
+   "ko": "이오",
+   "en": "Io",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-96"
+  },
+  {
+   "id": "gbr-eugen",
+   "ko": "오이겐",
+   "en": "Eugen",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-95"
+  },
+  {
+   "id": "gbr-rosetta",
+   "ko": "로제타",
+   "en": "Rosetta",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-94"
+  },
+  {
+   "id": "gbr-lancelot",
+   "ko": "랜슬롯",
+   "en": "Lancelot",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-93"
+  },
+  {
+   "id": "gbr-vane",
+   "ko": "베인",
+   "en": "Vane",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-92"
+  },
+  {
+   "id": "gbr-percival",
+   "ko": "퍼시벌",
+   "en": "Percival",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-91"
+  },
+  {
+   "id": "gbr-siegfried",
+   "ko": "지크프리트",
+   "en": "Siegfried",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-90"
+  },
+  {
+   "id": "gbr-charlotta",
+   "ko": "샤를로테",
+   "en": "Charlotta",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-89"
+  },
+  {
+   "id": "gbr-yodarha",
+   "ko": "요달라하",
+   "en": "Yodarha",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-88"
+  },
+  {
+   "id": "gbr-narmaya",
+   "ko": "나루메아",
+   "en": "Narmaya",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-87"
+  },
+  {
+   "id": "gbr-zeta",
+   "ko": "제타",
+   "en": "Zeta",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-86"
+  },
+  {
+   "id": "gbr-vaseraga",
+   "ko": "바자라가",
+   "en": "Vaseraga",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-85"
+  },
+  {
+   "id": "gbr-ferry",
+   "ko": "페리",
+   "en": "Ferry",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-84"
+  },
+  {
+   "id": "gbr-ghandagoza",
+   "ko": "간다고우자",
+   "en": "Ghandagoza",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-83"
+  },
+  {
+   "id": "gbr-cagliostro",
+   "ko": "칼리오스트로",
+   "en": "Cagliostro",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-82"
+  },
+  {
+   "id": "gbr-id",
+   "ko": "이드",
+   "en": "Id",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-81"
+  },
+  {
+   "id": "gbr-seofon",
+   "ko": "시에테",
+   "en": "Seofon",
+   "zh": "",
+   "rarity": "",
+   "attr": "무료 업데이트",
+   "role": "무료 업데이트",
+   "ver": "무료 업데이트",
+   "date": "1-80"
+  },
+  {
+   "id": "gbr-tweyen",
+   "ko": "송",
+   "en": "Tweyen",
+   "zh": "",
+   "rarity": "",
+   "attr": "무료 업데이트",
+   "role": "무료 업데이트",
+   "ver": "무료 업데이트",
+   "date": "1-79"
+  },
+  {
+   "id": "gbr-sandalphon",
+   "ko": "산달폰",
+   "en": "Sandalphon",
+   "zh": "",
+   "rarity": "",
+   "attr": "무료 업데이트",
+   "role": "무료 업데이트",
+   "ver": "무료 업데이트",
+   "date": "1-78"
+  },
+  {
+   "id": "gbr-beatrix",
+   "ko": "베아트릭스",
+   "en": "Beatrix",
+   "zh": "",
+   "rarity": "",
+   "attr": "Endless Ragnarok",
+   "role": "Endless Ragnarok",
+   "ver": "Endless Ragnarok",
+   "date": "2-77"
+  },
+  {
+   "id": "gbr-eustace",
+   "ko": "유스테스",
+   "en": "Eustace",
+   "zh": "",
+   "rarity": "",
+   "attr": "Endless Ragnarok",
+   "role": "Endless Ragnarok",
+   "ver": "Endless Ragnarok",
+   "date": "2-76"
+  },
+  {
+   "id": "gbr-fraux",
+   "ko": "프라우",
+   "en": "Fraux",
+   "zh": "",
+   "rarity": "",
+   "attr": "Endless Ragnarok",
+   "role": "Endless Ragnarok",
+   "ver": "Endless Ragnarok",
+   "date": "2-75"
+  },
+  {
+   "id": "gbr-fediel",
+   "ko": "페디엘",
+   "en": "Fediel",
+   "zh": "",
+   "rarity": "",
+   "attr": "Endless Ragnarok",
+   "role": "Endless Ragnarok",
+   "ver": "Endless Ragnarok",
+   "date": "2-74"
+  }
+ ]
+}
