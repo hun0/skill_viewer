@@ -21,6 +21,8 @@
     <div class="row1">
       <select id="smode" aria-label="검색 기준">
         <option value="name">이름</option>
+        <option value="all">이름 (전체)</option>
+        <option value="attr">속성·역할 (전체)</option>
         <option value="tag">태그</option>
         <option value="bm">북마크</option>
       </select>
@@ -41,6 +43,7 @@
         </div>
       </details>
     </div>
+    <div class="chips aq" id="attrQuick" aria-label="속성 바로 찾기" hidden></div>
     <div class="chiprow" id="chiprow">
       <div class="chips" id="elemChips" aria-label="속성 필터"><span class="flabel" id="elemLabel">속성</span></div>
       <div class="chips" id="pathChips" aria-label="역할 필터"><span class="flabel" id="pathLabel">역할</span></div>

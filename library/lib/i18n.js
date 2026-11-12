@@ -112,6 +112,9 @@ const DICT = {
   "스킬 딜러":["Mage","法师"], "원거리 딜러":["Ranged","射手"],
   "공식 실험체 백과사전":["Official character encyclopedia","官方实验体百科"], "궁극기 (공식 GIF)":["Ultimate (official GIF)","大招（官方GIF）"],
   "시즌 1":["Season 1","第一季"], "시즌 2":["Season 2","第二季"], "시즌 3":["Season 3","第三季"], "시즌 4":["Season 4","第四季"], "시즌 5":["Season 5","第五季"], "파이터즈 패스 1":["FighterZ Pass 1","FighterZ 通行证 1"], "파이터즈 패스 2":["FighterZ Pass 2","FighterZ 通行证 2"], "파이터즈 패스 3":["FighterZ Pass 3","FighterZ 通行证 3"], "추가 DLC":["Extra DLC","追加 DLC"], "첫 참전":["Debut","初登场"], "캘러미티 트리거":["Calamity Trigger","刻之幻影 CT"], "컨티뉴엄 시프트":["Continuum Shift","CS"], "크로노판타즈마":["Chronophantasma","CP"], "센트럴픽션":["Central Fiction","CF"],
+  "이름 (전체)":["Name (all games)","名称（全部游戏）"], "속성·역할 (전체)":["Element / role (all games)","属性·定位（全部游戏）"],
+  "이름 검색 (모든 게임)":["Search names (all games)","搜索名称（全部游戏）"], "속성·역할 검색 (모든 게임) 예: 불, 탱커":["Search element / role (all games), e.g. fire, tank","搜索属性·定位（全部游戏），例：火、坦克"],
+  "이 속성·역할의 캐릭터가 없어요.":["No characters with this element or role.","没有该属性或定位的角色。"],
   "감시자":["Sentinel","哨卫"], "전략가":["Controller","控场"], "척후대":["Initiator","先锋"], "타격대":["Duelist","决斗"]
 };
 /* per-game notes (keyed by the exact Korean text, so an edited note falls back to Korean) */

@@ -293,9 +293,43 @@ function matches(c, q) {
 function tagHit(c, q) { return (state.tags[c.id] || []).some(t => t.toLowerCase().includes(q)); }
 function bmHit(bm, q) { return [bm.note, bm.title].some(v => v && String(v).toLowerCase().includes(q)); }
 function crossSearch() { return state.smode !== "name" && !!state.q.trim(); }
+/* element search across games: every game's own word for an element maps to one group */
+const ELEM_GROUPS = [
+  { k:"불", c:"fire", w:["불","화염","연소","용융","작열","열기","화","fire","pyro","ignis","fusion","heat","火","炎","燃烧","热熔","灼热"] },
+  { k:"얼음", c:"ice", w:["얼음","냉기","서리","응결","빙결","ice","cryo","glacio","glacies","frost","冰","冷凝","寒冷","烈霜","凝结"] },
+  { k:"번개", c:"light", w:["번개","전기","전격","전도","뇌전","lightning","electro","electric","thunder","fulmen","雷","电","导电","电击"] },
+  { k:"바람", c:"wind", w:["바람","기류","풍압","wind","anemo","aero","风","气动","风压"] },
+  { k:"물", c:"water", w:["물","수냉","water","hydro","水","水冷"] },
+  { k:"땅", c:"phys", w:["땅","바위","흙","대지","earth","geo","stone","岩","土","地"] },
+  { k:"풀", c:"wood", w:["풀","나무","자연","dendro","wood","plant","nature","草","木"] },
+  { k:"빛", c:"light", w:["빛","광","회절","light","spectro","光","衍射"] },
+  { k:"어둠", c:"dark", w:["어둠","암","암흑","인멸","dark","havoc","暗","湮灭"] },
+  { k:"물리", c:"phys", w:["물리","physical","物理"] },
+  { k:"양자", c:"quant", w:["양자","quantum","量子"] },
+  { k:"허수", c:"imag", w:["허수","imaginary","虚数"] },
+  { k:"에테르", c:"ether", w:["에테르","ether","以太"] }
+];
+const ELEM_OF = {};
+ELEM_GROUPS.forEach(g => g.w.forEach(w => { ELEM_OF[w.toLowerCase()] = g.k; }));
+/* the same word means something else in a few games */
+const ELEM_GAME = { r99:{ "나무":null }, kny:{} };
+function elemOf(gk, v) {
+  if (!v) return null;
+  const base = String(v).replace(/의 호흡$/, "").toLowerCase();
+  const o = ELEM_GAME[gk];
+  if (o && base in o) return o[base];
+  return ELEM_OF[base] || null;
+}
+function attrHit(c, q) {
+  const gk = gameOf(c);
+  const want = ELEM_OF[q];
+  if (want) return [c.attr, c.role].some(v => elemOf(gk, v) === want);
+  return [c.attr, c.role].some(v => v && (String(v).toLowerCase() === q || (q.length > 1 && String(v).toLowerCase().includes(q)) || tr(String(v), gk).toLowerCase() === q));
+}
 function searchHit(c, q) {
   if (state.smode === "tag") return tagHit(c, q);
   if (state.smode === "bm") return (state.bms[c.id] || []).some(b => bmHit(b, q));
+  if (state.smode === "attr") return attrHit(c, q);
   return matches(c, q);
 }
 function filtered() {
@@ -327,7 +361,8 @@ function render() {
   const list = filtered();
   const q = state.q.trim().toLowerCase();
   if (crossSearch()) {
-    if (!list.length) { main.innerHTML = `<p class="nores">${state.smode === "tag" ? "이 태그가 달린 캐릭터가 없어요." : "이 메모가 달린 캐릭터가 없어요."}</p>`; return; }
+    if (!list.length) { main.innerHTML = `<p class="nores">${state.smode === "tag" ? "이 태그가 달린 캐릭터가 없어요." : state.smode === "bm" ? "이 메모가 달린 캐릭터가 없어요." : state.smode === "attr" ? "이 속성·역할의 캐릭터가 없어요." : "조건에 맞는 캐릭터가 없어요."}</p>`; return; }
+    const tot = document.createElement("p"); tot.className = "xsum"; tot.textContent = L(`모든 게임에서 ${list.length}명`, `${list.length} across all games`, `全部游戏共 ${list.length} 名`); main.appendChild(tot);
     GAMES.forEach(gg => {
       const its = list.filter(c => gameOf(c) === gg.key); if (!its.length) return;
       const sec = document.createElement("section"); sec.className = "group";
@@ -681,7 +716,26 @@ async function saveTags(c, next) {
 function searchFor(mode, text) {
   state.smode = mode; $("#smode").value = mode; state.q = text; $("#q").value = text; setPlaceholder(); render(); window.scrollTo(0, 0);
 }
-function setPlaceholder() { $("#q").placeholder = state.smode === "tag" ? "태그 검색 (모든 게임)" : state.smode === "bm" ? "북마크 메모 검색 (모든 게임)" : "이름 검색 (한글·영문·중문)"; }
+function setPlaceholder() {
+  $("#q").placeholder = state.smode === "tag" ? "태그 검색 (모든 게임)" : state.smode === "bm" ? "북마크 메모 검색 (모든 게임)" : state.smode === "all" ? "이름 검색 (모든 게임)" : state.smode === "attr" ? "속성·역할 검색 (모든 게임) 예: 불, 탱커" : "이름 검색 (한글·영문·중문)";
+  buildAttrQuick();
+  $("#chiprow").classList.toggle("xhide", state.smode !== "name");
+}
+function buildAttrQuick() {
+  const box = $("#attrQuick"); if (!box) return;
+  box.hidden = state.smode !== "attr";
+  if (box.hidden) return;
+  const cur = state.q.trim().toLowerCase();
+  box.textContent = "";
+  ELEM_GROUPS.forEach(g => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.setAttribute("aria-pressed", String(ELEM_OF[cur] === g.k));
+    b.innerHTML = `<span class="dot" style="background:var(${COLORS[g.c]})"></span>`;
+    b.appendChild(document.createTextNode(g.k));
+    b.onclick = () => { state.q = ELEM_OF[cur] === g.k ? "" : g.k; $("#q").value = state.q; buildAttrQuick(); render(); };
+    box.appendChild(b);
+  });
+}
 
 /* ---------- bookmarks: frame + note cards under each character ---------- */
 function fmtT(t) { t = Math.max(0, +t || 0); const m = Math.floor(t / 60), x = t - m * 60; return `${m}:${x.toFixed(2).padStart(5, "0")}`; }
@@ -938,6 +992,7 @@ function hScroll(el) {
 hScroll($("#tabs")); hScroll($("#chiprow"));
 $("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
 $("#smode").addEventListener("change", e => { state.smode = e.target.value; setPlaceholder(); render(); });
+$("#q").addEventListener("input", () => { if (state.smode === "attr") buildAttrQuick(); });
 $("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
 $("#onlyEmpty").onclick = e => { state.onlyEmpty = !state.onlyEmpty; e.currentTarget.setAttribute("aria-pressed", state.onlyEmpty); render(); };
 $("#filterBtn").onclick = () => { const f = $("#filters"); const o = !f.classList.contains("open"); f.classList.toggle("open", o); $("#filterBtn").setAttribute("aria-expanded", o); };

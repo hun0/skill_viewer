@@ -188,3 +188,9 @@ html[lang="zh-CN"] .about summary::after { content: " · 详情"; }
   .row1 { flex-wrap: wrap !important; }
   .row1 .search { order: -1; flex: 1 1 100% !important; }
 }
+
+.aq { padding: 6px 0 2px; gap: 6px; flex-wrap: wrap; }
+.aq[hidden] { display: none; }
+.aq .chip { white-space: nowrap; }
+.xsum { margin: 4px 0 10px; color: var(--muted); font-size: 13px; }
+.chiprow.xhide #elemChips, .chiprow.xhide #pathChips { display: none !important; }
