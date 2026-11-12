@@ -1,0 +1,236 @@
+{
+ "note": "DNF 듀얼 플레이어블 21명(출시 로스터 17명 + DLC). 썸네일은 Dustloop 위키 아이콘이에요.",
+ "roster": [
+  {
+   "id": "dnf-berserker",
+   "ko": "버서커",
+   "en": "Berserker",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-99"
+  },
+  {
+   "id": "dnf-inquisitor",
+   "ko": "이단심판관",
+   "en": "Inquisitor",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-98"
+  },
+  {
+   "id": "dnf-grappler",
+   "ko": "그래플러",
+   "en": "Grappler",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-97"
+  },
+  {
+   "id": "dnf-striker",
+   "ko": "스트라이커",
+   "en": "Striker",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-96"
+  },
+  {
+   "id": "dnf-ranger",
+   "ko": "레인저",
+   "en": "Ranger",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-95"
+  },
+  {
+   "id": "dnf-launcher",
+   "ko": "런처",
+   "en": "Launcher",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-94"
+  },
+  {
+   "id": "dnf-dragon-knight",
+   "ko": "드래곤나이트",
+   "en": "Dragon Knight",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-93"
+  },
+  {
+   "id": "dnf-vanguard",
+   "ko": "뱅가드",
+   "en": "Vanguard",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-92"
+  },
+  {
+   "id": "dnf-crusader",
+   "ko": "크루세이더",
+   "en": "Crusader",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-91"
+  },
+  {
+   "id": "dnf-kunoichi",
+   "ko": "쿠노이치",
+   "en": "Kunoichi",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-90"
+  },
+  {
+   "id": "dnf-hitman",
+   "ko": "히트맨",
+   "en": "Hitman",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-89"
+  },
+  {
+   "id": "dnf-troubleshooter",
+   "ko": "트러블 슈터",
+   "en": "Troubleshooter",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-88"
+  },
+  {
+   "id": "dnf-enchantress",
+   "ko": "인챈트리스",
+   "en": "Enchantress",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-87"
+  },
+  {
+   "id": "dnf-ghostblade",
+   "ko": "검귀",
+   "en": "Ghostblade",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-86"
+  },
+  {
+   "id": "dnf-swift-master",
+   "ko": "스위프트 마스터",
+   "en": "Swift Master",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-85"
+  },
+  {
+   "id": "dnf-monk",
+   "ko": "인파이터",
+   "en": "Monk",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-84"
+  },
+  {
+   "id": "dnf-lost-warrior",
+   "ko": "길잃은 전사",
+   "en": "Lost Warrior",
+   "zh": "",
+   "rarity": "",
+   "attr": "기본",
+   "role": "기본",
+   "ver": "기본",
+   "date": "0-83"
+  },
+  {
+   "id": "dnf-battle-mage",
+   "ko": "배틀메이지",
+   "en": "Battle Mage",
+   "zh": "",
+   "rarity": "",
+   "attr": "DLC",
+   "role": "DLC",
+   "ver": "DLC",
+   "date": "1-82"
+  },
+  {
+   "id": "dnf-brawler",
+   "ko": "스트리트 파이터",
+   "en": "Brawler",
+   "zh": "",
+   "rarity": "",
+   "attr": "DLC",
+   "role": "DLC",
+   "ver": "DLC",
+   "date": "1-81"
+  },
+  {
+   "id": "dnf-nen-master",
+   "ko": "넨마스터",
+   "en": "Nen Master",
+   "zh": "",
+   "rarity": "",
+   "attr": "DLC",
+   "role": "DLC",
+   "ver": "DLC",
+   "date": "1-80"
+  },
+  {
+   "id": "dnf-spectre",
+   "ko": "블레이드",
+   "en": "Spectre",
+   "zh": "",
+   "rarity": "",
+   "attr": "DLC",
+   "role": "DLC",
+   "ver": "DLC",
+   "date": "1-79"
+  }
+ ]
+}

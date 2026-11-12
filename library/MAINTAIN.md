@@ -10,7 +10,7 @@
 - `lib/i18n.js` — 상단 언어 전환(한국어/English/中文). 코드의 한국어 문구를 화면에서 바꿔 끼우는 층이라, 새 문구·속성·역할 값이 생기면 `DICT`(공통), `GDICT`(게임마다 뜻이 다른 단어), `RULES`(숫자·이름이 섞인 문구), `GI18N`(게임 이름)에 영어·중국어를 추가해요. 게임 노트 번역은 노트 원문 그대로를 키로 쓰므로 노트를 고치면 번역도 다시 넣어야 해요(없으면 한국어로 표시)
 - `lib/hsr_source.html` — 스타레일 로스터와 기본 CSS. 캐릭터 행 형식: `["id","한글","English",등급,"속성","운명의 길","버전"]`, 중국어 이름은 같은 파일의 `const ZH = {...}`
 - `lib/build.py` — 페이지 생성. **스타레일 출시 예정 표시는 build.py 안의 `r[6]=="4.7"` 조건**이라, 새 버전이 나오면 이 숫자를 다음 예정 버전으로 바꿔요
-- `games/<게임>.json` — 나머지 25개 게임 로스터 (`zzz ww nte e7 gi r99 pgr nikke ake bd2 hi3 dna mgl gbvs kny ap sp mt mr sn er lol tft val 2xko`). 항목: `id, ko, en, zh, rarity, attr, role, ver`, 선택 `date`, 출시 전이면 `"upcoming": true`
+- `games/<게임>.json` — 나머지 29개 게임 로스터 (`zzz ww nte e7 gi r99 pgr nikke ake bd2 hi3 dna mgl gbvs gg db bb dnf kny ap sp mt mr sn er lol tft val 2xko`). 항목: `id, ko, en, zh, rarity, attr, role, ver`, 선택 `date`, 출시 전이면 `"upcoming": true`
 - `sprites/<게임>.webp` + `<게임>.json` — 나무위키 이미지로 만든 캐릭터 썸네일 시트(80px 칸, 16열). json의 `ids` 순서가 칸 순서
 - `sprites/blobs.json` — 각 시트가 아티팩트에 올라가 있는 asset id
 - `tools/transfer_grab.py` — 브라우저 결과가 너무 커서 파일로 저장됐을 때 `@@TAG@@...@@END@@` 사이 JSON을 꺼내는 도우미
@@ -23,6 +23,7 @@
    - 라이엇 게임: 롤은 챔피언(`ver`=출시 연도) + 주요 스킨(레전더리·고귀·초월·얼티밋, `ver`는 `레전더리 스킨` 또는 `특별 스킨 (고귀·초월·얼티밋)`, id는 `lol-<챔피언>-skin-<번호>`), TFT는 **현재 세트 유닛만**(`ver`=코스트, 새 세트가 나오면 로스터를 통째로 교체하고 `lib/script.js`의 TFT `name`·`bili`·`yt` 세트 번호도 바꿈), 발로란트는 요원(`ver`=출시 연도), 2XKO는 챔피언(`ver`=출시 연도). 라이엇 CDN은 컨테이너에서 막혀 있어서 GitHub 미러(`InFinity54/LoL_DDragon`, `noxelisdev/TFT_DDragon`·`Valorant_DDragon`·`2XKO_DDragon`)의 raw 파일로 목록과 썸네일을 받아요
    - 아주르 프로밀리아(`ap`, 2026-11-26 출시)·실버 팰리스(`sp`, 2026-12-14 출시)는 CBT 기준으로 전원 `upcoming`, `ver` 1.0으로 넣어 둠. 출시되면 `upcoming`을 지우고, CBT 영상(아주르는 유튜버 '조슈' 모션 영상, 실버 팰리스는 'delumi1' Gameplay 위주)을 출시 버전 스킬 영상으로 교체하고, 속성·클래스(실버 팰리스 클래스는 팬 위키 기준)와 영문명(아주르는 일부 로마자 표기)을 공식 값으로 고쳐요
    - 마블 투혼(`mt`)은 팀별, 마블 라이벌즈(`mr`)·스트리노바(`sn`)·이터널 리턴(`er`)은 역할별로 묶음(`ver`에 역할 이름, `date`로 묶음 순서). 데이터 출처: 이터널 리턴은 `pypy-vrc/er-gamedata`(Character·CharacterMastery·CharacterSkillVideos, 공식 궁극기 GIF 포함)와 썸네일 `EternalReturnInfo/EternalReuturnInfo` 드로어블(#1~#68만 있음), 스트리노바는 `Celest151/StrinovaData`(Localization·RolePlayerProfile), 마블 라이벌즈는 `anthonyturner/rivals-pulse-web`(official heroes json·hero 이미지). 마블 투혼 썸네일과 이터널 리턴 #69~#91 썸네일은 나무위키 이미지를 Claude in Chrome 화면 캡처(zoom save_to_disk)로 받아 만듦(토르·사이클롭스는 공식 트레일러 썸네일 크롭, 베놈·주빌리는 없음). 스트리노바 시엘/노라의 프로필 이미지(126/130)는 추정 매칭
+   - 아크 시스템웍스 격투 게임 길티기어 스트라이브(`gg`, 시즌별)·드래곤볼 파이터즈(`db`, 패스별)·블레이블루 센트럴픽션(`bb`, 첫 참전작별)·DNF 듀얼(`dnf`)의 썸네일은 Dustloop 위키(`/w/GGST`·`DBFZ`·`BBCF`·`DNFD` 페이지의 `*_Icon.png`)를 Chrome에서 캔버스로 모아 화면 캡처해 만듦. 영상 자동 검색 품질이 들쭉날쭉해서 다른 작품(Xrd·스파킹 제로 등) 영상은 걸러 냈고, 여러 캐릭터에 똑같이 걸린 영상은 넣지 않음
    - 붕괴3rd는 발키리 슈트 단위(`ko`는 `캐릭터 - 슈트명`, 3.8 이전은 `1.x/2.x/3.x`), 히노카미2는 버전 캐릭터(무한성·학원 등)를 따로, 그랑블루VS는 EX도 따로
 2. **현재 DB 받기** — `ArtifactData list`로 `links`(1000개씩 cursor 페이징), `bookmarks`, `thumbs`, `bosses`, `tags`를 `library/snap/` 아래에 out_dir로 저장. 응답에 찍힌 version은 이후 update의 `if_version`에 써요.
 3. **스킬 영상 찾기** — 새로 출시된 캐릭터와 아직 `(자동생성) 스킬모음` 링크가 없는 캐릭터만 대상. 사용자의 데스크톱 앱 내장 브라우저로 youtube.com 탭을 열고 페이지 안에서 `fetch('/results?search_query=...&sp=EgIQAQ%253D%253D')`의 `ytInitialData`를 파싱해 후보를 고르면 빨라요. 기준:
