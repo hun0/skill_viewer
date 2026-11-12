@@ -194,3 +194,5 @@ html[lang="zh-CN"] .about summary::after { content: " · 详情"; }
 .aq .chip { white-space: nowrap; }
 .xsum { margin: 4px 0 10px; color: var(--muted); font-size: 13px; }
 .chiprow.xhide #elemChips, .chiprow.xhide #pathChips { display: none !important; }
+#gameSel { flex: none; max-width: 240px; font-weight: 600; }
+@media (max-width: 720px) { .row1 #gameSel { max-width: 150px; font-size: 13px; } }

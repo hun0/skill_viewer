@@ -116,6 +116,7 @@ const DICT = {
   "이름 (전체)":["Name (all games)","名称（全部游戏）"], "속성·역할 (전체)":["Element / role (all games)","属性·定位（全部游戏）"],
   "이름 검색 (모든 게임)":["Search names (all games)","搜索名称（全部游戏）"], "속성·역할 검색 (모든 게임) 예: 불, 탱커":["Search element / role (all games), e.g. fire, tank","搜索属性·定位（全部游戏），例：火、坦克"],
   "이 속성·역할의 캐릭터가 없어요.":["No characters with this element or role.","没有该属性或定位的角色。"],
+  "수집형 RPG":["Collectible RPGs","收集型 RPG"], "대전 격투":["Fighting games","格斗游戏"], "MOBA·슈터·기타":["MOBA, shooters & more","MOBA·射击·其他"], "게임 선택":["Choose game","选择游戏"],
   "감시자":["Sentinel","哨卫"], "전략가":["Controller","控场"], "척후대":["Initiator","先锋"], "타격대":["Duelist","决斗"]
 };
 /* per-game notes (keyed by the exact Korean text, so an edited note falls back to Korean) */
@@ -299,7 +300,8 @@ function setLang(l) {
   document.documentElement.lang = l === "zh" ? "zh-CN" : l;
   document.title = L("스킬 연출 라이브러리", "Skill FX Library", "技能演出资料库");
   document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === l));
-  document.querySelectorAll(".tab").forEach(t => { const g = GAMES.find(x => x.key === t.dataset.key); if (g) t.textContent = gTab(g); });
+  document.querySelectorAll("#gameSel option").forEach(o => { const g = GAMES.find(x => x.key === o.value); if (g) o.textContent = `${gName(g)} (${g.roster.length})`; });
+  document.querySelectorAll("#gameSel optgroup").forEach(og => { og.label = tr(og.dataset.ko); });
   setHeader(state.game); setPlaceholder(); render();
   try { updateFillBtn(); } catch {}
   trTree(document.body);

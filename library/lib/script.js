@@ -233,22 +233,33 @@ function toast(msg) {
 function esc(s) { return String(s ?? "").replace(/[&<>"]/g, ch => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[ch])); }
 
 /* ---------- game switching ---------- */
+const GAME_GROUPS = [
+  ["수집형 RPG", ["hsr","zzz","ww","nte","gi","hi3","r99","pgr","nikke","ake","bd2","e7","dna","mgl","gbr","ap","sp"]],
+  ["대전 격투", ["gbvs","gg","db","bb","dnf","kny","mt","2xko"]],
+  ["MOBA·슈터·기타", ["lol","tft","val","mr","sn","er"]]
+];
 function buildTabs() {
-  const nav = $("#tabs");
-  GAMES.forEach(g => {
-    const a = document.createElement("a");
-    a.href = "#" + g.key; a.className = "tab"; a.dataset.key = g.key; a.textContent = gTab(g);
-    nav.appendChild(a);
+  const sel = $("#gameSel"); sel.textContent = "";
+  const used = new Set();
+  const add = (parent, g) => { const o = document.createElement("option"); o.value = g.key; o.textContent = `${gName(g)} (${g.roster.length})`; parent.appendChild(o); used.add(g.key); };
+  GAME_GROUPS.forEach(([label, keys]) => {
+    const og = document.createElement("optgroup"); og.label = label; og.dataset.ko = label;
+    keys.forEach(k => { const g = GAMES.find(x => x.key === k); if (g) add(og, g); });
+    if (og.children.length) sel.appendChild(og);
   });
+  const rest = GAMES.filter(g => !used.has(g.key));
+  if (rest.length) { const og = document.createElement("optgroup"); og.label = "기타"; og.dataset.ko = "기타"; rest.forEach(g => add(og, g)); sel.appendChild(og); }
+  sel.value = state.game.key;
 }
+$("#gameSel").addEventListener("change", e => { location.hash = e.target.value; });
 function selectGame(key) {
   const g = GAMES.find(x => x.key === key) || GAMES[0];
   state.game = g; state.elems.clear(); state.paths.clear(); state.q = ""; $("#q").value = "";
-  document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-current", t.dataset.key === g.key ? "page" : "false"));
+  $("#gameSel").value = g.key;
   setHeader(g);
   buildChips(); render();
   window.scrollTo(0, 0);
-  const cur = document.querySelector(`.tab[data-key="${g.key}"]`); if (cur) cur.scrollIntoView({ block: "nearest", inline: "nearest" });
+
 }
 
 function setHeader(g) {
@@ -994,7 +1005,7 @@ function hScroll(el) {
   el.addEventListener("pointerup", end); el.addEventListener("pointercancel", end);
   el.addEventListener("click", e => { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
 }
-hScroll($("#tabs")); hScroll($("#chiprow"));
+hScroll($("#chiprow"));
 $("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
 $("#smode").addEventListener("change", e => { state.smode = e.target.value; setPlaceholder(); render(); });
 $("#q").addEventListener("input", () => { if (state.smode === "attr") buildAttrQuick(); });
