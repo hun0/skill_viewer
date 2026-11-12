@@ -1,0 +1,272 @@
+{
+ "note": "마블 투혼: 파이팅 소울즈(아크시스템웍스, 2026-08-06 출시) 기본 20명과 Year 1 DLC 4명. 피닉스 사이클롭스는 2026-11-02 배포됐고, 토르(제인 포스터)·베놈·주빌리는 2027년 겨울~여름 예정이라 출시 예정으로 표시해요. 팀은 스토리 모드 기준이에요. 링크는 PlayStation 공식 캐릭터 가이드 트레일러 위주예요.",
+ "roster": [
+  {
+   "id": "mt-captain-america",
+   "ko": "캡틴 아메리카",
+   "en": "Captain America",
+   "zh": "",
+   "rarity": "",
+   "attr": "파이팅 어벤져스",
+   "role": "파이팅 어벤져스",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-iron-man",
+   "ko": "아이언맨",
+   "en": "Iron Man",
+   "zh": "",
+   "rarity": "",
+   "attr": "파이팅 어벤져스",
+   "role": "파이팅 어벤져스",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-black-panther",
+   "ko": "블랙 팬서 (슈리)",
+   "en": "Black Panther (Shuri)",
+   "zh": "",
+   "rarity": "",
+   "attr": "파이팅 어벤져스",
+   "role": "파이팅 어벤져스",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-hulk",
+   "ko": "헐크",
+   "en": "Hulk",
+   "zh": "",
+   "rarity": "",
+   "attr": "파이팅 어벤져스",
+   "role": "파이팅 어벤져스",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-storm",
+   "ko": "스톰",
+   "en": "Storm",
+   "zh": "",
+   "rarity": "",
+   "attr": "언브레이커블 엑스맨",
+   "role": "언브레이커블 엑스맨",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-magik",
+   "ko": "매직",
+   "en": "Magik",
+   "zh": "",
+   "rarity": "",
+   "attr": "언브레이커블 엑스맨",
+   "role": "언브레이커블 엑스맨",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-wolverine",
+   "ko": "울버린",
+   "en": "Wolverine",
+   "zh": "",
+   "rarity": "",
+   "attr": "언브레이커블 엑스맨",
+   "role": "언브레이커블 엑스맨",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-danger",
+   "ko": "데인저",
+   "en": "Danger",
+   "zh": "",
+   "rarity": "",
+   "attr": "언브레이커블 엑스맨",
+   "role": "언브레이커블 엑스맨",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-spider-man",
+   "ko": "스파이더맨",
+   "en": "Spider-Man",
+   "zh": "",
+   "rarity": "",
+   "attr": "어메이징 가디언즈",
+   "role": "어메이징 가디언즈",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-ms-marvel",
+   "ko": "미즈 마블",
+   "en": "Ms. Marvel",
+   "zh": "",
+   "rarity": "",
+   "attr": "어메이징 가디언즈",
+   "role": "어메이징 가디언즈",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-star-lord",
+   "ko": "스타로드",
+   "en": "Star-Lord",
+   "zh": "",
+   "rarity": "",
+   "attr": "어메이징 가디언즈",
+   "role": "어메이징 가디언즈",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-peni-parker",
+   "ko": "페니 파커",
+   "en": "Peni Parker",
+   "zh": "",
+   "rarity": "",
+   "attr": "어메이징 가디언즈",
+   "role": "어메이징 가디언즈",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-ghost-rider",
+   "ko": "고스트 라이더",
+   "en": "Ghost Rider",
+   "zh": "",
+   "rarity": "",
+   "attr": "사무라이 아웃라이더즈",
+   "role": "사무라이 아웃라이더즈",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-blade",
+   "ko": "블레이드",
+   "en": "Blade",
+   "zh": "",
+   "rarity": "",
+   "attr": "사무라이 아웃라이더즈",
+   "role": "사무라이 아웃라이더즈",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-deadpool",
+   "ko": "데드풀",
+   "en": "Deadpool",
+   "zh": "",
+   "rarity": "",
+   "attr": "사무라이 아웃라이더즈",
+   "role": "사무라이 아웃라이더즈",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-loki",
+   "ko": "로키",
+   "en": "Loki",
+   "zh": "",
+   "rarity": "",
+   "attr": "사무라이 아웃라이더즈",
+   "role": "사무라이 아웃라이더즈",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-doctor-doom",
+   "ko": "닥터 둠",
+   "en": "Doctor Doom",
+   "zh": "",
+   "rarity": "",
+   "attr": "나이츠 오브 둠",
+   "role": "나이츠 오브 둠",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-magneto",
+   "ko": "매그니토",
+   "en": "Magneto",
+   "zh": "",
+   "rarity": "",
+   "attr": "나이츠 오브 둠",
+   "role": "나이츠 오브 둠",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-green-goblin",
+   "ko": "그린 고블린",
+   "en": "Green Goblin",
+   "zh": "",
+   "rarity": "",
+   "attr": "나이츠 오브 둠",
+   "role": "나이츠 오브 둠",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-carnage",
+   "ko": "카니지",
+   "en": "Carnage",
+   "zh": "",
+   "rarity": "",
+   "attr": "나이츠 오브 둠",
+   "role": "나이츠 오브 둠",
+   "ver": "2026",
+   "date": "2026-08-06"
+  },
+  {
+   "id": "mt-cyclops",
+   "ko": "피닉스 사이클롭스",
+   "en": "Phoenix Cyclops",
+   "zh": "",
+   "rarity": "",
+   "attr": "Year 1 DLC",
+   "role": "Year 1 DLC",
+   "ver": "2026",
+   "date": "2026-11-02"
+  },
+  {
+   "id": "mt-thor",
+   "ko": "토르 (제인 포스터)",
+   "en": "Thor (Jane Foster)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Year 1 DLC",
+   "role": "Year 1 DLC",
+   "ver": "2027",
+   "date": "2027-01",
+   "upcoming": true
+  },
+  {
+   "id": "mt-venom",
+   "ko": "베놈",
+   "en": "Venom",
+   "zh": "",
+   "rarity": "",
+   "attr": "Year 1 DLC",
+   "role": "Year 1 DLC",
+   "ver": "2027",
+   "date": "2027-04",
+   "upcoming": true
+  },
+  {
+   "id": "mt-jubilee",
+   "ko": "주빌리",
+   "en": "Jubilee",
+   "zh": "",
+   "rarity": "",
+   "attr": "Year 1 DLC",
+   "role": "Year 1 DLC",
+   "ver": "2027",
+   "date": "2027-07",
+   "upcoming": true
+  }
+ ]
+}

@@ -17,6 +17,7 @@ const GI18N = {
   dna:["DNA","Duet Night Abyss","二重螺旋","二重螺旋"], mgl:["Mongil","Mongil: STAR DIVE","Mongil","Mongil: STAR DIVE"],
   gbvs:["GBVS","Granblue Fantasy Versus: Rising","碧蓝VS","碧蓝幻想Versus：Rising"], kny:["Hinokami 2","Demon Slayer: The Hinokami Chronicles 2","火之神2","鬼灭之刃 火之神血风谭2"],
   ap:["Azur","Azur Promilia","蓝色星原","蓝色星原：旅谣"], sp:["Silver Palace","Silver Palace","白银之城","白银之城"],
+  mt:["Tōkon","MARVEL Tōkon: Fighting Souls","漫威斗魂","漫威斗魂：Fighting Souls"], mr:["Marvel Rivals","Marvel Rivals","漫威争锋","漫威争锋"], sn:["Strinova","Strinova","卡拉彼丘","卡拉彼丘"], er:["Eternal Return","Eternal Return","永恒轮回","永恒轮回"],
   lol:["LoL","League of Legends","英雄联盟","英雄联盟"], tft:["TFT","Teamfight Tactics · Set 18","云顶","云顶之弈 · S18"],
   val:["VALORANT","VALORANT","无畏契约","无畏契约"], "2xko":["2XKO","2XKO","2XKO","2XKO"]
 };
@@ -104,6 +105,11 @@ const DICT = {
   "땅":["Earth","地"], "무":["Neutral","无"], "폭발":["Burst","爆发"], "증폭":["Amplify","增幅"], "부여":["Enhance","赋予"], "전투 역할군":["Combat role","战斗定位"], "미공개":["Unrevealed","未公开"],
   "연소":["Ignis","燃烧"], "응결":["Glacies","凝结"], "중력":["Gravitas","引力"], "전격":["Fulmen","电击"], "방사":["Radiatio","辐射"], "정화":["Alba","净化"],
   "영웅":["Hero","英雄"], "수호자":["Guardian","守护者"], "무법자":["Outlaw","法外者"], "목격자":["Witness","目击者"], "구원자":["Saviour","救赎者"],
+  "팀":["Team","队伍"], "파이팅 어벤져스":["Fighting Avengers","战斗复仇者"], "언브레이커블 엑스맨":["Unbreakable X-Men","不屈X战警"], "어메이징 가디언즈":["Amazing Guardians","惊奇守护者"], "사무라이 아웃라이더즈":["Samurai Outriders","武士骑手"], "나이츠 오브 둠":["Knights of Doom","毁灭骑士"],
+  "뱅가드":["Vanguard","先锋"], "듀얼리스트":["Duelist","决斗者"], "시저스":["Scissors","剪刀手"], "우르비노":["Urbino","乌尔比诺"], "돌격대":["Assault","突击"], "역할군":["Role","定位"],
+  "단검":["Dagger","短剑"], "도끼":["Axe","斧"], "쌍검":["Dual Swords","双剑"], "돌격 소총":["Assault Rifle","突击步枪"], "저격총":["Sniper Rifle","狙击枪"], "글러브":["Glove","拳套"], "톤파":["Tonfa","拐棍"], "방망이":["Bat","球棒"], "망치":["Hammer","锤"], "채찍":["Whip","鞭"], "투척":["Throw","投掷"], "암기":["Shuriken","暗器"], "석궁":["Crossbow","弩"], "창":["Spear","枪"], "쌍절곤":["Nunchaku","双节棍"], "레이피어":["Rapier","细剑"], "카메라":["Camera","相机"], "아르카나":["Arcana","奥秘"], "VF 의수":["VF Prosthetic","VF义肢"],
+  "스킬 딜러":["Mage","法师"], "원거리 딜러":["Ranged","射手"],
+  "공식 실험체 백과사전":["Official character encyclopedia","官方实验体百科"], "궁극기 (공식 GIF)":["Ultimate (official GIF)","大招（官方GIF）"],
   "감시자":["Sentinel","哨卫"], "전략가":["Controller","控场"], "척후대":["Initiator","先锋"], "타격대":["Duelist","决斗"]
 };
 /* per-game notes (keyed by the exact Korean text, so an edited note falls back to Korean) */
@@ -178,6 +184,7 @@ Object.assign(DICT, {
 ]
 });
 Object.assign(DICT, {"2026-11-26 한국·일본·대만·중국 출시 예정(넥슨 국내 서비스). CBT와 공식 공개로 확인된 플레이어블 26명이며 모두 출시 예정으로 표시해요. 속성·전투 역할군은 나무위키 기준, 영문명은 공식 발표가 없는 경우 로마자로 적었어요. 링크는 CBT·공식 영상이에요.": ["Launches 2026-11-26 in Korea, Japan, Taiwan and China (Nexon publishes in Korea). The 26 playable characters confirmed through CBTs and official reveals, all marked upcoming. Elements and combat roles follow Namu Wiki; English names are romanized where no official name exists. Links are CBT and official videos.", "2026-11-26 于韩国、日本、台湾和中国上线（韩国由 Nexon 运营）。收录 CBT 与官方公开确认的 26 名可玩角色，均标记为即将推出。属性与战斗定位依据 Namu Wiki，没有官方英文名的角色使用罗马字。链接为 CBT 与官方视频。"], "2026-12-14 글로벌 출시 예정. 1·2차 CBT(동일률·이분법 테스트)에 공개된 플레이어블 14명이며 모두 출시 예정으로 표시해요. 속성은 나무위키, 클래스는 팬 위키 기준이라 출시 후 바뀔 수 있어요. 링크는 CBT 영상이에요.": ["Global launch on 2026-12-14. The 14 playable characters shown in the first and second CBTs (Identity and Dichotomy tests), all marked upcoming. Elements follow Namu Wiki and classes a fan wiki, so they may change at launch. Links are CBT videos.", "2026-12-14 全球上线。收录第一、二次 CBT（同一律测试、二分法测试）中公开的 14 名可玩角色，均标记为即将推出。属性依据 Namu Wiki，职业依据玩家 wiki，上线后可能变动。链接为 CBT 视频。"]});
+Object.assign(DICT, {"마블 투혼: 파이팅 소울즈(아크시스템웍스, 2026-08-06 출시) 기본 20명과 Year 1 DLC 4명. 피닉스 사이클롭스는 2026-11-02 배포됐고, 토르(제인 포스터)·베놈·주빌리는 2027년 겨울~여름 예정이라 출시 예정으로 표시해요. 팀은 스토리 모드 기준이에요. 링크는 PlayStation 공식 캐릭터 가이드 트레일러 위주예요.": ["MARVEL Tōkon: Fighting Souls (Arc System Works, launched 2026-08-06): the 20 base fighters plus 4 Year 1 DLC. Phoenix Cyclops arrived on 2026-11-02; Thor (Jane Foster), Venom and Jubilee are due winter–summer 2027 and are marked upcoming. Teams follow story mode. Links are mostly PlayStation's official character guide trailers.", "漫威斗魂（Arc System Works，2026-08-06 发售）基础 20 名角色与 Year 1 DLC 4 名。凤凰镭射眼已于 2026-11-02 上线，雷神（简·福斯特）、毒液、朱比莉预计 2027 年冬至夏季推出，标记为即将推出。队伍按故事模式划分。链接以 PlayStation 官方角色指南预告为主。"], "마블 라이벌즈 영웅 54명(2026년 11월 기준). 역할은 공식 사이트 기준 뱅가드·듀얼리스트·전략가로 묶었어요. 링크는 스킬 전체를 보여 주는 'All Abilities' 영상과 공식 캐릭터 공개 트레일러예요.": ["The 54 Marvel Rivals heroes as of November 2026, grouped by the official roles Vanguard, Duelist and Strategist. Links are 'All Abilities' showcases plus the official character reveal trailers.", "漫威争锋 54 名英雄（截至 2026 年 11 月），按官方定位先锋、决斗者、战略家分组。链接为“全技能”展示视频与官方角色公开预告。"], "스트리노바 슈퍼스트링 24명. 진영과 역할(돌격대·타격대·척후대·수호자·전략가·지원가)은 나무위키 기준이고, 링크는 공식 'Superstring Agent Gameplay Reveal' 영상 위주예요. 썸네일은 게임 데이터의 프로필 이미지예요.": ["The 24 Strinova Superstrings. Factions and roles (Assault, Duelist, Vanguard, Sentinel, Controller, Support) follow Namu Wiki; links are mostly the official 'Superstring Agent Gameplay Reveal' videos. Thumbnails are in-game profile images.", "卡拉彼丘 24 名超弦体。阵营与定位依据 Namu Wiki，链接以官方“Superstring Agent Gameplay Reveal”视频为主。缩略图为游戏内档案图。"], "이터널 리턴 실험체 91명(코드 #91 세레스까지). 역할군은 나무위키의 주 역할군으로 묶었고, 무기는 게임 데이터의 첫 번째 무기예요. 링크는 공식 '실험체 백과사전'·'미리보기'가 있으면 그것을, 없으면 유튜버 공략 영상을 넣었고, 궁극기 공식 GIF(게임 내 스킬 미리보기 영상)도 붙였어요. #번호는 출시 순서예요.": ["All 91 Eternal Return subjects (through #91 Seres), grouped by their main role on Namu Wiki; the weapon is the first weapon in the game data. Links use the official 'Subject Encyclopedia' or preview videos where they exist, otherwise creator guides, plus the official ultimate GIF from the in-game skill preview. #numbers are release order.", "永恒轮回全部 91 名实验体（至 #91 塞蕾丝），按 Namu Wiki 主定位分组，武器为游戏数据中的第一武器。链接优先使用官方“实验体百科”或预览视频，否则为创作者攻略，并附官方大招 GIF。#编号为上线顺序。"]});
 /* the same Korean word means something else in some games */
 const GDICT = {
   gi: { "물":["Hydro","水"], "바람":["Anemo","风"], "불":["Pyro","火"], "번개":["Electro","雷"], "얼음":["Cryo","冰"] },
@@ -188,6 +195,9 @@ const GDICT = {
   kny: { "기타":["Other","其他"] },
   val: { "역할":["Role","职能"] },
   ake: { "자연":["Nature","自然"] },
+  mr: { "전략가":["Strategist","战略家"] },
+  sn: { "돌격대":["Assault","突击"], "타격대":["Duelist","决斗"], "척후대":["Vanguard","先锋"], "수호자":["Sentinel","哨卫"], "전략가":["Controller","控场"] },
+  er: { "전사":["Bruiser","斗士"], "탱커":["Tank","坦克"], "기타":["Guitar","吉他"], "양손검":["Two-handed Sword","双手剑"], "권총":["Pistol","手枪"], "지원가":["Support","辅助"] },
   ap: { "파괴":["Break","破坏"], "강공":["Assault","强攻"], "나무":["Wood","木"] },
   "2xko": { "챔피언":["Champion","角色"] }
 };

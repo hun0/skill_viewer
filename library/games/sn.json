@@ -1,0 +1,269 @@
+{
+ "note": "스트리노바 슈퍼스트링 24명. 진영과 역할(돌격대·타격대·척후대·수호자·전략가·지원가)은 나무위키 기준이고, 링크는 공식 'Superstring Agent Gameplay Reveal' 영상 위주예요. 썸네일은 게임 데이터의 프로필 이미지예요.",
+ "roster": [
+  {
+   "id": "sn-michele",
+   "ko": "미셸",
+   "en": "Michele",
+   "zh": "米雪儿·李",
+   "rarity": "",
+   "attr": "P.U.S",
+   "role": "수호자",
+   "ver": "수호자",
+   "date": "3-982"
+  },
+  {
+   "id": "sn-nobunaga",
+   "ko": "노부나가",
+   "en": "Nobunaga",
+   "zh": "信长",
+   "rarity": "",
+   "attr": "P.U.S",
+   "role": "수호자",
+   "ver": "수호자",
+   "date": "3-980"
+  },
+  {
+   "id": "sn-kokona",
+   "ko": "코코나",
+   "en": "Kokona Shiki",
+   "zh": "志木心夏",
+   "rarity": "",
+   "attr": "P.U.S",
+   "role": "지원가",
+   "ver": "지원가",
+   "date": "1-988"
+  },
+  {
+   "id": "sn-yvette",
+   "ko": "이베트",
+   "en": "Yvette",
+   "zh": "伊薇特",
+   "rarity": "",
+   "attr": "P.U.S",
+   "role": "전략가",
+   "ver": "전략가",
+   "date": "2-976"
+  },
+  {
+   "id": "sn-flavia",
+   "ko": "플라비아",
+   "en": "Flavia",
+   "zh": "芙拉薇娅",
+   "rarity": "",
+   "attr": "P.U.S",
+   "role": "돌격대",
+   "ver": "돌격대",
+   "date": "6-993"
+  },
+  {
+   "id": "sn-yugiri",
+   "ko": "유기리",
+   "en": "Yugiri",
+   "zh": "忧雾",
+   "rarity": "",
+   "attr": "P.U.S",
+   "role": "전략가",
+   "ver": "전략가",
+   "date": "2-977"
+  },
+  {
+   "id": "sn-leona",
+   "ko": "레오나",
+   "en": "Leona",
+   "zh": "蕾欧娜",
+   "rarity": "",
+   "attr": "P.U.S",
+   "role": "수호자",
+   "ver": "수호자",
+   "date": "3-986"
+  },
+  {
+   "id": "sn-chiyo",
+   "ko": "치요",
+   "en": "Chiyo",
+   "zh": "千代",
+   "rarity": "",
+   "attr": "P.U.S",
+   "role": "타격대",
+   "ver": "타격대",
+   "date": "5-996"
+  },
+  {
+   "id": "sn-ming",
+   "ko": "밍",
+   "en": "Ming",
+   "zh": "明",
+   "rarity": "",
+   "attr": "시저스",
+   "role": "돌격대",
+   "ver": "돌격대",
+   "date": "6-981"
+  },
+  {
+   "id": "sn-lawine",
+   "ko": "라비네",
+   "en": "Lawine",
+   "zh": "拉薇",
+   "rarity": "",
+   "attr": "시저스",
+   "role": "척후대",
+   "ver": "척후대",
+   "date": "4-987"
+  },
+  {
+   "id": "sn-meredith",
+   "ko": "메레디스",
+   "en": "Meredith",
+   "zh": "梅瑞迪斯",
+   "rarity": "",
+   "attr": "시저스",
+   "role": "전략가",
+   "ver": "전략가",
+   "date": "2-983"
+  },
+  {
+   "id": "sn-kanami",
+   "ko": "카나미",
+   "en": "Kanami",
+   "zh": "香奈美",
+   "rarity": "",
+   "attr": "시저스",
+   "role": "척후대",
+   "ver": "척후대",
+   "date": "4-989"
+  },
+  {
+   "id": "sn-reiichi",
+   "ko": "레이이치",
+   "en": "Reiichi",
+   "zh": "令一",
+   "rarity": "",
+   "attr": "시저스",
+   "role": "전략가",
+   "ver": "전략가",
+   "date": "2-978"
+  },
+  {
+   "id": "sn-eika",
+   "ko": "아이카",
+   "en": "Eika",
+   "zh": "艾卡",
+   "rarity": "",
+   "attr": "시저스",
+   "role": "타격대",
+   "ver": "타격대",
+   "date": "5-994"
+  },
+  {
+   "id": "sn-fragrans",
+   "ko": "프라그란스",
+   "en": "Fragrans",
+   "zh": "珐格兰斯",
+   "rarity": "",
+   "attr": "시저스",
+   "role": "지원가",
+   "ver": "지원가",
+   "date": "1-992"
+  },
+  {
+   "id": "sn-mara",
+   "ko": "마라",
+   "en": "Mara",
+   "zh": "玛拉",
+   "rarity": "",
+   "attr": "시저스",
+   "role": "돌격대",
+   "ver": "돌격대",
+   "date": "6-984"
+  },
+  {
+   "id": "sn-nora",
+   "ko": "노라",
+   "en": "Nora",
+   "zh": "",
+   "rarity": "",
+   "attr": "시저스",
+   "role": "척후대",
+   "ver": "척후대",
+   "date": "4-979"
+  },
+  {
+   "id": "sn-celestia",
+   "ko": "미리내",
+   "en": "Celestia",
+   "zh": "星绘",
+   "rarity": "",
+   "attr": "우르비노",
+   "role": "지원가",
+   "ver": "지원가",
+   "date": "1-997"
+  },
+  {
+   "id": "sn-audrey",
+   "ko": "오드리",
+   "en": "Audrey",
+   "zh": "奥黛丽",
+   "rarity": "",
+   "attr": "우르비노",
+   "role": "수호자",
+   "ver": "수호자",
+   "date": "3-999"
+  },
+  {
+   "id": "sn-bai-mo",
+   "ko": "바이모",
+   "en": "Bai Mo",
+   "zh": "白墨",
+   "rarity": "",
+   "attr": "우르비노",
+   "role": "타격대",
+   "ver": "타격대",
+   "date": "5-998"
+  },
+  {
+   "id": "sn-maddelena",
+   "ko": "마들렌",
+   "en": "Maddelena",
+   "zh": "玛德蕾娜",
+   "rarity": "",
+   "attr": "우르비노",
+   "role": "전략가",
+   "ver": "전략가",
+   "date": "2-985"
+  },
+  {
+   "id": "sn-fuchsia",
+   "ko": "퓨시아",
+   "en": "Fuchsia",
+   "zh": "绯莎",
+   "rarity": "",
+   "attr": "우르비노",
+   "role": "타격대",
+   "ver": "타격대",
+   "date": "5-991"
+  },
+  {
+   "id": "sn-galatea",
+   "ko": "갈라테아",
+   "en": "Galatea",
+   "zh": "加拉蒂亚",
+   "rarity": "",
+   "attr": "우르비노",
+   "role": "척후대",
+   "ver": "척후대",
+   "date": "4-990"
+  },
+  {
+   "id": "sn-cielle",
+   "ko": "시엘",
+   "en": "Cielle",
+   "zh": "",
+   "rarity": "",
+   "attr": "우르비노",
+   "role": "돌격대",
+   "ver": "돌격대",
+   "date": "6-995"
+  }
+ ]
+}
