@@ -1,0 +1,113 @@
+{
+ "note": "붕괴: 넥서스 아니마(호요버스, 출시일 미정, 2026년 11월 파이널 베타). 아니마(크리처)를 모아 싸우는 게임이라, 여기엔 궁극기 연출이 있는 플레이어블 캐릭터 중 베타 플레이 영상이 확인된 9명만 넣었어요. 한글 이름은 공식 한국어 PV에 나온 나나페이·바이 메이 말고는 영문을 옮긴 표기예요. 아니마 82종은 아직 개별 영상·아이콘이 없어 넣지 않았어요.",
+ "roster": [
+  {
+   "id": "hna-kiana",
+   "ko": "키아나",
+   "en": "Kiana",
+   "zh": "琪亚娜",
+   "rarity": "",
+   "attr": "아니마스트",
+   "role": "플레이어블 캐릭터",
+   "ver": "파이널 베타 기준",
+   "date": "2026-11-01",
+   "upcoming": true
+  },
+  {
+   "id": "hna-nanafey",
+   "ko": "나나페이",
+   "en": "Nanafey",
+   "zh": "娜娜菲",
+   "rarity": "",
+   "attr": "아니마스트",
+   "role": "플레이어블 캐릭터",
+   "ver": "파이널 베타 기준",
+   "date": "2026-11-01",
+   "upcoming": true
+  },
+  {
+   "id": "hna-baimei",
+   "ko": "바이 메이",
+   "en": "Bai Mei",
+   "zh": "白梅",
+   "rarity": "",
+   "attr": "아니마스트",
+   "role": "플레이어블 캐릭터",
+   "ver": "파이널 베타 기준",
+   "date": "2026-11-01",
+   "upcoming": true
+  },
+  {
+   "id": "hna-blade",
+   "ko": "블레이드",
+   "en": "Blade",
+   "zh": "刃",
+   "rarity": "",
+   "attr": "아니마스트",
+   "role": "플레이어블 캐릭터",
+   "ver": "파이널 베타 기준",
+   "date": "2026-11-01",
+   "upcoming": true
+  },
+  {
+   "id": "hna-parayaya",
+   "ko": "파라야야",
+   "en": "Parayaya",
+   "zh": "帕拉雅雅",
+   "rarity": "",
+   "attr": "아니마스트",
+   "role": "플레이어블 캐릭터",
+   "ver": "파이널 베타 기준",
+   "date": "2026-11-01",
+   "upcoming": true
+  },
+  {
+   "id": "hna-shilian",
+   "ko": "실리안",
+   "en": "Shilian",
+   "zh": "Shilian",
+   "rarity": "",
+   "attr": "아니마스트",
+   "role": "플레이어블 캐릭터",
+   "ver": "파이널 베타 기준",
+   "date": "2026-11-01",
+   "upcoming": true
+  },
+  {
+   "id": "hna-herocrates",
+   "ko": "헤로크라테스",
+   "en": "Herocrates",
+   "zh": "Herocrates",
+   "rarity": "",
+   "attr": "아니마스트",
+   "role": "플레이어블 캐릭터",
+   "ver": "파이널 베타 기준",
+   "date": "2026-11-01",
+   "upcoming": true
+  },
+  {
+   "id": "hna-hungrille",
+   "ko": "헝그릴",
+   "en": "Hungrille",
+   "zh": "Hungrille",
+   "rarity": "",
+   "attr": "아니마스트",
+   "role": "플레이어블 캐릭터",
+   "ver": "파이널 베타 기준",
+   "date": "2026-11-01",
+   "upcoming": true
+  },
+  {
+   "id": "hna-breadhead",
+   "ko": "브레드헤드",
+   "en": "Breadhead",
+   "zh": "Breadhead",
+   "rarity": "",
+   "attr": "아니마스트",
+   "role": "플레이어블 캐릭터",
+   "ver": "파이널 베타 기준",
+   "date": "2026-11-01",
+   "upcoming": true
+  }
+ ]
+}

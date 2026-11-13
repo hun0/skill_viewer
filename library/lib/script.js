@@ -82,6 +82,16 @@ const GAMES = [
     yt: c => `아스트라에 오라티오 ${c.ko} 스킬`,
     colors:{ "어태커":"fire","브레이커":"imag","서포터":"wind","앵커":"quant","디펜더":"ice","스위퍼":"dark","미공개":"phys" },
     roles:["CBT 플레이어블","공개 캐릭터"] },
+  { key:"an", tab:"무한대 (아난타)", name:"무한대 (아난타)", bili:"无限大", file:"AN", group:"year",
+    attrLabel:"소속", roleLabel:"공개",
+    yt: c => `Ananta ${c.en} gameplay`,
+    colors:{ "카오스 대책국":"fire","독립":"imag","능운위":"wind","노바 시티":"quant","드림 가든":"light","D.P.A.":"ice","딜리리움 블록":"dark" },
+    roles:["공식 공개","추가 공개"] },
+  { key:"hna", tab:"붕괴: 넥서스 아니마", name:"붕괴: 넥서스 아니마", bili:"崩坏：因缘精灵", file:"HNA", group:"year",
+    attrLabel:"구분", roleLabel:"구분",
+    yt: c => `Honkai Nexus Anima ${c.en} gameplay ultimate`,
+    colors:{ "아니마스트":"wind" },
+    roles:["플레이어블 캐릭터"] },
   { key:"gbvs", tab:"그랑블루VS", name:"그랑블루 판타지 버서스 -라이징-", bili:"碧蓝幻想Versus 崛起", file:"GBVS", group:"year",
     attrLabel:"원작 속성", roleLabel:"구분",
     yt: c => `GBVSR ${c.en.replace(/[()]/g,"")} Skybound Art Super Skybound Art`,
@@ -270,7 +280,7 @@ function esc(s) { return String(s ?? "").replace(/[&<>"]/g, ch => ({ "&":"&amp;"
 /* ---------- game switching ---------- */
 const GAME_GROUPS = [
   ["수집형 RPG", ["hsr","zzz","ww","nte","gi","hi3","r99","pgr","nikke","ake","bd2","e7","dna","mgl","gbr","ap","sp"]],
-  ["출시 예정", ["ao"]],
+  ["출시 예정", ["ao","an","hna"]],
   ["대전 격투", ["gbvs","gg","db","bb","dnf","kny","mt","nrt","opa","2xko"]],
   ["액션·로그라이트", ["hd1","hd2","d4"]],
   ["MOBA·슈터·기타", ["lol","tft","val","ow","mr","sn","er"]]

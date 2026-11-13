@@ -1,0 +1,161 @@
+{
+ "note": "무한대 / 아난타(ANANTA, 넷이즈, 2027-01-15 글로벌 출시 예정). '공식 공개'는 한국 공식 홈페이지에 소개된 6명, '추가 공개'는 이후 공개된 캐릭터예요. 추가 공개 캐릭터의 한글 이름과 소속은 공식 한국어 표기가 없어 영문을 옮긴 거예요. 아직 캐릭터별 공식 스킬 영상이 없어서 공식 홈페이지 소개 영상과 공식 게임플레이 트레일러를 연결했어요.",
+ "roster": [
+  {
+   "id": "an-captain",
+   "ko": "캡틴",
+   "en": "The Captain",
+   "zh": "船长",
+   "rarity": "",
+   "attr": "카오스 대책국",
+   "role": "공식 공개",
+   "ver": "공식 공개",
+   "date": "2027-01-15",
+   "upcoming": true
+  },
+  {
+   "id": "an-shiye",
+   "ko": "시야",
+   "en": "Shi Ye",
+   "zh": "诗也",
+   "rarity": "",
+   "attr": "독립",
+   "role": "공식 공개",
+   "ver": "공식 공개",
+   "date": "2027-01-15",
+   "upcoming": true
+  },
+  {
+   "id": "an-taffy",
+   "ko": "타피",
+   "en": "Taffy",
+   "zh": "塔菲",
+   "rarity": "",
+   "attr": "카오스 대책국",
+   "role": "공식 공개",
+   "ver": "공식 공개",
+   "date": "2027-01-15",
+   "upcoming": true
+  },
+  {
+   "id": "an-richie",
+   "ko": "리키",
+   "en": "Richie",
+   "zh": "莉琪",
+   "rarity": "",
+   "attr": "카오스 대책국",
+   "role": "공식 공개",
+   "ver": "공식 공개",
+   "date": "2027-01-15",
+   "upcoming": true
+  },
+  {
+   "id": "an-yinglong",
+   "ko": "영롱",
+   "en": "Yinglong",
+   "zh": "莹珑",
+   "rarity": "",
+   "attr": "능운위",
+   "role": "공식 공개",
+   "ver": "공식 공개",
+   "date": "2027-01-15",
+   "upcoming": true
+  },
+  {
+   "id": "an-seymour",
+   "ko": "세이머",
+   "en": "Seymour",
+   "zh": "赛莫",
+   "rarity": "",
+   "attr": "카오스 대책국",
+   "role": "공식 공개",
+   "ver": "공식 공개",
+   "date": "2027-01-15",
+   "upcoming": true
+  },
+  {
+   "id": "an-lykaia",
+   "ko": "리카이아",
+   "en": "Lykaia",
+   "zh": "Lykaia",
+   "rarity": "",
+   "attr": "노바 시티",
+   "role": "추가 공개",
+   "ver": "추가 공개",
+   "date": "2027-01-15",
+   "upcoming": true
+  },
+  {
+   "id": "an-aileen",
+   "ko": "에일린",
+   "en": "Aileen",
+   "zh": "Aileen",
+   "rarity": "",
+   "attr": "드림 가든",
+   "role": "추가 공개",
+   "ver": "추가 공개",
+   "date": "2027-01-15",
+   "upcoming": true
+  },
+  {
+   "id": "an-ringo",
+   "ko": "링고",
+   "en": "Ringo",
+   "zh": "Ringo",
+   "rarity": "",
+   "attr": "D.P.A.",
+   "role": "추가 공개",
+   "ver": "추가 공개",
+   "date": "2027-01-15",
+   "upcoming": true
+  },
+  {
+   "id": "an-alan",
+   "ko": "앨런",
+   "en": "Alan",
+   "zh": "Alan",
+   "rarity": "",
+   "attr": "노바 시티",
+   "role": "추가 공개",
+   "ver": "추가 공개",
+   "date": "2027-01-15",
+   "upcoming": true
+  },
+  {
+   "id": "an-bansy",
+   "ko": "밴시",
+   "en": "Bansy",
+   "zh": "Bansy",
+   "rarity": "",
+   "attr": "딜리리움 블록",
+   "role": "추가 공개",
+   "ver": "추가 공개",
+   "date": "2027-01-15",
+   "upcoming": true
+  },
+  {
+   "id": "an-dila",
+   "ko": "딜라",
+   "en": "Dila",
+   "zh": "Dila",
+   "rarity": "",
+   "attr": "노바 시티",
+   "role": "추가 공개",
+   "ver": "추가 공개",
+   "date": "2027-01-15",
+   "upcoming": true
+  },
+  {
+   "id": "an-mechanika",
+   "ko": "메카니카",
+   "en": "Mechanika",
+   "zh": "Mechanika",
+   "rarity": "",
+   "attr": "노바 시티",
+   "role": "추가 공개",
+   "ver": "추가 공개",
+   "date": "2027-01-15",
+   "upcoming": true
+  }
+ ]
+}
