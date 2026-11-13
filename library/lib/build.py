@@ -1,5 +1,7 @@
 import json, re, os, sys
+DIST = os.environ.get("DIST") == "1"
 os.makedirs(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "dist"), exist_ok=True)
+if DIST: os.makedirs(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "dist", "team"), exist_ok=True)
 B = os.path.dirname(os.path.abspath(__file__))
 src = open(f"{B}/hsr_source.html", encoding="utf-8").read()
 css = re.search(r"<style>(.*?)</style>", src, re.S).group(1)
@@ -40,7 +42,7 @@ for f in glob.glob(f"{B}/../snap/links/*.json"):
 snap_thumbs = {}
 for f in glob.glob(f"{B}/../snap/thumbs/*.json"):
     d = json.load(open(f, encoding="utf-8"))
-    if d.get("asset"): snap_thumbs[os.path.basename(f)[:-5]] = d["asset"]
+    if d.get("asset"): snap_thumbs[os.path.basename(f)[:-5]] = (f"thumbs/{d['asset']}.webp" if DIST else d["asset"])
 snap_bosses = {}
 for f in glob.glob(f"{B}/../snap/bosses/*.json"):
     d = json.load(open(f, encoding="utf-8"))
@@ -59,13 +61,14 @@ for f in glob.glob(f"{B}/../sprites/*.json"):
     if f.endswith("blobs.json"): continue
     m = json.load(open(f)); g = m["game"]
     ids = [("" if i in m.get("bad", []) else i) for i in m["ids"]]
-    sprites[g] = {"file": f"/_blob/{BLOBS[g]}", "cols": m["cols"], "rows": m["rows"], "ids": ids}
+    sprites[g] = {"file": (f"sprites/{g}.webp" if DIST else f"/_blob/{BLOBS[g]}"), "cols": m["cols"], "rows": m["rows"], "ids": ids}
 data["sprites"] = sprites
+if DIST: data["dist"] = True
 data["snapshot"] = {"links": snap_links, "thumbs": snap_thumbs, "bosses": snap_bosses, "bookmarks": snap_bms, "tags": snap_tags, "at": datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).strftime("%m월 %d일 %H:%M")}
-print({k: len(v["roster"]) for k, v in data.items() if k not in ("snapshot","sprites")}, "snapshot links", len(snap_links), "thumbs", len(snap_thumbs))
+print({k: len(v["roster"]) for k, v in data.items() if k not in ("snapshot","sprites","dist")}, "snapshot links", len(snap_links), "thumbs", len(snap_thumbs))
 
 js = (open(f"{B}/i18n.js", encoding="utf-8").read() + "\n" + open(f"{B}/script.js", encoding="utf-8").read() + "\n" + open(f"{B}/viewer.js", encoding="utf-8").read()).replace("/*__GAME_DATA__*/", json.dumps(data, ensure_ascii=False))
-head = '<title>스킬 연출 라이브러리</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbit&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">\n'
+head = '<meta charset="utf-8">\n' + ('<title>스킬 연출 라이브러리 (팀 공유)</title>' if DIST else '<title>스킬 연출 라이브러리</title>') + '\n<meta name="claude:viewport-fit-sides" content="cover">\n<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbit&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">\n'
 out = head + "<style>" + css + "</style>\n\n" + open(f"{B}/markup.html", encoding="utf-8").read() + "\n<script>\n" + js + "</script>\n"
-open(f"{B}/../dist/library.html", "w", encoding="utf-8").write(out)
+open(f"{B}/../dist/team/index.html" if DIST else f"{B}/../dist/library.html", "w", encoding="utf-8").write(out)
 open(f"{B}/../dist/check.js", "w", encoding="utf-8").write(js)

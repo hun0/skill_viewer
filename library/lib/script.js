@@ -275,9 +275,9 @@ function selectGame(key) {
 function setHeader(g) {
   $("#gname").textContent = gName(g);
   const up = g.roster.length - g.released;
-  $("#gsub").textContent = L(`플레이어블 캐릭터 ${g.released}명` + (up > 0 ? ` + 출시 예정 ${up}명` : "") + ". 캐릭터마다 영상 링크를 붙여넣으면 저장됩니다.",
-    `${g.released} playable characters` + (up > 0 ? ` + ${up} upcoming` : "") + ". Paste a video link on any character to save it.",
-    `可玩角色 ${g.released} 名` + (up > 0 ? ` + 即将推出 ${up} 名` : "") + "。在角色上粘贴视频链接即可保存。");
+  $("#gsub").textContent = L(`플레이어블 캐릭터 ${g.released}명` + (up > 0 ? ` + 출시 예정 ${up}명` : "") + (DATA.dist ? ". ▶ 보기를 누르면 프레임 뷰어로 열려요." : ". 캐릭터마다 영상 링크를 붙여넣으면 저장됩니다."),
+    `${g.released} playable characters` + (up > 0 ? ` + ${up} upcoming` : "") + (DATA.dist ? ". Press ▶ to open a video in the frame viewer." : ". Paste a video link on any character to save it."),
+    `可玩角色 ${g.released} 名` + (up > 0 ? ` + 即将推出 ${up} 名` : "") + (DATA.dist ? "。点 ▶ 即可在逐帧查看器中打开。" : "。在角色上粘贴视频链接即可保存。"));
   const src = $("#gsrc"); src.innerHTML = g.src; src.hidden = !g.src;
   const gn = $("#gnote"); gn.textContent = g.note; gn.hidden = !g.note;
   $("#elemLabel").textContent = g.attrLabel; $("#pathLabel").textContent = g.roleLabel;
@@ -631,7 +631,7 @@ function thumbFor(c, colorVar) {
   if (assets) { box.type = "button"; box.id = `t-${c.id}`; box.dataset.cid = c.id; box.setAttribute("aria-label", `${nm(c)} 썸네일 ${assetId ? "바꾸기" : "넣기"}`); }
   if (assetId) {
     const img = document.createElement("img");
-    img.src = "/_blob/" + assetId; img.alt = ""; img.loading = "lazy"; img.decoding = "async";
+    img.src = String(assetId).includes("/") ? assetId : "/_blob/" + assetId; img.alt = ""; img.loading = "lazy"; img.decoding = "async";
     img.onerror = () => { img.remove(); box.classList.remove("has"); box.insertAdjacentHTML("beforeend", `<span class="ph">${esc(nm(c).slice(0, 1))}</span>`); };
     box.appendChild(img);
   } else if (spriteFor(c)) {
@@ -1073,12 +1073,13 @@ setLang(LANG);
 function useSnapshot() {
   state.mode = "snapshot"; state.readonly = true;
   const n = $("#notice");
-  n.textContent = `보기 전용 화면이에요 (${SNAP.at} 기준). 링크 추가·수정은 편집 권한이 있는 계정으로 로그인하면 할 수 있어요.`;
+  n.textContent = DATA.dist ? `팀 공유용 보기 전용 버전이에요 (${SNAP.at} 기준). 새 캐릭터·링크는 주기적으로 갱신돼요.` : `보기 전용 화면이에요 (${SNAP.at} 기준). 링크 추가·수정은 편집 권한이 있는 계정으로 로그인하면 할 수 있어요.`;
   n.hidden = false;
   render();
 }
 
 (async () => {
+  if (DATA.dist) { useSnapshot(); return; }
   try { db = window.claude && claude.use ? await claude.use("db") : null; } catch { db = null; }
   if (!db) { useSnapshot(); return; }
   try {
