@@ -21,7 +21,7 @@ css += open(f"{B}/extra.css", encoding="utf-8").read()
 # HSR data
 rows = re.findall(r'\["([a-z0-9-]+)","([^"]+)","([^"]+)",(\d),"([^"]+)","([^"]+)","([\d.]+)"\]', src)
 zh = dict(re.findall(r'"([a-z0-9-]+)":"([^"]+)"', re.search(r"const ZH = \{(.*?)\};", src, re.S).group(1)))
-hsr = [{"id":r[0],"ko":r[1],"en":r[2],"zh":zh.get(r[0],""),"rarity":int(r[3]),"attr":r[4],"role":r[5],"ver":r[6],**({"upcoming":True} if r[6]=="4.7" else {})} for r in rows]
+hsr = [{"id":r[0],"ko":r[1],"en":r[2],"zh":zh.get(r[0],""),"rarity":int(r[3]),"attr":r[4],"role":r[5],"ver":r[6],**({"upcoming":True} if r[6]=="4.8" else {})} for r in rows]
 bosses = [
   {"id":"boss-flame-reaver","ko":"盗火行者","zh":"盗火行者","en":"Boss","dur":"0:39"},
   {"id":"boss-dead-dragon","ko":"死龙","zh":"死龙","en":"Boss","dur":"0:32"},

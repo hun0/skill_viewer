@@ -289,7 +289,9 @@ const ROSTER = [
 ["robin-summeretto","로빈·서머레토","Robin • Summeretto",5,"바람","기억","4.5"],
 ["aventurine-waveflair","어벤츄린·웨이브","Aventurine • Waveflair",5,"양자","환락","4.5"],
 ["pearl","펄","Pearl",5,"얼음","환락","4.6"],
-["aha","아하","Aeon☆Aha",5,"양자","환락","4.7"]
+["aha","아하","Aeon☆Aha",5,"양자","환락","4.7"],
+["ellen","엘렌","Ellen Joe",5,"얼음","파멸","4.8"],
+["astra-yao","아스트라","Astra Yao",5,"양자","화합","4.8"]
 ].map(r => ({ id:r[0], ko:r[1], en:r[2], rarity:r[3], elem:r[4], path:r[5], ver:r[6], upcoming: r[6] === "4.7" }));
 
 // 중국어 이름 (빌리빌리 검색용)
@@ -308,7 +310,7 @@ const ZH = {
 "hysilens":"海瑟音","cerydra":"刻律德菈","evernight":"长夜月","dan-heng-pt":"丹恒·腾荒","cyrene":"昔涟","the-dahlia":"大丽花",
 "sparxie":"火花","yao-guang":"爻光","ashveil":"不死途","silver-wolf-999":"银狼LV.999","evanescia":"绯英","tb-elation":"开拓者·欢愉",
 "mortenax-blade":"千冶•刃","himeko-nova":"姬子•启行","rin-tohsaka":"远坂凛","gilgamesh":"吉尔伽美什",
-"robin-summeretto":"知更鸟•晴歌","aventurine-waveflair":"砂金•戏浪","pearl":"真珠","aha":"星神★阿哈"
+"robin-summeretto":"知更鸟•晴歌","aventurine-waveflair":"砂金•戏浪","pearl":"真珠","aha":"星神★阿哈","ellen":"艾莲","astra-yao":"耀嘉音"
 };
 ROSTER.forEach(c => { c.zh = ZH[c.id] || ""; });
 
