@@ -77,6 +77,11 @@ const GAMES = [
     yt: c => `몬길 스타다이브 ${c.ko.replace(/[:!]/g,"")} 스킬`,
     colors:{ "불":"fire","얼음":"ice","번개":"light","바람":"wind","대지":"imag" },
     roles:["난투","파괴","암살","지원"] },
+  { key:"ao", tab:"아스트라에 오라티오", name:"아스트라에 오라티오", bili:"Astrae Oratio", file:"AO", group:"year",
+    attrLabel:"역할", roleLabel:"구분",
+    yt: c => `아스트라에 오라티오 ${c.ko} 스킬`,
+    colors:{ "어태커":"fire","브레이커":"imag","서포터":"wind","앵커":"quant","디펜더":"ice","스위퍼":"dark","미공개":"phys" },
+    roles:["CBT 플레이어블","공개 캐릭터"] },
   { key:"gbvs", tab:"그랑블루VS", name:"그랑블루 판타지 버서스 -라이징-", bili:"碧蓝幻想Versus 崛起", file:"GBVS", group:"year",
     attrLabel:"원작 속성", roleLabel:"구분",
     yt: c => `GBVSR ${c.en.replace(/[()]/g,"")} Skybound Art Super Skybound Art`,
@@ -265,6 +270,7 @@ function esc(s) { return String(s ?? "").replace(/[&<>"]/g, ch => ({ "&":"&amp;"
 /* ---------- game switching ---------- */
 const GAME_GROUPS = [
   ["수집형 RPG", ["hsr","zzz","ww","nte","gi","hi3","r99","pgr","nikke","ake","bd2","e7","dna","mgl","gbr","ap","sp"]],
+  ["출시 예정", ["ao"]],
   ["대전 격투", ["gbvs","gg","db","bb","dnf","kny","mt","nrt","opa","2xko"]],
   ["액션·로그라이트", ["hd1","hd2","d4"]],
   ["MOBA·슈터·기타", ["lol","tft","val","ow","mr","sn","er"]]
