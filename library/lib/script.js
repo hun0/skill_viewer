@@ -97,6 +97,21 @@ const GAMES = [
     yt: c => `航海王壮志雄心 ${c.zh.replace(/「|」/g," ")} 技能`,
     colors:{ "빨강":"fire","금색":"imag","보라":"light","파랑":"ice","신규 추가":"wind" },
     roles:["빨강","금색","보라","파랑","신규 추가"] },
+  { key:"hd1", tab:"하데스", name:"하데스", bili:"哈迪斯", file:"HD1", group:"year",
+    attrLabel:"성격", roleLabel:"구분",
+    yt: c => `Hades ${c.en} ${c.role === "무기" ? "aspects" : "boons"}`,
+    colors:{ "번개":"imag","물":"water","빛":"light","어둠":"dark","매혹":"fire","바람":"wind","독":"wood","얼음":"ice","허수":"quant","물리":"phys" },
+    roles:["신 (축복)","무기"] },
+  { key:"hd2", tab:"하데스 II", name:"하데스 II", bili:"哈迪斯2", file:"HD2", group:"year",
+    attrLabel:"성격", roleLabel:"구분",
+    yt: c => `Hades 2 ${c.en} ${c.role === "무기" ? "aspects" : "boons"}`,
+    colors:{ "번개":"imag","물":"water","빛":"light","어둠":"dark","매혹":"fire","바람":"wind","독":"wood","얼음":"ice","허수":"quant","불":"fire","달":"ether","물리":"phys" },
+    roles:["신 (축복)","무기"] },
+  { key:"d4", tab:"디아블로 IV", name:"디아블로 IV", bili:"暗黑破坏神4", file:"D4", group:"year",
+    attrLabel:"성향", roleLabel:"구분",
+    yt: c => `Diablo IV ${c.en} skills showcase`,
+    colors:{ "물리":"phys","땅":"wood","어둠":"dark","불":"fire","바람":"wind","빛":"imag" },
+    roles:["클래스"] },
   { key:"gg", tab:"길티기어", name:"길티기어 -스트라이브-", bili:"罪恶装备 Strive", file:"GG", group:"year",
     attrLabel:"구분", roleLabel:"구분",
     yt: c => `GGST ${c.en} overdrives`,
@@ -137,6 +152,11 @@ const GAMES = [
     yt: c => `Marvel Tokon ${c.en.replace(/\s*\(.*\)/,"")} character guide`,
     colors:{ "파이팅 어벤져스":"fire","언브레이커블 엑스맨":"ice","어메이징 가디언즈":"wind","사무라이 아웃라이더즈":"quant","나이츠 오브 둠":"imag","Year 1 DLC":"light" },
     roles:["파이팅 어벤져스","언브레이커블 엑스맨","어메이징 가디언즈","사무라이 아웃라이더즈","나이츠 오브 둠","Year 1 DLC"] },
+  { key:"ow", tab:"오버워치", name:"오버워치", bili:"守望先锋", file:"OW", group:"year",
+    attrLabel:"역할", roleLabel:"세부 역할",
+    yt: c => `Overwatch ${c.en} ability overview`,
+    colors:{ "돌격":"ice","공격":"fire","지원":"wind" },
+    roles:["강건한 자","개시자","투사","명사수","수색가","전문가","측면 공격가","생존왕","의무관","전술가"] },
   { key:"mr", tab:"마블 라이벌즈", name:"마블 라이벌즈", bili:"漫威争锋", file:"MR", group:"year",
     attrLabel:"역할", roleLabel:"역할",
     yt: c => `Marvel Rivals ${c.en} all abilities`,
@@ -246,7 +266,8 @@ function esc(s) { return String(s ?? "").replace(/[&<>"]/g, ch => ({ "&":"&amp;"
 const GAME_GROUPS = [
   ["수집형 RPG", ["hsr","zzz","ww","nte","gi","hi3","r99","pgr","nikke","ake","bd2","e7","dna","mgl","gbr","ap","sp"]],
   ["대전 격투", ["gbvs","gg","db","bb","dnf","kny","mt","nrt","opa","2xko"]],
-  ["MOBA·슈터·기타", ["lol","tft","val","mr","sn","er"]]
+  ["액션·로그라이트", ["hd1","hd2","d4"]],
+  ["MOBA·슈터·기타", ["lol","tft","val","ow","mr","sn","er"]]
 ];
 function buildTabs() {
   const sel = $("#gameSel"); sel.textContent = "";

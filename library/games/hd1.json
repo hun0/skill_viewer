@@ -1,0 +1,181 @@
+{
+ "note": "하데스(2020)는 주인공이 자그레우스 한 명이라, 축복을 주는 신 10명과 지하세계 무기 6종으로 나눴어요. 신 항목은 그 신의 축복 연출, 무기 항목은 무기·형태(Aspect) 연출 영상이에요. 속성은 축복 성격에 맞춰 붙인 분류예요.",
+ "roster": [
+  {
+   "id": "hd1-zeus",
+   "ko": "제우스",
+   "en": "Zeus",
+   "zh": "宙斯",
+   "rarity": "",
+   "attr": "번개",
+   "role": "신 (축복)",
+   "ver": "올림포스 신",
+   "date": "2020-09-17"
+  },
+  {
+   "id": "hd1-poseidon",
+   "ko": "포세이돈",
+   "en": "Poseidon",
+   "zh": "波塞冬",
+   "rarity": "",
+   "attr": "물",
+   "role": "신 (축복)",
+   "ver": "올림포스 신",
+   "date": "2020-09-17"
+  },
+  {
+   "id": "hd1-athena",
+   "ko": "아테나",
+   "en": "Athena",
+   "zh": "雅典娜",
+   "rarity": "",
+   "attr": "빛",
+   "role": "신 (축복)",
+   "ver": "올림포스 신",
+   "date": "2020-09-17"
+  },
+  {
+   "id": "hd1-ares",
+   "ko": "아레스",
+   "en": "Ares",
+   "zh": "阿瑞斯",
+   "rarity": "",
+   "attr": "어둠",
+   "role": "신 (축복)",
+   "ver": "올림포스 신",
+   "date": "2020-09-17"
+  },
+  {
+   "id": "hd1-aphrodite",
+   "ko": "아프로디테",
+   "en": "Aphrodite",
+   "zh": "阿佛洛狄忒",
+   "rarity": "",
+   "attr": "매혹",
+   "role": "신 (축복)",
+   "ver": "올림포스 신",
+   "date": "2020-09-17"
+  },
+  {
+   "id": "hd1-artemis",
+   "ko": "아르테미스",
+   "en": "Artemis",
+   "zh": "阿耳忒弥斯",
+   "rarity": "",
+   "attr": "바람",
+   "role": "신 (축복)",
+   "ver": "올림포스 신",
+   "date": "2020-09-17"
+  },
+  {
+   "id": "hd1-dionysus",
+   "ko": "디오니소스",
+   "en": "Dionysus",
+   "zh": "狄俄尼索斯",
+   "rarity": "",
+   "attr": "독",
+   "role": "신 (축복)",
+   "ver": "올림포스 신",
+   "date": "2020-09-17"
+  },
+  {
+   "id": "hd1-demeter",
+   "ko": "데메테르",
+   "en": "Demeter",
+   "zh": "得墨忒耳",
+   "rarity": "",
+   "attr": "얼음",
+   "role": "신 (축복)",
+   "ver": "올림포스 신",
+   "date": "2020-09-17"
+  },
+  {
+   "id": "hd1-hermes",
+   "ko": "헤르메스",
+   "en": "Hermes",
+   "zh": "赫尔墨斯",
+   "rarity": "",
+   "attr": "바람",
+   "role": "신 (축복)",
+   "ver": "올림포스 신",
+   "date": "2020-09-17"
+  },
+  {
+   "id": "hd1-chaos",
+   "ko": "카오스",
+   "en": "Chaos",
+   "zh": "卡俄斯",
+   "rarity": "",
+   "attr": "허수",
+   "role": "신 (축복)",
+   "ver": "올림포스 신",
+   "date": "2020-09-17"
+  },
+  {
+   "id": "hd1-stygianblade",
+   "ko": "스티기우스 (스틱스의 검)",
+   "en": "Stygian Blade",
+   "zh": "冥河之剑",
+   "rarity": "",
+   "attr": "물리",
+   "role": "무기",
+   "ver": "지하세계 무기",
+   "date": "2020-09-17"
+  },
+  {
+   "id": "hd1-eternalspear",
+   "ko": "바라타 (영원의 창)",
+   "en": "Eternal Spear",
+   "zh": "永恒之矛",
+   "rarity": "",
+   "attr": "물리",
+   "role": "무기",
+   "ver": "지하세계 무기",
+   "date": "2020-09-17"
+  },
+  {
+   "id": "hd1-shieldofchaos",
+   "ko": "이지스 (혼돈의 방패)",
+   "en": "Shield of Chaos",
+   "zh": "混沌之盾",
+   "rarity": "",
+   "attr": "물리",
+   "role": "무기",
+   "ver": "지하세계 무기",
+   "date": "2020-09-17"
+  },
+  {
+   "id": "hd1-heartseekingbow",
+   "ko": "코로나크트 (심장추적자의 활)",
+   "en": "Heart-Seeking Bow",
+   "zh": "追心之弓",
+   "rarity": "",
+   "attr": "물리",
+   "role": "무기",
+   "ver": "지하세계 무기",
+   "date": "2020-09-17"
+  },
+  {
+   "id": "hd1-twinfists",
+   "ko": "말폰 (쌍주먹)",
+   "en": "Twin Fists of Malphon",
+   "zh": "马尔丰双拳",
+   "rarity": "",
+   "attr": "물리",
+   "role": "무기",
+   "ver": "지하세계 무기",
+   "date": "2020-09-17"
+  },
+  {
+   "id": "hd1-adamantrail",
+   "ko": "엑사그리프 (아다마스 레일)",
+   "en": "Adamant Rail",
+   "zh": "精金轨道炮",
+   "rarity": "",
+   "attr": "물리",
+   "role": "무기",
+   "ver": "지하세계 무기",
+   "date": "2020-09-17"
+  }
+ ]
+}

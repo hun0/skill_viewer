@@ -1,0 +1,247 @@
+{
+ "note": "하데스 II(2025 정식 출시)는 주인공 멜리노에 한 명이라, 축복을 주는 신·조력자 16명과 밤의 무기 6종으로 나눴어요. 신 항목은 축복 연출, 무기 항목은 무기·형태(Aspect) 연출 영상이에요. 한글 무기 이름은 원어를 옮긴 표기라 게임 내 표기와 다를 수 있어요.",
+ "roster": [
+  {
+   "id": "hd2-zeus",
+   "ko": "제우스",
+   "en": "Zeus",
+   "zh": "宙斯",
+   "rarity": "",
+   "attr": "번개",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-hera",
+   "ko": "헤라",
+   "en": "Hera",
+   "zh": "赫拉",
+   "rarity": "",
+   "attr": "허수",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-poseidon",
+   "ko": "포세이돈",
+   "en": "Poseidon",
+   "zh": "波塞冬",
+   "rarity": "",
+   "attr": "물",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-demeter",
+   "ko": "데메테르",
+   "en": "Demeter",
+   "zh": "得墨忒耳",
+   "rarity": "",
+   "attr": "얼음",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-apollo",
+   "ko": "아폴론",
+   "en": "Apollo",
+   "zh": "阿波罗",
+   "rarity": "",
+   "attr": "빛",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-aphrodite",
+   "ko": "아프로디테",
+   "en": "Aphrodite",
+   "zh": "阿佛洛狄忒",
+   "rarity": "",
+   "attr": "매혹",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-hephaestus",
+   "ko": "헤파이스토스",
+   "en": "Hephaestus",
+   "zh": "赫菲斯托斯",
+   "rarity": "",
+   "attr": "불",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-hestia",
+   "ko": "헤스티아",
+   "en": "Hestia",
+   "zh": "赫斯提亚",
+   "rarity": "",
+   "attr": "불",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-ares",
+   "ko": "아레스",
+   "en": "Ares",
+   "zh": "阿瑞斯",
+   "rarity": "",
+   "attr": "어둠",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-artemis",
+   "ko": "아르테미스",
+   "en": "Artemis",
+   "zh": "阿耳忒弥斯",
+   "rarity": "",
+   "attr": "바람",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-athena",
+   "ko": "아테나",
+   "en": "Athena",
+   "zh": "雅典娜",
+   "rarity": "",
+   "attr": "빛",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-dionysus",
+   "ko": "디오니소스",
+   "en": "Dionysus",
+   "zh": "狄俄尼索斯",
+   "rarity": "",
+   "attr": "독",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-hermes",
+   "ko": "헤르메스",
+   "en": "Hermes",
+   "zh": "赫尔墨斯",
+   "rarity": "",
+   "attr": "바람",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-hades",
+   "ko": "하데스",
+   "en": "Hades",
+   "zh": "哈迪斯",
+   "rarity": "",
+   "attr": "어둠",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-chaos",
+   "ko": "카오스",
+   "en": "Chaos",
+   "zh": "卡俄斯",
+   "rarity": "",
+   "attr": "허수",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-selene",
+   "ko": "셀레네",
+   "en": "Selene",
+   "zh": "塞勒涅",
+   "rarity": "",
+   "attr": "달",
+   "role": "신 (축복)",
+   "ver": "신과 조력자",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-witchsstaff",
+   "ko": "데스쿠라 (마녀의 지팡이)",
+   "en": "Witch's Staff",
+   "zh": "女巫法杖",
+   "rarity": "",
+   "attr": "물리",
+   "role": "무기",
+   "ver": "밤의 무기",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-sisterblades",
+   "ko": "림과 오로스 (자매 단검)",
+   "en": "Sister Blades",
+   "zh": "姐妹双刃",
+   "rarity": "",
+   "attr": "물리",
+   "role": "무기",
+   "ver": "밤의 무기",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-umbralflames",
+   "ko": "이그니움 (그림자 불꽃)",
+   "en": "Umbral Flames",
+   "zh": "冥影之焰",
+   "rarity": "",
+   "attr": "물리",
+   "role": "무기",
+   "ver": "밤의 무기",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-moonstoneaxe",
+   "ko": "조레페트 (월장석 도끼)",
+   "en": "Moonstone Axe",
+   "zh": "月石战斧",
+   "rarity": "",
+   "attr": "물리",
+   "role": "무기",
+   "ver": "밤의 무기",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-argentskull",
+   "ko": "레발 (은빛 해골)",
+   "en": "Argent Skull",
+   "zh": "银光头骨",
+   "rarity": "",
+   "attr": "물리",
+   "role": "무기",
+   "ver": "밤의 무기",
+   "date": "2025-09-25"
+  },
+  {
+   "id": "hd2-blackcoat",
+   "ko": "진스 (검은 외투)",
+   "en": "Black Coat",
+   "zh": "黑色外套",
+   "rarity": "",
+   "attr": "물리",
+   "role": "무기",
+   "ver": "밤의 무기",
+   "date": "2025-09-25"
+  }
+ ]
+}

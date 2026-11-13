@@ -1,0 +1,93 @@
+{
+ "note": "디아블로 IV 클래스 8종 (2026년 11월, 확장팩 '증오의 군주' 기준). 기본·확장팩별로 묶었어요. 링크는 공식 클래스 트레일러와 스킬 모음 영상이에요.",
+ "roster": [
+  {
+   "id": "d4-barbarian",
+   "ko": "야만용사",
+   "en": "Barbarian",
+   "zh": "野蛮人",
+   "rarity": "",
+   "attr": "물리",
+   "role": "클래스",
+   "ver": "기본",
+   "date": "2023-06-06"
+  },
+  {
+   "id": "d4-druid",
+   "ko": "드루이드",
+   "en": "Druid",
+   "zh": "德鲁伊",
+   "rarity": "",
+   "attr": "땅",
+   "role": "클래스",
+   "ver": "기본",
+   "date": "2023-06-06"
+  },
+  {
+   "id": "d4-necromancer",
+   "ko": "강령술사",
+   "en": "Necromancer",
+   "zh": "死灵法师",
+   "rarity": "",
+   "attr": "어둠",
+   "role": "클래스",
+   "ver": "기본",
+   "date": "2023-06-06"
+  },
+  {
+   "id": "d4-rogue",
+   "ko": "도적",
+   "en": "Rogue",
+   "zh": "游侠",
+   "rarity": "",
+   "attr": "물리",
+   "role": "클래스",
+   "ver": "기본",
+   "date": "2023-06-06"
+  },
+  {
+   "id": "d4-sorcerer",
+   "ko": "원소술사",
+   "en": "Sorcerer",
+   "zh": "魔法师",
+   "rarity": "",
+   "attr": "불",
+   "role": "클래스",
+   "ver": "기본",
+   "date": "2023-06-06"
+  },
+  {
+   "id": "d4-spiritborn",
+   "ko": "혼령사",
+   "en": "Spiritborn",
+   "zh": "灵巫",
+   "rarity": "",
+   "attr": "바람",
+   "role": "클래스",
+   "ver": "증오의 그릇",
+   "date": "2024-10-08"
+  },
+  {
+   "id": "d4-paladin",
+   "ko": "성기사",
+   "en": "Paladin",
+   "zh": "圣骑士",
+   "rarity": "",
+   "attr": "빛",
+   "role": "클래스",
+   "ver": "증오의 군주",
+   "date": "2026-04-28"
+  },
+  {
+   "id": "d4-warlock",
+   "ko": "흑마법사",
+   "en": "Warlock",
+   "zh": "术士",
+   "rarity": "",
+   "attr": "어둠",
+   "role": "클래스",
+   "ver": "증오의 군주",
+   "date": "2026-04-28"
+  }
+ ]
+}
