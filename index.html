@@ -114,6 +114,7 @@
   <div class="top">
     <div class="title" id="title">프레임 뷰어</div>
     <a id="ext" target="_blank" rel="noopener" class="hide">유튜브 ↗</a>
+    <button id="mute" type="button" aria-label="음소거" aria-pressed="false" title="음소거 (M)">🔊</button>
     <button id="fs" type="button" aria-label="전체화면">⛶</button>
   </div>
 
@@ -159,7 +160,7 @@
     <ul class="bm-list" id="bmList"></ul>
     <p class="bm-empty" id="bmEmpty">아직 북마크가 없어요. 원하는 프레임에서 메모를 적고 ＋ 북마크를 누르세요.</p>
   </section>
-  <p class="help">영상 위를 좌우로 끌면 멈추고 프레임 이동 · 탭하면 재생/정지 · 타임라인을 누르면 그 위치부터 재생<br>키보드: ← → 5초 이동, Shift+← → 또는 , . 1프레임, Space 재생, F 전체화면, B 북마크 메모<br>북마크는 이 기기에 저장돼요. ‘라이브러리로 보내기’를 누른 뒤 스킬 연출 라이브러리에서 붙여넣기(Ctrl+V)하면 캐릭터 줄 아래에 올라가요.<br><a href="bookmarklet.html" style="color:var(--muted)">유튜브에서 바로 북마크하는 버튼 설치하기</a></p>
+  <p class="help">영상 위를 좌우로 끌면 멈추고 프레임 이동 · 탭하면 재생/정지 · 타임라인을 누르면 그 위치부터 재생<br>키보드: ← → 5초 이동, Shift+← → 또는 , . 1프레임, Space 재생, M 음소거, F 전체화면, B 북마크 메모<br>북마크는 이 기기에 저장돼요. ‘라이브러리로 보내기’를 누른 뒤 스킬 연출 라이브러리에서 붙여넣기(Ctrl+V)하면 캐릭터 줄 아래에 올라가요.<br><a href="bookmarklet.html" style="color:var(--muted)">유튜브에서 바로 북마크하는 버튼 설치하기</a></p>
 
   <div class="open">
     <input type="url" id="url" placeholder="유튜브 링크 붙여넣기" aria-label="유튜브 링크">
@@ -172,7 +173,7 @@
 
 <script>
 const $ = s => document.querySelector(s);
-const S = { char: null, cap: null, mode: null, cur: 0, dur: 0, playing: false, fps: 30, rate: 1, sens: 8, a: null, b: null, yt: null, ytReady: false, pending: null, timer: null, raf: 0 };
+const S = { muted: (() => { try { return localStorage.getItem("sv-muted") === "1"; } catch { return false; } })(), char: null, cap: null, mode: null, cur: 0, dur: 0, playing: false, fps: 30, rate: 1, sens: 8, a: null, b: null, yt: null, ytReady: false, pending: null, timer: null, raf: 0 };
 const vid = $("#vid");
 
 /* ---------- helpers ---------- */
@@ -293,7 +294,7 @@ function warmDone() {
   const t0 = S.warming; S.warming = null;
   try { S.yt.pauseVideo(); S.yt.seekTo(t0, true); } catch {}
   S.cur = t0; S.playing = false; msg("");
-  setTimeout(() => { try { S.yt.unMute(); } catch {} }, 150);
+  setTimeout(applyMute, 150);
   S.dur = (S.yt.getDuration && S.yt.getDuration()) || S.dur; sync();
 }
 function fitYT() {
@@ -345,6 +346,15 @@ $("#seek").oninput = e => { if (!S.dur) return; seekTo(e.target.value / 1000 * S
 $("#seek").onchange = e => { if (!S.dur) return; seekTo(e.target.value / 1000 * S.dur, true); if (!S.playing) P.play(); e.target.blur(); };
 /* real fullscreen when the browser allows it; otherwise (blocked, iframe focus, embedded) fill the window instead */
 function setPseudoFs(on) { document.body.classList.toggle("pfs", on); document.body.classList.toggle("fs", on || !!document.fullscreenElement); setTimeout(fitYT, 50); }
+/* mute: remembered on this device, applied to both YouTube and local files */
+function applyMute() {
+  vid.muted = S.muted;
+  if (S.yt && S.ytReady && S.warming == null) { try { S.muted ? S.yt.mute() : S.yt.unMute(); } catch {} }
+  const b = $("#mute"); b.textContent = S.muted ? "🔇" : "🔊"; b.setAttribute("aria-pressed", String(S.muted)); b.setAttribute("aria-label", S.muted ? "소리 켜기" : "음소거");
+}
+function toggleMute() { S.muted = !S.muted; try { localStorage.setItem("sv-muted", S.muted ? "1" : "0"); } catch {} applyMute(); }
+$("#mute").onclick = toggleMute;
+applyMute();
 function toggleFs() {
   const d = document;
   if (d.fullscreenElement) { d.exitFullscreen().catch(() => {}); return; }
@@ -367,6 +377,7 @@ document.addEventListener("keydown", e => {
   else if (e.key === "ArrowLeft" || e.key === ",") { e.preventDefault(); step(-1); }
   else if (e.key === "ArrowRight" || e.key === ".") { e.preventDefault(); step(1); }
   else if (e.key === " ") { e.preventDefault(); toggle(); }
+  else if ((e.key === "m" || e.key === "M" || e.code === "KeyM") && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); toggleMute(); }
   else if (e.key === "b" || e.key === "B") { e.preventDefault(); $("#bmNote").focus(); }
   else if ((e.key === "f" || e.key === "F" || e.code === "KeyF") && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); toggleFs(); }
   else if (e.key === "Escape" && document.body.classList.contains("pfs")) { e.preventDefault(); setPseudoFs(false); }
