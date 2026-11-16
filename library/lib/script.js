@@ -7,6 +7,11 @@ const VCB = Math.floor(Date.now() / 60000).toString(36); /* cache-buster so the 
 const BILI_KEYS = [["궁극기","大招"],["스킬모음","全技能"],["스킬플레이","实机"]];
 const BILI_KEYS_BOSS = [["보스전","boss战"],["연출","演出"]];
 
+/* anime clip libraries (Sakugabooru): one entry per title, data carries a meta block */
+const ANI_KEYS = Object.keys(DATA).filter(k => DATA[k] && DATA[k].meta && DATA[k].meta.tag);
+ANI_KEYS.forEach(k => { const m = DATA[k].meta; GI18N[k] = [m.en, m.en, m.zh, m.zh]; });
+const SAKUGA_POST = id => `https://www.sakugabooru.com/post/show/${id}`;
+const linksOf = c => c.sk ? [{ url: c.sk.u, label: "원본 mp4" }] : (state.links[c.id] || []);
 const GAMES = [
   { key:"hsr", tab:"스타레일", name:"붕괴: 스타레일", bili:"崩坏星穹铁道", file:"HSR", group:"ver",
     attrLabel:"속성", roleLabel:"운명의 길",
@@ -206,11 +211,18 @@ const GAMES = [
     attrLabel:"구분", roleLabel:"구분",
     yt: c => `2XKO ${c.en} all supers`,
     colors:{ "챔피언":"fire" },
-    roles:["챔피언"] }
-].filter(g => DATA[g.key] && DATA[g.key].roster && DATA[g.key].roster.length);
+    roles:["챔피언"] },
+  { key:"vid", tab:"영상 모음", name:"게임영상 모음", bili:"", file:"VID", group:"reel", reel:true,
+    attrLabel:"게임", roleLabel:"분류",
+    yt: c => `${c.attr || ""} ${c.ko}`.trim(),
+    colors:{} },
+  ...ANI_KEYS.map(k => { const m = DATA[k].meta;
+    return { key:k, tab:m.ko, name:m.ko, bili:"", file:k.toUpperCase(), group:"score", ani:true, tag:m.tag,
+      attrLabel:"작품", roleLabel:"", yt: c => `${m.en} ${c.ko} sakuga`, colors:{} }; })
+].filter(g => g.reel || (DATA[g.key] && DATA[g.key].roster && DATA[g.key].roster.length));
 
 GAMES.forEach(g => {
-  const d = DATA[g.key];
+  const d = DATA[g.key] || { roster: [] };
   g.roster = d.roster; g.bosses = d.bosses || []; g.note = d.note || ""; g.src = d.src || "";
   g.attrs = [...new Set(g.roster.map(c => c.attr).filter(Boolean))];
   g.roleList = g.roles ? g.roles.filter(r => g.roster.some(c => c.role === r)) : [...new Set(g.roster.map(c => c.role).filter(Boolean))];
@@ -227,8 +239,48 @@ let db = null;
 
 const $ = s => document.querySelector(s);
 const verNum = v => String(v).split(".").map(x => Number(x) || 0).reduce((a,b,i)=> a + b * (i ? 1 : 100), 0);
-const sortKey = c => state.game.group === "year" ? (c.date || String(c.ver)) : verNum(c.ver);
+const sortKey = c => state.game.ani ? (c.score || 0) : (state.game.group === "year" || state.game.reel) ? (c.date || String(c.ver)) : verNum(c.ver);
 const cmp = (a, b) => { const x = sortKey(a), y = sortKey(b); return x < y ? -1 : x > y ? 1 : 0; };
+
+/* ---------- 게임영상 모음: rows the user adds (stored in the bosses collection with game "vid") ---------- */
+const REEL_ETC = "기타";
+function syncReels() {
+  const g = GAMES.find(x => x.reel); if (!g) return;
+  g.roster = Object.entries(state.bosses)
+    .filter(([, b]) => b && b.game === g.key)
+    .map(([id, b]) => ({ id, ko: b.ko, en: "", zh: "", attr: b.sub || "", role: "", ver: b.sub || REEL_ETC, date: b.createdAt || "", custom: true, reel: true }));
+  g.attrs = [...new Set(g.roster.map(c => c.attr).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ko"));
+  g.roleList = [];
+  let fi = 0; g.attrVar = {};
+  g.attrs.forEach(a => { g.attrVar[a] = FALLBACK[fi++ % FALLBACK.length]; });
+  g.released = g.roster.length;
+  const o = document.querySelector(`#gameSel option[value="${g.key}"]`);
+  if (o) o.textContent = `${gName(g)} (${g.roster.length})`;
+  if (state.game === g && g.attrs.join("\u0001") !== (g._chipKey || "")) { g._chipKey = g.attrs.join("\u0001"); buildChips(); }
+}
+const reelCmp = (a, b) => (a.ver === REEL_ETC) - (b.ver === REEL_ETC) || String(a.ver).localeCompare(String(b.ver), "ko");
+async function addReel(g, form) {
+  const title = form.querySelector("#reel-title").value.trim();
+  const game = form.querySelector("#reel-game").value.trim();
+  if (!title || !db) return;
+  const id = `${g.key}-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
+  const doc = { game: g.key, ko: title, sub: game, createdAt: new Date().toISOString() };
+  state.bosses = { ...state.bosses, [id]: doc };
+  form.querySelector("#reel-title").value = ""; form.querySelector("#reel-game").value = ""; render();
+  if (state.view === "grid") setView("list");
+  try { await db.collection("bosses").doc(id).set(doc); toast(`'${title}' 추가됨. 아래 항목에 영상 링크를 붙여넣으세요`); }
+  catch { const n = { ...state.bosses }; delete n[id]; state.bosses = n; render(); toast("항목을 추가하지 못했어요"); }
+}
+function reelForm(g) {
+  const f = document.createElement("form"); f.className = "bossadd reeladd";
+  const games = [...new Set([...g.attrs, ...GAMES.filter(x => !x.reel).map(x => x.name)])];
+  f.innerHTML = `<input type="text" id="reel-title" placeholder="제목 (예: 붕스 3.x 궁극기 모음)" aria-label="새 영상 모음 제목" maxlength="60" required>
+    <input type="text" id="reel-game" list="reel-games" placeholder="게임 (선택, 같은 게임끼리 묶여요)" aria-label="게임 이름" maxlength="40">
+    <datalist id="reel-games">${games.map(n => `<option value="${esc(n)}">`).join("")}</datalist>
+    <button class="btn primary" type="submit">모음 추가</button>`;
+  f.onsubmit = e => { e.preventDefault(); addReel(g, f); };
+  return f;
+}
 
 function ytInfo(url) {
   try {
@@ -278,6 +330,12 @@ function toast(msg) {
 function esc(s) { return String(s ?? "").replace(/[&<>"]/g, ch => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[ch])); }
 
 /* ---------- game switching ---------- */
+/* top level: 게임 (character libraries) | 영상 (video collections: 게임 / 애니) */
+const VIDEO_GROUPS = [
+  ["게임", ["vid"]],
+  ["애니", ANI_KEYS]
+];
+const isVideo = g => !!(g && (g.reel || g.ani));
 const GAME_GROUPS = [
   ["수집형 RPG", ["hsr","zzz","ww","nte","gi","hi3","r99","pgr","nikke","ake","bd2","e7","dna","mgl","gbr","ap","sp"]],
   ["출시 예정", ["ao","an","hna"]],
@@ -287,9 +345,12 @@ const GAME_GROUPS = [
 ];
 function buildTabs() {
   const sel = $("#gameSel"); sel.textContent = "";
-  const used = new Set();
+  const video = isVideo(state.game);
+  document.querySelectorAll(".topsw button").forEach(b => b.setAttribute("aria-pressed", String((b.dataset.top === "video") === video)));
+  sel.setAttribute("aria-label", video ? "영상 모음 선택" : "게임 선택");
+  const used = new Set(GAMES.filter(g => isVideo(g) !== video).map(g => g.key));
   const add = (parent, g) => { const o = document.createElement("option"); o.value = g.key; o.textContent = `${gName(g)} (${g.roster.length})`; parent.appendChild(o); used.add(g.key); };
-  GAME_GROUPS.forEach(([label, keys]) => {
+  (video ? VIDEO_GROUPS : GAME_GROUPS).forEach(([label, keys]) => {
     const og = document.createElement("optgroup"); og.label = label; og.dataset.ko = label;
     keys.forEach(k => { const g = GAMES.find(x => x.key === k); if (g) add(og, g); });
     if (og.children.length) sel.appendChild(og);
@@ -299,9 +360,16 @@ function buildTabs() {
   sel.value = state.game.key;
 }
 $("#gameSel").addEventListener("change", e => { location.hash = e.target.value; });
+const LAST_TOP = { game: "hsr", video: "vid" };
+document.querySelectorAll(".topsw button").forEach(b => b.onclick = () => { const k = LAST_TOP[b.dataset.top]; if (k && k !== state.game.key) location.hash = k; });
 function selectGame(key) {
   const g = GAMES.find(x => x.key === key) || GAMES[0];
-  state.game = g; state.elems.clear(); state.paths.clear(); state.q = ""; $("#q").value = "";
+  const topChanged = isVideo(g) !== isVideo(state.game) || !$("#gameSel").options.length;
+  state.game = g; LAST_TOP[isVideo(g) ? "video" : "game"] = g.key;
+  if (topChanged) buildTabs();
+  const so = $("#sort");
+  so.querySelector('[value="ver-desc"]').textContent = g.ani ? "인기순" : "최신순";
+  so.querySelector('[value="ver-asc"]').textContent = g.ani ? "점수 낮은순" : "오래된순"; state.elems.clear(); state.paths.clear(); state.q = ""; $("#q").value = "";
   $("#gameSel").value = g.key;
   setHeader(g);
   buildChips(); render();
@@ -311,6 +379,26 @@ function selectGame(key) {
 
 function setHeader(g) {
   $("#gname").textContent = gName(g);
+  if (g.ani) {
+    const n = g.roster.length;
+    $("#gsub").textContent = L(`Sakugabooru 인기 이펙트 전투 클립 ${n}개 · ▶ 프레임 뷰어 · ⬇ 원본 mp4 다운로드`,
+      `${n} popular effects fight clips from Sakugabooru · ▶ frame viewer · ⬇ original mp4`,
+      `Sakugabooru 热门特效战斗片段 ${n} 个 · ▶ 逐帧查看 · ⬇ 原始 mp4`);
+    const src = $("#gsrc"); src.innerHTML = g.src + ' · <button type="button" class="linkbtn" id="aniDl">전체 다운로드 명령 복사</button>'; src.hidden = false;
+    src.querySelector("#aniDl").onclick = () => copyText(g.roster.map(c => sakugaCmd(c)).join("\n"), `${gName(g)}: ${g.roster.length}개 다운로드 명령을 복사했어요. 터미널에 붙여넣으세요`);
+    const gn = $("#gnote"); gn.textContent = g.note; gn.hidden = !g.note;
+    $("#elemLabel").textContent = g.attrLabel; $("#pathLabel").textContent = g.roleLabel;
+    return;
+  }
+  if (g.reel) {
+    const n = g.roster.length;
+    $("#gsub").textContent = L(`스킬 모음 같은 게임 영상을 직접 모아 두는 곳이에요 · ${n}개` + (DATA.dist ? ". ▶ 보기를 누르면 프레임 뷰어로 열려요." : ""),
+      `Your own collection of game videos such as skill compilations · ${n}` + (DATA.dist ? ". Press ▶ to open a video in the frame viewer." : ""),
+      `自行收集的游戏视频（如技能合集）· ${n} 个` + (DATA.dist ? "。点 ▶ 即可在逐帧查看器中打开。" : ""));
+    $("#gsrc").hidden = true; $("#gnote").hidden = true;
+    $("#elemLabel").textContent = g.attrLabel; $("#pathLabel").textContent = g.roleLabel;
+    return;
+  }
   const up = g.roster.length - g.released;
   $("#gsub").textContent = L(`플레이어블 캐릭터 ${g.released}명` + (up > 0 ? ` + 출시 예정 ${up}명` : "") + (DATA.dist ? ". ▶ 보기를 누르면 프레임 뷰어로 열려요." : ". 캐릭터마다 영상 링크를 붙여넣으면 저장됩니다."),
     `${g.released} playable characters` + (up > 0 ? ` + ${up} upcoming` : "") + (DATA.dist ? ". Press ▶ to open a video in the frame viewer." : ". Paste a video link on any character to save it."),
@@ -321,6 +409,7 @@ function setHeader(g) {
 }
 function grpHead(g, t) {
   const v = `<span class="ver">${esc(t)}</span>`;
+  if (g.reel) return v;
   if (g.key === "tft") return L(`${v}코스트`, `${v}-cost`, `${v}费`);
   if (/^\d{4}$/.test(t)) return L(`${v}년 출시`, `Released in ${v}`, `${v}年推出`);
   if (g.group === "year") return v;
@@ -351,7 +440,7 @@ function toggle(set, v) { set.has(v) ? set.delete(v) : set.add(v); }
 
 /* ---------- render ---------- */
 function matches(c, q) {
-  return [c.ko, c.en, c.zh, c.code].some(v => v && String(v).toLowerCase().includes(q));
+  return [c.ko, c.en, c.zh, c.code, c.arts].some(v => v && String(v).toLowerCase().includes(q));
 }
 function tagHit(c, q) { return (state.tags[c.id] || []).some(t => t.toLowerCase().includes(q)); }
 function bmHit(bm, q) { return [bm.note, bm.title].some(v => v && String(v).toLowerCase().includes(q)); }
@@ -402,16 +491,18 @@ function filtered() {
     if (q && !searchHit(c, q)) return false;
     if (!crossSearch() && state.elems.size && !state.elems.has(c.attr)) return false;
     if (!crossSearch() && state.paths.size && !state.paths.has(c.role)) return false;
-    if (state.onlyEmpty && (state.links[c.id] || []).length) return false;
+    if (state.onlyEmpty && linksOf(c).length) return false;
     return true;
   });
   if (state.sort === "name") list.sort((a,b) => nm(a).localeCompare(nm(b), LANG));
   else if (state.sort === "ver-asc") list.sort(cmp);
   else list.sort((a,b) => cmp(b,a));
+  if (!crossSearch() && state.game.reel && state.sort !== "name") list.sort(reelCmp);
   return list;
 }
 
 function render() {
+  syncReels();
   const g = state.game;
   updateFilterCount();
 
@@ -436,10 +527,19 @@ function render() {
     });
     return;
   }
-  const bosses = (state.elems.size || state.paths.size) ? [] : bossesOf(g).filter(b =>
+  if (g.reel) {
+    setHeader(g);
+    if (!state.readonly && state.mode === "db") main.appendChild(reelForm(g));
+    if (!list.length) {
+      const p = document.createElement("p"); p.className = "nores";
+      p.textContent = g.roster.length ? "조건에 맞는 영상 모음이 없어요." : (state.readonly ? "아직 올라온 영상 모음이 없어요." : "아직 영상 모음이 없어요. 위에서 제목을 적고 ‘모음 추가’를 누른 뒤, 생긴 항목에 영상 링크를 붙여넣으세요.");
+      main.appendChild(p); return;
+    }
+  }
+  const bosses = (g.reel || g.ani || state.elems.size || state.paths.size) ? [] : bossesOf(g).filter(b =>
     (!q || searchHit(b, q) || (state.smode === "name" && ("보스".includes(q) || q.includes("보스")))) &&
     !(state.onlyEmpty && (state.links[b.id] || []).length));
-  const canAddBoss = !state.readonly && state.mode === "db" && !state.elems.size && !state.paths.size;
+  const canAddBoss = !g.reel && !g.ani && !state.readonly && state.mode === "db" && !state.elems.size && !state.paths.size;
   if (!list.length && !bosses.length && !canAddBoss) { main.innerHTML = `<p class="nores">조건에 맞는 캐릭터가 없어요.</p>`; return; }
 
   const groups = [];
@@ -454,10 +554,10 @@ function render() {
   groups.forEach(gr => {
     const sec = document.createElement("section"); sec.className = "group";
     if (gr.title) {
-      const gf = gr.items.filter(c => (state.links[c.id]||[]).length).length;
+      const gf = gr.items.filter(c => linksOf(c).length).length;
       const up = gr.items.some(c => c.upcoming) ? '<span class="upcoming">출시 예정</span>' : "";
       const h = document.createElement("h2");
-      h.innerHTML = grpHead(g, gr.title) + up + `<span class="gfill">${gr.items.length}명</span>`;
+      h.innerHTML = grpHead(g, gr.title) + up + `<span class="gfill">${gr.items.length}${g.reel ? "개" : "명"}</span>`;
       sec.appendChild(h);
     }
     const box = document.createElement("div"); box.className = state.view === "grid" ? "list cards" : "list";
@@ -497,21 +597,35 @@ function rarityHTML(c) {
 
 function itemFor(c) { return state.view === "grid" ? cardFor(c) : rowFor(c); }
 /* compact card: thumbnail, name, element/role and a play button for the first video; no bookmarks */
+function sakugaHref(c) {
+  return `${VIEWER_URL}?_=${VCB}&src=${encodeURIComponent(c.sk.u)}&page=${encodeURIComponent(SAKUGA_POST(c.sk.p))}&title=${encodeURIComponent(`${gName(GAMES.find(x => x.key === gameOf(c)) || state.game)} · ${nm(c)}`)}&c=${encodeURIComponent(c.id)}`;
+}
+function sakugaCmd(c) {
+  const g = GAMES.find(x => x.key === gameOf(c)) || state.game;
+  const ext = (c.sk.u.match(/\.(\w+)$/) || [, "mp4"])[1];
+  return `curl -L -o "${g.file}_${c.sk.p}_${safeName((c.arts || c.ko).split(",")[0])}.${ext}" "${c.sk.u}"`;
+}
 function cardFor(c) {
   const g = GAMES.find(x => x.key === gameOf(c)) || state.game;
-  const items = state.links[c.id] || [];
+  const items = linksOf(c);
   const card = document.createElement("div");
   card.className = "card" + (items.length ? " done" : "") + (c.upcoming ? " up" : ""); card.dataset.g = g.key;
   const th = thumbFor(c, c.boss ? "--danger" : (g.attrVar[c.attr] || "--muted"));
   th.style.borderBottomColor = th.style.borderLeftColor; card.appendChild(th);
   const body = document.createElement("div"); body.className = "cbody";
-  const tags = c.boss ? "보스" : [...new Set([c.attr, c.role].filter(Boolean))].map(esc).join(" · ");
-  body.innerHTML = `<div class="name"></div><div class="en"></div><div class="meta">${c.boss ? "" : rarityHTML(c)}<span>${tags}</span></div><div class="cfoot"></div>`;
+  const tags = c.boss ? "보스" : c.sk ? "" : [...new Set([c.attr, c.role].filter(Boolean))].map(esc).join(" · ");
+  body.innerHTML = `<div class="name"></div><div class="en"></div><div class="meta">${c.boss ? "" : rarityHTML(c)}${c.sk ? `<span class="score" title="Sakugabooru 점수">♥ ${c.score}</span>` : ""}<span>${tags}</span></div><div class="cfoot"></div>`;
   body.querySelector(".name").textContent = nm(c);
   body.querySelector(".en").textContent = sub(c) || "";
   const foot = body.querySelector(".cfoot");
   const first = items.map(it => ({ it, yv: ytId(it.url) })).find(x => x.yv);
-  if (first) {
+  if (c.sk) {
+    const pv = document.createElement("a"); pv.className = "cplay"; pv.target = "_blank"; pv.rel = "noopener"; pv.href = sakugaHref(c);
+    pv.textContent = "▶ 보기"; pv.title = "프레임 뷰어로 보기"; foot.appendChild(pv);
+    const dl = document.createElement("a"); dl.className = "cplay cdl"; dl.target = "_blank"; dl.rel = "noopener"; dl.href = c.sk.u;
+    dl.textContent = "⬇"; dl.title = "원본 mp4 다운로드 (새 탭에서 열리면 우클릭 → 동영상 저장)"; dl.setAttribute("aria-label", `${nm(c)} 원본 영상 다운로드`);
+    foot.appendChild(dl);
+  } else if (first) {
     const lbl = first.it.label || "영상 1";
     const pv = document.createElement("a"); pv.className = "cplay"; pv.target = "_blank"; pv.rel = "noopener";
     pv.href = `${VIEWER_URL}?_=${VCB}&v=${encodeURIComponent(first.yv.id)}${first.yv.t ? "&t=" + encodeURIComponent(String(first.yv.t).replace(/s$/, "")) : ""}&title=${encodeURIComponent(`${nm(c)} · ${lbl}`)}&c=${encodeURIComponent(c.id)}`;
@@ -526,26 +640,40 @@ function cardFor(c) {
   card.appendChild(body);
   return card;
 }
+function sakugaLinks(c) {
+  const links = document.createElement("div"); links.className = "links";
+  const ll = document.createElement("div"); ll.className = "linklist";
+  ll.innerHTML = `<span class="link"><a class="play" target="_blank" rel="noopener" title="프레임 뷰어로 보기">▶</a><a class="src" target="_blank" rel="noopener"><span class="lbl">프레임 뷰어</span> <span class="vid"></span></a></span>
+    <span class="link"><a class="dlk" target="_blank" rel="noopener" title="새 탭에서 열리면 영상 위에서 우클릭 → ‘동영상을 다른 이름으로 저장’"><span class="lbl">⬇ 원본 다운로드</span> <span class="vid"></span></a></span>`;
+  const [pa, sa] = ll.querySelectorAll(".play, .src"); pa.href = sa.href = sakugaHref(c);
+  sa.querySelector(".vid").textContent = "#" + c.sk.p;
+  const d = ll.querySelector(".dlk"); d.href = c.sk.u; d.querySelector(".vid").textContent = (c.sk.u.match(/\.(\w+)$/) || [, ""])[1];
+  links.appendChild(ll);
+  const ar = document.createElement("div"); ar.className = "arts"; ar.textContent = "원화: " + (c.arts || "");
+  links.appendChild(ar);
+  return links;
+}
 function rowFor(c) {
   const g = GAMES.find(x => x.key === gameOf(c)) || state.game;
-  const items = state.links[c.id] || [];
+  const items = linksOf(c);
   const row = document.createElement("div");
   row.className = "char" + (items.length ? " done" : ""); row.dataset.g = g.key;
 
   const who = document.createElement("div"); who.className = "who";
-  const tags = [c.attr, c.role].filter(Boolean).map(esc).join(" · ");
+  const tags = c.sk ? "" : [c.attr, c.role].filter(Boolean).map(esc).join(" · ");
   who.innerHTML = c.boss
     ? `<div class="name"></div>
     <div class="meta"><span>보스${c.dur ? " · " + esc(c.dur) : ""}</span><span class="en"></span></div>`
     : `<div class="name"></div>
-    <div class="meta">${rarityHTML(c)}${c.moonlight ? '<span class="ml">월광</span>' : ""}<span>${tags}</span><span class="en"></span>${c.code ? `<span class="code">${esc(c.code)}</span>` : ""}</div>`;
+    <div class="meta">${rarityHTML(c)}${c.moonlight ? '<span class="ml">월광</span>' : ""}${c.sk ? `<span class="score" title="Sakugabooru 점수">♥ ${c.score}</span>` : ""}<span>${tags}</span><span class="en"></span>${c.code ? `<span class="code">${esc(c.code)}</span>` : ""}</div>`;
   who.querySelector(".name").textContent = nm(c);
   who.querySelector(".en").textContent = sub(c) || "";
   who.prepend(thumbFor(c, c.boss ? "--danger" : (g.attrVar[c.attr] || "--muted")));
   who.appendChild(tagRow(c));
 
-  const links = document.createElement("div"); links.className = "links";
+  const links = c.sk ? sakugaLinks(c) : document.createElement("div"); links.className = "links";
   const ll = document.createElement("div"); ll.className = "linklist";
+  if (c.sk) {} else {
   if (!items.length) {
     const e = document.createElement("span"); e.className = "empty-hint";
     e.textContent = c.upcoming ? "출시 후 추가" : "아직 링크 없음"; ll.appendChild(e);
@@ -583,8 +711,9 @@ function rowFor(c) {
     ll.appendChild(chip);
   });
   links.appendChild(ll);
+  }
 
-  const term = (c.zh || c.en || "").replace(/[·•]/g, " ");
+  const term = c.sk ? "" : (c.zh || c.en || "").replace(/[·•]/g, " ");
   if (term) {
     const bs = document.createElement("div"); bs.className = "bsearch";
     bs.innerHTML = `<span class="bs-label">빌리빌리 검색</span><span class="zh"></span>` +
@@ -593,7 +722,7 @@ function rowFor(c) {
     links.appendChild(bs);
   }
 
-  if (!state.readonly) {
+  if (!state.readonly && !c.sk) {
     const f = document.createElement("form"); f.className = "addform";
     f.innerHTML = `<input type="url" id="u-${c.id}" placeholder="영상 링크 붙여넣기" aria-label="${esc(nm(c))} 영상 링크" required>
       <input type="text" id="l-${c.id}" placeholder="라벨 (선택)" aria-label="${esc(nm(c))} 링크 라벨" maxlength="20">
@@ -605,13 +734,15 @@ function rowFor(c) {
 
   const side = document.createElement("div"); side.className = "side";
   const ytSearch = `https://www.youtube.com/results?search_query=${encodeURIComponent(g.yt(c))}`;
-  side.innerHTML = `<a class="yt" target="_blank" rel="noopener" href="${esc(ytSearch)}">유튜브에서 찾기 ↗</a>`;
+  side.innerHTML = c.sk ? `<a class="yt" target="_blank" rel="noopener" href="${esc(SAKUGA_POST(c.sk.p))}">Sakugabooru ↗</a>`
+    : `<a class="yt" target="_blank" rel="noopener" href="${esc(ytSearch)}">유튜브에서 찾기 ↗</a>`;
   if (c.custom && !state.readonly && state.mode === "db") {
-    const rm = document.createElement("button"); rm.type = "button"; rm.className = "yt rmboss"; rm.textContent = "보스 삭제";
+    const rmLbl = c.reel ? "모음 삭제" : "보스 삭제";
+    const rm = document.createElement("button"); rm.type = "button"; rm.className = "yt rmboss"; rm.textContent = rmLbl;
     rm.onclick = () => {
       if (rm.dataset.armed) { removeBoss(c); return; }
       rm.dataset.armed = "1"; rm.textContent = "한 번 더 누르면 삭제";
-      setTimeout(() => { if (rm.isConnected) { delete rm.dataset.armed; rm.textContent = "보스 삭제"; } }, 3000);
+      setTimeout(() => { if (rm.isConnected) { delete rm.dataset.armed; rm.textContent = rmLbl; } }, 3000);
     };
     side.appendChild(rm);
   }
@@ -619,7 +750,7 @@ function rowFor(c) {
     const d = document.createElement("button"); d.type = "button"; d.className = "dl";
     d.textContent = "다운로드 명령 복사";
     d.setAttribute("aria-label", `${nm(c)} 영상 다운로드 명령어 복사`);
-    d.onclick = () => copyText(dlCommand(c, items), `${nm(c)}: 다운로드 명령어를 복사했어요. 터미널에 붙여넣으세요`);
+    d.onclick = () => copyText(c.sk ? sakugaCmd(c) : dlCommand(c, items), `${nm(c)}: 다운로드 명령어를 복사했어요. 터미널에 붙여넣으세요`);
     side.appendChild(d);
   }
 
@@ -631,6 +762,7 @@ function rowFor(c) {
 
 /* ---------- custom bosses ---------- */
 function bossesOf(g) {
+  if (g.reel) return [];
   const custom = Object.entries(state.bosses)
     .filter(([, b]) => b && b.game === g.key)
     .sort((a, b) => String(a[1].createdAt || "").localeCompare(String(b[1].createdAt || "")))
@@ -653,8 +785,8 @@ async function removeBoss(c) {
     if ((state.links[c.id] || []).length) { try { await db.collection("links").doc(c.id).delete(); } catch {} }
     if (state.thumbs[c.id]) { const a = state.thumbs[c.id]; try { await db.collection("thumbs").doc(c.id).delete(); if (assets) await assets.delete(a); } catch {} }
     const n = { ...state.bosses }; delete n[c.id]; state.bosses = n; render();
-    toast(`보스 '${nm(c)}' 삭제됨`);
-  } catch { toast("보스를 삭제하지 못했어요"); }
+    toast(c.reel ? `'${nm(c)}' 삭제됨` : `보스 '${nm(c)}' 삭제됨`);
+  } catch { toast(c.reel ? "삭제하지 못했어요" : "보스를 삭제하지 못했어요"); }
 }
 
 /* ---------- thumbnails ---------- */
@@ -1056,7 +1188,7 @@ $("#copyCsv").onclick = () => {
   const lines = [["게임","버전","한글명","English","中文","등급",g.attrLabel,g.roleLabel,"라벨","링크"].join(",")];
   [...[...g.roster].sort(cmp), ...bossesOf(g)].forEach(c => {
     const base = [g.tab, c.ver, c.ko, c.en, c.zh, c.rarity, c.attr, c.role];
-    const items = state.links[c.id] || [];
+    const items = linksOf(c);
     if (!items.length) lines.push([...base, "", ""].map(q).join(","));
     items.forEach(it => lines.push([...base, it.label, it.url].map(q).join(",")));
   });
@@ -1141,7 +1273,7 @@ function useSnapshot() {
   });
   db.collection("bosses").onSnapshot(snap => {
     const m = {};
-    snap.docs.forEach(d => { const v = d.data(); if (v && v.game && v.ko) m[d.id] = { game: v.game, ko: v.ko, zh: v.zh || "", createdAt: v.createdAt || "" }; });
+    snap.docs.forEach(d => { const v = d.data(); if (v && v.game && v.ko) m[d.id] = { game: v.game, ko: v.ko, zh: v.zh || "", sub: v.sub || "", createdAt: v.createdAt || "" }; });
     state.bosses = m; render();
   }, () => {});
   try { const u = await claude.use("user"); if (u && u.id) state.me = await u.id(); } catch {}

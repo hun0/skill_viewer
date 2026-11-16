@@ -1,0 +1,332 @@
+{
+ "note": "Sakugabooru에서 ‘neon_genesis_evangelion_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=neon_genesis_evangelion_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Evangelion</a>",
+ "roster": [
+  {
+   "id": "aeva-301413",
+   "ko": "Mitsuo Iso",
+   "en": "The End of Evangelion · #25",
+   "zh": "",
+   "rarity": "",
+   "attr": "The End of Evangelion",
+   "role": "",
+   "ver": "",
+   "score": 4826,
+   "arts": "Mitsuo Iso",
+   "sk": {
+    "p": 301413,
+    "u": "https://www.sakugabooru.com/data/119489a4c6f0f1a668a2e4c8a1fc3a94.mp4"
+   }
+  },
+  {
+   "id": "aeva-301740",
+   "ko": "Yoh Yoshinari",
+   "en": "Neon Genesis Evangelion · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "Neon Genesis Evangelion",
+   "role": "",
+   "ver": "",
+   "score": 1999,
+   "arts": "Unknown, Yoh Yoshinari",
+   "sk": {
+    "p": 301740,
+    "u": "https://www.sakugabooru.com/data/c5234bd693e5381679f98e305d2d8dc8.mp4"
+   }
+  },
+  {
+   "id": "aeva-266412",
+   "ko": "Mitsuo Iso",
+   "en": "Neon Genesis Evangelion · #19",
+   "zh": "",
+   "rarity": "",
+   "attr": "Neon Genesis Evangelion",
+   "role": "",
+   "ver": "",
+   "score": 1647,
+   "arts": "Mitsuo Iso",
+   "sk": {
+    "p": 266412,
+    "u": "https://www.sakugabooru.com/data/8a3cfd4fc3f27d990a74cc7710325f36.mp4"
+   }
+  },
+  {
+   "id": "aeva-211172",
+   "ko": "Takeshi Honda",
+   "en": "Neon Genesis Evangelion · #02",
+   "zh": "",
+   "rarity": "",
+   "attr": "Neon Genesis Evangelion",
+   "role": "",
+   "ver": "",
+   "score": 1637,
+   "arts": "Takeshi Honda",
+   "sk": {
+    "p": 211172,
+    "u": "https://www.sakugabooru.com/data/1626ab12a03a91d87afe2c1cc5ff234e.mp4"
+   }
+  },
+  {
+   "id": "aeva-301585",
+   "ko": "Keisuke Watabe, Shoichi Masuo 외 1명",
+   "en": "Neon Genesis Evangelion · #09",
+   "zh": "",
+   "rarity": "",
+   "attr": "Neon Genesis Evangelion",
+   "role": "",
+   "ver": "",
+   "score": 1428,
+   "arts": "Keisuke Watabe, Shoichi Masuo, Yutaka Nakamura",
+   "sk": {
+    "p": 301585,
+    "u": "https://www.sakugabooru.com/data/441dbabcea6360300c97e325b26a71e1.mp4"
+   }
+  },
+  {
+   "id": "aeva-301416",
+   "ko": "Kazuchika Kise, Shigeki Sunada 외 2명",
+   "en": "The End of Evangelion · #25 (Chara",
+   "zh": "",
+   "rarity": "",
+   "attr": "The End of Evangelion",
+   "role": "",
+   "ver": "",
+   "score": 1378,
+   "arts": "Kazuchika Kise, Shigeki Sunada, Yoh Yoshinari, Yutaka Kamogawa",
+   "sk": {
+    "p": 301416,
+    "u": "https://www.sakugabooru.com/data/470a7558fb6020c73e46b860d2354ff1.mp4"
+   }
+  },
+  {
+   "id": "aeva-214737",
+   "ko": "Kenichi Yoshida, Mitsuo Iso 외 1명",
+   "en": "Neon Genesis Evangelion · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "Neon Genesis Evangelion",
+   "role": "",
+   "ver": "",
+   "score": 1214,
+   "arts": "Kenichi Yoshida, Mitsuo Iso, Shinsaku Sasaki",
+   "sk": {
+    "p": 214737,
+    "u": "https://www.sakugabooru.com/data/3192e427640820cedb081c83bc174abb.mp4"
+   }
+  },
+  {
+   "id": "aeva-301408",
+   "ko": "Hisaki Furukawa, Yoh Yoshinari",
+   "en": "The End of Evangelion · #25",
+   "zh": "",
+   "rarity": "",
+   "attr": "The End of Evangelion",
+   "role": "",
+   "ver": "",
+   "score": 1119,
+   "arts": "Unknown, Hisaki Furukawa, Yoh Yoshinari",
+   "sk": {
+    "p": 301408,
+    "u": "https://www.sakugabooru.com/data/6b13bf7d23551581130c3bdab1a4edc9.mp4"
+   }
+  },
+  {
+   "id": "aeva-301412",
+   "ko": "Kazuchika Kise, Takeshi Honda 외 1명",
+   "en": "The End of Evangelion · #25 (Chara",
+   "zh": "",
+   "rarity": "",
+   "attr": "The End of Evangelion",
+   "role": "",
+   "ver": "",
+   "score": 1085,
+   "arts": "Unknown, Kazuchika Kise, Takeshi Honda, Yoh Yoshinari",
+   "sk": {
+    "p": 301412,
+    "u": "https://www.sakugabooru.com/data/2ff0844a3f693c802a1b27086263ac0c.mp4"
+   }
+  },
+  {
+   "id": "aeva-301522",
+   "ko": "Yoh Yoshinari",
+   "en": "Neon Genesis Evangelion · #02",
+   "zh": "",
+   "rarity": "",
+   "attr": "Neon Genesis Evangelion",
+   "role": "",
+   "ver": "",
+   "score": 1030,
+   "arts": "Yoh Yoshinari",
+   "sk": {
+    "p": 301522,
+    "u": "https://www.sakugabooru.com/data/7ce5b008d1360af38be2f75bb3bf61b5.mp4"
+   }
+  },
+  {
+   "id": "aeva-117726",
+   "ko": "Sushio, Takeshi Honda 외 1명",
+   "en": "Evangelion 3.0: You Can (not) Redo · #3.33",
+   "zh": "",
+   "rarity": "",
+   "attr": "Evangelion 3.0: You Can (not) Redo",
+   "role": "",
+   "ver": "",
+   "score": 987,
+   "arts": "Sushio, Takeshi Honda, Toshiyuki Inoue",
+   "sk": {
+    "p": 117726,
+    "u": "https://www.sakugabooru.com/data/a7aecb9e4262d21c6f2dab0c3771603a.mp4"
+   }
+  },
+  {
+   "id": "aeva-162049",
+   "ko": "Hiroyuki Imaishi, Kai Ikarashi 외 1명",
+   "en": "Evangelion 3.0+1.01: Thrice Upon a Time",
+   "zh": "",
+   "rarity": "",
+   "attr": "Evangelion 3.0+1.01: Thrice Upon …",
+   "role": "",
+   "ver": "",
+   "score": 978,
+   "arts": "Unknown, Hiroyuki Imaishi, Kai Ikarashi, Yoh Yoshinari",
+   "sk": {
+    "p": 162049,
+    "u": "https://www.sakugabooru.com/data/8e4236d016660a66e6a4176fb0c4e668.mp4"
+   }
+  },
+  {
+   "id": "aeva-301401",
+   "ko": "Yasushi Muraki",
+   "en": "The End of Evangelion · #25",
+   "zh": "",
+   "rarity": "",
+   "attr": "The End of Evangelion",
+   "role": "",
+   "ver": "",
+   "score": 939,
+   "arts": "Unknown, Yasushi Muraki",
+   "sk": {
+    "p": 301401,
+    "u": "https://www.sakugabooru.com/data/79db0087eab03eba1416f655577f97c8.mp4"
+   }
+  },
+  {
+   "id": "aeva-301414",
+   "ko": "Nobutoshi Ogura",
+   "en": "The End of Evangelion · #25",
+   "zh": "",
+   "rarity": "",
+   "attr": "The End of Evangelion",
+   "role": "",
+   "ver": "",
+   "score": 892,
+   "arts": "Nobutoshi Ogura",
+   "sk": {
+    "p": 301414,
+    "u": "https://www.sakugabooru.com/data/5ebe6cb9d7dffaf9b178576b4441d624.mp4"
+   }
+  },
+  {
+   "id": "aeva-301404",
+   "ko": "Tensai Okamura",
+   "en": "The End of Evangelion · #25",
+   "zh": "",
+   "rarity": "",
+   "attr": "The End of Evangelion",
+   "role": "",
+   "ver": "",
+   "score": 830,
+   "arts": "Tensai Okamura",
+   "sk": {
+    "p": 301404,
+    "u": "https://www.sakugabooru.com/data/8565a4546cca3096da78231d54711f0d.mp4"
+   }
+  },
+  {
+   "id": "aeva-122250",
+   "ko": "Atsushi Nishigori, Kiyotaka Oshiyama 외 2명",
+   "en": "Evangelion 2.0: You Can (not) Advance · #2.22",
+   "zh": "",
+   "rarity": "",
+   "attr": "Evangelion 2.0: You Can (not) Adv…",
+   "role": "",
+   "ver": "",
+   "score": 743,
+   "arts": "Unknown, Atsushi Nishigori, Kiyotaka Oshiyama, Sushio, Takashi Hashimoto",
+   "sk": {
+    "p": 122250,
+    "u": "https://www.sakugabooru.com/data/97112142e55ec4d5de0259d5f0ca2c5c.mp4"
+   }
+  },
+  {
+   "id": "aeva-162037",
+   "ko": "Hisashi Mori, Yoh Yoshinari",
+   "en": "Evangelion 3.0+1.01: Thrice Upon a Time",
+   "zh": "",
+   "rarity": "",
+   "attr": "Evangelion 3.0+1.01: Thrice Upon …",
+   "role": "",
+   "ver": "",
+   "score": 679,
+   "arts": "Unknown, Hisashi Mori, Yoh Yoshinari",
+   "sk": {
+    "p": 162037,
+    "u": "https://www.sakugabooru.com/data/984e3a2aa755d71986067211d81d7914.mp4"
+   }
+  },
+  {
+   "id": "aeva-122235",
+   "ko": "Kiyotaka Oshiyama",
+   "en": "Evangelion 2.0: You Can (not) Advance · #2.22",
+   "zh": "",
+   "rarity": "",
+   "attr": "Evangelion 2.0: You Can (not) Adv…",
+   "role": "",
+   "ver": "",
+   "score": 663,
+   "arts": "Unknown, Kiyotaka Oshiyama",
+   "sk": {
+    "p": 122235,
+    "u": "https://www.sakugabooru.com/data/a84e0562aa960c5a5be5734ece3e1f89.mp4"
+   }
+  },
+  {
+   "id": "aeva-301586",
+   "ko": "Yoh Yoshinari",
+   "en": "Neon Genesis Evangelion · #03",
+   "zh": "",
+   "rarity": "",
+   "attr": "Neon Genesis Evangelion",
+   "role": "",
+   "ver": "",
+   "score": 622,
+   "arts": "Yoh Yoshinari",
+   "sk": {
+    "p": 301586,
+    "u": "https://www.sakugabooru.com/data/83151469b0d8d2ddebdd5f84e51cc4a1.mp4"
+   }
+  },
+  {
+   "id": "aeva-117839",
+   "ko": "Akira Honma, Takashi Hashimoto 외 1명",
+   "en": "Evangelion 3.0: You Can (not) Redo · #3.33",
+   "zh": "",
+   "rarity": "",
+   "attr": "Evangelion 3.0: You Can (not) Redo",
+   "role": "",
+   "ver": "",
+   "score": 620,
+   "arts": "Akira Honma, Takashi Hashimoto, Yoshimichi Kameda",
+   "sk": {
+    "p": 117839,
+    "u": "https://www.sakugabooru.com/data/067de5c2c9671ed0c04c1d45e1a241e0.mp4"
+   }
+  }
+ ],
+ "meta": {
+  "ko": "에반게리온",
+  "en": "Evangelion",
+  "zh": "新世纪福音战士",
+  "tag": "neon_genesis_evangelion_series"
+ }
+}

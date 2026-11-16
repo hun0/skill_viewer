@@ -1,0 +1,332 @@
+{
+ "note": "Sakugabooru에서 ‘naruto effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=naruto+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Naruto</a>",
+ "roster": [
+  {
+   "id": "anrt-121591",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto (2002) · #030",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 3621,
+   "arts": "Norio Matsumoto",
+   "sk": {
+    "p": 121591,
+    "u": "https://www.sakugabooru.com/data/d7da4901a6c3531804da4fb0e1cf7a10.mp4"
+   }
+  },
+  {
+   "id": "anrt-201453",
+   "ko": "Hiroyuki Yamashita, Naoki Kobayashi",
+   "en": "Naruto Shippuuden · #375",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 2815,
+   "arts": "Hiroyuki Yamashita, Naoki Kobayashi",
+   "sk": {
+    "p": 201453,
+    "u": "https://www.sakugabooru.com/data/b2f9ca17f1d2ece1c66ef845170f8b68.mp4"
+   }
+  },
+  {
+   "id": "anrt-252598",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto (2002) · #048",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 2761,
+   "arts": "Norio Matsumoto",
+   "sk": {
+    "p": 252598,
+    "u": "https://www.sakugabooru.com/data/7078ff1f87222172856f74f40bd0b248.mp4"
+   }
+  },
+  {
+   "id": "anrt-164555",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto (2002) · #133",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 2727,
+   "arts": "Norio Matsumoto",
+   "sk": {
+    "p": 164555,
+    "u": "https://www.sakugabooru.com/data/21b8114adf5f2bee75af6e6f05e7a6a7.mp4"
+   }
+  },
+  {
+   "id": "anrt-175560",
+   "ko": "Gosei Oda, Keiichiro Watanabe 외 4명",
+   "en": "Naruto Shippuuden · NCOP13",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 2668,
+   "arts": "Gosei Oda, Keiichiro Watanabe, Ryu Nakayama, Shingo Fujii, Shingo Yamashita, Tatsurou Kawano",
+   "sk": {
+    "p": 175560,
+    "u": "https://www.sakugabooru.com/data/5bce4f15039982ec50f5d6e028218a84.mp4"
+   }
+  },
+  {
+   "id": "anrt-164550",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto (2002) · #133",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 2639,
+   "arts": "Norio Matsumoto",
+   "sk": {
+    "p": 164550,
+    "u": "https://www.sakugabooru.com/data/ca1cf8ad1f127b9e92258337c0f809df.mp4"
+   }
+  },
+  {
+   "id": "anrt-221837",
+   "ko": "Hiroyuki Yamashita",
+   "en": "Naruto Shippuuden · #143",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 2539,
+   "arts": "Hiroyuki Yamashita",
+   "sk": {
+    "p": 221837,
+    "u": "https://www.sakugabooru.com/data/2975c4d5fccbf6b7771d6e293d8abcd4.mp4"
+   }
+  },
+  {
+   "id": "anrt-173132",
+   "ko": "Naoki Kobayashi, Norio Matsumoto",
+   "en": "Naruto Shippuuden · NCOP16",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 2140,
+   "arts": "Unknown, Naoki Kobayashi, Norio Matsumoto",
+   "sk": {
+    "p": 173132,
+    "u": "https://www.sakugabooru.com/data/67dd1468d78c98bfc6402f50d096f7a5.mp4"
+   }
+  },
+  {
+   "id": "anrt-196824",
+   "ko": "Daisuke Tsumagari, Emi Kouno 외 2명",
+   "en": "Naruto Shippuuden · #476",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 2132,
+   "arts": "Unknown, Daisuke Tsumagari, Emi Kouno, Hiroyuki Yamashita, Keisuke Watanabe",
+   "sk": {
+    "p": 196824,
+    "u": "https://www.sakugabooru.com/data/4f13cd92fa56d711582059060923e9cc.mp4"
+   }
+  },
+  {
+   "id": "anrt-164551",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto (2002) · #133",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 1956,
+   "arts": "Norio Matsumoto",
+   "sk": {
+    "p": 164551,
+    "u": "https://www.sakugabooru.com/data/084825337ce7a80cca94e4987c584d33.mp4"
+   }
+  },
+  {
+   "id": "anrt-167510",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto Movie 3: Guardians of the Crescent Moon",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Movie 3: Guardians of the …",
+   "role": "",
+   "ver": "",
+   "score": 1946,
+   "arts": "Norio Matsumoto",
+   "sk": {
+    "p": 167510,
+    "u": "https://www.sakugabooru.com/data/b274cb5170eb9aeb0f4407fb874d0187.mp4"
+   }
+  },
+  {
+   "id": "anrt-111548",
+   "ko": "Shingo Yamashita",
+   "en": "Naruto Shippuuden · #167",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1925,
+   "arts": "Shingo Yamashita",
+   "sk": {
+    "p": 111548,
+    "u": "https://www.sakugabooru.com/data/362bc83e2493cad608553a1c914ad6a2.mp4"
+   }
+  },
+  {
+   "id": "anrt-121593",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto (2002) · #030",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 1832,
+   "arts": "Norio Matsumoto",
+   "sk": {
+    "p": 121593,
+    "u": "https://www.sakugabooru.com/data/ffef1c333990950fd8d2ce1adc033838.mp4"
+   }
+  },
+  {
+   "id": "anrt-201452",
+   "ko": "Hiroyuki Yamashita, Kenichi Fujisawa",
+   "en": "Naruto Shippuuden · #375",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1811,
+   "arts": "Hiroyuki Yamashita, Kenichi Fujisawa",
+   "sk": {
+    "p": 201452,
+    "u": "https://www.sakugabooru.com/data/d64b6cc21700073218c002c2cb892972.mp4"
+   }
+  },
+  {
+   "id": "anrt-175638",
+   "ko": "Hiroyuki Yamashita, Norio Matsumoto",
+   "en": "Naruto Shippuuden · NCOP3v2 (NCOP4v1)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1728,
+   "arts": "Hiroyuki Yamashita, Norio Matsumoto",
+   "sk": {
+    "p": 175638,
+    "u": "https://www.sakugabooru.com/data/0fb155d3c348ae258f80b0e277e9c5c6.mp4"
+   }
+  },
+  {
+   "id": "anrt-242397",
+   "ko": "Hiroyuki Yamashita, Norio Matsumoto",
+   "en": "Naruto Shippuuden · #085",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1700,
+   "arts": "Hiroyuki Yamashita, Norio Matsumoto",
+   "sk": {
+    "p": 242397,
+    "u": "https://www.sakugabooru.com/data/fdfdb3995bd3c9a9261564dc7b5afb4a.mp4"
+   }
+  },
+  {
+   "id": "anrt-187168",
+   "ko": "Naoki Kobayashi",
+   "en": "Naruto Shippuuden · #322",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1676,
+   "arts": "Naoki Kobayashi",
+   "sk": {
+    "p": 187168,
+    "u": "https://www.sakugabooru.com/data/54cad5cfd831a34e5e99d2178984f9bb.mp4"
+   }
+  },
+  {
+   "id": "anrt-164558",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto (2002) · #133",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 1614,
+   "arts": "Norio Matsumoto",
+   "sk": {
+    "p": 164558,
+    "u": "https://www.sakugabooru.com/data/35795470489941e7fc061f2eb8182baf.mp4"
+   }
+  },
+  {
+   "id": "anrt-167512",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto Movie 3: Guardians of the Crescent Moon",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Movie 3: Guardians of the …",
+   "role": "",
+   "ver": "",
+   "score": 1518,
+   "arts": "Norio Matsumoto",
+   "sk": {
+    "p": 167512,
+    "u": "https://www.sakugabooru.com/data/037b78139251b717ed1a8507b4a990ec.mp4"
+   }
+  },
+  {
+   "id": "anrt-156257",
+   "ko": "Naoki Kobayashi",
+   "en": "Naruto Shippuuden · #353",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1468,
+   "arts": "Naoki Kobayashi",
+   "sk": {
+    "p": 156257,
+    "u": "https://www.sakugabooru.com/data/b58c7ba136c821660332b4468c892348.mp4"
+   }
+  }
+ ],
+ "meta": {
+  "ko": "나루토",
+  "en": "Naruto",
+  "zh": "火影忍者",
+  "tag": "naruto"
+ }
+}

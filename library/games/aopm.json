@@ -1,0 +1,332 @@
+{
+ "note": "Sakugabooru에서 ‘one-punch_man_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=one-punch_man_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · One-Punch Man</a>",
+ "roster": [
+  {
+   "id": "aopm-152980",
+   "ko": "Arifumi Imai",
+   "en": "One-punch Man · #05",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 4620,
+   "arts": "Arifumi Imai",
+   "sk": {
+    "p": 152980,
+    "u": "https://www.sakugabooru.com/data/36d5033c5e469696091f9baea0d52ae7.mp4"
+   }
+  },
+  {
+   "id": "aopm-162980",
+   "ko": "Gosei Oda, Yutaka Nakamura",
+   "en": "One-punch Man · #12 (PN)",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 4358,
+   "arts": "Gosei Oda, Yutaka Nakamura",
+   "sk": {
+    "p": 162980,
+    "u": "https://www.sakugabooru.com/data/c39d4afe02df73654599c9bf15072d1c.mp4"
+   }
+  },
+  {
+   "id": "aopm-194936",
+   "ko": "Yoshimichi Kameda",
+   "en": "One-punch Man · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 3571,
+   "arts": "Yoshimichi Kameda",
+   "sk": {
+    "p": 194936,
+    "u": "https://www.sakugabooru.com/data/14917798351e4fc27054e62ebf566fc6.mp4"
+   }
+  },
+  {
+   "id": "aopm-191821",
+   "ko": "Gen Asano, Toya Oshima 외 1명",
+   "en": "One-punch Man · #09",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 2911,
+   "arts": "Gen Asano, Toya Oshima, Yoshimichi Kameda",
+   "sk": {
+    "p": 191821,
+    "u": "https://www.sakugabooru.com/data/2e9d9c3fe5ba9d800388fa0730ba28b3.mp4"
+   }
+  },
+  {
+   "id": "aopm-193721",
+   "ko": "Norifumi Kugai",
+   "en": "One-punch Man · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 2555,
+   "arts": "Norifumi Kugai",
+   "sk": {
+    "p": 193721,
+    "u": "https://www.sakugabooru.com/data/c033cc65caa1bf967de2ec7117118377.mp4"
+   }
+  },
+  {
+   "id": "aopm-214992",
+   "ko": "Arifumi Imai",
+   "en": "One-punch Man · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 2248,
+   "arts": "Arifumi Imai",
+   "sk": {
+    "p": 214992,
+    "u": "https://www.sakugabooru.com/data/2eeef19f6eea1b6ee9cda7b521a5e354.mp4"
+   }
+  },
+  {
+   "id": "aopm-194937",
+   "ko": "Norifumi Kugai, Yoshimichi Kameda",
+   "en": "One-punch Man · #12 (PN)",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 2096,
+   "arts": "Norifumi Kugai, Yoshimichi Kameda",
+   "sk": {
+    "p": 194937,
+    "u": "https://www.sakugabooru.com/data/fd7e2148938f6288f87c1deb326b0f4b.mp4"
+   }
+  },
+  {
+   "id": "aopm-285162",
+   "ko": "Gosei Oda",
+   "en": "One-punch Man · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 1852,
+   "arts": "Gosei Oda",
+   "sk": {
+    "p": 285162,
+    "u": "https://www.sakugabooru.com/data/a985faad5c049ef32ad82b03d2336fc6.mp4"
+   }
+  },
+  {
+   "id": "aopm-242731",
+   "ko": "Toshi Sada, Yoshimichi Kameda",
+   "en": "One-punch Man · #03",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 1826,
+   "arts": "Unknown, Toshi Sada, Yoshimichi Kameda",
+   "sk": {
+    "p": 242731,
+    "u": "https://www.sakugabooru.com/data/7fc794cfcc9fa3ea2923ad9acceb77a1.mp4"
+   }
+  },
+  {
+   "id": "aopm-285174",
+   "ko": "Toshiyuki Sato",
+   "en": "One-punch Man · #03",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 1791,
+   "arts": "Toshiyuki Sato",
+   "sk": {
+    "p": 285174,
+    "u": "https://www.sakugabooru.com/data/413439baeb7ea25bd85b2932d4cd2bb9.mp4"
+   }
+  },
+  {
+   "id": "aopm-109100",
+   "ko": "Kenichiro Aoki",
+   "en": "One-punch Man 2 · #03",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man 2",
+   "role": "",
+   "ver": "",
+   "score": 1771,
+   "arts": "Kenichiro Aoki",
+   "sk": {
+    "p": 109100,
+    "u": "https://www.sakugabooru.com/data/f53d73d82912c76421dc1d1bf8b949ad.mp4"
+   }
+  },
+  {
+   "id": "aopm-310818",
+   "ko": "Hidehiko Sawada",
+   "en": "One-punch Man · #05",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 1593,
+   "arts": "Hidehiko Sawada",
+   "sk": {
+    "p": 310818,
+    "u": "https://www.sakugabooru.com/data/0ba188688470775265fb348d0714f735.mp4"
+   }
+  },
+  {
+   "id": "aopm-193844",
+   "ko": "Keiichiro Watanabe",
+   "en": "One-punch Man · #02",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 1527,
+   "arts": "Keiichiro Watanabe",
+   "sk": {
+    "p": 193844,
+    "u": "https://www.sakugabooru.com/data/fbc4a997232702c2c9e50e5f1f00e8e3.mp4"
+   }
+  },
+  {
+   "id": "aopm-194447",
+   "ko": "Bahi Jd",
+   "en": "One-punch Man · #09",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 1367,
+   "arts": "Bahi Jd",
+   "sk": {
+    "p": 194447,
+    "u": "https://www.sakugabooru.com/data/e9066cc10b557a39189beddc9dd5b068.mp4"
+   }
+  },
+  {
+   "id": "aopm-107823",
+   "ko": "Kenichi Fujisawa",
+   "en": "One-punch Man · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 1288,
+   "arts": "Kenichi Fujisawa",
+   "sk": {
+    "p": 107823,
+    "u": "https://www.sakugabooru.com/data/cbbf40494074141bedaadbbd947e02de.mp4"
+   }
+  },
+  {
+   "id": "aopm-212077",
+   "ko": "Norimoto Tokura, Sushio 외 2명",
+   "en": "One-punch Man · NCOP",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 1284,
+   "arts": "Unknown, Norimoto Tokura, Sushio, Taiki Imamura, Toshiyuki Sato",
+   "sk": {
+    "p": 212077,
+    "u": "https://www.sakugabooru.com/data/30f5dd920ff77641e55e19112082c279.mp4"
+   }
+  },
+  {
+   "id": "aopm-211584",
+   "ko": "Yoshimichi Kameda",
+   "en": "One-punch Man",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 1137,
+   "arts": "Yoshimichi Kameda",
+   "sk": {
+    "p": 211584,
+    "u": "https://www.sakugabooru.com/data/fab33f1f07765005bc3959c5eb7e3b18.mp4"
+   }
+  },
+  {
+   "id": "aopm-154172",
+   "ko": "Kenichiro Aoki",
+   "en": "One-punch Man 2 · #07",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man 2",
+   "role": "",
+   "ver": "",
+   "score": 1084,
+   "arts": "Kenichiro Aoki",
+   "sk": {
+    "p": 154172,
+    "u": "https://www.sakugabooru.com/data/f5c4859aab7613c0f3ef46e6a70e1f4e.mp4"
+   }
+  },
+  {
+   "id": "aopm-212075",
+   "ko": "Naoki Kobayashi",
+   "en": "One-punch Man · NCOP",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 1081,
+   "arts": "Naoki Kobayashi",
+   "sk": {
+    "p": 212075,
+    "u": "https://www.sakugabooru.com/data/f6ed35beb228f0510770d8e3b7e31061.mp4"
+   }
+  },
+  {
+   "id": "aopm-137097",
+   "ko": "Kenichiro Aoki",
+   "en": "One-punch Man 2 · #11",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man 2",
+   "role": "",
+   "ver": "",
+   "score": 1025,
+   "arts": "Kenichiro Aoki",
+   "sk": {
+    "p": 137097,
+    "u": "https://www.sakugabooru.com/data/bff10e46427a0d718c026e730911cd83.mp4"
+   }
+  }
+ ],
+ "meta": {
+  "ko": "원펀맨",
+  "en": "One-Punch Man",
+  "zh": "一拳超人",
+  "tag": "one-punch_man_series"
+ }
+}

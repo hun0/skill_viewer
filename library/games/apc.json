@@ -1,0 +1,332 @@
+{
+ "note": "Sakugabooru에서 ‘precure effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=precure+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Pretty Cure</a>",
+ "roster": [
+  {
+   "id": "apc-222371",
+   "ko": "Shingo Fujii",
+   "en": "Go! Princess Precure · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "Go! Princess Precure",
+   "role": "",
+   "ver": "",
+   "score": 2561,
+   "arts": "Shingo Fujii",
+   "sk": {
+    "p": 222371,
+    "u": "https://www.sakugabooru.com/data/8e58a667fce0639158eaf27f46e4ad52.mp4"
+   }
+  },
+  {
+   "id": "apc-259255",
+   "ko": "Koudai Watanabe",
+   "en": "Hugtto! Precure · #04",
+   "zh": "",
+   "rarity": "",
+   "attr": "Hugtto! Precure",
+   "role": "",
+   "ver": "",
+   "score": 1573,
+   "arts": "Koudai Watanabe",
+   "sk": {
+    "p": 259255,
+    "u": "https://www.sakugabooru.com/data/53e4b4dd35da0baceb6fbbe5aff6bdb8.mp4"
+   }
+  },
+  {
+   "id": "apc-259254",
+   "ko": "Masami Mori",
+   "en": "Hugtto! Precure · #04",
+   "zh": "",
+   "rarity": "",
+   "attr": "Hugtto! Precure",
+   "role": "",
+   "ver": "",
+   "score": 1329,
+   "arts": "Masami Mori",
+   "sk": {
+    "p": 259254,
+    "u": "https://www.sakugabooru.com/data/b5d11a92a4ba2e7a7f51882ebbaabf90.mp4"
+   }
+  },
+  {
+   "id": "apc-240349",
+   "ko": "Itsuki Tsuchigami, Nakaya Onsen",
+   "en": "Tropical Rouge Precure · #29",
+   "zh": "",
+   "rarity": "",
+   "attr": "Tropical Rouge Precure",
+   "role": "",
+   "ver": "",
+   "score": 1264,
+   "arts": "Itsuki Tsuchigami, Nakaya Onsen",
+   "sk": {
+    "p": 240349,
+    "u": "https://www.sakugabooru.com/data/3976bd9a8ddc024ae36cfdae59674485.mp4"
+   }
+  },
+  {
+   "id": "apc-253508",
+   "ko": "Sushio",
+   "en": "Heartcatch Precure! · #10",
+   "zh": "",
+   "rarity": "",
+   "attr": "Heartcatch Precure!",
+   "role": "",
+   "ver": "",
+   "score": 1112,
+   "arts": "Sushio",
+   "sk": {
+    "p": 253508,
+    "u": "https://www.sakugabooru.com/data/0ac5ad9084c95371b60f45f34642744f.mp4"
+   }
+  },
+  {
+   "id": "apc-222372",
+   "ko": "Shingo Fujii",
+   "en": "Go! Princess Precure · #09",
+   "zh": "",
+   "rarity": "",
+   "attr": "Go! Princess Precure",
+   "role": "",
+   "ver": "",
+   "score": 1055,
+   "arts": "Shingo Fujii",
+   "sk": {
+    "p": 222372,
+    "u": "https://www.sakugabooru.com/data/491104b006c4a8eac8a35d675c21b235.mp4"
+   }
+  },
+  {
+   "id": "apc-260118",
+   "ko": "Shingo Fujii",
+   "en": "Go! Princess Precure · #50",
+   "zh": "",
+   "rarity": "",
+   "attr": "Go! Princess Precure",
+   "role": "",
+   "ver": "",
+   "score": 927,
+   "arts": "Shingo Fujii",
+   "sk": {
+    "p": 260118,
+    "u": "https://www.sakugabooru.com/data/b5e408d6fe6b84fe5a5de65265addab0.mp4"
+   }
+  },
+  {
+   "id": "apc-23064",
+   "ko": "Shingo Fujii",
+   "en": "Go! Princess Precure",
+   "zh": "",
+   "rarity": "",
+   "attr": "Go! Princess Precure",
+   "role": "",
+   "ver": "",
+   "score": 903,
+   "arts": "Shingo Fujii",
+   "sk": {
+    "p": 23064,
+    "u": "https://www.sakugabooru.com/data/6a2093882da5ef7caa7ff977b5734b86.mp4"
+   }
+  },
+  {
+   "id": "apc-260117",
+   "ko": "Shingo Fujii",
+   "en": "Go! Princess Precure · #30",
+   "zh": "",
+   "rarity": "",
+   "attr": "Go! Princess Precure",
+   "role": "",
+   "ver": "",
+   "score": 839,
+   "arts": "Shingo Fujii",
+   "sk": {
+    "p": 260117,
+    "u": "https://www.sakugabooru.com/data/af3ceee48fabe2d28384ed97798e7eb9.mp4"
+   }
+  },
+  {
+   "id": "apc-178264",
+   "ko": "Yuu Yoshiyama",
+   "en": "Tropical Rouge Precure · #45",
+   "zh": "",
+   "rarity": "",
+   "attr": "Tropical Rouge Precure",
+   "role": "",
+   "ver": "",
+   "score": 823,
+   "arts": "Yuu Yoshiyama",
+   "sk": {
+    "p": 178264,
+    "u": "https://www.sakugabooru.com/data/8289ab029732881da20e2d6671e49a3f.mp4"
+   }
+  },
+  {
+   "id": "apc-244279",
+   "ko": "Naotoshi Shida",
+   "en": "Precure All Stars New Stage:mirai no Tomodachi · NCOP",
+   "zh": "",
+   "rarity": "",
+   "attr": "Precure All Stars New Stage:mirai…",
+   "role": "",
+   "ver": "",
+   "score": 799,
+   "arts": "Naotoshi Shida",
+   "sk": {
+    "p": 244279,
+    "u": "https://www.sakugabooru.com/data/548d1b4534e6de74f1dd58e4e3140877.mp4"
+   }
+  },
+  {
+   "id": "apc-240345",
+   "ko": "Itsuki Tsuchigami",
+   "en": "Hugtto! Precure · #16",
+   "zh": "",
+   "rarity": "",
+   "attr": "Hugtto! Precure",
+   "role": "",
+   "ver": "",
+   "score": 758,
+   "arts": "Itsuki Tsuchigami",
+   "sk": {
+    "p": 240345,
+    "u": "https://www.sakugabooru.com/data/76e4bf0b69b6e7ae0b9c1b74ea5ce15b.mp4"
+   }
+  },
+  {
+   "id": "apc-165418",
+   "ko": "Koudai Watanabe",
+   "en": "Tropical Rouge Precure · #29",
+   "zh": "",
+   "rarity": "",
+   "attr": "Tropical Rouge Precure",
+   "role": "",
+   "ver": "",
+   "score": 751,
+   "arts": "Koudai Watanabe",
+   "sk": {
+    "p": 165418,
+    "u": "https://www.sakugabooru.com/data/d7686ff50a9094ec7f66383fb98c8633.mp4"
+   }
+  },
+  {
+   "id": "apc-126104",
+   "ko": "Yuki Hayashi",
+   "en": "Healin' Good Precure · NCOP",
+   "zh": "",
+   "rarity": "",
+   "attr": "Healin' Good Precure",
+   "role": "",
+   "ver": "",
+   "score": 731,
+   "arts": "Yuki Hayashi",
+   "sk": {
+    "p": 126104,
+    "u": "https://www.sakugabooru.com/data/c8b7165b0323a05c9996a1baa39151c5.mp4"
+   }
+  },
+  {
+   "id": "apc-253522",
+   "ko": "Tatsuo Yamada",
+   "en": "Futari wa Pretty Cure Max Heart · NCOP",
+   "zh": "",
+   "rarity": "",
+   "attr": "Futari wa Pretty Cure Max Heart",
+   "role": "",
+   "ver": "",
+   "score": 624,
+   "arts": "Tatsuo Yamada",
+   "sk": {
+    "p": 253522,
+    "u": "https://www.sakugabooru.com/data/67d123d88af9b7d56ecf9a1e386d2fd7.mp4"
+   }
+  },
+  {
+   "id": "apc-232512",
+   "ko": "Shingo Fujii",
+   "en": "Go! Princess Precure · #15",
+   "zh": "",
+   "rarity": "",
+   "attr": "Go! Princess Precure",
+   "role": "",
+   "ver": "",
+   "score": 621,
+   "arts": "Shingo Fujii",
+   "sk": {
+    "p": 232512,
+    "u": "https://www.sakugabooru.com/data/080daff7b44f1058da0e6a6dac4d2df7.mp4"
+   }
+  },
+  {
+   "id": "apc-232522",
+   "ko": "Shingo Fujii",
+   "en": "Go! Princess Precure · #22",
+   "zh": "",
+   "rarity": "",
+   "attr": "Go! Princess Precure",
+   "role": "",
+   "ver": "",
+   "score": 606,
+   "arts": "Shingo Fujii",
+   "sk": {
+    "p": 232522,
+    "u": "https://www.sakugabooru.com/data/67a822cee88c5ff071ee25c3e53a92d7.mp4"
+   }
+  },
+  {
+   "id": "apc-113149",
+   "ko": "Yuu Yoshiyama",
+   "en": "Star Twinkle Precure Movie: Hoshi no Uta ni Omoi o Komete",
+   "zh": "",
+   "rarity": "",
+   "attr": "Star Twinkle Precure Movie: Hoshi…",
+   "role": "",
+   "ver": "",
+   "score": 584,
+   "arts": "Yuu Yoshiyama",
+   "sk": {
+    "p": 113149,
+    "u": "https://www.sakugabooru.com/data/1d04eabfd9f08832fb8158ece342bbc2.mp4"
+   }
+  },
+  {
+   "id": "apc-238072",
+   "ko": "Takeshi Morita",
+   "en": "Hirogaru Sky! Precure · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "Hirogaru Sky! Precure",
+   "role": "",
+   "ver": "",
+   "score": 566,
+   "arts": "Takeshi Morita",
+   "sk": {
+    "p": 238072,
+    "u": "https://www.sakugabooru.com/data/e338c7b58b0d504b2f38d35426c37e73.mp4"
+   }
+  },
+  {
+   "id": "apc-239564",
+   "ko": "Hironori Tanaka, Naotoshi Shida 외 1명",
+   "en": "Precure All Stars Gogo Dream Live!",
+   "zh": "",
+   "rarity": "",
+   "attr": "Precure All Stars Gogo Dream Live!",
+   "role": "",
+   "ver": "",
+   "score": 558,
+   "arts": "Unknown, Hironori Tanaka, Naotoshi Shida, Tatsuo Yamada",
+   "sk": {
+    "p": 239564,
+    "u": "https://www.sakugabooru.com/data/6414b95b91cb26ef1122059bead7dd80.mp4"
+   }
+  }
+ ],
+ "meta": {
+  "ko": "프리큐어",
+  "en": "Pretty Cure",
+  "zh": "光之美少女",
+  "tag": "precure"
+ }
+}

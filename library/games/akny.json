@@ -1,0 +1,332 @@
+{
+ "note": "Sakugabooru에서 ‘kimetsu_no_yaiba_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=kimetsu_no_yaiba_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Demon Slayer</a>",
+ "roster": [
+  {
+   "id": "akny-117031",
+   "ko": "Nozomu Abe",
+   "en": "Kimetsu no Yaiba · #19",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba",
+   "role": "",
+   "ver": "",
+   "score": 2649,
+   "arts": "Nozomu Abe",
+   "sk": {
+    "p": 117031,
+    "u": "https://www.sakugabooru.com/data/9d8498e8cf3092c9a6650acb0472e52b.mp4"
+   }
+  },
+  {
+   "id": "akny-199401",
+   "ko": "Nozomu Abe",
+   "en": "Kimetsu no Yaiba Yuukaku-hen · #10",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba Yuukaku-hen",
+   "role": "",
+   "ver": "",
+   "score": 2213,
+   "arts": "Nozomu Abe",
+   "sk": {
+    "p": 199401,
+    "u": "https://www.sakugabooru.com/data/3d5d26d95dbb848e8439034c8d10a612.mp4"
+   }
+  },
+  {
+   "id": "akny-84723",
+   "ko": "Masaru Kimura, Masayuki Kunihiro",
+   "en": "Kimetsu no Yaiba · #19",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba",
+   "role": "",
+   "ver": "",
+   "score": 1927,
+   "arts": "Masaru Kimura, Masayuki Kunihiro",
+   "sk": {
+    "p": 84723,
+    "u": "https://www.sakugabooru.com/data/dc6d4a63794315bcf793f1481578bdcd.mp4"
+   }
+  },
+  {
+   "id": "akny-157527",
+   "ko": "Nozomu Abe",
+   "en": "Kimetsu no Yaiba Mugen Train · Movie",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba Mugen Train",
+   "role": "",
+   "ver": "",
+   "score": 1896,
+   "arts": "Nozomu Abe",
+   "sk": {
+    "p": 157527,
+    "u": "https://www.sakugabooru.com/data/e6489143d16475d290087cc2ed874e74.mp4"
+   }
+  },
+  {
+   "id": "akny-236066",
+   "ko": "Nozomu Abe",
+   "en": "Kimetsu no Yaiba · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba",
+   "role": "",
+   "ver": "",
+   "score": 1654,
+   "arts": "Nozomu Abe",
+   "sk": {
+    "p": 236066,
+    "u": "https://www.sakugabooru.com/data/f66b65734f11d6e44febb3443f69eff1.mp4"
+   }
+  },
+  {
+   "id": "akny-192371",
+   "ko": "Nozomu Abe",
+   "en": "Kimetsu no Yaiba Yuukaku-hen · #06",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba Yuukaku-hen",
+   "role": "",
+   "ver": "",
+   "score": 1515,
+   "arts": "Nozomu Abe",
+   "sk": {
+    "p": 192371,
+    "u": "https://www.sakugabooru.com/data/631f0fe67d5f25301c34a668a284e112.mp4"
+   }
+  },
+  {
+   "id": "akny-199400",
+   "ko": "Masayuki Kunihiro",
+   "en": "Kimetsu no Yaiba Yuukaku-hen · #10",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba Yuukaku-hen",
+   "role": "",
+   "ver": "",
+   "score": 1389,
+   "arts": "Masayuki Kunihiro",
+   "sk": {
+    "p": 199400,
+    "u": "https://www.sakugabooru.com/data/24183b122300ee20a5875ed8700f7bb6.mp4"
+   }
+  },
+  {
+   "id": "akny-227487",
+   "ko": "Nozomu Abe",
+   "en": "Kimetsu no Yaiba Katanakaji no Sato-hen · #05",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba Katanakaji no Sa…",
+   "role": "",
+   "ver": "",
+   "score": 1275,
+   "arts": "Nozomu Abe",
+   "sk": {
+    "p": 227487,
+    "u": "https://www.sakugabooru.com/data/09e2c6d5d664b386c605fc755fe0e4aa.mp4"
+   }
+  },
+  {
+   "id": "akny-83563",
+   "ko": "Nozomu Abe",
+   "en": "Kimetsu no Yaiba · #17",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba",
+   "role": "",
+   "ver": "",
+   "score": 1267,
+   "arts": "Nozomu Abe",
+   "sk": {
+    "p": 83563,
+    "u": "https://www.sakugabooru.com/data/c6c3451b29890089943589b1bb0e3ebd.mp4"
+   }
+  },
+  {
+   "id": "akny-81944",
+   "ko": "Masayuki Kunihiro",
+   "en": "Kimetsu no Yaiba · #14",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba",
+   "role": "",
+   "ver": "",
+   "score": 1134,
+   "arts": "Masayuki Kunihiro",
+   "sk": {
+    "p": 81944,
+    "u": "https://www.sakugabooru.com/data/876826104a414bd5d25ad67cbd0e4d48.mp4"
+   }
+  },
+  {
+   "id": "akny-259894",
+   "ko": "Nozomu Abe",
+   "en": "Kimetsu no Yaiba Hashira Geiko-hen · #08",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba Hashira Geiko-hen",
+   "role": "",
+   "ver": "",
+   "score": 1128,
+   "arts": "Nozomu Abe",
+   "sk": {
+    "p": 259894,
+    "u": "https://www.sakugabooru.com/data/d9339b4bffa06dea06f91adf3094cd24.mp4"
+   }
+  },
+  {
+   "id": "akny-199399",
+   "ko": "Masaharu Koyama, Masaru Kimura 외 1명",
+   "en": "Kimetsu no Yaiba Yuukaku-hen · #10",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba Yuukaku-hen",
+   "role": "",
+   "ver": "",
+   "score": 1033,
+   "arts": "Masaharu Koyama, Masaru Kimura, Shinichi Kurita",
+   "sk": {
+    "p": 199399,
+    "u": "https://www.sakugabooru.com/data/1f5250fa842fb44a7ba4fdfa712cba7e.mp4"
+   }
+  },
+  {
+   "id": "akny-167976",
+   "ko": "Masayuki Kunihiro",
+   "en": "Kimetsu no Yaiba · #19",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba",
+   "role": "",
+   "ver": "",
+   "score": 1033,
+   "arts": "Masayuki Kunihiro",
+   "sk": {
+    "p": 167976,
+    "u": "https://www.sakugabooru.com/data/e9a51f0f7730f825a92437ea5fb2aba3.mp4"
+   }
+  },
+  {
+   "id": "akny-195943",
+   "ko": "Mitsuru Obunai",
+   "en": "Kimetsu no Yaiba Yuukaku-hen · #08",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba Yuukaku-hen",
+   "role": "",
+   "ver": "",
+   "score": 991,
+   "arts": "Mitsuru Obunai",
+   "sk": {
+    "p": 195943,
+    "u": "https://www.sakugabooru.com/data/85f15247320b626001907f6cd0eba7ac.mp4"
+   }
+  },
+  {
+   "id": "akny-199444",
+   "ko": "Masayuki Kunihiro",
+   "en": "Kimetsu no Yaiba Yuukaku-hen · #10",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba Yuukaku-hen",
+   "role": "",
+   "ver": "",
+   "score": 934,
+   "arts": "Masayuki Kunihiro",
+   "sk": {
+    "p": 199444,
+    "u": "https://www.sakugabooru.com/data/4c9436c892c8469770d78fc41cd3829f.mp4"
+   }
+  },
+  {
+   "id": "akny-157603",
+   "ko": "Masayuki Kunihiro",
+   "en": "Kimetsu no Yaiba Mugen Train · Movie",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba Mugen Train",
+   "role": "",
+   "ver": "",
+   "score": 913,
+   "arts": "Masayuki Kunihiro",
+   "sk": {
+    "p": 157603,
+    "u": "https://www.sakugabooru.com/data/914247b6cfefc67138b31bdc74303047.mp4"
+   }
+  },
+  {
+   "id": "akny-246032",
+   "ko": "Nozomu Abe",
+   "en": "Kimetsu no Yaiba Katanakaji no Sato-hen · #08",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba Katanakaji no Sa…",
+   "role": "",
+   "ver": "",
+   "score": 869,
+   "arts": "Nozomu Abe",
+   "sk": {
+    "p": 246032,
+    "u": "https://www.sakugabooru.com/data/03cc3add18326850bcf52756e559ac71.mp4"
+   }
+  },
+  {
+   "id": "akny-246107",
+   "ko": "Hironori Tanaka",
+   "en": "Kimetsu no Yaiba Katanakaji no Sato-hen · #10",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba Katanakaji no Sa…",
+   "role": "",
+   "ver": "",
+   "score": 853,
+   "arts": "Hironori Tanaka",
+   "sk": {
+    "p": 246107,
+    "u": "https://www.sakugabooru.com/data/888caa84d024bfe470969aee064df32a.mp4"
+   }
+  },
+  {
+   "id": "akny-157504",
+   "ko": "Hironori Tanaka, Kazuhiro Miwa",
+   "en": "Kimetsu no Yaiba Mugen Train · Movie",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba Mugen Train",
+   "role": "",
+   "ver": "",
+   "score": 838,
+   "arts": "Hironori Tanaka, Kazuhiro Miwa",
+   "sk": {
+    "p": 157504,
+    "u": "https://www.sakugabooru.com/data/ff33d84c46f8af15e48076f3273a43a2.mp4"
+   }
+  },
+  {
+   "id": "akny-229077",
+   "ko": "Masayuki Kunihiro",
+   "en": "Kimetsu no Yaiba Katanakaji no Sato-hen · #08",
+   "zh": "",
+   "rarity": "",
+   "attr": "Kimetsu no Yaiba Katanakaji no Sa…",
+   "role": "",
+   "ver": "",
+   "score": 823,
+   "arts": "Masayuki Kunihiro",
+   "sk": {
+    "p": 229077,
+    "u": "https://www.sakugabooru.com/data/6e74aed18394e240ce995e6ccafe06c9.mp4"
+   }
+  }
+ ],
+ "meta": {
+  "ko": "귀멸의 칼날",
+  "en": "Demon Slayer",
+  "zh": "鬼灭之刃",
+  "tag": "kimetsu_no_yaiba_series"
+ }
+}

@@ -31,7 +31,7 @@ bosses = [
 for b in bosses: b.update({"boss":True,"ver":"보스"})
 data = {"hsr": {"roster": hsr, "bosses": bosses,
   "src": '링크는 <a href="https://space.bilibili.com/47359729" target="_blank" rel="noopener">Citrus橘颜</a>의 스킬 참고 합집을 우선하고, 없으면 <a href="https://space.bilibili.com/258583859" target="_blank" rel="noopener">擒龙小师弟</a>의 「崩铁角色技能合集」입니다. 라벨이 업로더를 뜻해요.'}}
-for key in ["zzz","ww","nte","e7","gi","r99","pgr","nikke","ake","bd2","hi3","dna","mgl","ao","an","hna","gbvs","gbr","gg","db","bb","dnf","kny","nrt","opa","hd1","hd2","d4","ap","sp","mt","ow","mr","sn","er","lol","tft","val","2xko"]:
+for key in ["zzz","ww","nte","e7","gi","r99","pgr","nikke","ake","bd2","hi3","dna","mgl","ao","an","hna","gbvs","gbr","gg","db","bb","dnf","kny","nrt","opa","hd1","hd2","d4","ap","sp","mt","ow","mr","sn","er","lol","tft","val","2xko","aop","ajjk","anrt","abrt","amha","acsm","afate","adb","aopm","aaot","afma","afrn","aeva","abc","akny","agl","aff","ablc","amob","ase","asl","addd","ajojo","aklk","apkm","agdm","apc","amt","aor","acpe"]:
     p = f"{B}/../games/{key}.json"
     if os.path.exists(p): data[key] = json.load(open(p, encoding="utf-8"))
 import glob, datetime
@@ -46,7 +46,7 @@ for f in glob.glob(f"{B}/../snap/thumbs/*.json"):
 snap_bosses = {}
 for f in glob.glob(f"{B}/../snap/bosses/*.json"):
     d = json.load(open(f, encoding="utf-8"))
-    if d.get("game") and d.get("ko"): snap_bosses[os.path.basename(f)[:-5]] = {"game": d["game"], "ko": d["ko"], "zh": d.get("zh",""), "createdAt": d.get("createdAt","")}
+    if d.get("game") and d.get("ko"): snap_bosses[os.path.basename(f)[:-5]] = {"game": d["game"], "ko": d["ko"], "zh": d.get("zh",""), "sub": d.get("sub",""), "createdAt": d.get("createdAt","")}
 snap_bms = {}
 for f in glob.glob(f"{B}/../snap/bookmarks/*.json"):
     d = json.load(open(f, encoding="utf-8"))

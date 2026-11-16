@@ -1,0 +1,332 @@
+{
+ "note": "Sakugabooru에서 ‘solo_leveling effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=solo_leveling+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Solo Leveling</a>",
+ "roster": [
+  {
+   "id": "asl-253350",
+   "ko": "Vercreek",
+   "en": "Solo Leveling · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 1130,
+   "arts": "Vercreek",
+   "sk": {
+    "p": 253350,
+    "u": "https://www.sakugabooru.com/data/0e31816ba71f3ef829e25ed56d6555cf.mp4"
+   }
+  },
+  {
+   "id": "asl-293117",
+   "ko": "Yoshihiro Kanno",
+   "en": "Solo Leveling · #24 (S2 #12)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 864,
+   "arts": "Yoshihiro Kanno",
+   "sk": {
+    "p": 293117,
+    "u": "https://www.sakugabooru.com/data/11fa657c1c6cc382a3a0e6d4afb36310.mp4"
+   }
+  },
+  {
+   "id": "asl-252853",
+   "ko": "Takafumi Torii",
+   "en": "Solo Leveling · #11",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 775,
+   "arts": "Takafumi Torii",
+   "sk": {
+    "p": 252853,
+    "u": "https://www.sakugabooru.com/data/fb406ec24a406a15d8d93f551c89033f.mp4"
+   }
+  },
+  {
+   "id": "asl-252790",
+   "ko": "Yoshihiro Kanno",
+   "en": "Solo Leveling · #11",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 763,
+   "arts": "Yoshihiro Kanno",
+   "sk": {
+    "p": 252790,
+    "u": "https://www.sakugabooru.com/data/1597afc46fe3fb053487b3993aba3bdf.mp4"
+   }
+  },
+  {
+   "id": "asl-269521",
+   "ko": "Unknown",
+   "en": "Solo Leveling · NCOP1",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 757,
+   "arts": "Unknown",
+   "sk": {
+    "p": 269521,
+    "u": "https://www.sakugabooru.com/data/de200ac5c672805fbf5a537d977a97e6.mp4"
+   }
+  },
+  {
+   "id": "asl-269516",
+   "ko": "Unknown",
+   "en": "Solo Leveling · NCOP1",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 713,
+   "arts": "Unknown",
+   "sk": {
+    "p": 269516,
+    "u": "https://www.sakugabooru.com/data/62494ee6ed0d00f9105c757f937cc0e4.mp4"
+   }
+  },
+  {
+   "id": "asl-276534",
+   "ko": "Yoshihiro Kanno",
+   "en": "Solo Leveling · #20 (S2 #08)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 707,
+   "arts": "Yoshihiro Kanno",
+   "sk": {
+    "p": 276534,
+    "u": "https://www.sakugabooru.com/data/0502234c17643b36ea7b754412b928b8.mp4"
+   }
+  },
+  {
+   "id": "asl-284622",
+   "ko": "Takafumi Torii",
+   "en": "Solo Leveling · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 680,
+   "arts": "Takafumi Torii",
+   "sk": {
+    "p": 284622,
+    "u": "https://www.sakugabooru.com/data/1dd96263d0ab498266fa7ad90b2ede56.mp4"
+   }
+  },
+  {
+   "id": "asl-293118",
+   "ko": "Takafumi Torii",
+   "en": "Solo Leveling · #24 (S2 #12)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 659,
+   "arts": "Takafumi Torii",
+   "sk": {
+    "p": 293118,
+    "u": "https://www.sakugabooru.com/data/f737f688cd098fe094229df2d62b7c5b.mp4"
+   }
+  },
+  {
+   "id": "asl-252792",
+   "ko": "Yoshihiro Kanno",
+   "en": "Solo Leveling · #11",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 657,
+   "arts": "Yoshihiro Kanno",
+   "sk": {
+    "p": 252792,
+    "u": "https://www.sakugabooru.com/data/fc6fd33e5f95b8d8aecc3ec56a4bbda4.mp4"
+   }
+  },
+  {
+   "id": "asl-275634",
+   "ko": "Yoshihiro Kanno",
+   "en": "Solo Leveling · #18 (S2 #06)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 610,
+   "arts": "Yoshihiro Kanno",
+   "sk": {
+    "p": 275634,
+    "u": "https://www.sakugabooru.com/data/aaf62f428594886c4305b858baec5a23.mp4"
+   }
+  },
+  {
+   "id": "asl-247730",
+   "ko": "Takafumi Torii, Yoshihiro Kanno",
+   "en": "Solo Leveling · #04",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 596,
+   "arts": "Takafumi Torii, Yoshihiro Kanno",
+   "sk": {
+    "p": 247730,
+    "u": "https://www.sakugabooru.com/data/2a4e60ff792d193b3df868e928aac64b.mp4"
+   }
+  },
+  {
+   "id": "asl-278427",
+   "ko": "Atsushi Yonezawa, Yoshihiro Kanno",
+   "en": "Solo Leveling · #24 (S2 #12)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 568,
+   "arts": "Atsushi Yonezawa, Yoshihiro Kanno",
+   "sk": {
+    "p": 278427,
+    "u": "https://www.sakugabooru.com/data/dc830c5f25ba46dbfaea003b560ea886.mp4"
+   }
+  },
+  {
+   "id": "asl-278850",
+   "ko": "Hajime Nakagawa, Xinxiong Ceng",
+   "en": "Solo Leveling · #25 (S2 #13) (Action",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 547,
+   "arts": "Hajime Nakagawa, Xinxiong Ceng",
+   "sk": {
+    "p": 278850,
+    "u": "https://www.sakugabooru.com/data/bf1112360fdd741cfb300a06fc23546e.mp4"
+   }
+  },
+  {
+   "id": "asl-278505",
+   "ko": "Ryota Saito",
+   "en": "Solo Leveling · #24 (S2 #12) (Action",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 474,
+   "arts": "Ryota Saito",
+   "sk": {
+    "p": 278505,
+    "u": "https://www.sakugabooru.com/data/8f06bfbc405c76df8d49e6330045e0ec.mp4"
+   }
+  },
+  {
+   "id": "asl-251566",
+   "ko": "Takafumi Torii",
+   "en": "Solo Leveling · #09",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 440,
+   "arts": "Takafumi Torii",
+   "sk": {
+    "p": 251566,
+    "u": "https://www.sakugabooru.com/data/62a83fd0a0c12a306ca092efd1613c6b.mp4"
+   }
+  },
+  {
+   "id": "asl-246208",
+   "ko": "Yoshihiro Kanno",
+   "en": "Solo Leveling · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 396,
+   "arts": "Yoshihiro Kanno",
+   "sk": {
+    "p": 246208,
+    "u": "https://www.sakugabooru.com/data/7608a74e5a459c1f7820e0ad3acaae3f.mp4"
+   }
+  },
+  {
+   "id": "asl-252791",
+   "ko": "Kouta Mori, Kouya Uemichi",
+   "en": "Solo Leveling · #11",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 383,
+   "arts": "Kouta Mori, Kouya Uemichi",
+   "sk": {
+    "p": 252791,
+    "u": "https://www.sakugabooru.com/data/33ab7abc1fff27d38cb95bcfff104a3d.mp4"
+   }
+  },
+  {
+   "id": "asl-275628",
+   "ko": "Takafumi Torii",
+   "en": "Solo Leveling · #18 (S2 #06)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 378,
+   "arts": "Takafumi Torii",
+   "sk": {
+    "p": 275628,
+    "u": "https://www.sakugabooru.com/data/d8197c78ffa74a741cb63e49276741fa.mp4"
+   }
+  },
+  {
+   "id": "asl-276530",
+   "ko": "Yoshihiro Kanno",
+   "en": "Solo Leveling · #20 (S2 #08)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Solo Leveling",
+   "role": "",
+   "ver": "",
+   "score": 368,
+   "arts": "Yoshihiro Kanno",
+   "sk": {
+    "p": 276530,
+    "u": "https://www.sakugabooru.com/data/f3561556aaf1fa12cb056545bd628cdf.mp4"
+   }
+  }
+ ],
+ "meta": {
+  "ko": "나 혼자만 레벨업",
+  "en": "Solo Leveling",
+  "zh": "我独自升级",
+  "tag": "solo_leveling"
+ }
+}

@@ -1,0 +1,332 @@
+{
+ "note": "Sakugabooru에서 ‘gundam effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=gundam+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Gundam</a>",
+ "roster": [
+  {
+   "id": "agdm-103108",
+   "ko": "Akihiko Yamashita",
+   "en": "Mobile Suit Gundam: the 08th MS Team · #10",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam: the 08th MS T…",
+   "role": "",
+   "ver": "",
+   "score": 918,
+   "arts": "Akihiko Yamashita",
+   "sk": {
+    "p": 103108,
+    "u": "https://www.sakugabooru.com/data/8a268adcdbbc5e8472cd3bad81994113.mp4"
+   }
+  },
+  {
+   "id": "agdm-251153",
+   "ko": "Hirotoshi Takaya",
+   "en": "Mobile Suit Gundam Unicorn · #07",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam Unicorn",
+   "role": "",
+   "ver": "",
+   "score": 730,
+   "arts": "Hirotoshi Takaya",
+   "sk": {
+    "p": 251153,
+    "u": "https://www.sakugabooru.com/data/837fbdf14a95770ca9678332647f7526.mp4"
+   }
+  },
+  {
+   "id": "agdm-147443",
+   "ko": "Kazuki Ito, Nobuhiko Genma",
+   "en": "Mobile Suit Gundam Thunderbolt · Director's Cut",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam Thunderbolt",
+   "role": "",
+   "ver": "",
+   "score": 529,
+   "arts": "Unknown, Kazuki Ito, Nobuhiko Genma",
+   "sk": {
+    "p": 147443,
+    "u": "https://www.sakugabooru.com/data/354b167023a9aa6176c9440709a9cd8c.mp4"
+   }
+  },
+  {
+   "id": "agdm-158583",
+   "ko": "Hirotoshi Takaya, Shingo Tamagawa",
+   "en": "Mobile Suit Gundam Hathaway",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam Hathaway",
+   "role": "",
+   "ver": "",
+   "score": 486,
+   "arts": "Hirotoshi Takaya, Shingo Tamagawa",
+   "sk": {
+    "p": 158583,
+    "u": "https://www.sakugabooru.com/data/b485a81e94881bb4c7d1b06796f8aeb8.mp4"
+   }
+  },
+  {
+   "id": "agdm-294834",
+   "ko": "Shigeki Kuhara, Yutaka Nakamura",
+   "en": "Mobile Fighter G Gundam · #49 (Mecha",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Fighter G Gundam",
+   "role": "",
+   "ver": "",
+   "score": 466,
+   "arts": "Shigeki Kuhara, Yutaka Nakamura",
+   "sk": {
+    "p": 294834,
+    "u": "https://www.sakugabooru.com/data/89a4fb56f587c709b1eb015144716cd8.mp4"
+   }
+  },
+  {
+   "id": "agdm-158585",
+   "ko": "Hirotoshi Takaya",
+   "en": "Mobile Suit Gundam Hathaway",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam Hathaway",
+   "role": "",
+   "ver": "",
+   "score": 417,
+   "arts": "Hirotoshi Takaya",
+   "sk": {
+    "p": 158585,
+    "u": "https://www.sakugabooru.com/data/cab41387235d2aeff8a42345665aefbf.mp4"
+   }
+  },
+  {
+   "id": "agdm-158551",
+   "ko": "Takashi Tomioka",
+   "en": "Mobile Suit Gundam Hathaway",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam Hathaway",
+   "role": "",
+   "ver": "",
+   "score": 380,
+   "arts": "Unknown, Takashi Tomioka",
+   "sk": {
+    "p": 158551,
+    "u": "https://www.sakugabooru.com/data/a59a335548c6fc33300c7bc738e94611.mp4"
+   }
+  },
+  {
+   "id": "agdm-5708",
+   "ko": "Shukou Murase",
+   "en": "Mobile Suit Gundam Unicorn · #07",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam Unicorn",
+   "role": "",
+   "ver": "",
+   "score": 347,
+   "arts": "Shukou Murase",
+   "sk": {
+    "p": 5708,
+    "u": "https://www.sakugabooru.com/data/be35993d1514a818ee9aa1db4c8da6ce.webm"
+   }
+  },
+  {
+   "id": "agdm-5168",
+   "ko": "Yasuomi Umetsu",
+   "en": "Mobile Suit Zeta Gundam (TV) · NCOP1 (Solo KA)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Zeta Gundam (TV)",
+   "role": "",
+   "ver": "",
+   "score": 340,
+   "arts": "Yasuomi Umetsu",
+   "sk": {
+    "p": 5168,
+    "u": "https://www.sakugabooru.com/data/3258d53f1a4918cad540d7d28cedf3e1.webm"
+   }
+  },
+  {
+   "id": "agdm-206362",
+   "ko": "Kenichi Kangawa, Osamu Yamane 외 1명",
+   "en": "Mobile Suit Gundam: the Witch From Mercury · #01 (Yamane NC)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam: the Witch Fro…",
+   "role": "",
+   "ver": "",
+   "score": 326,
+   "arts": "Unknown, Kenichi Kangawa, Osamu Yamane, Shinya Tateyama",
+   "sk": {
+    "p": 206362,
+    "u": "https://www.sakugabooru.com/data/af415c56cf21e3f4f3c13043971b903c.mp4"
+   }
+  },
+  {
+   "id": "agdm-270392",
+   "ko": "Masahito Yamashita, Masami Obari 외 1명",
+   "en": "Mobile Suit Gundam: Iron-blooded Orphans · #38",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam: Iron-blooded …",
+   "role": "",
+   "ver": "",
+   "score": 307,
+   "arts": "Masahito Yamashita, Masami Obari, Yousuke Kabashima",
+   "sk": {
+    "p": 270392,
+    "u": "https://www.sakugabooru.com/data/6a38ae932f8ea90a1907520c50985ae6.mp4"
+   }
+  },
+  {
+   "id": "agdm-38709",
+   "ko": "Hirotoshi Sano, Mitsuo Iso",
+   "en": "Mobile Suit Gundam 0080 War in the Pocket · #06",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam 0080 War in th…",
+   "role": "",
+   "ver": "",
+   "score": 301,
+   "arts": "Unknown, Hirotoshi Sano, Mitsuo Iso",
+   "sk": {
+    "p": 38709,
+    "u": "https://www.sakugabooru.com/data/fb70237b2baee9da31be8d741b965de2.mp4"
+   }
+  },
+  {
+   "id": "agdm-56511",
+   "ko": "Hirofumi Masuda, Seiichi Nakatani",
+   "en": "Mobile Suit Gundam Unicorn · #05",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam Unicorn",
+   "role": "",
+   "ver": "",
+   "score": 296,
+   "arts": "Hirofumi Masuda, Seiichi Nakatani",
+   "sk": {
+    "p": 56511,
+    "u": "https://www.sakugabooru.com/data/73e0238e45a8563fe577fbf0505c1892.mp4"
+   }
+  },
+  {
+   "id": "agdm-216204",
+   "ko": "Mitsuo Iso",
+   "en": "Mobile Suit Gundam 0080 War in the Pocket · #06",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam 0080 War in th…",
+   "role": "",
+   "ver": "",
+   "score": 277,
+   "arts": "Unknown, Mitsuo Iso",
+   "sk": {
+    "p": 216204,
+    "u": "https://www.sakugabooru.com/data/c19258371ddfbac3144daa935e697f84.mp4"
+   }
+  },
+  {
+   "id": "agdm-262074",
+   "ko": "Hiroyuki Nishimura",
+   "en": "Mobile Suit Gundam: the Origin · #04",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam: the Origin",
+   "role": "",
+   "ver": "",
+   "score": 243,
+   "arts": "Hiroyuki Nishimura",
+   "sk": {
+    "p": 262074,
+    "u": "https://www.sakugabooru.com/data/73ffaf0767c522d0122ab320eb74c3f1.mp4"
+   }
+  },
+  {
+   "id": "agdm-103008",
+   "ko": "Seiichi Nakatani",
+   "en": "Mobile Suit Gundam: the 08th MS Team · #10",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam: the 08th MS T…",
+   "role": "",
+   "ver": "",
+   "score": 238,
+   "arts": "Seiichi Nakatani",
+   "sk": {
+    "p": 103008,
+    "u": "https://www.sakugabooru.com/data/33267abdd0598ec303986aa6b776fd9b.mp4"
+   }
+  },
+  {
+   "id": "agdm-215190",
+   "ko": "Kanta Suzuki, Masami Obari 외 1명",
+   "en": "Mobile Suit Gundam: the Witch From Mercury · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam: the Witch Fro…",
+   "role": "",
+   "ver": "",
+   "score": 238,
+   "arts": "Unknown, Kanta Suzuki, Masami Obari, Yuu Yoshiyama",
+   "sk": {
+    "p": 215190,
+    "u": "https://www.sakugabooru.com/data/a381796e1535bdabc25d01c276a1755d.mp4"
+   }
+  },
+  {
+   "id": "agdm-231004",
+   "ko": "Daisuke Shibukawa",
+   "en": "Mobile Suit Gundam: the Witch From Mercury · #23",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam: the Witch Fro…",
+   "role": "",
+   "ver": "",
+   "score": 235,
+   "arts": "Daisuke Shibukawa",
+   "sk": {
+    "p": 231004,
+    "u": "https://www.sakugabooru.com/data/44155ab5091b888d4741acece1c3db7e.mp4"
+   }
+  },
+  {
+   "id": "agdm-287612",
+   "ko": "Atsushi Shigeta",
+   "en": "Mobile Suit Gundam Unicorn · Unicorn Novel PV (2007)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam Unicorn",
+   "role": "",
+   "ver": "",
+   "score": 230,
+   "arts": "Atsushi Shigeta",
+   "sk": {
+    "p": 287612,
+    "u": "https://www.sakugabooru.com/data/87d90a38155bdeee4d6dcf42d421364a.mp4"
+   }
+  },
+  {
+   "id": "agdm-228636",
+   "ko": "Hirotoshi Sano, Kouji Sugiura 외 2명",
+   "en": "Mobile Suit Gundam Wing (TV) · NCOP2v2 (Mecha",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mobile Suit Gundam Wing (TV)",
+   "role": "",
+   "ver": "",
+   "score": 225,
+   "arts": "Hirotoshi Sano, Kouji Sugiura, Shukou Murase, Yutaka Nakamura",
+   "sk": {
+    "p": 228636,
+    "u": "https://www.sakugabooru.com/data/4c148a8f48aa7b9b187d28cd5fc6602a.mp4"
+   }
+  }
+ ],
+ "meta": {
+  "ko": "건담",
+  "en": "Gundam",
+  "zh": "高达",
+  "tag": "gundam"
+ }
+}

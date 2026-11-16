@@ -1,0 +1,332 @@
+{
+ "note": "Sakugabooru에서 ‘one_piece effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=one_piece+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · One Piece</a>",
+ "roster": [
+  {
+   "id": "aop-217484",
+   "ko": "Akihiro Ota",
+   "en": "One Piece · #1049",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 4908,
+   "arts": "Akihiro Ota",
+   "sk": {
+    "p": 217484,
+    "u": "https://www.sakugabooru.com/data/08c15ccfb45da4643beb326e964bb2cc.mp4"
+   }
+  },
+  {
+   "id": "aop-283898",
+   "ko": "Hiromi Ishigami, Isuta Meister 외 5명",
+   "en": "One Piece · #0978 (Mori NC)",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 4213,
+   "arts": "Hiromi Ishigami, Isuta Meister, Masami Mori, Shuu Sugita, Takashi Hashimoto, Takeshi Maenami, Tetsuro Niregi",
+   "sk": {
+    "p": 283898,
+    "u": "https://www.sakugabooru.com/data/909b344d139cd83c04d231d96b070ce1.mp4"
+   }
+  },
+  {
+   "id": "aop-283895",
+   "ko": "Katsumi Ishizuka",
+   "en": "One Piece · #0934",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 4143,
+   "arts": "Katsumi Ishizuka",
+   "sk": {
+    "p": 283895,
+    "u": "https://www.sakugabooru.com/data/7f4db72f8f85e6daf43d6cf4535a982b.mp4"
+   }
+  },
+  {
+   "id": "aop-234269",
+   "ko": "Weilin Zhang",
+   "en": "One Piece · #1071",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 4052,
+   "arts": "Weilin Zhang",
+   "sk": {
+    "p": 234269,
+    "u": "https://www.sakugabooru.com/data/5b9403629c6f110163ce3ecc16ddd871.mp4"
+   }
+  },
+  {
+   "id": "aop-236300",
+   "ko": "Keisuke Okura, Shuu Sugita 외 4명",
+   "en": "One Piece · #1074",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 3910,
+   "arts": "Keisuke Okura, Shuu Sugita, Sota Shigetsugu, Vincent Chansard, Yen Bm, Yuu Yoshiyama",
+   "sk": {
+    "p": 236300,
+    "u": "https://www.sakugabooru.com/data/dc395590485a0f43bec6ea770acf74c2.mp4"
+   }
+  },
+  {
+   "id": "aop-228603",
+   "ko": "Luana Nguyen, Vincent Chansard",
+   "en": "One Piece · #1062",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 3601,
+   "arts": "Luana Nguyen, Vincent Chansard",
+   "sk": {
+    "p": 228603,
+    "u": "https://www.sakugabooru.com/data/2d4adc8e59c9796c284459e4481cb5c9.mp4"
+   }
+  },
+  {
+   "id": "aop-233815",
+   "ko": "Koudai Watanabe",
+   "en": "One Piece · #0870",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 3390,
+   "arts": "Koudai Watanabe",
+   "sk": {
+    "p": 233815,
+    "u": "https://www.sakugabooru.com/data/bf95e98e93bef1d9a15941afe31ad33d.mp4"
+   }
+  },
+  {
+   "id": "aop-188360",
+   "ko": "Takashi Kojima",
+   "en": "One Piece · #1015",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 3272,
+   "arts": "Takashi Kojima",
+   "sk": {
+    "p": 188360,
+    "u": "https://www.sakugabooru.com/data/22ba277def88315a9ef82b39afb222ec.mp4"
+   }
+  },
+  {
+   "id": "aop-263683",
+   "ko": "Bahi Jd",
+   "en": "One Piece · #0914",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 3250,
+   "arts": "Bahi Jd",
+   "sk": {
+    "p": 263683,
+    "u": "https://www.sakugabooru.com/data/bf3e37e81d5cc455cd0f1b14f01e081f.mp4"
+   }
+  },
+  {
+   "id": "aop-228604",
+   "ko": "Yen Bm",
+   "en": "One Piece · #1062",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 3212,
+   "arts": "Yen Bm",
+   "sk": {
+    "p": 228604,
+    "u": "https://www.sakugabooru.com/data/ee4c93f97e03455dff5ea78c1ed8db41.mp4"
+   }
+  },
+  {
+   "id": "aop-204501",
+   "ko": "Akihiro Ota",
+   "en": "One Piece · #1033",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 3106,
+   "arts": "Akihiro Ota",
+   "sk": {
+    "p": 204501,
+    "u": "https://www.sakugabooru.com/data/8673316bfc6c141fe291c2a9bb048cf5.mp4"
+   }
+  },
+  {
+   "id": "aop-35126",
+   "ko": "Naoki Tate",
+   "en": "One Piece · #0396",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 3066,
+   "arts": "Naoki Tate",
+   "sk": {
+    "p": 35126,
+    "u": "https://www.sakugabooru.com/data/dc15aec5ac3d3440a6503452b4cf84d1.mp4"
+   }
+  },
+  {
+   "id": "aop-234967",
+   "ko": "Bahi Jd, Julian Bentley 외 2명",
+   "en": "One Piece · #1072",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 2953,
+   "arts": "Unknown, Bahi Jd, Julian Bentley, Masami Mori, Yen Bm",
+   "sk": {
+    "p": 234967,
+    "u": "https://www.sakugabooru.com/data/6cd9a96b8eeea24dc78cf8c174f2cc0a.mp4"
+   }
+  },
+  {
+   "id": "aop-209006",
+   "ko": "Julien Cortey, Vincent Chansard",
+   "en": "One Piece · #1038",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 2921,
+   "arts": "Julien Cortey, Vincent Chansard",
+   "sk": {
+    "p": 209006,
+    "u": "https://www.sakugabooru.com/data/12662062c782b001e612b137ccf6764c.mp4"
+   }
+  },
+  {
+   "id": "aop-283894",
+   "ko": "Takashi Kojima",
+   "en": "One Piece · #0933",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 2900,
+   "arts": "Takashi Kojima",
+   "sk": {
+    "p": 283894,
+    "u": "https://www.sakugabooru.com/data/44d918cf13a451671899b13294335a71.mp4"
+   }
+  },
+  {
+   "id": "aop-259237",
+   "ko": "Vincent Chansard",
+   "en": "One Piece · #1109",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 2851,
+   "arts": "Vincent Chansard",
+   "sk": {
+    "p": 259237,
+    "u": "https://www.sakugabooru.com/data/a2990c4401da1fe26c8da802b0c468d7.mp4"
+   }
+  },
+  {
+   "id": "aop-216609",
+   "ko": "Vincent Chansard",
+   "en": "One Piece · #1048",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 2823,
+   "arts": "Vincent Chansard",
+   "sk": {
+    "p": 216609,
+    "u": "https://www.sakugabooru.com/data/b4bd817fa30294b7fb534e77e185f016.mp4"
+   }
+  },
+  {
+   "id": "aop-302080",
+   "ko": "Hironori Tanaka",
+   "en": "One Piece: Episode of Chopper · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece: Episode of Chopper",
+   "role": "",
+   "ver": "",
+   "score": 2807,
+   "arts": "Hironori Tanaka",
+   "sk": {
+    "p": 302080,
+    "u": "https://www.sakugabooru.com/data/187e35ffc29c9dd9605e36164289d2d7.mp4"
+   }
+  },
+  {
+   "id": "aop-172477",
+   "ko": "Sota Shigetsugu",
+   "en": "One Piece · #1001",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 2791,
+   "arts": "Sota Shigetsugu",
+   "sk": {
+    "p": 172477,
+    "u": "https://www.sakugabooru.com/data/3daac7c9aadde92d60f99d448a45dfc2.mp4"
+   }
+  },
+  {
+   "id": "aop-204496",
+   "ko": "Akihiro Ota",
+   "en": "One Piece · #1033",
+   "zh": "",
+   "rarity": "",
+   "attr": "One Piece",
+   "role": "",
+   "ver": "",
+   "score": 2768,
+   "arts": "Akihiro Ota",
+   "sk": {
+    "p": 204496,
+    "u": "https://www.sakugabooru.com/data/2dcb4f1e3ecc3801b21ec1c61819da51.mp4"
+   }
+  }
+ ],
+ "meta": {
+  "ko": "원피스",
+  "en": "One Piece",
+  "zh": "海贼王",
+  "tag": "one_piece"
+ }
+}

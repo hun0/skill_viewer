@@ -13,7 +13,12 @@
 - `lib/hsr_source.html` — 스타레일 로스터와 기본 CSS. 캐릭터 행 형식: `["id","한글","English",등급,"속성","운명의 길","버전"]`, 중국어 이름은 같은 파일의 `const ZH = {...}`
 - `lib/build.py` — 페이지 생성. **스타레일 출시 예정 표시는 build.py 안의 `r[6]=="4.8"` 조건**이라, 새 버전이 나오면 이 숫자를 다음 예정 버전으로 바꿔요
 - 스타레일 4.8 젠존제 콜라보(엘렌·아스트라)는 zzz.webp 칸을 hsr.webp 뒤에 붙였어요. 스프라이트는 **RGBA로 저장**해야 해요(RGB로 저장하면 투명 영역이 깨져 보여요)
-- `games/<게임>.json` — 나머지 39개 게임 로스터 (`zzz ww nte e7 gi r99 pgr nikke ake bd2 hi3 dna mgl ao an hna gbvs gbr gg db bb dnf kny nrt opa hd1 hd2 d4 ap sp mt mr sn er lol tft val 2xko`). 항목: `id, ko, en, zh, rarity, attr, role, ver`, 선택 `date`, 출시 전이면 `"upcoming": true`
+- `games/<게임>.json` — 나머지 39개 게임 로스터 + 애니 30작품(아래 대분류 참고) (`zzz ww nte e7 gi r99 pgr nikke ake bd2 hi3 dna mgl ao an hna gbvs gbr gg db bb dnf kny nrt opa hd1 hd2 d4 ap sp mt mr sn er lol tft val 2xko`). 항목: `id, ko, en, zh, rarity, attr, role, ver`, 선택 `date`, 출시 전이면 `"upcoming": true`
+- **대분류 게임 | 영상** — 필터 줄 맨 앞 스위치. 영상 쪽 드롭다운은 `게임`(= `vid`, 게임영상 모음)과 `애니`(Sakugabooru 30작품)로 나뉘어요(`lib/script.js`의 `VIDEO_GROUPS`)
+  - **게임영상 모음(`vid`)**: 로스터가 없고 사용자가 페이지에서 직접 항목(제목 + 게임)을 추가해요. 항목은 DB `bosses` 컬렉션에 `{game:"vid", ko:제목, sub:게임 이름, createdAt}`로 저장되고(id `vid-…`), 링크는 다른 캐릭터처럼 `links` 컬렉션. 같은 게임끼리 묶여 표시돼요
+  - **애니(`aop ajjk anrt abrt amha acsm afate adb aopm aaot afma afrn aeva abc akny agl aff ablc amob ase asl addd ajojo aklk apkm agdm apc amt aor acpe`)**: `games/<키>.json`의 `meta`(ko·en·zh·Sakugabooru 태그)가 있으면 애니로 인식. 각 작품은 Sakugabooru `"<태그> effects fighting order:score"` 상위 mp4 20개(나루토는 `-boruto:_naruto_next_generations -boruto:_naruto_the_movie`로 보루토 제외). 항목: `id=<키>-<post id>`, `ko`=원화가(2명 + 외 N명), `en`=작품·화수, `attr`=세부 작품, `score`, `arts`=전체 원화가, `sk:{p:post id, u:원본 파일 URL}`. 링크는 DB가 아니라 `sk`에서 바로 만들어요(▶ 프레임 뷰어 `?src=`, ⬇ 원본 mp4, Sakugabooru 글). 원본 수집 데이터는 `tools/sakuga/sakuga.json`
+  - Sakugabooru는 컨테이너에서 막혀 있어서 Chrome으로 `post.json?api_version=2&include_tags=1`을 받아요(태그 종류로 원화가·작품 구분). 미리보기(`/data/preview/<md5>.jpg`, 300×169)는 같은 페이지 캔버스에 120px 정사각(가운데 자르기)으로 깔고 `zoom save_to_disk`로 캡처해 80px 시트(10열×2행)로 만들었어요
+  - 다운로드: Sakugabooru는 CORS를 안 열어 줘서 스크립트 저장이 안 되고, 아티팩트는 `download` 속성 링크를 막아요. 그래서 ⬇는 원본 mp4를 새 탭으로 열고(우클릭 → 저장), 작품 단위로는 헤더의 ‘전체 다운로드 명령 복사’(curl)를 써요. 프레임 뷰어도 `?src=<mp4>&page=<글 주소>`로 직접 재생(네이티브 video라 프레임 단위 정확)
 - `sprites/<게임>.webp` + `<게임>.json` — 나무위키 이미지로 만든 캐릭터 썸네일 시트(80px 칸, 16열). json의 `ids` 순서가 칸 순서
 - `sprites/blobs.json` — 각 시트가 아티팩트에 올라가 있는 asset id
 - `tools/transfer_grab.py` — 브라우저 결과가 너무 커서 파일로 저장됐을 때 `@@TAG@@...@@END@@` 사이 JSON을 꺼내는 도우미

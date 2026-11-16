@@ -1,0 +1,332 @@
+{
+ "note": "Sakugabooru에서 ‘pokemon effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=pokemon+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Pokémon</a>",
+ "roster": [
+  {
+   "id": "apkm-217828",
+   "ko": "Keiichiro Watanabe, Weilin Zhang",
+   "en": "Pokemon: Twilight Wings · #07 (PN)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon: Twilight Wings",
+   "role": "",
+   "ver": "",
+   "score": 3017,
+   "arts": "Unknown, Keiichiro Watanabe, Weilin Zhang",
+   "sk": {
+    "p": 217828,
+    "u": "https://www.sakugabooru.com/data/ed382f832821198bd45b6cfca2188b78.mp4"
+   }
+  },
+  {
+   "id": "apkm-252543",
+   "ko": "Yuki Hayashi, Yutaka Nakamura",
+   "en": "Gotcha! · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "Gotcha!",
+   "role": "",
+   "ver": "",
+   "score": 2348,
+   "arts": "Yuki Hayashi, Yutaka Nakamura",
+   "sk": {
+    "p": 252543,
+    "u": "https://www.sakugabooru.com/data/28cb9bef4772dc748d28a3e1cc4a80e5.mp4"
+   }
+  },
+  {
+   "id": "apkm-278007",
+   "ko": "Weilin Zhang",
+   "en": "Pokemon: Twilight Wings",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon: Twilight Wings",
+   "role": "",
+   "ver": "",
+   "score": 2057,
+   "arts": "Weilin Zhang",
+   "sk": {
+    "p": 278007,
+    "u": "https://www.sakugabooru.com/data/059e099c8cb99a07d4ee065bb7211a7b.mp4"
+   }
+  },
+  {
+   "id": "apkm-266931",
+   "ko": "Yoshimichi Kameda",
+   "en": "Pokemon Sun & Moon · NCOP1",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon Sun & Moon",
+   "role": "",
+   "ver": "",
+   "score": 1348,
+   "arts": "Yoshimichi Kameda",
+   "sk": {
+    "p": 266931,
+    "u": "https://www.sakugabooru.com/data/8e29643a0b12107110725429c1704cc0.mp4"
+   }
+  },
+  {
+   "id": "apkm-217827",
+   "ko": "Hiromitsu Seki",
+   "en": "Pokemon: Twilight Wings · #07",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon: Twilight Wings",
+   "role": "",
+   "ver": "",
+   "score": 1293,
+   "arts": "Hiromitsu Seki",
+   "sk": {
+    "p": 217827,
+    "u": "https://www.sakugabooru.com/data/670b702c0f1f620a774f62fedb71d586.mp4"
+   }
+  },
+  {
+   "id": "apkm-209981",
+   "ko": "Claire Launay, Osamu Murata 외 2명",
+   "en": "Pokemon (2019) · #132",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon (2019)",
+   "role": "",
+   "ver": "",
+   "score": 1219,
+   "arts": "Claire Launay, Osamu Murata, Takeshi Maenami, Washio",
+   "sk": {
+    "p": 209981,
+    "u": "https://www.sakugabooru.com/data/b2c1ccc9895500a982370e8d7df24bdf.mp4"
+   }
+  },
+  {
+   "id": "apkm-219589",
+   "ko": "Chikashi Kubota, Daiki Harashina 외 7명",
+   "en": "Pokemon Sun & Moon · #144 (PN)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon Sun & Moon",
+   "role": "",
+   "ver": "",
+   "score": 1166,
+   "arts": "Unknown, Chikashi Kubota, Daiki Harashina, Hiroyuki Horiuchi, Maki Kawake, Osamu Murata, Shosuke Ishibashi, Shuhei Yasuda, Toshiyuki Sato, Yoshimichi Kameda",
+   "sk": {
+    "p": 219589,
+    "u": "https://www.sakugabooru.com/data/b413d5965530dcb33304e9ac3efb05f2.mp4"
+   }
+  },
+  {
+   "id": "apkm-282421",
+   "ko": "Takeshi Maenami",
+   "en": "Pokemon (2019) · #002",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon (2019)",
+   "role": "",
+   "ver": "",
+   "score": 889,
+   "arts": "Takeshi Maenami",
+   "sk": {
+    "p": 282421,
+    "u": "https://www.sakugabooru.com/data/3ecebc13f5fc9b9d9994f288e6e533a9.mp4"
+   }
+  },
+  {
+   "id": "apkm-266117",
+   "ko": "Koudai Watanabe",
+   "en": "Pokemon: Twilight Wings · #02",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon: Twilight Wings",
+   "role": "",
+   "ver": "",
+   "score": 854,
+   "arts": "Koudai Watanabe",
+   "sk": {
+    "p": 266117,
+    "u": "https://www.sakugabooru.com/data/edd224d6d1ec43d129437a779a40853c.mp4"
+   }
+  },
+  {
+   "id": "apkm-219224",
+   "ko": "Aito Ohashi",
+   "en": "Pokemon Sun & Moon · #043",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon Sun & Moon",
+   "role": "",
+   "ver": "",
+   "score": 779,
+   "arts": "Aito Ohashi",
+   "sk": {
+    "p": 219224,
+    "u": "https://www.sakugabooru.com/data/53e6d4d8071900d2d48f925e4149586a.mp4"
+   }
+  },
+  {
+   "id": "apkm-181567",
+   "ko": "Yuki Sato",
+   "en": "Gotcha! · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "Gotcha!",
+   "role": "",
+   "ver": "",
+   "score": 701,
+   "arts": "Yuki Sato",
+   "sk": {
+    "p": 181567,
+    "u": "https://www.sakugabooru.com/data/47a3dc34f4e4d8dae0b9818e343ed2fc.mp4"
+   }
+  },
+  {
+   "id": "apkm-219223",
+   "ko": "Aito Ohashi",
+   "en": "Pokemon Sun & Moon · #043",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon Sun & Moon",
+   "role": "",
+   "ver": "",
+   "score": 646,
+   "arts": "Aito Ohashi",
+   "sk": {
+    "p": 219223,
+    "u": "https://www.sakugabooru.com/data/a22fd913f0a37bf2e1688a5f8c524e04.mp4"
+   }
+  },
+  {
+   "id": "apkm-190598",
+   "ko": "Yoh Yoshinari",
+   "en": "Pokemon Movie 14: Black & White Victini and Reshiram/Zekrom",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon Movie 14: Black & White V…",
+   "role": "",
+   "ver": "",
+   "score": 643,
+   "arts": "Yoh Yoshinari",
+   "sk": {
+    "p": 190598,
+    "u": "https://www.sakugabooru.com/data/b31bd78a57af055b9f9c856c5b3ae9f4.mp4"
+   }
+  },
+  {
+   "id": "apkm-218611",
+   "ko": "Takeshi Maenami",
+   "en": "Pokemon (2019) · NCOP1",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon (2019)",
+   "role": "",
+   "ver": "",
+   "score": 631,
+   "arts": "Takeshi Maenami",
+   "sk": {
+    "p": 218611,
+    "u": "https://www.sakugabooru.com/data/51f9f330b3d9969e40f2e6cc6fd16148.mp4"
+   }
+  },
+  {
+   "id": "apkm-154015",
+   "ko": "Aito Ohashi",
+   "en": "Pokemon Sun & Moon · #036",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon Sun & Moon",
+   "role": "",
+   "ver": "",
+   "score": 569,
+   "arts": "Aito Ohashi",
+   "sk": {
+    "p": 154015,
+    "u": "https://www.sakugabooru.com/data/eca202f68629077feb7ffd21d1c30ec6.mp4"
+   }
+  },
+  {
+   "id": "apkm-181574",
+   "ko": "Yuuta Kiso",
+   "en": "Gotcha! · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "Gotcha!",
+   "role": "",
+   "ver": "",
+   "score": 568,
+   "arts": "Yuuta Kiso",
+   "sk": {
+    "p": 181574,
+    "u": "https://www.sakugabooru.com/data/3b9c0bc8d3f8f09f59a68c10660d1e5c.mp4"
+   }
+  },
+  {
+   "id": "apkm-209979",
+   "ko": "Yuhei Takahoshi, Yusuke Oshida",
+   "en": "Pokemon (2019) · #132",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon (2019)",
+   "role": "",
+   "ver": "",
+   "score": 564,
+   "arts": "Yuhei Takahoshi, Yusuke Oshida",
+   "sk": {
+    "p": 209979,
+    "u": "https://www.sakugabooru.com/data/7b952b7aae411f1875af1dcf2e26a2d0.mp4"
+   }
+  },
+  {
+   "id": "apkm-201263",
+   "ko": "Takeshi Maenami",
+   "en": "Pokemon Sun & Moon · #130",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon Sun & Moon",
+   "role": "",
+   "ver": "",
+   "score": 547,
+   "arts": "Takeshi Maenami",
+   "sk": {
+    "p": 201263,
+    "u": "https://www.sakugabooru.com/data/13327f48c5442c545c124f7590ec2255.mp4"
+   }
+  },
+  {
+   "id": "apkm-248464",
+   "ko": "Yasushi Nishiya",
+   "en": "Pokemon Sun & Moon · OP4",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon Sun & Moon",
+   "role": "",
+   "ver": "",
+   "score": 535,
+   "arts": "Yasushi Nishiya",
+   "sk": {
+    "p": 248464,
+    "u": "https://www.sakugabooru.com/data/6409df0a831c5becdfdb36cd8f422ea6.mp4"
+   }
+  },
+  {
+   "id": "apkm-243758",
+   "ko": "Takeshi Maenami",
+   "en": "Pokemon (2023) · NCOP1",
+   "zh": "",
+   "rarity": "",
+   "attr": "Pokemon (2023)",
+   "role": "",
+   "ver": "",
+   "score": 509,
+   "arts": "Takeshi Maenami",
+   "sk": {
+    "p": 243758,
+    "u": "https://www.sakugabooru.com/data/aeb3ae2dd6f086cb257b6cba8587f6e0.mp4"
+   }
+  }
+ ],
+ "meta": {
+  "ko": "포켓몬스터",
+  "en": "Pokémon",
+  "zh": "宝可梦",
+  "tag": "pokemon"
+ }
+}

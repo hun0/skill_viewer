@@ -1,0 +1,332 @@
+{
+ "note": "Sakugabooru에서 ‘fullmetal_alchemist effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=fullmetal_alchemist+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Fullmetal Alchemist</a>",
+ "roster": [
+  {
+   "id": "afma-203287",
+   "ko": "Yutaka Nakamura",
+   "en": "Fullmetal Alchemist Brotherhood · NCOP2",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist Brotherhood",
+   "role": "",
+   "ver": "",
+   "score": 3579,
+   "arts": "Yutaka Nakamura",
+   "sk": {
+    "p": 203287,
+    "u": "https://www.sakugabooru.com/data/e6e2f20bf2dad57448f4f13d8c67a71d.mp4"
+   }
+  },
+  {
+   "id": "afma-197864",
+   "ko": "Yoshimichi Kameda",
+   "en": "Fullmetal Alchemist Brotherhood · #45",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist Brotherhood",
+   "role": "",
+   "ver": "",
+   "score": 2895,
+   "arts": "Yoshimichi Kameda",
+   "sk": {
+    "p": 197864,
+    "u": "https://www.sakugabooru.com/data/5a5e1624bebf4ebf7e23999277716094.mp4"
+   }
+  },
+  {
+   "id": "afma-108301",
+   "ko": "Yutaka Nakamura",
+   "en": "Fullmetal Alchemist (2003) · #34",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist (2003)",
+   "role": "",
+   "ver": "",
+   "score": 2887,
+   "arts": "Yutaka Nakamura",
+   "sk": {
+    "p": 108301,
+    "u": "https://www.sakugabooru.com/data/1cd9d9d176f436e4a467bbe5d24393fe.mp4"
+   }
+  },
+  {
+   "id": "afma-215914",
+   "ko": "Yoshimichi Kameda",
+   "en": "Fullmetal Alchemist Brotherhood · #54",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist Brotherhood",
+   "role": "",
+   "ver": "",
+   "score": 2236,
+   "arts": "Yoshimichi Kameda",
+   "sk": {
+    "p": 215914,
+    "u": "https://www.sakugabooru.com/data/0728af7b88ba28b2c66d2076c2b30691.mp4"
+   }
+  },
+  {
+   "id": "afma-216675",
+   "ko": "Yoshimichi Kameda",
+   "en": "Fullmetal Alchemist Brotherhood · #62",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist Brotherhood",
+   "role": "",
+   "ver": "",
+   "score": 2147,
+   "arts": "Yoshimichi Kameda",
+   "sk": {
+    "p": 216675,
+    "u": "https://www.sakugabooru.com/data/39cccd12c1d25da6ca06d7d158cf353f.mp4"
+   }
+  },
+  {
+   "id": "afma-185912",
+   "ko": "Yoshimichi Kameda",
+   "en": "Fullmetal Alchemist the Sacred Star of Milos",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist the Sacred St…",
+   "role": "",
+   "ver": "",
+   "score": 1984,
+   "arts": "Yoshimichi Kameda",
+   "sk": {
+    "p": 185912,
+    "u": "https://www.sakugabooru.com/data/92b29edad0d8e17a2703e4613a6484b2.mp4"
+   }
+  },
+  {
+   "id": "afma-69068",
+   "ko": "Hideki Kakita, Kou Yoshinari 외 2명",
+   "en": "Fullmetal Alchemist (2003) · NCOP4",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist (2003)",
+   "role": "",
+   "ver": "",
+   "score": 1932,
+   "arts": "Hideki Kakita, Kou Yoshinari, Tadashi Sakazaki, Yutaka Nakamura",
+   "sk": {
+    "p": 69068,
+    "u": "https://www.sakugabooru.com/data/7cd994aa0d5805956fb023c5319c923e.mp4"
+   }
+  },
+  {
+   "id": "afma-213658",
+   "ko": "Yoshimichi Kameda",
+   "en": "Fullmetal Alchemist Brotherhood · #19",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist Brotherhood",
+   "role": "",
+   "ver": "",
+   "score": 1762,
+   "arts": "Yoshimichi Kameda",
+   "sk": {
+    "p": 213658,
+    "u": "https://www.sakugabooru.com/data/a23c918ede333a8940cc1ce4b5466ccd.mp4"
+   }
+  },
+  {
+   "id": "afma-265930",
+   "ko": "Hironori Tanaka",
+   "en": "Fullmetal Alchemist Brotherhood · #52",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist Brotherhood",
+   "role": "",
+   "ver": "",
+   "score": 1424,
+   "arts": "Hironori Tanaka",
+   "sk": {
+    "p": 265930,
+    "u": "https://www.sakugabooru.com/data/6771c1e86e64d9120621f547d637b9ef.mp4"
+   }
+  },
+  {
+   "id": "afma-185735",
+   "ko": "Yoshimichi Kameda",
+   "en": "Fullmetal Alchemist the Sacred Star of Milos",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist the Sacred St…",
+   "role": "",
+   "ver": "",
+   "score": 1361,
+   "arts": "Yoshimichi Kameda",
+   "sk": {
+    "p": 185735,
+    "u": "https://www.sakugabooru.com/data/310ab8df50ad7b2da0656f12a169739c.mp4"
+   }
+  },
+  {
+   "id": "afma-215912",
+   "ko": "Yoshimichi Kameda",
+   "en": "Fullmetal Alchemist Brotherhood · #53",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist Brotherhood",
+   "role": "",
+   "ver": "",
+   "score": 1349,
+   "arts": "Yoshimichi Kameda",
+   "sk": {
+    "p": 215912,
+    "u": "https://www.sakugabooru.com/data/a770fbb412415eba8cbfde63290908f0.mp4"
+   }
+  },
+  {
+   "id": "afma-69070",
+   "ko": "Kouichi Hashimoto, Satoru Utsunomiya",
+   "en": "Fullmetal Alchemist (2003) · NCOP4",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist (2003)",
+   "role": "",
+   "ver": "",
+   "score": 1348,
+   "arts": "Kouichi Hashimoto, Satoru Utsunomiya",
+   "sk": {
+    "p": 69070,
+    "u": "https://www.sakugabooru.com/data/566d62f2a206f16ff2e9a82062bcdf72.mp4"
+   }
+  },
+  {
+   "id": "afma-185720",
+   "ko": "Gosei Oda",
+   "en": "Fullmetal Alchemist the Sacred Star of Milos",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist the Sacred St…",
+   "role": "",
+   "ver": "",
+   "score": 1334,
+   "arts": "Gosei Oda",
+   "sk": {
+    "p": 185720,
+    "u": "https://www.sakugabooru.com/data/b832dbe559f70efaa0992ce7d960bfa7.mp4"
+   }
+  },
+  {
+   "id": "afma-185756",
+   "ko": "Kenichi Kutsuna, Majiro 외 1명",
+   "en": "Fullmetal Alchemist the Sacred Star of Milos",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist the Sacred St…",
+   "role": "",
+   "ver": "",
+   "score": 1309,
+   "arts": "Kenichi Kutsuna, Majiro, Shingo Yamashita",
+   "sk": {
+    "p": 185756,
+    "u": "https://www.sakugabooru.com/data/46d4dbb22ffef1ce36d8cca6c52873b4.mp4"
+   }
+  },
+  {
+   "id": "afma-197865",
+   "ko": "Yoshimichi Kameda",
+   "en": "Fullmetal Alchemist Brotherhood · #61",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist Brotherhood",
+   "role": "",
+   "ver": "",
+   "score": 1287,
+   "arts": "Yoshimichi Kameda",
+   "sk": {
+    "p": 197865,
+    "u": "https://www.sakugabooru.com/data/7610ff759c4046431185ea31a1be0167.mp4"
+   }
+  },
+  {
+   "id": "afma-217673",
+   "ko": "Yutaka Nakamura",
+   "en": "Fullmetal Alchemist Conqueror of Shamballa",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist Conqueror of …",
+   "role": "",
+   "ver": "",
+   "score": 1286,
+   "arts": "Yutaka Nakamura",
+   "sk": {
+    "p": 217673,
+    "u": "https://www.sakugabooru.com/data/a7e72d4cc5a1ac5ffdc3ed83a8b48050.mp4"
+   }
+  },
+  {
+   "id": "afma-168475",
+   "ko": "Norimitsu Suzuki",
+   "en": "Fullmetal Alchemist (2003) · #34",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist (2003)",
+   "role": "",
+   "ver": "",
+   "score": 1200,
+   "arts": "Norimitsu Suzuki",
+   "sk": {
+    "p": 168475,
+    "u": "https://www.sakugabooru.com/data/d10eb1bd19424fab945805d14d0cbcf4.mp4"
+   }
+  },
+  {
+   "id": "afma-185746",
+   "ko": "Yoshimichi Kameda",
+   "en": "Fullmetal Alchemist the Sacred Star of Milos",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist the Sacred St…",
+   "role": "",
+   "ver": "",
+   "score": 1177,
+   "arts": "Yoshimichi Kameda",
+   "sk": {
+    "p": 185746,
+    "u": "https://www.sakugabooru.com/data/84b59b1c159c1ee024a7b36aed44a817.mp4"
+   }
+  },
+  {
+   "id": "afma-210214",
+   "ko": "Yutaka Nakamura",
+   "en": "Fullmetal Alchemist (2003) · #31",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist (2003)",
+   "role": "",
+   "ver": "",
+   "score": 1081,
+   "arts": "Yutaka Nakamura",
+   "sk": {
+    "p": 210214,
+    "u": "https://www.sakugabooru.com/data/1a6b218873f351a27b6ec7cef46b0055.mp4"
+   }
+  },
+  {
+   "id": "afma-210213",
+   "ko": "Yutaka Nakamura",
+   "en": "Fullmetal Alchemist (2003) · #25",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fullmetal Alchemist (2003)",
+   "role": "",
+   "ver": "",
+   "score": 1065,
+   "arts": "Yutaka Nakamura",
+   "sk": {
+    "p": 210213,
+    "u": "https://www.sakugabooru.com/data/ea48599e5fec27f5bfdc8047e4867c85.mp4"
+   }
+  }
+ ],
+ "meta": {
+  "ko": "강철의 연금술사",
+  "en": "Fullmetal Alchemist",
+  "zh": "钢之炼金术师",
+  "tag": "fullmetal_alchemist"
+ }
+}

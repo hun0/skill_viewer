@@ -1,0 +1,332 @@
+{
+ "note": "Sakugabooru에서 ‘jojo's_bizarre_adventure_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=jojo's_bizarre_adventure_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · JoJo's Bizarre Adventure</a>",
+ "roster": [
+  {
+   "id": "ajojo-114108",
+   "ko": "Mitsuo Iso",
+   "en": "Jojo's Bizarre Adventure · #13",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure",
+   "role": "",
+   "ver": "",
+   "score": 1621,
+   "arts": "Mitsuo Iso",
+   "sk": {
+    "p": 114108,
+    "u": "https://www.sakugabooru.com/data/558887b8ceebb109270ba3a73606a745.mp4"
+   }
+  },
+  {
+   "id": "ajojo-157775",
+   "ko": "Toshiaki Hontani",
+   "en": "Jojo's Bizarre Adventure · #13",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure",
+   "role": "",
+   "ver": "",
+   "score": 1386,
+   "arts": "Toshiaki Hontani",
+   "sk": {
+    "p": 157775,
+    "u": "https://www.sakugabooru.com/data/5b722779cd89f46a18b8868f8a788ce8.mp4"
+   }
+  },
+  {
+   "id": "ajojo-204109",
+   "ko": "Kouki Fujimoto",
+   "en": "Jojo's Bizarre Adventure: Vento Aureo · #27",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure: Vento A…",
+   "role": "",
+   "ver": "",
+   "score": 1382,
+   "arts": "Kouki Fujimoto",
+   "sk": {
+    "p": 204109,
+    "u": "https://www.sakugabooru.com/data/910a8e36e1fe7dc60a36abd00821c4dc.mp4"
+   }
+  },
+  {
+   "id": "ajojo-204107",
+   "ko": "Kai Shibata",
+   "en": "Jojo's Bizarre Adventure: Vento Aureo · #27",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure: Vento A…",
+   "role": "",
+   "ver": "",
+   "score": 1226,
+   "arts": "Kai Shibata",
+   "sk": {
+    "p": 204107,
+    "u": "https://www.sakugabooru.com/data/fcd14ff6a07a4535c4c512c71552f73b.mp4"
+   }
+  },
+  {
+   "id": "ajojo-310213",
+   "ko": "Kai Shibata, Kanta Suzuki 외 5명",
+   "en": "Jojo's Bizarre Adventure: Vento Aureo · #31",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure: Vento A…",
+   "role": "",
+   "ver": "",
+   "score": 1178,
+   "arts": "Kai Shibata, Kanta Suzuki, Masamichi Ishiyama, Nobuhiro Nagata, Takahito Katayama, Takeshi Morita, Toru Iwazawa",
+   "sk": {
+    "p": 310213,
+    "u": "https://www.sakugabooru.com/data/1864262ddf40f45fb7bbb6dc61336ec9.mp4"
+   }
+  },
+  {
+   "id": "ajojo-310111",
+   "ko": "Hironori Tanaka",
+   "en": "Jojo's Bizarre Adventure: Vento Aureo · #19",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure: Vento A…",
+   "role": "",
+   "ver": "",
+   "score": 1016,
+   "arts": "Hironori Tanaka",
+   "sk": {
+    "p": 310111,
+    "u": "https://www.sakugabooru.com/data/0fe9df69936280b3c25ac186ff10b35c.mp4"
+   }
+  },
+  {
+   "id": "ajojo-114085",
+   "ko": "Hideki Hamasu",
+   "en": "Jojo's Bizarre Adventure · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure",
+   "role": "",
+   "ver": "",
+   "score": 833,
+   "arts": "Hideki Hamasu",
+   "sk": {
+    "p": 114085,
+    "u": "https://www.sakugabooru.com/data/2fa76f74962bcfd169b0d7357a894e13.mp4"
+   }
+  },
+  {
+   "id": "ajojo-158422",
+   "ko": "Shinya Takahashi",
+   "en": "Jojo's Bizarre Adventure · #07",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure",
+   "role": "",
+   "ver": "",
+   "score": 777,
+   "arts": "Shinya Takahashi",
+   "sk": {
+    "p": 158422,
+    "u": "https://www.sakugabooru.com/data/f585335bb218b05f709fbd2577d381e7.mp4"
+   }
+  },
+  {
+   "id": "ajojo-313442",
+   "ko": "Nobuhiro Nagata, Yasutoshi Iwasaki",
+   "en": "Jojo's Bizarre Adventure: Vento Aureo · NCOP2",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure: Vento A…",
+   "role": "",
+   "ver": "",
+   "score": 745,
+   "arts": "Nobuhiro Nagata, Yasutoshi Iwasaki",
+   "sk": {
+    "p": 313442,
+    "u": "https://www.sakugabooru.com/data/8b45bd4cdaa6d14d2f83af2515e1b1f8.mp4"
+   }
+  },
+  {
+   "id": "ajojo-310100",
+   "ko": "Daisuke Tsumagari, Shuu Sugita",
+   "en": "Jojo's Bizarre Adventure: Vento Aureo · #16",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure: Vento A…",
+   "role": "",
+   "ver": "",
+   "score": 591,
+   "arts": "Daisuke Tsumagari, Shuu Sugita",
+   "sk": {
+    "p": 310100,
+    "u": "https://www.sakugabooru.com/data/4d11bbb2ed9a8c0e68472d3dafde7361.mp4"
+   }
+  },
+  {
+   "id": "ajojo-310085",
+   "ko": "Yasutoshi Iwasaki",
+   "en": "Jojo's Bizarre Adventure: Vento Aureo · #13",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure: Vento A…",
+   "role": "",
+   "ver": "",
+   "score": 589,
+   "arts": "Yasutoshi Iwasaki",
+   "sk": {
+    "p": 310085,
+    "u": "https://www.sakugabooru.com/data/eb0304dea5e017e9058bbf076a5099a1.mp4"
+   }
+  },
+  {
+   "id": "ajojo-114086",
+   "ko": "Norio Matsumoto",
+   "en": "Jojo's Bizarre Adventure · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure",
+   "role": "",
+   "ver": "",
+   "score": 574,
+   "arts": "Unknown, Norio Matsumoto",
+   "sk": {
+    "p": 114086,
+    "u": "https://www.sakugabooru.com/data/21c3675f01dd7903326eb1cf5da546f2.mp4"
+   }
+  },
+  {
+   "id": "ajojo-281037",
+   "ko": "Takashi Kojima",
+   "en": "Jojo's Bizarre Adventure: Stone Ocean · #37",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure: Stone O…",
+   "role": "",
+   "ver": "",
+   "score": 565,
+   "arts": "Takashi Kojima",
+   "sk": {
+    "p": 281037,
+    "u": "https://www.sakugabooru.com/data/dfabbe30a53a098561428a40f41cee9e.mp4"
+   }
+  },
+  {
+   "id": "ajojo-310240",
+   "ko": "Nobuhiro Nagata",
+   "en": "Jojo's Bizarre Adventure: Vento Aureo · #38",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure: Vento A…",
+   "role": "",
+   "ver": "",
+   "score": 559,
+   "arts": "Nobuhiro Nagata",
+   "sk": {
+    "p": 310240,
+    "u": "https://www.sakugabooru.com/data/ac79595d81af927eaf00d8c8644467c3.mp4"
+   }
+  },
+  {
+   "id": "ajojo-159267",
+   "ko": "Hironori Tanaka, Kouki Fujimoto",
+   "en": "Jojo's Bizarre Adventure: Vento Aureo · #04",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure: Vento A…",
+   "role": "",
+   "ver": "",
+   "score": 542,
+   "arts": "Hironori Tanaka, Kouki Fujimoto",
+   "sk": {
+    "p": 159267,
+    "u": "https://www.sakugabooru.com/data/50eec229f833410ecddc356b1182370d.mp4"
+   }
+  },
+  {
+   "id": "ajojo-204106",
+   "ko": "Toru Iwazawa",
+   "en": "Jojo's Bizarre Adventure: Vento Aureo · #27",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure: Vento A…",
+   "role": "",
+   "ver": "",
+   "score": 480,
+   "arts": "Toru Iwazawa",
+   "sk": {
+    "p": 204106,
+    "u": "https://www.sakugabooru.com/data/32dd69f710aa12afed67b84139ababce.mp4"
+   }
+  },
+  {
+   "id": "ajojo-114107",
+   "ko": "Junichi Hayama",
+   "en": "Jojo's Bizarre Adventure · #13",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure",
+   "role": "",
+   "ver": "",
+   "score": 469,
+   "arts": "Junichi Hayama",
+   "sk": {
+    "p": 114107,
+    "u": "https://www.sakugabooru.com/data/11b6aa0053dd78322f8cf8b309e25c4c.mp4"
+   }
+  },
+  {
+   "id": "ajojo-313443",
+   "ko": "Nobuhiro Nagata, Takahito Katayama 외 2명",
+   "en": "Jojo's Bizarre Adventure: Vento Aureo · NCOP2v3",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure: Vento A…",
+   "role": "",
+   "ver": "",
+   "score": 450,
+   "arts": "Nobuhiro Nagata, Takahito Katayama, Yasutoshi Iwasaki, Yuuta Shinohara",
+   "sk": {
+    "p": 313443,
+    "u": "https://www.sakugabooru.com/data/3d625a556abe66a8e5812068e59036c9.mp4"
+   }
+  },
+  {
+   "id": "ajojo-36638",
+   "ko": "Toshiharu Sugie",
+   "en": "Jojo's Bizarre Adventure: Diamond Is Unbreakable · #37",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure: Diamond…",
+   "role": "",
+   "ver": "",
+   "score": 405,
+   "arts": "Unknown, Toshiharu Sugie",
+   "sk": {
+    "p": 36638,
+    "u": "https://www.sakugabooru.com/data/c2b9f38db6e93f924960b575a952c458.mp4"
+   }
+  },
+  {
+   "id": "ajojo-114094",
+   "ko": "Hiroyuki Okiura",
+   "en": "Jojo's Bizarre Adventure · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "Jojo's Bizarre Adventure",
+   "role": "",
+   "ver": "",
+   "score": 401,
+   "arts": "Hiroyuki Okiura",
+   "sk": {
+    "p": 114094,
+    "u": "https://www.sakugabooru.com/data/ec36625495fd542b0c4221b8f8cef39a.mp4"
+   }
+  }
+ ],
+ "meta": {
+  "ko": "죠죠의 기묘한 모험",
+  "en": "JoJo's Bizarre Adventure",
+  "zh": "JOJO的奇妙冒险",
+  "tag": "jojo's_bizarre_adventure_series"
+ }
+}

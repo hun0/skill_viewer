@@ -1,0 +1,332 @@
+{
+ "note": "Sakugabooru에서 ‘ousama_ranking_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=ousama_ranking_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Ranking of Kings</a>",
+ "roster": [
+  {
+   "id": "aor-182379",
+   "ko": "Arifumi Imai, Atsuko Nozaki 외 6명",
+   "en": "Ousama Ranking · #21 (PN)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 3071,
+   "arts": "Arifumi Imai, Atsuko Nozaki, Hirotaka Tokuda, Nozomi Fujii, Porkky, Shosuke Ishibashi, Shota Goshozono, Toya Oshima",
+   "sk": {
+    "p": 182379,
+    "u": "https://www.sakugabooru.com/data/2c6e00e8a530d709de922ddfc8f28a17.mp4"
+   }
+  },
+  {
+   "id": "aor-199113",
+   "ko": "Atsuko Nozaki, Julian Bentley 외 5명",
+   "en": "Ousama Ranking · NCOP2",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 1373,
+   "arts": "Unknown, Atsuko Nozaki, Julian Bentley, Myoun, Takahito Sakazume, Takeru Noda, Toshiyuki Sato, Vercreek",
+   "sk": {
+    "p": 199113,
+    "u": "https://www.sakugabooru.com/data/beba2c68ba8292347516337be8df01f8.mp4"
+   }
+  },
+  {
+   "id": "aor-168182",
+   "ko": "Arifumi Imai",
+   "en": "Ousama Ranking · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 1256,
+   "arts": "Arifumi Imai",
+   "sk": {
+    "p": 168182,
+    "u": "https://www.sakugabooru.com/data/9f4c9a25a3f3980747dd80b05fbb1319.mp4"
+   }
+  },
+  {
+   "id": "aor-169283",
+   "ko": "Hiromitsu Seki",
+   "en": "Ousama Ranking · #03",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 1197,
+   "arts": "Hiromitsu Seki",
+   "sk": {
+    "p": 169283,
+    "u": "https://www.sakugabooru.com/data/b002c0f2f8d1e080fc508c714d9296e9.mp4"
+   }
+  },
+  {
+   "id": "aor-192133",
+   "ko": "Itsuki Tsuchigami, Kouki Fujimoto 외 2명",
+   "en": "Ousama Ranking · #09",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 1097,
+   "arts": "Itsuki Tsuchigami, Kouki Fujimoto, Mitsuaki Takabe, Osamu Murata",
+   "sk": {
+    "p": 192133,
+    "u": "https://www.sakugabooru.com/data/e11bbfe0443ee828145ddb78cb066447.mp4"
+   }
+  },
+  {
+   "id": "aor-181325",
+   "ko": "Hiromitsu Seki",
+   "en": "Ousama Ranking · #19",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 977,
+   "arts": "Hiromitsu Seki",
+   "sk": {
+    "p": 181325,
+    "u": "https://www.sakugabooru.com/data/cf42dc4768ec5a9b9669e42341773407.mp4"
+   }
+  },
+  {
+   "id": "aor-182382",
+   "ko": "Hiromatsu Shuu, Kou Horio 외 1명",
+   "en": "Ousama Ranking · #21",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 868,
+   "arts": "Hiromatsu Shuu, Kou Horio, Shota Goshozono",
+   "sk": {
+    "p": 182382,
+    "u": "https://www.sakugabooru.com/data/d40c3652ac067a1fb74615f69de361f4.mp4"
+   }
+  },
+  {
+   "id": "aor-225551",
+   "ko": "Claire Launay, Daisuke Tsumagari 외 3명",
+   "en": "Ousama Ranking: Yuuki no Takarabako · OP",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking: Yuuki no Takaraba…",
+   "role": "",
+   "ver": "",
+   "score": 828,
+   "arts": "Claire Launay, Daisuke Tsumagari, Mehdi Aouichaoui, Takeshi Maenami, Yoshimichi Kameda",
+   "sk": {
+    "p": 225551,
+    "u": "https://www.sakugabooru.com/data/5afa11921e0b4a8061bfd2f3df01597c.mp4"
+   }
+  },
+  {
+   "id": "aor-181321",
+   "ko": "Spike",
+   "en": "Ousama Ranking · #19",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 820,
+   "arts": "Spike",
+   "sk": {
+    "p": 181321,
+    "u": "https://www.sakugabooru.com/data/8429388943fe07d977c2228032b7ceb7.mp4"
+   }
+  },
+  {
+   "id": "aor-192137",
+   "ko": "Yoshimichi Kameda",
+   "en": "Ousama Ranking · #09",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 774,
+   "arts": "Yoshimichi Kameda",
+   "sk": {
+    "p": 192137,
+    "u": "https://www.sakugabooru.com/data/bc1369dbfd2985244d491e12125f2680.mp4"
+   }
+  },
+  {
+   "id": "aor-179160",
+   "ko": "Hiromitsu Seki",
+   "en": "Ousama Ranking · #16",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 747,
+   "arts": "Hiromitsu Seki",
+   "sk": {
+    "p": 179160,
+    "u": "https://www.sakugabooru.com/data/90a23481801aadf7d4cfe6de6ae7f66b.mp4"
+   }
+  },
+  {
+   "id": "aor-181327",
+   "ko": "Isaac Weston",
+   "en": "Ousama Ranking · #19",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 716,
+   "arts": "Isaac Weston",
+   "sk": {
+    "p": 181327,
+    "u": "https://www.sakugabooru.com/data/913fd1e8ecfae2990195f33a0784ebbe.mp4"
+   }
+  },
+  {
+   "id": "aor-192135",
+   "ko": "Spike",
+   "en": "Ousama Ranking · #09",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 654,
+   "arts": "Spike",
+   "sk": {
+    "p": 192135,
+    "u": "https://www.sakugabooru.com/data/122f61716d48be71655332f023d1f6a5.mp4"
+   }
+  },
+  {
+   "id": "aor-179621",
+   "ko": "Sem1automatick",
+   "en": "Ousama Ranking · #17",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 651,
+   "arts": "Unknown, Sem1automatick",
+   "sk": {
+    "p": 179621,
+    "u": "https://www.sakugabooru.com/data/44c7287e5f21a9a31b068841f1ffb3da.mp4"
+   }
+  },
+  {
+   "id": "aor-181324",
+   "ko": "Shin Ogasawara",
+   "en": "Ousama Ranking · #19",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 600,
+   "arts": "Shin Ogasawara",
+   "sk": {
+    "p": 181324,
+    "u": "https://www.sakugabooru.com/data/468ca5b624bbc8ea9c76c3496127e8ee.mp4"
+   }
+  },
+  {
+   "id": "aor-182386",
+   "ko": "Meka Aoratos, Shota Goshozono",
+   "en": "Ousama Ranking · #21",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 561,
+   "arts": "Meka Aoratos, Shota Goshozono",
+   "sk": {
+    "p": 182386,
+    "u": "https://www.sakugabooru.com/data/a9b2923d878fe5e03a38c6bdbe7be7a9.mp4"
+   }
+  },
+  {
+   "id": "aor-171475",
+   "ko": "Hiromitsu Seki",
+   "en": "Ousama Ranking · #06",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 545,
+   "arts": "Hiromitsu Seki",
+   "sk": {
+    "p": 171475,
+    "u": "https://www.sakugabooru.com/data/2e98c85fdb6b3bc64fe160bd4e6db913.mp4"
+   }
+  },
+  {
+   "id": "aor-182455",
+   "ko": "Itsuki Tsuchigami",
+   "en": "Ousama Ranking · #21",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 531,
+   "arts": "Itsuki Tsuchigami",
+   "sk": {
+    "p": 182455,
+    "u": "https://www.sakugabooru.com/data/390a42063ddd5f19415d2ab018da8a0f.mp4"
+   }
+  },
+  {
+   "id": "aor-182381",
+   "ko": "0nepeach, Shota Goshozono",
+   "en": "Ousama Ranking · #21",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 531,
+   "arts": "0nepeach, Shota Goshozono",
+   "sk": {
+    "p": 182381,
+    "u": "https://www.sakugabooru.com/data/76ef1a20971657617ed88a7a8b10cdcd.mp4"
+   }
+  },
+  {
+   "id": "aor-168192",
+   "ko": "Hirofumi Masuda, Natsuki Shimabukuro",
+   "en": "Ousama Ranking · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "Ousama Ranking",
+   "role": "",
+   "ver": "",
+   "score": 429,
+   "arts": "Hirofumi Masuda, Natsuki Shimabukuro",
+   "sk": {
+    "p": 168192,
+    "u": "https://www.sakugabooru.com/data/451cadb974bcce8e20b289d10695943a.mp4"
+   }
+  }
+ ],
+ "meta": {
+  "ko": "왕 랭킹",
+  "en": "Ranking of Kings",
+  "zh": "国王排名",
+  "tag": "ousama_ranking_series"
+ }
+}

@@ -1,0 +1,332 @@
+{
+ "note": "Sakugabooru에서 ‘mob effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=mob+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Mob Psycho 100</a>",
+ "roster": [
+  {
+   "id": "amob-229975",
+   "ko": "Yutaka Nakamura",
+   "en": "Mob Psycho 100 III · #06",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 III",
+   "role": "",
+   "ver": "",
+   "score": 3344,
+   "arts": "Yutaka Nakamura",
+   "sk": {
+    "p": 229975,
+    "u": "https://www.sakugabooru.com/data/2b953cb61e487c8c0084a7de2c5e1818.mp4"
+   }
+  },
+  {
+   "id": "amob-229974",
+   "ko": "Hironori Tanaka",
+   "en": "Mob Psycho 100 III · #06",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 III",
+   "role": "",
+   "ver": "",
+   "score": 1381,
+   "arts": "Hironori Tanaka",
+   "sk": {
+    "p": 229974,
+    "u": "https://www.sakugabooru.com/data/67d6b02e9cbf9f03e1be211ed41a0aad.mp4"
+   }
+  },
+  {
+   "id": "amob-209806",
+   "ko": "Osamu Murata, Yuuta Kiso",
+   "en": "Mob Psycho 100 III · #06",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 III",
+   "role": "",
+   "ver": "",
+   "score": 1065,
+   "arts": "Osamu Murata, Yuuta Kiso",
+   "sk": {
+    "p": 209806,
+    "u": "https://www.sakugabooru.com/data/385bd8802c21cf3b7a4d58b879fe0d21.mp4"
+   }
+  },
+  {
+   "id": "amob-272921",
+   "ko": "Hakuyu Go, Weilin Zhang",
+   "en": "Mob Psycho 100 II · #05",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 II",
+   "role": "",
+   "ver": "",
+   "score": 1044,
+   "arts": "Hakuyu Go, Weilin Zhang",
+   "sk": {
+    "p": 272921,
+    "u": "https://www.sakugabooru.com/data/d0ee773a7c33f88a6cce6c04ef281575.mp4"
+   }
+  },
+  {
+   "id": "amob-272649",
+   "ko": "Yutaka Nakamura",
+   "en": "Mob Psycho 100 · #08",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100",
+   "role": "",
+   "ver": "",
+   "score": 1006,
+   "arts": "Yutaka Nakamura",
+   "sk": {
+    "p": 272649,
+    "u": "https://www.sakugabooru.com/data/19931c9bdad17c891ce3e20187cdd0d2.mp4"
+   }
+  },
+  {
+   "id": "amob-210061",
+   "ko": "Yuki Hayashi",
+   "en": "Mob Psycho 100 III · #06",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 III",
+   "role": "",
+   "ver": "",
+   "score": 969,
+   "arts": "Yuki Hayashi",
+   "sk": {
+    "p": 210061,
+    "u": "https://www.sakugabooru.com/data/be4caf20207a281617f17f974409bd82.mp4"
+   }
+  },
+  {
+   "id": "amob-273007",
+   "ko": "Nakaya Onsen",
+   "en": "Mob Psycho 100 II · #11",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 II",
+   "role": "",
+   "ver": "",
+   "score": 968,
+   "arts": "Nakaya Onsen",
+   "sk": {
+    "p": 273007,
+    "u": "https://www.sakugabooru.com/data/2e405d8ce502bb02daf2afb833624c37.mp4"
+   }
+  },
+  {
+   "id": "amob-212631",
+   "ko": "Jordan Rear, Meka Aoratos 외 1명",
+   "en": "Mob Psycho 100 III · #11 (2nd KA: Yutaka Naka",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 III",
+   "role": "",
+   "ver": "",
+   "score": 844,
+   "arts": "Jordan Rear, Meka Aoratos, Yutaka Nakamura",
+   "sk": {
+    "p": 212631,
+    "u": "https://www.sakugabooru.com/data/edcef4b9df46d0f1273da9fdf5e5e55d.mp4"
+   }
+  },
+  {
+   "id": "amob-207549",
+   "ko": "Shuhei Fukuda, Yusaku Nagahama",
+   "en": "Mob Psycho 100 III · #02",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 III",
+   "role": "",
+   "ver": "",
+   "score": 841,
+   "arts": "Unknown, Shuhei Fukuda, Yusaku Nagahama",
+   "sk": {
+    "p": 207549,
+    "u": "https://www.sakugabooru.com/data/5c5da0f3182b9cbf0e5ece4751f5a83b.mp4"
+   }
+  },
+  {
+   "id": "amob-272715",
+   "ko": "Yutaka Nakamura",
+   "en": "Mob Psycho 100 · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100",
+   "role": "",
+   "ver": "",
+   "score": 836,
+   "arts": "Yutaka Nakamura",
+   "sk": {
+    "p": 272715,
+    "u": "https://www.sakugabooru.com/data/8cdbf0a22ff1d04d45649fdbdcc96273.mp4"
+   }
+  },
+  {
+   "id": "amob-209273",
+   "ko": "Jordan Rear",
+   "en": "Mob Psycho 100 III · #05",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 III",
+   "role": "",
+   "ver": "",
+   "score": 796,
+   "arts": "Jordan Rear",
+   "sk": {
+    "p": 209273,
+    "u": "https://www.sakugabooru.com/data/94a3e6a420e433bba2c1e378c119df45.mp4"
+   }
+  },
+  {
+   "id": "amob-273018",
+   "ko": "Kenichi Fujisawa",
+   "en": "Mob Psycho 100 II · #11",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 II",
+   "role": "",
+   "ver": "",
+   "score": 673,
+   "arts": "Kenichi Fujisawa",
+   "sk": {
+    "p": 273018,
+    "u": "https://www.sakugabooru.com/data/1e5ccb57c164f8b6055d03842782cc7c.mp4"
+   }
+  },
+  {
+   "id": "amob-208722",
+   "ko": "Kosuke Kato",
+   "en": "Mob Psycho 100 III · #04",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 III",
+   "role": "",
+   "ver": "",
+   "score": 660,
+   "arts": "Kosuke Kato",
+   "sk": {
+    "p": 208722,
+    "u": "https://www.sakugabooru.com/data/feddfeb6d9c2b6ff3ce38d293f6b730d.mp4"
+   }
+  },
+  {
+   "id": "amob-272612",
+   "ko": "Norio Matsumoto",
+   "en": "Mob Psycho 100 · #05",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100",
+   "role": "",
+   "ver": "",
+   "score": 640,
+   "arts": "Norio Matsumoto",
+   "sk": {
+    "p": 272612,
+    "u": "https://www.sakugabooru.com/data/d4f063d9b5ef77ccac885be1250c895f.mp4"
+   }
+  },
+  {
+   "id": "amob-208725",
+   "ko": "Yukina Kosaka",
+   "en": "Mob Psycho 100 III · #04",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 III",
+   "role": "",
+   "ver": "",
+   "score": 636,
+   "arts": "Yukina Kosaka",
+   "sk": {
+    "p": 208725,
+    "u": "https://www.sakugabooru.com/data/ed6124da5199aaae8e0a882acb9b889b.mp4"
+   }
+  },
+  {
+   "id": "amob-209352",
+   "ko": "Jordan Rear",
+   "en": "Mob Psycho 100 III · #05",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 III",
+   "role": "",
+   "ver": "",
+   "score": 605,
+   "arts": "Jordan Rear",
+   "sk": {
+    "p": 209352,
+    "u": "https://www.sakugabooru.com/data/2c0cef28410b01cd5bcf4dfe0c8b7d6c.mp4"
+   }
+  },
+  {
+   "id": "amob-209261",
+   "ko": "Vincent Chansard",
+   "en": "Mob Psycho 100 III · #05",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 III",
+   "role": "",
+   "ver": "",
+   "score": 540,
+   "arts": "Vincent Chansard",
+   "sk": {
+    "p": 209261,
+    "u": "https://www.sakugabooru.com/data/525305c1099618ddb951d793211201d2.mp4"
+   }
+  },
+  {
+   "id": "amob-272920",
+   "ko": "Takumi Sunakohara",
+   "en": "Mob Psycho 100 II · #05",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 II",
+   "role": "",
+   "ver": "",
+   "score": 536,
+   "arts": "Takumi Sunakohara",
+   "sk": {
+    "p": 272920,
+    "u": "https://www.sakugabooru.com/data/a783b5a7079b37735855f8ae06d93a5a.mp4"
+   }
+  },
+  {
+   "id": "amob-272689",
+   "ko": "Hakuyu Go",
+   "en": "Mob Psycho 100 · #11",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100",
+   "role": "",
+   "ver": "",
+   "score": 519,
+   "arts": "Hakuyu Go",
+   "sk": {
+    "p": 272689,
+    "u": "https://www.sakugabooru.com/data/14e5aa31a6cde4c9be6ccfc739fd755b.mp4"
+   }
+  },
+  {
+   "id": "amob-209805",
+   "ko": "Masashi Takai, Osamu Murata",
+   "en": "Mob Psycho 100 III · #06",
+   "zh": "",
+   "rarity": "",
+   "attr": "Mob Psycho 100 III",
+   "role": "",
+   "ver": "",
+   "score": 507,
+   "arts": "Unknown, Masashi Takai, Osamu Murata",
+   "sk": {
+    "p": 209805,
+    "u": "https://www.sakugabooru.com/data/fc803bac2229a9396d696c67b93278c3.mp4"
+   }
+  }
+ ],
+ "meta": {
+  "ko": "모브사이코 100",
+  "en": "Mob Psycho 100",
+  "zh": "灵能百分百",
+  "tag": "mob"
+ }
+}

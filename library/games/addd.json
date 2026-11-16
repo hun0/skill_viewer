@@ -1,0 +1,332 @@
+{
+ "note": "Sakugabooru에서 ‘dandadan effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=dandadan+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Dandadan</a>",
+ "roster": [
+  {
+   "id": "addd-287174",
+   "ko": "Genta Ishimori",
+   "en": "Dandadan · #14",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 839,
+   "arts": "Genta Ishimori",
+   "sk": {
+    "p": 287174,
+    "u": "https://www.sakugabooru.com/data/d6511d233d24f836b0950e342bf38e87.mp4"
+   }
+  },
+  {
+   "id": "addd-269710",
+   "ko": "Kinya Rikitoku, Shuuto Enomoto",
+   "en": "Dandadan · #07",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 723,
+   "arts": "Kinya Rikitoku, Shuuto Enomoto",
+   "sk": {
+    "p": 269710,
+    "u": "https://www.sakugabooru.com/data/729b7047550cd2342b61d5672542bfa6.mp4"
+   }
+  },
+  {
+   "id": "addd-290120",
+   "ko": "Genta Ishimori",
+   "en": "Dandadan · #20",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 643,
+   "arts": "Genta Ishimori",
+   "sk": {
+    "p": 290120,
+    "u": "https://www.sakugabooru.com/data/bc67b2f8f7088c565ef1ecce9f274919.mp4"
+   }
+  },
+  {
+   "id": "addd-267078",
+   "ko": "Incylinder",
+   "en": "Dandadan · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 627,
+   "arts": "Incylinder",
+   "sk": {
+    "p": 267078,
+    "u": "https://www.sakugabooru.com/data/816fc437d5ac6ae4cc82784610dc5eba.mp4"
+   }
+  },
+  {
+   "id": "addd-269693",
+   "ko": "Genta Ishimori, Shuuto Enomoto 외 1명",
+   "en": "Dandadan · #07",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 591,
+   "arts": "Genta Ishimori, Shuuto Enomoto, Songlin Yao",
+   "sk": {
+    "p": 269693,
+    "u": "https://www.sakugabooru.com/data/40fb26197c5175a4f2f34769b565b5c9.mp4"
+   }
+  },
+  {
+   "id": "addd-269690",
+   "ko": "Jason Yao, Nasiijau 외 2명",
+   "en": "Dandadan · #07",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 553,
+   "arts": "Unknown, Jason Yao, Nasiijau, Shuuto Enomoto, Yusaku Nagahama",
+   "sk": {
+    "p": 269690,
+    "u": "https://www.sakugabooru.com/data/99a2b271d3a5af45852d117c3776586d.mp4"
+   }
+  },
+  {
+   "id": "addd-287740",
+   "ko": "0nepeach",
+   "en": "Dandadan · #15",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 547,
+   "arts": "0nepeach",
+   "sk": {
+    "p": 287740,
+    "u": "https://www.sakugabooru.com/data/40a5007deae1259ed33b7463faa860bb.mp4"
+   }
+  },
+  {
+   "id": "addd-268479",
+   "ko": "Hayato Kurosaki",
+   "en": "Dandadan · #04",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 514,
+   "arts": "Hayato Kurosaki",
+   "sk": {
+    "p": 268479,
+    "u": "https://www.sakugabooru.com/data/2242dbd15d5ed4b7099d2e2748db0305.mp4"
+   }
+  },
+  {
+   "id": "addd-270849",
+   "ko": "Unknown",
+   "en": "Dandadan · #09",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 494,
+   "arts": "Unknown",
+   "sk": {
+    "p": 270849,
+    "u": "https://www.sakugabooru.com/data/8dbf50ba10c8b5f204c654f12383ca30.mp4"
+   }
+  },
+  {
+   "id": "addd-288211",
+   "ko": "Toshiyuki Sato",
+   "en": "Dandadan · #16",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 482,
+   "arts": "Toshiyuki Sato",
+   "sk": {
+    "p": 288211,
+    "u": "https://www.sakugabooru.com/data/2efd5a9a6b80f186eddf45c3a14e7ed2.mp4"
+   }
+  },
+  {
+   "id": "addd-267076",
+   "ko": "Myoun",
+   "en": "Dandadan · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 482,
+   "arts": "Unknown, Myoun",
+   "sk": {
+    "p": 267076,
+    "u": "https://www.sakugabooru.com/data/77101db9a8cbcc54de10b52e6e340163.mp4"
+   }
+  },
+  {
+   "id": "addd-287737",
+   "ko": "Yuu Yoshiyama",
+   "en": "Dandadan · #15",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 444,
+   "arts": "Yuu Yoshiyama",
+   "sk": {
+    "p": 287737,
+    "u": "https://www.sakugabooru.com/data/5a4e1ae298202355f60302b2649e202f.mp4"
+   }
+  },
+  {
+   "id": "addd-290453",
+   "ko": "Genta Ishimori",
+   "en": "Dandadan · #21 (2nd KA: Genta Ishim",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 439,
+   "arts": "Unknown, Genta Ishimori",
+   "sk": {
+    "p": 290453,
+    "u": "https://www.sakugabooru.com/data/d4b0620480a5823bfd2cdd2562d0165b.mp4"
+   }
+  },
+  {
+   "id": "addd-271393",
+   "ko": "0nepeach",
+   "en": "Dandadan · #09",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 411,
+   "arts": "0nepeach",
+   "sk": {
+    "p": 271393,
+    "u": "https://www.sakugabooru.com/data/75b48bcf134a7e2d22804f1c9d87fafa.mp4"
+   }
+  },
+  {
+   "id": "addd-288215",
+   "ko": "Kinya Rikitoku",
+   "en": "Dandadan · #16",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 396,
+   "arts": "Kinya Rikitoku",
+   "sk": {
+    "p": 288215,
+    "u": "https://www.sakugabooru.com/data/3d4d30065a52cc6c7b8f707c47e8332a.mp4"
+   }
+  },
+  {
+   "id": "addd-269688",
+   "ko": "Jura",
+   "en": "Dandadan · #07",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 384,
+   "arts": "Jura",
+   "sk": {
+    "p": 269688,
+    "u": "https://www.sakugabooru.com/data/297ceae4f9fe3d3f4f3eebac6d84e0bc.mp4"
+   }
+  },
+  {
+   "id": "addd-267074",
+   "ko": "Unknown",
+   "en": "Dandadan · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 366,
+   "arts": "Unknown",
+   "sk": {
+    "p": 267074,
+    "u": "https://www.sakugabooru.com/data/42b562872754d7c54e500ab53b2e41d0.mp4"
+   }
+  },
+  {
+   "id": "addd-287175",
+   "ko": "Kyohei Ebata",
+   "en": "Dandadan · #14",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 331,
+   "arts": "Kyohei Ebata",
+   "sk": {
+    "p": 287175,
+    "u": "https://www.sakugabooru.com/data/4117cd9b651a80d5086a357a8bfe6c1f.mp4"
+   }
+  },
+  {
+   "id": "addd-269689",
+   "ko": "Shuuto Enomoto, Xiao Lin",
+   "en": "Dandadan · #07",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 327,
+   "arts": "Unknown, Shuuto Enomoto, Xiao Lin",
+   "sk": {
+    "p": 269689,
+    "u": "https://www.sakugabooru.com/data/0ede947a72a16686f1a10796f837bb6d.mp4"
+   }
+  },
+  {
+   "id": "addd-270846",
+   "ko": "Zhilong Li",
+   "en": "Dandadan · #09",
+   "zh": "",
+   "rarity": "",
+   "attr": "Dandadan",
+   "role": "",
+   "ver": "",
+   "score": 326,
+   "arts": "Zhilong Li",
+   "sk": {
+    "p": 270846,
+    "u": "https://www.sakugabooru.com/data/fee6d5c6514a1fd7e76b2923bd445356.mp4"
+   }
+  }
+ ],
+ "meta": {
+  "ko": "단다단",
+  "en": "Dandadan",
+  "zh": "胆大党",
+  "tag": "dandadan"
+ }
+}
