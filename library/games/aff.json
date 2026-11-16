@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘fire_force_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘fire_force_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=fire_force_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Fire Force</a>",
  "roster": [
   {
@@ -13,6 +13,13 @@
    "ver": "",
    "score": 1698,
    "arts": "Unknown",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "파편",
+    "CG"
+   ],
    "sk": {
     "p": 302459,
     "u": "https://www.sakugabooru.com/data/4f4f158308c6c59784e11484276ccb7b.mp4"
@@ -29,6 +36,14 @@
    "ver": "",
    "score": 1544,
    "arts": "Kazuhiro Miwa",
+   "fx": [
+    "불",
+    "폭발",
+    "바람",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 235369,
     "u": "https://www.sakugabooru.com/data/eb096dae7701e011ceedc438b6806f98.mp4"
@@ -45,6 +60,14 @@
    "ver": "",
    "score": 1361,
    "arts": "Nozomu Abe, Yasuyuki Kai",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "바람",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 235352,
     "u": "https://www.sakugabooru.com/data/bab13c235c00c07af54d14076ba7b7e1.mp4"
@@ -61,6 +84,14 @@
    "ver": "",
    "score": 1338,
    "arts": "Yuuki Yamashita",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 128088,
     "u": "https://www.sakugabooru.com/data/9244529efa6927b1981b065b48f776ac.mp4"
@@ -77,6 +108,14 @@
    "ver": "",
    "score": 1199,
    "arts": "Yuki Sato",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "바람",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 108694,
     "u": "https://www.sakugabooru.com/data/77686ceac0a86f3901f28c3f30f95d63.mp4"
@@ -93,6 +132,13 @@
    "ver": "",
    "score": 1038,
    "arts": "Unknown, Kazuhiro Miwa, Yasuyuki Kai",
+   "fx": [
+    "불",
+    "연기",
+    "스파크",
+    "임팩트 프레임",
+    "CG"
+   ],
    "sk": {
     "p": 235365,
     "u": "https://www.sakugabooru.com/data/4ec0e2b7a080444819cdd7e67541b71c.mp4"
@@ -109,6 +155,15 @@
    "ver": "",
    "score": 904,
    "arts": "Kazuhiro Miwa",
+   "fx": [
+    "불",
+    "연기",
+    "바람",
+    "스파크",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 235422,
     "u": "https://www.sakugabooru.com/data/42a717859ebff0a1899a109e49d6df15.mp4"
@@ -125,6 +180,14 @@
    "ver": "",
    "score": 870,
    "arts": "Toru Iwazawa, Yuki Sato",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 139129,
     "u": "https://www.sakugabooru.com/data/abf99c6f1b229af6402a33b55a207d9f.mp4"
@@ -141,6 +204,13 @@
    "ver": "",
    "score": 821,
    "arts": "Sute",
+   "fx": [
+    "불",
+    "연기",
+    "바람",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 136097,
     "u": "https://www.sakugabooru.com/data/1d355c7f8a986fc05eac6b3cda116f21.mp4"
@@ -157,6 +227,14 @@
    "ver": "",
    "score": 795,
    "arts": "Yuki Sato",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 179534,
     "u": "https://www.sakugabooru.com/data/841622e11a6a69a8c7cc1ec9fb77da2a.mp4"
@@ -173,6 +251,16 @@
    "ver": "",
    "score": 765,
    "arts": "Kazuhiro Miwa",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 235414,
     "u": "https://www.sakugabooru.com/data/413a14140dedbdedb207f3c36212f559.mp4"
@@ -189,6 +277,13 @@
    "ver": "",
    "score": 720,
    "arts": "Riki Matsuura",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 132643,
     "u": "https://www.sakugabooru.com/data/822d3270593b7eed74f16c804a1c227a.mp4"
@@ -205,6 +300,13 @@
    "ver": "",
    "score": 716,
    "arts": "Yasuyuki Kai",
+   "fx": [
+    "불",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 235410,
     "u": "https://www.sakugabooru.com/data/9d4efbdfee773673bf43aebed66bf1a0.mp4"
@@ -221,6 +323,17 @@
    "ver": "",
    "score": 711,
    "arts": "Yuki Sato",
+   "fx": [
+    "불",
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "스파크",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 235421,
     "u": "https://www.sakugabooru.com/data/d9209a120448eb7178e8d21615ceec16.mp4"
@@ -237,6 +350,11 @@
    "ver": "",
    "score": 693,
    "arts": "Kazuhiro Miwa",
+   "fx": [
+    "연기",
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 235423,
     "u": "https://www.sakugabooru.com/data/c04e1f2da4caa1e19e1c8a5626dd84cc.mp4"
@@ -253,6 +371,14 @@
    "ver": "",
    "score": 680,
    "arts": "Yasuto Hirohara",
+   "fx": [
+    "불",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 235445,
     "u": "https://www.sakugabooru.com/data/4f8bc06f82b2aa72aa5778bae2d7863e.mp4"
@@ -269,6 +395,13 @@
    "ver": "",
    "score": 650,
    "arts": "Takahiro Shikama",
+   "fx": [
+    "불",
+    "연기",
+    "바람",
+    "스파크",
+    "파편"
+   ],
    "sk": {
     "p": 133876,
     "u": "https://www.sakugabooru.com/data/b9d0cee342fcd686e6f75fe9ee453594.mp4"
@@ -285,6 +418,13 @@
    "ver": "",
    "score": 645,
    "arts": "Kazuhiro Miwa",
+   "fx": [
+    "불",
+    "연기",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 235351,
     "u": "https://www.sakugabooru.com/data/cd4a7440b280349194849b55fc168924.mp4"
@@ -301,6 +441,16 @@
    "ver": "",
    "score": 622,
    "arts": "Yasuyuki Kai",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 235420,
     "u": "https://www.sakugabooru.com/data/092d628adcbb50d5697bc76c02d7a20e.mp4"
@@ -317,6 +467,12 @@
    "ver": "",
    "score": 599,
    "arts": "Ryo Araki",
+   "fx": [
+    "불",
+    "물·액체",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 235433,
     "u": "https://www.sakugabooru.com/data/6b3c0d0fda47199889a3ae27d905e81b.mp4"

@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘solo_leveling effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘solo_leveling effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=solo_leveling+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Solo Leveling</a>",
  "roster": [
   {
@@ -13,6 +13,13 @@
    "ver": "",
    "score": 1130,
    "arts": "Vercreek",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 253350,
     "u": "https://www.sakugabooru.com/data/0e31816ba71f3ef829e25ed56d6555cf.mp4"
@@ -29,6 +36,15 @@
    "ver": "",
    "score": 864,
    "arts": "Yoshihiro Kanno",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 293117,
     "u": "https://www.sakugabooru.com/data/11fa657c1c6cc382a3a0e6d4afb36310.mp4"
@@ -45,6 +61,16 @@
    "ver": "",
    "score": 775,
    "arts": "Takafumi Torii",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 252853,
     "u": "https://www.sakugabooru.com/data/fb406ec24a406a15d8d93f551c89033f.mp4"
@@ -61,6 +87,15 @@
    "ver": "",
    "score": 763,
    "arts": "Yoshihiro Kanno",
+   "fx": [
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 252790,
     "u": "https://www.sakugabooru.com/data/1597afc46fe3fb053487b3993aba3bdf.mp4"
@@ -77,6 +112,12 @@
    "ver": "",
    "score": 757,
    "arts": "Unknown",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 269521,
     "u": "https://www.sakugabooru.com/data/de200ac5c672805fbf5a537d977a97e6.mp4"
@@ -93,6 +134,13 @@
    "ver": "",
    "score": 713,
    "arts": "Unknown",
+   "fx": [
+    "번개",
+    "물·액체",
+    "바람",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 269516,
     "u": "https://www.sakugabooru.com/data/62494ee6ed0d00f9105c757f937cc0e4.mp4"
@@ -109,6 +157,18 @@
    "ver": "",
    "score": 707,
    "arts": "Yoshihiro Kanno",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 276534,
     "u": "https://www.sakugabooru.com/data/0502234c17643b36ea7b754412b928b8.mp4"
@@ -125,6 +185,16 @@
    "ver": "",
    "score": 680,
    "arts": "Takafumi Torii",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "물·액체",
+    "연기",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 284622,
     "u": "https://www.sakugabooru.com/data/1dd96263d0ab498266fa7ad90b2ede56.mp4"
@@ -141,6 +211,17 @@
    "ver": "",
    "score": 659,
    "arts": "Takafumi Torii",
+   "fx": [
+    "번개",
+    "얼음",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 293118,
     "u": "https://www.sakugabooru.com/data/f737f688cd098fe094229df2d62b7c5b.mp4"
@@ -157,6 +238,18 @@
    "ver": "",
    "score": 657,
    "arts": "Yoshihiro Kanno",
+   "fx": [
+    "번개",
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 252792,
     "u": "https://www.sakugabooru.com/data/fc6fd33e5f95b8d8aecc3ec56a4bbda4.mp4"
@@ -173,6 +266,16 @@
    "ver": "",
    "score": 610,
    "arts": "Yoshihiro Kanno",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 275634,
     "u": "https://www.sakugabooru.com/data/aaf62f428594886c4305b858baec5a23.mp4"
@@ -189,6 +292,15 @@
    "ver": "",
    "score": 596,
    "arts": "Takafumi Torii, Yoshihiro Kanno",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 247730,
     "u": "https://www.sakugabooru.com/data/2a4e60ff792d193b3df868e928aac64b.mp4"
@@ -205,6 +317,13 @@
    "ver": "",
    "score": 568,
    "arts": "Atsushi Yonezawa, Yoshihiro Kanno",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 278427,
     "u": "https://www.sakugabooru.com/data/dc830c5f25ba46dbfaea003b560ea886.mp4"
@@ -221,6 +340,13 @@
    "ver": "",
    "score": 547,
    "arts": "Hajime Nakagawa, Xinxiong Ceng",
+   "fx": [
+    "폭발",
+    "물·액체",
+    "바람",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 278850,
     "u": "https://www.sakugabooru.com/data/bf1112360fdd741cfb300a06fc23546e.mp4"
@@ -237,6 +363,14 @@
    "ver": "",
    "score": 474,
    "arts": "Ryota Saito",
+   "fx": [
+    "번개",
+    "얼음",
+    "연기",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 278505,
     "u": "https://www.sakugabooru.com/data/8f06bfbc405c76df8d49e6330045e0ec.mp4"
@@ -253,6 +387,14 @@
    "ver": "",
    "score": 440,
    "arts": "Takafumi Torii",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 251566,
     "u": "https://www.sakugabooru.com/data/62a83fd0a0c12a306ca092efd1613c6b.mp4"
@@ -269,6 +411,14 @@
    "ver": "",
    "score": 396,
    "arts": "Yoshihiro Kanno",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "연기",
+    "파편",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 246208,
     "u": "https://www.sakugabooru.com/data/7608a74e5a459c1f7820e0ad3acaae3f.mp4"
@@ -285,6 +435,13 @@
    "ver": "",
    "score": 383,
    "arts": "Kouta Mori, Kouya Uemichi",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 252791,
     "u": "https://www.sakugabooru.com/data/33ab7abc1fff27d38cb95bcfff104a3d.mp4"
@@ -301,6 +458,15 @@
    "ver": "",
    "score": 378,
    "arts": "Takafumi Torii",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 275628,
     "u": "https://www.sakugabooru.com/data/d8197c78ffa74a741cb63e49276741fa.mp4"
@@ -317,6 +483,13 @@
    "ver": "",
    "score": 368,
    "arts": "Yoshihiro Kanno",
+   "fx": [
+    "빔",
+    "물·액체",
+    "연기",
+    "파편",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 276530,
     "u": "https://www.sakugabooru.com/data/f3561556aaf1fa12cb056545bd628cdf.mp4"

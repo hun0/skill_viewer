@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘kill_la_kill effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘kill_la_kill effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=kill_la_kill+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Kill la Kill</a>",
  "roster": [
   {
@@ -13,6 +13,15 @@
    "ver": "",
    "score": 970,
    "arts": "Masahito Yamashita",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 214726,
     "u": "https://www.sakugabooru.com/data/47b883341227f645b6ddb72bc1554113.mp4"
@@ -29,6 +38,13 @@
    "ver": "",
    "score": 899,
    "arts": "Takafumi Hori",
+   "fx": [
+    "폭발",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 215351,
     "u": "https://www.sakugabooru.com/data/f567083f6ffb179208e5809be87e7a6f.mp4"
@@ -45,6 +61,9 @@
    "ver": "",
    "score": 858,
    "arts": "Yoh Yoshinari",
+   "fx": [
+    "스파크"
+   ],
    "sk": {
     "p": 215348,
     "u": "https://www.sakugabooru.com/data/87d7e88332c2f813f25ed4d88cb0df70.mp4"
@@ -61,6 +80,11 @@
    "ver": "",
    "score": 770,
    "arts": "Takafumi Hori",
+   "fx": [
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 214635,
     "u": "https://www.sakugabooru.com/data/4158df5d4f6062169a02b847c0fb884f.mp4"
@@ -77,6 +101,12 @@
    "ver": "",
    "score": 756,
    "arts": "Takafumi Hori",
+   "fx": [
+    "불",
+    "빔",
+    "물·액체",
+    "스미어"
+   ],
    "sk": {
     "p": 215002,
     "u": "https://www.sakugabooru.com/data/db2a3a5c2fdc7cbaccfe431508569c61.mp4"
@@ -93,6 +123,13 @@
    "ver": "",
    "score": 674,
    "arts": "Hironori Tanaka",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 204551,
     "u": "https://www.sakugabooru.com/data/f6e87b73e77424404e1724c3bfb7055d.mp4"
@@ -109,6 +146,13 @@
    "ver": "",
    "score": 633,
    "arts": "Takashi Mukouda",
+   "fx": [
+    "폭발",
+    "연기",
+    "파편",
+    "스미어",
+    "미사일"
+   ],
    "sk": {
     "p": 215137,
     "u": "https://www.sakugabooru.com/data/16d56bb57be3643dc9827a4e1e9a04db.mp4"
@@ -125,6 +169,11 @@
    "ver": "",
    "score": 602,
    "arts": "Toshiyuki Sato",
+   "fx": [
+    "번개",
+    "연기",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 73993,
     "u": "https://www.sakugabooru.com/data/5c96316c36298680b2cbe58d9274cc73.mp4"
@@ -141,6 +190,12 @@
    "ver": "",
    "score": 583,
    "arts": "Yuuto Kaneko",
+   "fx": [
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 214725,
     "u": "https://www.sakugabooru.com/data/b031cbb64fd03beac9e283ecfe3cb1d9.mp4"
@@ -157,6 +212,11 @@
    "ver": "",
    "score": 566,
    "arts": "Takafumi Hori",
+   "fx": [
+    "연기",
+    "파편",
+    "변형"
+   ],
    "sk": {
     "p": 110756,
     "u": "https://www.sakugabooru.com/data/98e3c0ae27522a9192a6caeb0cc23c6c.mp4"
@@ -173,6 +233,11 @@
    "ver": "",
    "score": 547,
    "arts": "Osamu Yamane",
+   "fx": [
+    "연기",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 211631,
     "u": "https://www.sakugabooru.com/data/8c5422b8d41d5ebc927b0976628a778b.mp4"
@@ -189,6 +254,12 @@
    "ver": "",
    "score": 519,
    "arts": "Takafumi Hori",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 215001,
     "u": "https://www.sakugabooru.com/data/b148afef671c2e1523d97f4deaa20261.mp4"
@@ -205,6 +276,10 @@
    "ver": "",
    "score": 503,
    "arts": "Unknown, Sushio",
+   "fx": [
+    "연기",
+    "스파크"
+   ],
    "sk": {
     "p": 214734,
     "u": "https://www.sakugabooru.com/data/6a04a7460a99e167b862960b2905fca9.mp4"
@@ -221,6 +296,12 @@
    "ver": "",
    "score": 477,
    "arts": "Toshiyuki Sato",
+   "fx": [
+    "빔",
+    "연기",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 215142,
     "u": "https://www.sakugabooru.com/data/3e748a4763311fe1104dc011825ca32c.mp4"
@@ -237,6 +318,10 @@
    "ver": "",
    "score": 476,
    "arts": "Takafumi Hori",
+   "fx": [
+    "물·액체",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 215359,
     "u": "https://www.sakugabooru.com/data/af64b75b7066f0f66adf43da7488bf91.mp4"
@@ -253,6 +338,15 @@
    "ver": "",
    "score": 469,
    "arts": "Atsushi Ikariya",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 69515,
     "u": "https://www.sakugabooru.com/data/3c4c23e2c3f3072dc08e556eaae9d667.mp4"
@@ -269,6 +363,16 @@
    "ver": "",
    "score": 427,
    "arts": "Toshiyuki Sato",
+   "fx": [
+    "불",
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "파편",
+    "스미어",
+    "미사일"
+   ],
    "sk": {
     "p": 214729,
     "u": "https://www.sakugabooru.com/data/6567729f3f852c7fc91b986018ae5786.mp4"
@@ -285,6 +389,10 @@
    "ver": "",
    "score": 423,
    "arts": "Tadashi Hiramatsu",
+   "fx": [
+    "물·액체",
+    "연기"
+   ],
    "sk": {
     "p": 70838,
     "u": "https://www.sakugabooru.com/data/37c3ff0c3281621d3330846e27d5a7f7.mp4"
@@ -301,6 +409,13 @@
    "ver": "",
    "score": 388,
    "arts": "Yoshihiko Umakoshi",
+   "fx": [
+    "폭발",
+    "연기",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 110750,
     "u": "https://www.sakugabooru.com/data/79ce45f52eba504fe409f7f557a66b8e.mp4"
@@ -317,6 +432,15 @@
    "ver": "",
    "score": 386,
    "arts": "Yuuto Kaneko",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 215144,
     "u": "https://www.sakugabooru.com/data/85922a43ae6bb6bc40a0700b6e89cb0b.mp4"

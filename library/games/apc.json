@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘precure effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘precure effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=precure+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Pretty Cure</a>",
  "roster": [
   {
@@ -13,6 +13,13 @@
    "ver": "",
    "score": 2561,
    "arts": "Shingo Fujii",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 222371,
     "u": "https://www.sakugabooru.com/data/8e58a667fce0639158eaf27f46e4ad52.mp4"
@@ -29,6 +36,12 @@
    "ver": "",
    "score": 1573,
    "arts": "Koudai Watanabe",
+   "fx": [
+    "연기",
+    "바람",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 259255,
     "u": "https://www.sakugabooru.com/data/53e4b4dd35da0baceb6fbbe5aff6bdb8.mp4"
@@ -45,6 +58,10 @@
    "ver": "",
    "score": 1329,
    "arts": "Masami Mori",
+   "fx": [
+    "연기",
+    "스미어"
+   ],
    "sk": {
     "p": 259254,
     "u": "https://www.sakugabooru.com/data/b5d11a92a4ba2e7a7f51882ebbaabf90.mp4"
@@ -61,6 +78,12 @@
    "ver": "",
    "score": 1264,
    "arts": "Itsuki Tsuchigami, Nakaya Onsen",
+   "fx": [
+    "빔",
+    "물·액체",
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 240349,
     "u": "https://www.sakugabooru.com/data/3976bd9a8ddc024ae36cfdae59674485.mp4"
@@ -77,6 +100,9 @@
    "ver": "",
    "score": 1112,
    "arts": "Sushio",
+   "fx": [
+    "연기"
+   ],
    "sk": {
     "p": 253508,
     "u": "https://www.sakugabooru.com/data/0ac5ad9084c95371b60f45f34642744f.mp4"
@@ -93,6 +119,11 @@
    "ver": "",
    "score": 1055,
    "arts": "Shingo Fujii",
+   "fx": [
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 222372,
     "u": "https://www.sakugabooru.com/data/491104b006c4a8eac8a35d675c21b235.mp4"
@@ -109,6 +140,14 @@
    "ver": "",
    "score": 927,
    "arts": "Shingo Fujii",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "빔",
+    "연기",
+    "파편"
+   ],
    "sk": {
     "p": 260118,
     "u": "https://www.sakugabooru.com/data/b5e408d6fe6b84fe5a5de65265addab0.mp4"
@@ -125,6 +164,7 @@
    "ver": "",
    "score": 903,
    "arts": "Shingo Fujii",
+   "fx": [],
    "sk": {
     "p": 23064,
     "u": "https://www.sakugabooru.com/data/6a2093882da5ef7caa7ff977b5734b86.mp4"
@@ -141,6 +181,10 @@
    "ver": "",
    "score": 839,
    "arts": "Shingo Fujii",
+   "fx": [
+    "연기",
+    "파편"
+   ],
    "sk": {
     "p": 260117,
     "u": "https://www.sakugabooru.com/data/af3ceee48fabe2d28384ed97798e7eb9.mp4"
@@ -157,6 +201,16 @@
    "ver": "",
    "score": 823,
    "arts": "Yuu Yoshiyama",
+   "fx": [
+    "번개",
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 178264,
     "u": "https://www.sakugabooru.com/data/8289ab029732881da20e2d6671e49a3f.mp4"
@@ -173,6 +227,12 @@
    "ver": "",
    "score": 799,
    "arts": "Naotoshi Shida",
+   "fx": [
+    "빔",
+    "물·액체",
+    "연기",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 244279,
     "u": "https://www.sakugabooru.com/data/548d1b4534e6de74f1dd58e4e3140877.mp4"
@@ -189,6 +249,12 @@
    "ver": "",
    "score": 758,
    "arts": "Itsuki Tsuchigami",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 240345,
     "u": "https://www.sakugabooru.com/data/76e4bf0b69b6e7ae0b9c1b74ea5ce15b.mp4"
@@ -205,6 +271,10 @@
    "ver": "",
    "score": 751,
    "arts": "Koudai Watanabe",
+   "fx": [
+    "물·액체",
+    "스미어"
+   ],
    "sk": {
     "p": 165418,
     "u": "https://www.sakugabooru.com/data/d7686ff50a9094ec7f66383fb98c8633.mp4"
@@ -221,6 +291,11 @@
    "ver": "",
    "score": 731,
    "arts": "Yuki Hayashi",
+   "fx": [
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 126104,
     "u": "https://www.sakugabooru.com/data/c8b7165b0323a05c9996a1baa39151c5.mp4"
@@ -237,6 +312,11 @@
    "ver": "",
    "score": 624,
    "arts": "Tatsuo Yamada",
+   "fx": [
+    "연기",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 253522,
     "u": "https://www.sakugabooru.com/data/67d123d88af9b7d56ecf9a1e386d2fd7.mp4"
@@ -253,6 +333,12 @@
    "ver": "",
    "score": 621,
    "arts": "Shingo Fujii",
+   "fx": [
+    "연기",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 232512,
     "u": "https://www.sakugabooru.com/data/080daff7b44f1058da0e6a6dac4d2df7.mp4"
@@ -269,6 +355,10 @@
    "ver": "",
    "score": 606,
    "arts": "Shingo Fujii",
+   "fx": [
+    "불",
+    "스파크"
+   ],
    "sk": {
     "p": 232522,
     "u": "https://www.sakugabooru.com/data/67a822cee88c5ff071ee25c3e53a92d7.mp4"
@@ -285,6 +375,13 @@
    "ver": "",
    "score": 584,
    "arts": "Yuu Yoshiyama",
+   "fx": [
+    "번개",
+    "물·액체",
+    "임팩트 프레임",
+    "스미어",
+    "변형"
+   ],
    "sk": {
     "p": 113149,
     "u": "https://www.sakugabooru.com/data/1d04eabfd9f08832fb8158ece342bbc2.mp4"
@@ -301,6 +398,10 @@
    "ver": "",
    "score": 566,
    "arts": "Takeshi Morita",
+   "fx": [
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 238072,
     "u": "https://www.sakugabooru.com/data/e338c7b58b0d504b2f38d35426c37e73.mp4"
@@ -317,6 +418,11 @@
    "ver": "",
    "score": 558,
    "arts": "Unknown, Hironori Tanaka, Naotoshi Shida, Tatsuo Yamada",
+   "fx": [
+    "빔",
+    "연기",
+    "스미어"
+   ],
    "sk": {
     "p": 239564,
     "u": "https://www.sakugabooru.com/data/6414b95b91cb26ef1122059bead7dd80.mp4"

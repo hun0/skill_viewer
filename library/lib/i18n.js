@@ -216,7 +216,11 @@ Object.assign(DICT, {"직접 모은 영상": ["My video collections", "自建视
   "프레임 뷰어": ["Frame viewer", "逐帧查看器"], "⬇ 원본 다운로드": ["⬇ Original", "⬇ 原始文件"], "전체 다운로드 명령 복사": ["Copy download commands for all", "复制全部下载命令"],
   "원본 mp4 다운로드 (새 탭에서 열리면 우클릭 → 동영상 저장)": ["Download the original mp4 (if it opens in a new tab, right-click → Save video as)", "下载原始 mp4（若在新标签页打开，请右键 → 视频另存为）"],
   "새 탭에서 열리면 영상 위에서 우클릭 → ‘동영상을 다른 이름으로 저장’": ["If it opens in a new tab, right-click the video → ‘Save video as’", "若在新标签页打开，请在视频上右键 → “视频另存为”"],
-  "Sakugabooru 점수": ["Sakugabooru score", "Sakugabooru 分数"]});
+  "Sakugabooru 점수": ["Sakugabooru score", "Sakugabooru 分数"], "이펙트": ["Effects", "特效"], "이펙트별": ["By effect", "按特效"],
+  "전체": ["All", "全部"], "작품별": ["By title", "按作品"], "화려한 전투 (50개)": ["Spectacular fights (50 each)", "华丽战斗（各50个）"], "영상 모음": ["Video collections", "视频合集"], "눌러서 재생": ["Click to play", "点击播放"], "애니 전체": ["All anime", "全部动画"],
+  "불": ["Fire", "火"], "번개": ["Lightning", "闪电"], "폭발": ["Explosions", "爆炸"], "빔": ["Beams", "光束"], "얼음": ["Ice", "冰"], "물·액체": ["Liquid", "液体"],
+  "연기": ["Smoke", "烟"], "바람": ["Wind", "风"], "스파크": ["Sparks", "火花"], "파편": ["Debris", "碎片"], "임팩트 프레임": ["Impact frames", "冲击帧"], "스미어": ["Smears", "拖影"],
+  "미사일": ["Missiles", "导弹"], "변형": ["Morphing", "变形"], "CG": ["CG", "CG"]});
 Object.assign(DICT, {"그랑블루 판타지 리링크 플레이어블 26명(본편 19명 + 무료 업데이트 3명 + 「Endless Ragnarok」 4명). 주인공은 그랑/지타를 한 칸으로 묶었어요. 링크는 대부분 'All Moveset, Skills & Skybound Arts' 영상이에요. 썸네일은 나무위키 아이콘이에요.": ["The 26 playable characters of Granblue Fantasy: Relink (19 in the base game + 3 free updates + 4 from Endless Ragnarok). Gran and Djeeta share one row. Links are mostly 'All Moveset, Skills & Skybound Arts' videos. Thumbnails are Namu Wiki icons.", "碧蓝幻想 Relink 可玩角色 26 名（本篇 19 名 + 免费更新 3 名 + Endless Ragnarok 4 名）。古兰与姬塔合为一行。链接以“全招式·技能·奥义”视频为主。缩略图为 Namu Wiki 图标。"], "무료 업데이트": ["Free update", "免费更新"]});
 /* the same Korean word means something else in some games */
 const GDICT = {

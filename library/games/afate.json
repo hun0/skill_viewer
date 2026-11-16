@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘fate_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘fate_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 50개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=fate_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Fate Series</a>",
  "roster": [
   {
@@ -13,6 +13,14 @@
    "ver": "",
    "score": 3048,
    "arts": "Weilin Zhang",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 175071,
     "u": "https://www.sakugabooru.com/data/119f9bbfb6e10f7f16b4195fcf9a7002.mp4"
@@ -29,6 +37,19 @@
    "ver": "",
    "score": 2711,
    "arts": "Unknown, Hakuyu Go, Hironori Tanaka, Kai Ikarashi, Toshiyuki Sato",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 190092,
     "u": "https://www.sakugabooru.com/data/55ec156f48c2a63ba314230ba50c8a3e.mp4"
@@ -45,6 +66,18 @@
    "ver": "",
    "score": 2356,
    "arts": "Nozomu Abe",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 85470,
     "u": "https://www.sakugabooru.com/data/25f6c131a96aa0ca456832e4bf411830.mp4"
@@ -61,6 +94,18 @@
    "ver": "",
    "score": 2336,
    "arts": "Unknown, Hakuyu Go, Itsuki Tsuchigami, Kazuto Arai, Naoki Miyajima, Shinsaku Kozuma, Takumi Sunakohara, Tatsuya Miki, Toshi Sada",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 190091,
     "u": "https://www.sakugabooru.com/data/2822e63212d87f483b1ef416dbd9b90b.mp4"
@@ -77,6 +122,18 @@
    "ver": "",
    "score": 2109,
    "arts": "Unknown, Hironori Tanaka, Nakaya Onsen, Toshiyuki Sato",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 202956,
     "u": "https://www.sakugabooru.com/data/b90acef6b574ded16a89fab7d20e0206.mp4"
@@ -93,6 +150,19 @@
    "ver": "",
    "score": 2028,
    "arts": "Nozomu Abe",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 264001,
     "u": "https://www.sakugabooru.com/data/3dc5071aef9fe62f17efe502a851976c.mp4"
@@ -109,6 +179,19 @@
    "ver": "",
    "score": 1992,
    "arts": "Hisashi Mori, Kerorira, Kosuke Kato, Moaang, Shota Goshozono, Yusuke Kawakami",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 294824,
     "u": "https://www.sakugabooru.com/data/d9cc720bf62ce44e9b83e504af45a855.mp4"
@@ -125,6 +208,17 @@
    "ver": "",
    "score": 1920,
    "arts": "Unknown, China (animator), Hidekazu Ebina, Itsuki Tsuchigami, Kai Shibata, Kazuma Tanaka, Shingo Yamashita, Tomato, Toru Iwazawa, Toshiya Kouno, Yusuke Kawakami",
+   "fx": [
+    "불",
+    "번개",
+    "얼음",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "미사일",
+    "CG"
+   ],
    "sk": {
     "p": 288697,
     "u": "https://www.sakugabooru.com/data/c8d03f517d8d3e9b76776f1f1618598f.mp4"
@@ -141,6 +235,15 @@
    "ver": "",
    "score": 1795,
    "arts": "Kai Ikarashi",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "연기",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 175092,
     "u": "https://www.sakugabooru.com/data/4960b60b72750bf5e6144d5652ea11f1.mp4"
@@ -157,6 +260,15 @@
    "ver": "",
    "score": 1773,
    "arts": "Itsuki Tsuchigami, Masami Mori",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편"
+   ],
    "sk": {
     "p": 190088,
     "u": "https://www.sakugabooru.com/data/a6d1ad4772dbe12125a420935deb3fd6.mp4"
@@ -173,6 +285,14 @@
    "ver": "",
    "score": 1723,
    "arts": "Nakaya Onsen",
+   "fx": [
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "스파크",
+    "파편"
+   ],
    "sk": {
     "p": 190097,
     "u": "https://www.sakugabooru.com/data/ec642c1da6a32346994959c8c57eda99.mp4"
@@ -189,6 +309,13 @@
    "ver": "",
    "score": 1691,
    "arts": "Kai Ikarashi",
+   "fx": [
+    "번개",
+    "연기",
+    "스파크",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 294822,
     "u": "https://www.sakugabooru.com/data/d8d6c4dedd22da45b4265ad9edf423ce.mp4"
@@ -205,6 +332,16 @@
    "ver": "",
    "score": 1610,
    "arts": "Unknown, Kazuto Arai, Kerorira, Kosuke Kato, Nakaya Onsen, Shouta Iwasaki, Weilin Zhang",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 202953,
     "u": "https://www.sakugabooru.com/data/ea681bdf8a5b2e6798f56b53cfe25b1c.mp4"
@@ -221,6 +358,15 @@
    "ver": "",
    "score": 1536,
    "arts": "Takahito Sakazume",
+   "fx": [
+    "번개",
+    "빔",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 86510,
     "u": "https://www.sakugabooru.com/data/f208e59b679aa554a04dc68fd9790f8f.mp4"
@@ -237,6 +383,14 @@
    "ver": "",
    "score": 1496,
    "arts": "Curie Lu, Gabriel Ugbodaga, Vincent Chansard",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "물·액체",
+    "연기",
+    "파편"
+   ],
    "sk": {
     "p": 246002,
     "u": "https://www.sakugabooru.com/data/cca4e8550fb13f05735754dd98a1d943.mp4"
@@ -253,6 +407,18 @@
    "ver": "",
    "score": 1396,
    "arts": "Nozomu Abe",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 248298,
     "u": "https://www.sakugabooru.com/data/5b8318e1cfbcfcf6a4bbbd31a6dbc5af.mp4"
@@ -269,6 +435,13 @@
    "ver": "",
    "score": 1354,
    "arts": "Megumi Kouno",
+   "fx": [
+    "빔",
+    "물·액체",
+    "연기",
+    "임팩트 프레임",
+    "CG"
+   ],
    "sk": {
     "p": 103084,
     "u": "https://www.sakugabooru.com/data/d0a40588236fdb6ec79c1fc09f40c630.mp4"
@@ -285,6 +458,17 @@
    "ver": "",
    "score": 1342,
    "arts": "Nozomu Abe",
+   "fx": [
+    "번개",
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 255673,
     "u": "https://www.sakugabooru.com/data/b3245a54cd372753f8ef0b8bec96c946.mp4"
@@ -301,6 +485,15 @@
    "ver": "",
    "score": 1301,
    "arts": "Ken Yamamoto",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 248917,
     "u": "https://www.sakugabooru.com/data/f716b8be1799fbc4a0de22d09c66a761.mp4"
@@ -317,9 +510,718 @@
    "ver": "",
    "score": 1264,
    "arts": "Bahi Jd",
+   "fx": [
+    "폭발",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 175081,
     "u": "https://www.sakugabooru.com/data/6f2babc7f5f9e02006ad19deeb07a589.mp4"
+   }
+  },
+  {
+   "id": "afate-207634",
+   "ko": "Masayuki Kunihiro",
+   "en": "Fate/Stay Night Unlimited Blade Works (2014) · #24",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Stay Night Unlimited Blade W…",
+   "role": "",
+   "ver": "",
+   "score": 1168,
+   "arts": "Masayuki Kunihiro",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
+   "sk": {
+    "p": 207634,
+    "u": "https://www.sakugabooru.com/data/afa2814cc383d2bbfb241c52a0716ea8.mp4"
+   }
+  },
+  {
+   "id": "afate-299554",
+   "ko": "Shuu Sugita",
+   "en": "Fate/Strange Fake · #06",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Strange Fake",
+   "role": "",
+   "ver": "",
+   "score": 1153,
+   "arts": "Shuu Sugita",
+   "fx": [
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 299554,
+    "u": "https://www.sakugabooru.com/data/5c40b84ba498dff4aca1b6d443dd4797.mp4"
+   }
+  },
+  {
+   "id": "afate-248916",
+   "ko": "Ken Yamamoto",
+   "en": "Fate/Grand Order: Zettai Majuu Sensen Babylonia · #11",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Grand Order: Zettai Majuu Se…",
+   "role": "",
+   "ver": "",
+   "score": 1150,
+   "arts": "Ken Yamamoto",
+   "fx": [
+    "연기",
+    "스미어"
+   ],
+   "sk": {
+    "p": 248916,
+    "u": "https://www.sakugabooru.com/data/32e8d3a65564152d705749bc1e2db6e3.mp4"
+   }
+  },
+  {
+   "id": "afate-85469",
+   "ko": "Masayuki Kunihiro, Toru Iwazawa",
+   "en": "Fate/Stay Night: Heaven's Feel II. Lost Butterfly · #02",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Stay Night: Heaven's Feel II…",
+   "role": "",
+   "ver": "",
+   "score": 1142,
+   "arts": "Masayuki Kunihiro, Toru Iwazawa",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
+   "sk": {
+    "p": 85469,
+    "u": "https://www.sakugabooru.com/data/ec93146d765a9f52955efcaa734c60ab.mp4"
+   }
+  },
+  {
+   "id": "afate-151380",
+   "ko": "Masayuki Kunihiro",
+   "en": "Fate/Stay Night: Heaven's Feel III. Spring Song · Movie",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Stay Night: Heaven's Feel II…",
+   "role": "",
+   "ver": "",
+   "score": 1106,
+   "arts": "Masayuki Kunihiro",
+   "fx": [
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "CG"
+   ],
+   "sk": {
+    "p": 151380,
+    "u": "https://www.sakugabooru.com/data/b5bca9541bfd426f55d36da4585f366e.mp4"
+   }
+  },
+  {
+   "id": "afate-151381",
+   "ko": "Hironori Tanaka",
+   "en": "Fate/Stay Night: Heaven's Feel III. Spring Song · Movie",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Stay Night: Heaven's Feel II…",
+   "role": "",
+   "ver": "",
+   "score": 1084,
+   "arts": "Hironori Tanaka",
+   "fx": [
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 151381,
+    "u": "https://www.sakugabooru.com/data/1daeb96777a31001f97c6aa95092a46b.mp4"
+   }
+  },
+  {
+   "id": "afate-190096",
+   "ko": "Hakuyu Go",
+   "en": "Fate/Apocrypha · #22",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Apocrypha",
+   "role": "",
+   "ver": "",
+   "score": 1082,
+   "arts": "Unknown, Hakuyu Go",
+   "fx": [
+    "불",
+    "빔",
+    "물·액체",
+    "연기",
+    "파편"
+   ],
+   "sk": {
+    "p": 190096,
+    "u": "https://www.sakugabooru.com/data/94cc7bbde763d993c84d38afecbfd8bd.mp4"
+   }
+  },
+  {
+   "id": "afate-175088",
+   "ko": "Itsuki Tsuchigami, Vercreek 외 1명",
+   "en": "Fate/Grand Order Camelot Paladin Agateram · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Grand Order Camelot Paladin …",
+   "role": "",
+   "ver": "",
+   "score": 1011,
+   "arts": "Unknown, Itsuki Tsuchigami, Vercreek, Yen Bm",
+   "fx": [
+    "불",
+    "빔",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 175088,
+    "u": "https://www.sakugabooru.com/data/9fc8aa003d78c69e1b3f70a0f7e89c82.mp4"
+   }
+  },
+  {
+   "id": "afate-248297",
+   "ko": "Nozomu Abe",
+   "en": "Fate/Stay Night Unlimited Blade Works (2014) · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Stay Night Unlimited Blade W…",
+   "role": "",
+   "ver": "",
+   "score": 977,
+   "arts": "Nozomu Abe",
+   "fx": [
+    "폭발",
+    "빔",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
+   "sk": {
+    "p": 248297,
+    "u": "https://www.sakugabooru.com/data/56dd31da9b12f0f1c108398f6a6f6a75.mp4"
+   }
+  },
+  {
+   "id": "afate-299593",
+   "ko": "Kaito Tomioka, Sota Shigetsugu 외 2명",
+   "en": "Fate/Strange Fake · #06",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Strange Fake",
+   "role": "",
+   "ver": "",
+   "score": 970,
+   "arts": "Kaito Tomioka, Sota Shigetsugu, Takahiro Watabe, Yen Bm",
+   "fx": [
+    "번개",
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 299593,
+    "u": "https://www.sakugabooru.com/data/aa4b1824a855452ac980cd6db64b0e86.mp4"
+   }
+  },
+  {
+   "id": "afate-320552",
+   "ko": "Nozomu Abe",
+   "en": "Fate/Stay Night Unlimited Blade Works (2014) · #21",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Stay Night Unlimited Blade W…",
+   "role": "",
+   "ver": "",
+   "score": 926,
+   "arts": "Nozomu Abe",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "스파크",
+    "파편"
+   ],
+   "sk": {
+    "p": 320552,
+    "u": "https://www.sakugabooru.com/data/9c4f141d446788f4808fe0cc66ce683c.mp4"
+   }
+  },
+  {
+   "id": "afate-175700",
+   "ko": "Masaru Kimura, Masato Nagamori 외 4명",
+   "en": "Fate/Grand Order CM · Fate/Grand Order x Kara ",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Grand Order CM",
+   "role": "",
+   "ver": "",
+   "score": 924,
+   "arts": "Masaru Kimura, Masato Nagamori, Takayuki Motegi, Tetsuhito Satou, Touko Uchimura, Yuka Shiojima",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "CG"
+   ],
+   "sk": {
+    "p": 175700,
+    "u": "https://www.sakugabooru.com/data/9ed3a5566010c062f903a6263ccee156.mp4"
+   }
+  },
+  {
+   "id": "afate-162432",
+   "ko": "Nozomu Abe",
+   "en": "Fate/Stay Night Unlimited Blade Works (2014) · #07",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Stay Night Unlimited Blade W…",
+   "role": "",
+   "ver": "",
+   "score": 905,
+   "arts": "Nozomu Abe",
+   "fx": [
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
+   "sk": {
+    "p": 162432,
+    "u": "https://www.sakugabooru.com/data/1511bce7baf34bfd8a2007f768def886.mp4"
+   }
+  },
+  {
+   "id": "afate-190085",
+   "ko": "Masami Mori, Toya Oshima",
+   "en": "Fate/Apocrypha · #22",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Apocrypha",
+   "role": "",
+   "ver": "",
+   "score": 904,
+   "arts": "Masami Mori, Toya Oshima",
+   "fx": [
+    "연기",
+    "변형"
+   ],
+   "sk": {
+    "p": 190085,
+    "u": "https://www.sakugabooru.com/data/4425eea3e68afbc757299a6953d83d93.mp4"
+   }
+  },
+  {
+   "id": "afate-175090",
+   "ko": "Itsuki Tsuchigami",
+   "en": "Fate/Grand Order Camelot Paladin Agateram · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Grand Order Camelot Paladin …",
+   "role": "",
+   "ver": "",
+   "score": 890,
+   "arts": "Itsuki Tsuchigami",
+   "fx": [
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 175090,
+    "u": "https://www.sakugabooru.com/data/49831bf7d0bd906c8e00267ac5449b09.mp4"
+   }
+  },
+  {
+   "id": "afate-233417",
+   "ko": "Corcoran Mark Kenta, Hidekazu Ebina 외 6명",
+   "en": "Fate/Grand Order CM · Lostbelt 4 CM",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Grand Order CM",
+   "role": "",
+   "ver": "",
+   "score": 857,
+   "arts": "Corcoran Mark Kenta, Hidekazu Ebina, Hiroo Nagano, Kai Shibata, Keisuke Hiroe, Shun Enokido, Takahito Sakazume, Toru Iwazawa",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "변형"
+   ],
+   "sk": {
+    "p": 233417,
+    "u": "https://www.sakugabooru.com/data/fb3d3a8ca4a28e9562c2b7749dca061a.mp4"
+   }
+  },
+  {
+   "id": "afate-175696",
+   "ko": "Shun Enokido, Takahito Sakazume",
+   "en": "Fate/Grand Order CM · Fate/Grand Order - E Plu",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Grand Order CM",
+   "role": "",
+   "ver": "",
+   "score": 847,
+   "arts": "Shun Enokido, Takahito Sakazume",
+   "fx": [
+    "번개",
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 175696,
+    "u": "https://www.sakugabooru.com/data/eeb7221cfcb461f44d795d67f51a8996.mp4"
+   }
+  },
+  {
+   "id": "afate-197954",
+   "ko": "Masayuki Kunihiro",
+   "en": "Fate/Stay Night Unlimited Blade Works (2014) · #00",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Stay Night Unlimited Blade W…",
+   "role": "",
+   "ver": "",
+   "score": 841,
+   "arts": "Masayuki Kunihiro",
+   "fx": [
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
+   "sk": {
+    "p": 197954,
+    "u": "https://www.sakugabooru.com/data/631bc6ac8610fcd14b72ca2fc9a3aaa2.mp4"
+   }
+  },
+  {
+   "id": "afate-233423",
+   "ko": "Ayaka Minoshima, Daisuke Hatsumi 외 8명",
+   "en": "Fate/Grand Order CM · Tokugawa Kaiten Meikyū -",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Grand Order CM",
+   "role": "",
+   "ver": "",
+   "score": 834,
+   "arts": "Ayaka Minoshima, Daisuke Hatsumi, Hidekazu Ebina, Hiroo Nagano, Kai Shibata, Kazuma Tanaka, Keisuke Hiroe, Shun Enokido, Toru Iwazawa, Yuukei Yamada",
+   "fx": [
+    "스파크",
+    "CG"
+   ],
+   "sk": {
+    "p": 233423,
+    "u": "https://www.sakugabooru.com/data/58af841e649f8daa914d2287438bb57c.mp4"
+   }
+  },
+  {
+   "id": "afate-116215",
+   "ko": "Isao Hayashi, Kazuhiro Miwa 외 1명",
+   "en": "Fate/Grand Order: Zettai Majuu Sensen Babylonia · #03 (PN)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Grand Order: Zettai Majuu Se…",
+   "role": "",
+   "ver": "",
+   "score": 828,
+   "arts": "Isao Hayashi, Kazuhiro Miwa, Kyoushirou Ezawa",
+   "fx": [
+    "빔",
+    "연기",
+    "스파크",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 116215,
+    "u": "https://www.sakugabooru.com/data/b9a23134a0d3e4e64cd0ddba346c8fd2.mp4"
+   }
+  },
+  {
+   "id": "afate-235133",
+   "ko": "Tatsuya Yoshihara",
+   "en": "Fate/Apocrypha · #03",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Apocrypha",
+   "role": "",
+   "ver": "",
+   "score": 820,
+   "arts": "Tatsuya Yoshihara",
+   "fx": [
+    "불",
+    "폭발",
+    "빔",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 235133,
+    "u": "https://www.sakugabooru.com/data/9f3e56e7f5ae229eb2f63f7adbf3adab.mp4"
+   }
+  },
+  {
+   "id": "afate-238423",
+   "ko": "Nakaya Onsen",
+   "en": "Fate/Samurai Remnant · OP (Game)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Samurai Remnant",
+   "role": "",
+   "ver": "",
+   "score": 802,
+   "arts": "Nakaya Onsen",
+   "fx": [
+    "물·액체",
+    "스미어"
+   ],
+   "sk": {
+    "p": 238423,
+    "u": "https://www.sakugabooru.com/data/48110c8b7cf772a2d49d4393ff33e295.mp4"
+   }
+  },
+  {
+   "id": "afate-248299",
+   "ko": "Nozomu Abe",
+   "en": "Fate/Stay Night Unlimited Blade Works (2014) · #24",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Stay Night Unlimited Blade W…",
+   "role": "",
+   "ver": "",
+   "score": 801,
+   "arts": "Nozomu Abe",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임"
+   ],
+   "sk": {
+    "p": 248299,
+    "u": "https://www.sakugabooru.com/data/4518231014f6796a804091a1f6879430.mp4"
+   }
+  },
+  {
+   "id": "afate-234463",
+   "ko": "Takahito Sakazume",
+   "en": "Fate/Grand Order (game) · Cosmos in the Lostbelt O",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Grand Order (game)",
+   "role": "",
+   "ver": "",
+   "score": 791,
+   "arts": "Takahito Sakazume",
+   "fx": [
+    "빔",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임"
+   ],
+   "sk": {
+    "p": 234463,
+    "u": "https://www.sakugabooru.com/data/a7147d0642c0b4010db6c6c246cd9b4e.mp4"
+   }
+  },
+  {
+   "id": "afate-233424",
+   "ko": "Shun Enokido, Takahito Sakazume",
+   "en": "Fate/Grand Order CM · GudaGuda 2018 CM",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Grand Order CM",
+   "role": "",
+   "ver": "",
+   "score": 764,
+   "arts": "Shun Enokido, Takahito Sakazume",
+   "fx": [
+    "불",
+    "빔",
+    "바람",
+    "스파크",
+    "스미어",
+    "CG"
+   ],
+   "sk": {
+    "p": 233424,
+    "u": "https://www.sakugabooru.com/data/2f3109743f84963dd2ee77af46df1e8c.mp4"
+   }
+  },
+  {
+   "id": "afate-207900",
+   "ko": "Nozomu Abe",
+   "en": "Fate/Zero · #04",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Zero",
+   "role": "",
+   "ver": "",
+   "score": 763,
+   "arts": "Nozomu Abe",
+   "fx": [
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 207900,
+    "u": "https://www.sakugabooru.com/data/a4dff420863900162ea976224220df44.mp4"
+   }
+  },
+  {
+   "id": "afate-235164",
+   "ko": "Shingo Yamashita",
+   "en": "Fate/Apocrypha · #23",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Apocrypha",
+   "role": "",
+   "ver": "",
+   "score": 732,
+   "arts": "Shingo Yamashita",
+   "fx": [
+    "번개",
+    "빔",
+    "임팩트 프레임"
+   ],
+   "sk": {
+    "p": 235164,
+    "u": "https://www.sakugabooru.com/data/cebf80d40fb22e697b03f2ac27ef7971.mp4"
+   }
+  },
+  {
+   "id": "afate-231408",
+   "ko": "Shun Enokido, Takahito Sakazume",
+   "en": "Fate/Strange Fake: Whispers of Dawn",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Strange Fake: Whispers of Da…",
+   "role": "",
+   "ver": "",
+   "score": 724,
+   "arts": "Unknown, Shun Enokido, Takahito Sakazume",
+   "fx": [
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "CG"
+   ],
+   "sk": {
+    "p": 231408,
+    "u": "https://www.sakugabooru.com/data/330eb94cd13348b83bbe27d19afa92b1.mp4"
+   }
+  },
+  {
+   "id": "afate-152638",
+   "ko": "Kou Yoshinari",
+   "en": "Fate/Grand Order Camelot Wandering Agateram · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Grand Order Camelot Wanderin…",
+   "role": "",
+   "ver": "",
+   "score": 721,
+   "arts": "Kou Yoshinari",
+   "fx": [
+    "불"
+   ],
+   "sk": {
+    "p": 152638,
+    "u": "https://www.sakugabooru.com/data/3ab852ed9dce46189c84f3ff1f55db70.mp4"
+   }
+  },
+  {
+   "id": "afate-86523",
+   "ko": "Nozomu Abe",
+   "en": "Fate/Stay Night: Heaven's Feel II. Lost Butterfly · Animation Material 2",
+   "zh": "",
+   "rarity": "",
+   "attr": "Fate/Stay Night: Heaven's Feel II…",
+   "role": "",
+   "ver": "",
+   "score": 717,
+   "arts": "Nozomu Abe",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "CG"
+   ],
+   "sk": {
+    "p": 86523,
+    "u": "https://www.sakugabooru.com/data/75203f11a2b3fac76910ba195e9dfdde.mp4"
    }
   }
  ],

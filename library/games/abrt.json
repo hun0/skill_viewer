@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘boruto:_naruto_next_generations effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘boruto:_naruto_next_generations effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 50개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=boruto:_naruto_next_generations+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Boruto</a>",
  "roster": [
   {
@@ -13,6 +13,15 @@
    "ver": "",
    "score": 4022,
    "arts": "Chengxi Huang, Tilfinning, Weilin Zhang",
+   "fx": [
+    "불",
+    "번개",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 106678,
     "u": "https://www.sakugabooru.com/data/1045ede41235f790735a08dbfd7a57cf.mp4"
@@ -29,6 +38,11 @@
    "ver": "",
    "score": 2479,
    "arts": "Naoki Kobayashi",
+   "fx": [
+    "연기",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 188937,
     "u": "https://www.sakugabooru.com/data/50d69870554717e429b6d264501b2bbc.mp4"
@@ -45,6 +59,15 @@
    "ver": "",
    "score": 2227,
    "arts": "Hiromitsu Seki, Norio Matsumoto, Tatsurou Kawano, Tatsuya Koyanagi, Yojiro Arai",
+   "fx": [
+    "불",
+    "번개",
+    "얼음",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 113579,
     "u": "https://www.sakugabooru.com/data/231b5d97c0c9216cef2e8b807826067b.mp4"
@@ -61,6 +84,11 @@
    "ver": "",
    "score": 2221,
    "arts": "Hiroyuki Yamashita",
+   "fx": [
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 230822,
     "u": "https://www.sakugabooru.com/data/09e1936814a9fad56416ec1d2b4e463e.mp4"
@@ -77,6 +105,17 @@
    "ver": "",
    "score": 1704,
    "arts": "Vincent Chansard",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 230826,
     "u": "https://www.sakugabooru.com/data/d9a51bcc485a912ef8166bd7d612208e.mp4"
@@ -93,6 +132,14 @@
    "ver": "",
    "score": 1678,
    "arts": "Guzzu, Kilocrescent",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 106679,
     "u": "https://www.sakugabooru.com/data/863b02b1f6194dbdabcf694001e4bb13.mp4"
@@ -109,6 +156,15 @@
    "ver": "",
    "score": 1523,
    "arts": "Hiroyuki Yamashita",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 198086,
     "u": "https://www.sakugabooru.com/data/68242cb1381f21635737b13990761fc7.mp4"
@@ -125,6 +181,12 @@
    "ver": "",
    "score": 1485,
    "arts": "Weilin Zhang",
+   "fx": [
+    "번개",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 198945,
     "u": "https://www.sakugabooru.com/data/3bccbbb6ff2cc6b8954b1715f912f1c3.mp4"
@@ -141,6 +203,13 @@
    "ver": "",
    "score": 1378,
    "arts": "Chengxi Huang",
+   "fx": [
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 113462,
     "u": "https://www.sakugabooru.com/data/1f44a06886094fe1acb6789b6f77cbc5.mp4"
@@ -157,6 +226,12 @@
    "ver": "",
    "score": 1354,
    "arts": "Hiromitsu Seki, Itsuki Tsuchigami",
+   "fx": [
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 188938,
     "u": "https://www.sakugabooru.com/data/04db5eaa9f8c43304f18ed0ead87fdb5.mp4"
@@ -173,6 +248,12 @@
    "ver": "",
    "score": 1333,
    "arts": "Gem, Juansheng Shi",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 133184,
     "u": "https://www.sakugabooru.com/data/44357984ab180852468b44584bae4d71.mp4"
@@ -189,6 +270,13 @@
    "ver": "",
    "score": 1304,
    "arts": "Hiroyuki Yamashita, Kenichi Fujisawa, Weilin Zhang",
+   "fx": [
+    "불",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 143217,
     "u": "https://www.sakugabooru.com/data/78b5987618084cc69ed70247d7e7767b.mp4"
@@ -205,6 +293,15 @@
    "ver": "",
    "score": 1247,
    "arts": "Unknown, Chengxi Huang, Hero, Hirofumi Masuda, Muggle, Tatsuya Koyanagi",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 106683,
     "u": "https://www.sakugabooru.com/data/6dc410bcf96e5195edcaf6c117dcd54f.mp4"
@@ -221,6 +318,15 @@
    "ver": "",
    "score": 1202,
    "arts": "David Bradshaw, Dogdog, Hiromatsu Shuu, Optical-core",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 215723,
     "u": "https://www.sakugabooru.com/data/2dd1bea8969df2c6594a168449be14c9.mp4"
@@ -237,6 +343,14 @@
    "ver": "",
    "score": 1136,
    "arts": "Hiromatsu Shuu, Kana Ito",
+   "fx": [
+    "번개",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편"
+   ],
    "sk": {
     "p": 206724,
     "u": "https://www.sakugabooru.com/data/07c50fe22da1caa291bbcbed1672b0ea.mp4"
@@ -253,6 +367,11 @@
    "ver": "",
    "score": 1104,
    "arts": "Chengxi Huang",
+   "fx": [
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 188928,
     "u": "https://www.sakugabooru.com/data/071e079ebff6d0d2f40ecc6fa0592a01.mp4"
@@ -269,6 +388,15 @@
    "ver": "",
    "score": 982,
    "arts": "Chengxi Huang",
+   "fx": [
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 188939,
     "u": "https://www.sakugabooru.com/data/e6db80662936d7737aae3c01dee77802.mp4"
@@ -285,6 +413,15 @@
    "ver": "",
    "score": 921,
    "arts": "Kouki Fujimoto, Shuu Sugita",
+   "fx": [
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 195282,
     "u": "https://www.sakugabooru.com/data/d754c00fe86d455509db8286cda741b6.mp4"
@@ -301,6 +438,14 @@
    "ver": "",
    "score": 918,
    "arts": "Daniel Baron, Kenichi Fujisawa, Proro",
+   "fx": [
+    "번개",
+    "폭발",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 206713,
     "u": "https://www.sakugabooru.com/data/fa91b3b05ff25a950b2e22459b537cb6.mp4"
@@ -317,9 +462,702 @@
    "ver": "",
    "score": 901,
    "arts": "Spencer Wan",
+   "fx": [
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 106681,
     "u": "https://www.sakugabooru.com/data/03694efeb5a639d2fdea404cd3b44130.mp4"
+   }
+  },
+  {
+   "id": "abrt-206716",
+   "ko": "Q Kawa, Xinxiong Ceng",
+   "en": "Boruto · #189",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 852,
+   "arts": "Q Kawa, Xinxiong Ceng",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 206716,
+    "u": "https://www.sakugabooru.com/data/62dee1a683da47c0f1a6f0e990b2ddc0.mp4"
+   }
+  },
+  {
+   "id": "abrt-133183",
+   "ko": "Chengxi Huang, Eri Taguchi 외 3명",
+   "en": "Boruto · #065",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 825,
+   "arts": "Unknown, Chengxi Huang, Eri Taguchi, Hartova Maverick, Hirofumi Masuda, Hirofumi Suzuki",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 133183,
+    "u": "https://www.sakugabooru.com/data/88173bf268fe5c9604f8b40f2c409a87.mp4"
+   }
+  },
+  {
+   "id": "abrt-297810",
+   "ko": "Hiroyuki Yamashita",
+   "en": "Boruto · #087",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 790,
+   "arts": "Hiroyuki Yamashita",
+   "fx": [
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 297810,
+    "u": "https://www.sakugabooru.com/data/900c52409e80f77ddcb14859d1cbf2d9.mp4"
+   }
+  },
+  {
+   "id": "abrt-206714",
+   "ko": "Jay1jay1jay1",
+   "en": "Boruto · #189",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 783,
+   "arts": "Jay1jay1jay1",
+   "fx": [
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 206714,
+    "u": "https://www.sakugabooru.com/data/98ba28a50966cf33e6439b1f1bd64ddc.mp4"
+   }
+  },
+  {
+   "id": "abrt-217233",
+   "ko": "Vincent Chansard",
+   "en": "Boruto · #204",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 779,
+   "arts": "Vincent Chansard",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 217233,
+    "u": "https://www.sakugabooru.com/data/df7728b716d773df1db2e5f9a512e32d.mp4"
+   }
+  },
+  {
+   "id": "abrt-206729",
+   "ko": "Ken Imaizumi, Vincent Chansard",
+   "en": "Boruto · NCOP8",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 716,
+   "arts": "Ken Imaizumi, Vincent Chansard",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "물·액체",
+    "바람",
+    "스파크",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 206729,
+    "u": "https://www.sakugabooru.com/data/f1203546aa473a91b3538acba5342880.mp4"
+   }
+  },
+  {
+   "id": "abrt-140789",
+   "ko": "Chengxi Huang, Hiroyuki Horiuchi 외 2명",
+   "en": "Boruto · #065",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 680,
+   "arts": "Chengxi Huang, Hiroyuki Horiuchi, Katsuhiro Takagi, Ren Onodera",
+   "fx": [
+    "불",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 140789,
+    "u": "https://www.sakugabooru.com/data/7c92301bd05f0cf78923e051be5dfc32.mp4"
+   }
+  },
+  {
+   "id": "abrt-217240",
+   "ko": "Chengxi Huang, Jay1jay1jay1 외 1명",
+   "en": "Boruto · #207",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 677,
+   "arts": "Unknown, Chengxi Huang, Jay1jay1jay1, Ken Imaizumi",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 217240,
+    "u": "https://www.sakugabooru.com/data/66ad7b35a0c091135ac0b73e0b1c5230.mp4"
+   }
+  },
+  {
+   "id": "abrt-188775",
+   "ko": "Chengxi Huang, Hiroyuki Yamashita",
+   "en": "Boruto · #009",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 640,
+   "arts": "Unknown, Chengxi Huang, Hiroyuki Yamashita",
+   "fx": [
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 188775,
+    "u": "https://www.sakugabooru.com/data/002c7a8fdc2cfdaf335c80b7058e84d1.mp4"
+   }
+  },
+  {
+   "id": "abrt-206712",
+   "ko": "Chengxi Huang, Jay1jay1jay1 외 1명",
+   "en": "Boruto · #189",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 640,
+   "arts": "Chengxi Huang, Jay1jay1jay1, Ken Imaizumi",
+   "fx": [
+    "폭발",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 206712,
+    "u": "https://www.sakugabooru.com/data/06c6b2ccd70b3941b33446a18f7bfcff.mp4"
+   }
+  },
+  {
+   "id": "abrt-217230",
+   "ko": "Vincent Chansard, Vincent Cooper",
+   "en": "Boruto · #204 (Action",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 629,
+   "arts": "Unknown, Vincent Chansard, Vincent Cooper",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 217230,
+    "u": "https://www.sakugabooru.com/data/52cf83dc2909bd0124eda01742fcda0c.mp4"
+   }
+  },
+  {
+   "id": "abrt-172504",
+   "ko": "Ken Yamamoto",
+   "en": "Boruto · #151",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 613,
+   "arts": "Ken Yamamoto",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 172504,
+    "u": "https://www.sakugabooru.com/data/06581941a13c4f994d9c612552fffa0e.mp4"
+   }
+  },
+  {
+   "id": "abrt-232371",
+   "ko": "Hamil, Jordan Rear 외 1명",
+   "en": "Boruto · NCOP10",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 611,
+   "arts": "Hamil, Jordan Rear, Tatsuya Koyanagi",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 232371,
+    "u": "https://www.sakugabooru.com/data/0cc3bbf0b5d80b1f589d93d889ff4aeb.mp4"
+   }
+  },
+  {
+   "id": "abrt-206717",
+   "ko": "Chengxi Huang",
+   "en": "Boruto · #189",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 600,
+   "arts": "Unknown, Chengxi Huang",
+   "fx": [
+    "빔",
+    "바람",
+    "스파크",
+    "스미어"
+   ],
+   "sk": {
+    "p": 206717,
+    "u": "https://www.sakugabooru.com/data/080fd4a06b4f6eab53b1f73ede9c54a0.mp4"
+   }
+  },
+  {
+   "id": "abrt-143218",
+   "ko": "Eri Taguchi, Guzzu 외 1명",
+   "en": "Boruto · NCOP5",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 591,
+   "arts": "Eri Taguchi, Guzzu, Spencer Wan",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "파편"
+   ],
+   "sk": {
+    "p": 143218,
+    "u": "https://www.sakugabooru.com/data/01c233f15c0c14aff6babef8657060f3.mp4"
+   }
+  },
+  {
+   "id": "abrt-87853",
+   "ko": "Hiroyuki Yamashita",
+   "en": "Boruto · #099",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 588,
+   "arts": "Hiroyuki Yamashita",
+   "fx": [
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 87853,
+    "u": "https://www.sakugabooru.com/data/1f65c12f649c02ab59198c09b8ec1dee.mp4"
+   }
+  },
+  {
+   "id": "abrt-232368",
+   "ko": "Lise Légier, Vincent Chansard",
+   "en": "Boruto · #225",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 574,
+   "arts": "Lise Légier, Vincent Chansard",
+   "fx": [
+    "번개",
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 232368,
+    "u": "https://www.sakugabooru.com/data/20f2df9f741d4c8ea2a0854f99afd789.mp4"
+   }
+  },
+  {
+   "id": "abrt-217223",
+   "ko": "Archiel",
+   "en": "Boruto · #204",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 548,
+   "arts": "Archiel",
+   "fx": [
+    "연기",
+    "스미어"
+   ],
+   "sk": {
+    "p": 217223,
+    "u": "https://www.sakugabooru.com/data/f2678ba908b0e801c747d19b4c743140.mp4"
+   }
+  },
+  {
+   "id": "abrt-206718",
+   "ko": "Hiroyuki Yamashita",
+   "en": "Boruto · #189 (PN)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 540,
+   "arts": "Unknown, Hiroyuki Yamashita",
+   "fx": [
+    "폭발",
+    "연기",
+    "파편"
+   ],
+   "sk": {
+    "p": 206718,
+    "u": "https://www.sakugabooru.com/data/7c52597aa694b9d1762dc00b8e2f5dbf.mp4"
+   }
+  },
+  {
+   "id": "abrt-230861",
+   "ko": "Jordan Rear, Mitchell Gonzales 외 1명",
+   "en": "Boruto · #217",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 539,
+   "arts": "Jordan Rear, Mitchell Gonzales, Nezar Alsabbagh",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스미어"
+   ],
+   "sk": {
+    "p": 230861,
+    "u": "https://www.sakugabooru.com/data/a1847fc8286140a9796eea4462a44ea2.mp4"
+   }
+  },
+  {
+   "id": "abrt-206722",
+   "ko": "Unknown",
+   "en": "Boruto · #189",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 526,
+   "arts": "Unknown",
+   "fx": [
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 206722,
+    "u": "https://www.sakugabooru.com/data/3eededa76b35c4c54d7ab4cbe4026e5e.mp4"
+   }
+  },
+  {
+   "id": "abrt-195280",
+   "ko": "Mitchell Gonzales, Vincent Chansard",
+   "en": "Boruto · #175",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 521,
+   "arts": "Mitchell Gonzales, Vincent Chansard",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 195280,
+    "u": "https://www.sakugabooru.com/data/ff97a657af31deeeb133c4d44eac2307.mp4"
+   }
+  },
+  {
+   "id": "abrt-230825",
+   "ko": "Jordan Rear",
+   "en": "Boruto · #217",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 519,
+   "arts": "Jordan Rear",
+   "fx": [
+    "불",
+    "번개",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 230825,
+    "u": "https://www.sakugabooru.com/data/d90b29691b33ac40523d238bb816e5a2.mp4"
+   }
+  },
+  {
+   "id": "abrt-151254",
+   "ko": "Jay1jay1jay1",
+   "en": "Boruto · #194",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 513,
+   "arts": "Jay1jay1jay1",
+   "fx": [
+    "연기",
+    "바람",
+    "스미어"
+   ],
+   "sk": {
+    "p": 151254,
+    "u": "https://www.sakugabooru.com/data/42319b69596776d448a1a2f437225f22.mp4"
+   }
+  },
+  {
+   "id": "abrt-133140",
+   "ko": "Hiroyuki Yamashita",
+   "en": "Boruto · #060",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 479,
+   "arts": "Hiroyuki Yamashita",
+   "fx": [
+    "번개",
+    "연기",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 133140,
+    "u": "https://www.sakugabooru.com/data/cfc4572b877dbc927bf6c74ce372bc20.mp4"
+   }
+  },
+  {
+   "id": "abrt-138007",
+   "ko": "Proro, Q Kawa",
+   "en": "Boruto · #175",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 470,
+   "arts": "Proro, Q Kawa",
+   "fx": [
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 138007,
+    "u": "https://www.sakugabooru.com/data/a68579a719b1aac991083096a4db6a79.mp4"
+   }
+  },
+  {
+   "id": "abrt-172393",
+   "ko": "Kana Ito",
+   "en": "Boruto · #145",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 464,
+   "arts": "Kana Ito",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 172393,
+    "u": "https://www.sakugabooru.com/data/a8788e874b7e6402a59555e92bb348b4.mp4"
+   }
+  },
+  {
+   "id": "abrt-297984",
+   "ko": "Chengxi Huang",
+   "en": "Boruto · #087",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 457,
+   "arts": "Chengxi Huang",
+   "fx": [
+    "연기",
+    "스미어"
+   ],
+   "sk": {
+    "p": 297984,
+    "u": "https://www.sakugabooru.com/data/0ba588119978525df4fc05dd913c3385.mp4"
+   }
+  },
+  {
+   "id": "abrt-206720",
+   "ko": "Misozune",
+   "en": "Boruto · #189",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 450,
+   "arts": "Unknown, Misozune",
+   "fx": [
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임"
+   ],
+   "sk": {
+    "p": 206720,
+    "u": "https://www.sakugabooru.com/data/acf9cb9a30ea782bc22055f1d75a1ad7.mp4"
+   }
+  },
+  {
+   "id": "abrt-230862",
+   "ko": "Masaaki Endo",
+   "en": "Boruto · #217",
+   "zh": "",
+   "rarity": "",
+   "attr": "Boruto",
+   "role": "",
+   "ver": "",
+   "score": 435,
+   "arts": "Masaaki Endo",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임"
+   ],
+   "sk": {
+    "p": 230862,
+    "u": "https://www.sakugabooru.com/data/11ea3159d1c569f1fd6792cc6ed8901d.mp4"
    }
   }
  ],

@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘black_clover effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘black_clover effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=black_clover+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Black Clover</a>",
  "roster": [
   {
@@ -13,6 +13,14 @@
    "ver": "",
    "score": 1992,
    "arts": "Riooo",
+   "fx": [
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 137055,
     "u": "https://www.sakugabooru.com/data/9956182c3738518ca198149b4a71e4db.mp4"
@@ -29,6 +37,13 @@
    "ver": "",
    "score": 1910,
    "arts": "Kai Ikarashi",
+   "fx": [
+    "불",
+    "번개",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 202617,
     "u": "https://www.sakugabooru.com/data/3b12cc5eea62ab00bec697c808e22338.mp4"
@@ -45,6 +60,19 @@
    "ver": "",
    "score": 1686,
    "arts": "0nepeach, Gem, Shunji Akasaka, Sute, Takaya Sunagawa, Takuya Nishimichi, Yusuke Kawakami",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "빔",
+    "얼음",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 236401,
     "u": "https://www.sakugabooru.com/data/424a7a2cf620239f9a154234752a9fed.mp4"
@@ -61,6 +89,16 @@
    "ver": "",
    "score": 1330,
    "arts": "Gem, Sute, Tokuyuki Matsutake, Toshiyuki Sato, Vincent Chansard",
+   "fx": [
+    "불",
+    "번개",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 147589,
     "u": "https://www.sakugabooru.com/data/04fa06ea981c2c0e81fbaffc0779d9fc.mp4"
@@ -77,6 +115,15 @@
    "ver": "",
    "score": 1110,
    "arts": "Tatsuya Yoshihara",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 83257,
     "u": "https://www.sakugabooru.com/data/5cd8d2ef71bf8377ebc67196e9066d01.mp4"
@@ -93,6 +140,14 @@
    "ver": "",
    "score": 972,
    "arts": "Yusuke Kawakami",
+   "fx": [
+    "불",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 229063,
     "u": "https://www.sakugabooru.com/data/4ab5eb8ed4246ebbd28541adb617819b.mp4"
@@ -109,6 +164,15 @@
    "ver": "",
    "score": 944,
    "arts": "Shota Goshozono",
+   "fx": [
+    "폭발",
+    "빔",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 209529,
     "u": "https://www.sakugabooru.com/data/56b2c9ca438d2a46a255ee5ca26b0a5b.mp4"
@@ -125,6 +189,15 @@
    "ver": "",
    "score": 916,
    "arts": "Gem, Pebble, Tilfinning",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 85306,
     "u": "https://www.sakugabooru.com/data/97fe13015ee80a8dc7b5675bd4edefbe.mp4"
@@ -141,6 +214,12 @@
    "ver": "",
    "score": 867,
    "arts": "Tatsuya Yoshihara",
+   "fx": [
+    "번개",
+    "연기",
+    "파편",
+    "CG"
+   ],
    "sk": {
     "p": 144126,
     "u": "https://www.sakugabooru.com/data/8fa979b947ac6da9dd504d0a1fc7124c.mp4"
@@ -157,6 +236,16 @@
    "ver": "",
    "score": 858,
    "arts": "Toru Iwazawa",
+   "fx": [
+    "불",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 85275,
     "u": "https://www.sakugabooru.com/data/940759a2ac69103c3ff1c066801bad95.mp4"
@@ -173,6 +262,11 @@
    "ver": "",
    "score": 841,
    "arts": "Takeshi Maenami",
+   "fx": [
+    "불",
+    "연기",
+    "스미어"
+   ],
    "sk": {
     "p": 230370,
     "u": "https://www.sakugabooru.com/data/cbd3386b3b36121dc06853ced58bc835.mp4"
@@ -189,6 +283,11 @@
    "ver": "",
    "score": 828,
    "arts": "Gem",
+   "fx": [
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 83258,
     "u": "https://www.sakugabooru.com/data/e7c50677c41325e6eba054badaecee48.mp4"
@@ -205,6 +304,13 @@
    "ver": "",
    "score": 765,
    "arts": "Sute",
+   "fx": [
+    "폭발",
+    "빔",
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 236406,
     "u": "https://www.sakugabooru.com/data/0b29ff653ae163a076d1a4a794430b43.mp4"
@@ -221,6 +327,14 @@
    "ver": "",
    "score": 762,
    "arts": "Coperime, Dorian Coulon, Isuta Meister, Yuitsu Kusakabe",
+   "fx": [
+    "불",
+    "폭발",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 230445,
     "u": "https://www.sakugabooru.com/data/7b3052b3396fff5bd10a6f22620f47ef.mp4"
@@ -237,6 +351,16 @@
    "ver": "",
    "score": 755,
    "arts": "0nepeach, Hiroaki Nakamichi, Isuta Meister, Rin-mi, Ryu Nakayama, Shun Enokido, Takahito Sakazume, Tilfinning",
+   "fx": [
+    "불",
+    "번개",
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 109300,
     "u": "https://www.sakugabooru.com/data/8c0dbea3b5e6313e83927b3e6cd894df.mp4"
@@ -253,6 +377,12 @@
    "ver": "",
    "score": 747,
    "arts": "Kosuke Kato",
+   "fx": [
+    "불",
+    "바람",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 309052,
     "u": "https://www.sakugabooru.com/data/e5ca0dafbb88801e46febb0d18575875.mp4"
@@ -269,6 +399,14 @@
    "ver": "",
    "score": 739,
    "arts": "Jay1jay1jay1",
+   "fx": [
+    "불",
+    "물·액체",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 320813,
     "u": "https://www.sakugabooru.com/data/16a5238d11b36f2d9b4e3e0e19296352.mp4"
@@ -285,6 +423,13 @@
    "ver": "",
    "score": 738,
    "arts": "Hirotaka Kondo, Tilfinning, Yukina Kosaka",
+   "fx": [
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "변형"
+   ],
    "sk": {
     "p": 126825,
     "u": "https://www.sakugabooru.com/data/3137d4d2f499b129577612c642c0d1e7.mp4"
@@ -301,6 +446,13 @@
    "ver": "",
    "score": 722,
    "arts": "Tatsuya Yoshihara",
+   "fx": [
+    "물·액체",
+    "연기",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 245264,
     "u": "https://www.sakugabooru.com/data/cf3d7105b2090feae19f172cc6e09088.mp4"
@@ -317,6 +469,12 @@
    "ver": "",
    "score": 701,
    "arts": "Yusuke Kawakami",
+   "fx": [
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 186033,
     "u": "https://www.sakugabooru.com/data/624d9901642ae40252a9a02d759444bc.mp4"

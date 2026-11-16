@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘fullmetal_alchemist effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘fullmetal_alchemist effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=fullmetal_alchemist+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Fullmetal Alchemist</a>",
  "roster": [
   {
@@ -13,6 +13,15 @@
    "ver": "",
    "score": 3579,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "불",
+    "번개",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 203287,
     "u": "https://www.sakugabooru.com/data/e6e2f20bf2dad57448f4f13d8c67a71d.mp4"
@@ -29,6 +38,12 @@
    "ver": "",
    "score": 2895,
    "arts": "Yoshimichi Kameda",
+   "fx": [
+    "물·액체",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 197864,
     "u": "https://www.sakugabooru.com/data/5a5e1624bebf4ebf7e23999277716094.mp4"
@@ -45,6 +60,10 @@
    "ver": "",
    "score": 2887,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "번개",
+    "스미어"
+   ],
    "sk": {
     "p": 108301,
     "u": "https://www.sakugabooru.com/data/1cd9d9d176f436e4a467bbe5d24393fe.mp4"
@@ -61,6 +80,15 @@
    "ver": "",
    "score": 2236,
    "arts": "Yoshimichi Kameda",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "연기",
+    "스파크",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 215914,
     "u": "https://www.sakugabooru.com/data/0728af7b88ba28b2c66d2076c2b30691.mp4"
@@ -77,6 +105,13 @@
    "ver": "",
    "score": 2147,
    "arts": "Yoshimichi Kameda",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 216675,
     "u": "https://www.sakugabooru.com/data/39cccd12c1d25da6ca06d7d158cf353f.mp4"
@@ -93,6 +128,17 @@
    "ver": "",
    "score": 1984,
    "arts": "Yoshimichi Kameda",
+   "fx": [
+    "번개",
+    "얼음",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 185912,
     "u": "https://www.sakugabooru.com/data/92b29edad0d8e17a2703e4613a6484b2.mp4"
@@ -109,6 +155,11 @@
    "ver": "",
    "score": 1932,
    "arts": "Hideki Kakita, Kou Yoshinari, Tadashi Sakazaki, Yutaka Nakamura",
+   "fx": [
+    "물·액체",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 69068,
     "u": "https://www.sakugabooru.com/data/7cd994aa0d5805956fb023c5319c923e.mp4"
@@ -125,6 +176,14 @@
    "ver": "",
    "score": 1762,
    "arts": "Yoshimichi Kameda",
+   "fx": [
+    "불",
+    "번개",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 213658,
     "u": "https://www.sakugabooru.com/data/a23c918ede333a8940cc1ce4b5466ccd.mp4"
@@ -141,6 +200,15 @@
    "ver": "",
    "score": 1424,
    "arts": "Hironori Tanaka",
+   "fx": [
+    "번개",
+    "폭발",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 265930,
     "u": "https://www.sakugabooru.com/data/6771c1e86e64d9120621f547d637b9ef.mp4"
@@ -157,6 +225,14 @@
    "ver": "",
    "score": 1361,
    "arts": "Yoshimichi Kameda",
+   "fx": [
+    "번개",
+    "폭발",
+    "연기",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 185735,
     "u": "https://www.sakugabooru.com/data/310ab8df50ad7b2da0656f12a169739c.mp4"
@@ -173,6 +249,15 @@
    "ver": "",
    "score": 1349,
    "arts": "Yoshimichi Kameda",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "연기",
+    "스파크",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 215912,
     "u": "https://www.sakugabooru.com/data/a770fbb412415eba8cbfde63290908f0.mp4"
@@ -189,6 +274,11 @@
    "ver": "",
    "score": 1348,
    "arts": "Kouichi Hashimoto, Satoru Utsunomiya",
+   "fx": [
+    "번개",
+    "연기",
+    "스파크"
+   ],
    "sk": {
     "p": 69070,
     "u": "https://www.sakugabooru.com/data/566d62f2a206f16ff2e9a82062bcdf72.mp4"
@@ -205,6 +295,12 @@
    "ver": "",
    "score": 1334,
    "arts": "Gosei Oda",
+   "fx": [
+    "번개",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 185720,
     "u": "https://www.sakugabooru.com/data/b832dbe559f70efaa0992ce7d960bfa7.mp4"
@@ -221,6 +317,12 @@
    "ver": "",
    "score": 1309,
    "arts": "Kenichi Kutsuna, Majiro, Shingo Yamashita",
+   "fx": [
+    "번개",
+    "연기",
+    "스파크",
+    "파편"
+   ],
    "sk": {
     "p": 185756,
     "u": "https://www.sakugabooru.com/data/46d4dbb22ffef1ce36d8cca6c52873b4.mp4"
@@ -237,6 +339,15 @@
    "ver": "",
    "score": 1287,
    "arts": "Yoshimichi Kameda",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 197865,
     "u": "https://www.sakugabooru.com/data/7610ff759c4046431185ea31a1be0167.mp4"
@@ -253,6 +364,10 @@
    "ver": "",
    "score": 1286,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "연기",
+    "파편"
+   ],
    "sk": {
     "p": 217673,
     "u": "https://www.sakugabooru.com/data/a7e72d4cc5a1ac5ffdc3ed83a8b48050.mp4"
@@ -269,6 +384,11 @@
    "ver": "",
    "score": 1200,
    "arts": "Norimitsu Suzuki",
+   "fx": [
+    "물·액체",
+    "스파크",
+    "파편"
+   ],
    "sk": {
     "p": 168475,
     "u": "https://www.sakugabooru.com/data/d10eb1bd19424fab945805d14d0cbcf4.mp4"
@@ -285,6 +405,12 @@
    "ver": "",
    "score": 1177,
    "arts": "Yoshimichi Kameda",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 185746,
     "u": "https://www.sakugabooru.com/data/84b59b1c159c1ee024a7b36aed44a817.mp4"
@@ -301,6 +427,10 @@
    "ver": "",
    "score": 1081,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "물·액체",
+    "스미어"
+   ],
    "sk": {
     "p": 210214,
     "u": "https://www.sakugabooru.com/data/1a6b218873f351a27b6ec7cef46b0055.mp4"
@@ -317,6 +447,12 @@
    "ver": "",
    "score": 1065,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 210213,
     "u": "https://www.sakugabooru.com/data/ea48599e5fec27f5bfdc8047e4867c85.mp4"

@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘ousama_ranking_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘ousama_ranking_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=ousama_ranking_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Ranking of Kings</a>",
  "roster": [
   {
@@ -13,6 +13,14 @@
    "ver": "",
    "score": 3071,
    "arts": "Arifumi Imai, Atsuko Nozaki, Hirotaka Tokuda, Nozomi Fujii, Porkky, Shosuke Ishibashi, Shota Goshozono, Toya Oshima",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 182379,
     "u": "https://www.sakugabooru.com/data/2c6e00e8a530d709de922ddfc8f28a17.mp4"
@@ -29,6 +37,16 @@
    "ver": "",
    "score": 1373,
    "arts": "Unknown, Atsuko Nozaki, Julian Bentley, Myoun, Takahito Sakazume, Takeru Noda, Toshiyuki Sato, Vercreek",
+   "fx": [
+    "번개",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 199113,
     "u": "https://www.sakugabooru.com/data/beba2c68ba8292347516337be8df01f8.mp4"
@@ -45,6 +63,13 @@
    "ver": "",
    "score": 1256,
    "arts": "Arifumi Imai",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 168182,
     "u": "https://www.sakugabooru.com/data/9f4c9a25a3f3980747dd80b05fbb1319.mp4"
@@ -61,6 +86,13 @@
    "ver": "",
    "score": 1197,
    "arts": "Hiromitsu Seki",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 169283,
     "u": "https://www.sakugabooru.com/data/b002c0f2f8d1e080fc508c714d9296e9.mp4"
@@ -77,6 +109,11 @@
    "ver": "",
    "score": 1097,
    "arts": "Itsuki Tsuchigami, Kouki Fujimoto, Mitsuaki Takabe, Osamu Murata",
+   "fx": [
+    "물·액체",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 192133,
     "u": "https://www.sakugabooru.com/data/e11bbfe0443ee828145ddb78cb066447.mp4"
@@ -93,6 +130,13 @@
    "ver": "",
    "score": 977,
    "arts": "Hiromitsu Seki",
+   "fx": [
+    "물·액체",
+    "스파크",
+    "파편",
+    "스미어",
+    "변형"
+   ],
    "sk": {
     "p": 181325,
     "u": "https://www.sakugabooru.com/data/cf42dc4768ec5a9b9669e42341773407.mp4"
@@ -109,6 +153,13 @@
    "ver": "",
    "score": 868,
    "arts": "Hiromatsu Shuu, Kou Horio, Shota Goshozono",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 182382,
     "u": "https://www.sakugabooru.com/data/d40c3652ac067a1fb74615f69de361f4.mp4"
@@ -125,6 +176,11 @@
    "ver": "",
    "score": 828,
    "arts": "Claire Launay, Daisuke Tsumagari, Mehdi Aouichaoui, Takeshi Maenami, Yoshimichi Kameda",
+   "fx": [
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 225551,
     "u": "https://www.sakugabooru.com/data/5afa11921e0b4a8061bfd2f3df01597c.mp4"
@@ -141,6 +197,13 @@
    "ver": "",
    "score": 820,
    "arts": "Spike",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 181321,
     "u": "https://www.sakugabooru.com/data/8429388943fe07d977c2228032b7ceb7.mp4"
@@ -157,6 +220,12 @@
    "ver": "",
    "score": 774,
    "arts": "Yoshimichi Kameda",
+   "fx": [
+    "연기",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 192137,
     "u": "https://www.sakugabooru.com/data/bc1369dbfd2985244d491e12125f2680.mp4"
@@ -173,6 +242,11 @@
    "ver": "",
    "score": 747,
    "arts": "Hiromitsu Seki",
+   "fx": [
+    "번개",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 179160,
     "u": "https://www.sakugabooru.com/data/90a23481801aadf7d4cfe6de6ae7f66b.mp4"
@@ -189,6 +263,11 @@
    "ver": "",
    "score": 716,
    "arts": "Isaac Weston",
+   "fx": [
+    "바람",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 181327,
     "u": "https://www.sakugabooru.com/data/913fd1e8ecfae2990195f33a0784ebbe.mp4"
@@ -205,6 +284,12 @@
    "ver": "",
    "score": 654,
    "arts": "Spike",
+   "fx": [
+    "물·액체",
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 192135,
     "u": "https://www.sakugabooru.com/data/122f61716d48be71655332f023d1f6a5.mp4"
@@ -221,6 +306,12 @@
    "ver": "",
    "score": 651,
    "arts": "Unknown, Sem1automatick",
+   "fx": [
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 179621,
     "u": "https://www.sakugabooru.com/data/44c7287e5f21a9a31b068841f1ffb3da.mp4"
@@ -237,6 +328,13 @@
    "ver": "",
    "score": 600,
    "arts": "Shin Ogasawara",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "스미어",
+    "변형"
+   ],
    "sk": {
     "p": 181324,
     "u": "https://www.sakugabooru.com/data/468ca5b624bbc8ea9c76c3496127e8ee.mp4"
@@ -253,6 +351,10 @@
    "ver": "",
    "score": 561,
    "arts": "Meka Aoratos, Shota Goshozono",
+   "fx": [
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 182386,
     "u": "https://www.sakugabooru.com/data/a9b2923d878fe5e03a38c6bdbe7be7a9.mp4"
@@ -269,6 +371,10 @@
    "ver": "",
    "score": 545,
    "arts": "Hiromitsu Seki",
+   "fx": [
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 171475,
     "u": "https://www.sakugabooru.com/data/2e98c85fdb6b3bc64fe160bd4e6db913.mp4"
@@ -285,6 +391,9 @@
    "ver": "",
    "score": 531,
    "arts": "Itsuki Tsuchigami",
+   "fx": [
+    "스미어"
+   ],
    "sk": {
     "p": 182455,
     "u": "https://www.sakugabooru.com/data/390a42063ddd5f19415d2ab018da8a0f.mp4"
@@ -301,6 +410,10 @@
    "ver": "",
    "score": 531,
    "arts": "0nepeach, Shota Goshozono",
+   "fx": [
+    "연기",
+    "스미어"
+   ],
    "sk": {
     "p": 182381,
     "u": "https://www.sakugabooru.com/data/76ef1a20971657617ed88a7a8b10cdcd.mp4"
@@ -317,6 +430,14 @@
    "ver": "",
    "score": 429,
    "arts": "Hirofumi Masuda, Natsuki Shimabukuro",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 168192,
     "u": "https://www.sakugabooru.com/data/451cadb974bcce8e20b289d10695943a.mp4"

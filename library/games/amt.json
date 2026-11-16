@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘mushoku_tensei_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘mushoku_tensei_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=mushoku_tensei_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Mushoku Tensei</a>",
  "roster": [
   {
@@ -13,6 +13,10 @@
    "ver": "",
    "score": 2113,
    "arts": "Q Kawa",
+   "fx": [
+    "물·액체",
+    "스미어"
+   ],
    "sk": {
     "p": 183006,
     "u": "https://www.sakugabooru.com/data/9f2030b05284d6d071855b5e31cea1dc.mp4"
@@ -29,6 +33,18 @@
    "ver": "",
    "score": 2102,
    "arts": "Unknown, Ken Otsuka, Naoya Takahashi, Q Kawa, Shho, Shingo Yamashita, Soichiro Matsuda, Yoshimichi Kameda",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 166488,
     "u": "https://www.sakugabooru.com/data/2fbd55c68deca05c9aeca7b73d6949ef.mp4"
@@ -45,6 +61,12 @@
    "ver": "",
    "score": 1857,
    "arts": "Q Kawa",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 170553,
     "u": "https://www.sakugabooru.com/data/594d70adc6c396e70575ec2463d2c996.mp4"
@@ -61,6 +83,11 @@
    "ver": "",
    "score": 1493,
    "arts": "Hiroyuki Takashima, Kosuke Yoshida",
+   "fx": [
+    "바람",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 173119,
     "u": "https://www.sakugabooru.com/data/aca4a1ccdce8bd12dc57fa9fcd864559.mp4"
@@ -77,6 +104,10 @@
    "ver": "",
    "score": 1419,
    "arts": "Q Kawa",
+   "fx": [
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 173121,
     "u": "https://www.sakugabooru.com/data/d03e1067e9c368f6eb6e58aca48dc12a.mp4"
@@ -93,6 +124,13 @@
    "ver": "",
    "score": 1134,
    "arts": "Q Kawa, Sota Shigetsugu",
+   "fx": [
+    "물·액체",
+    "연기",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 148928,
     "u": "https://www.sakugabooru.com/data/3fe0091d903cd134988af0676c938ece.mp4"
@@ -109,6 +147,15 @@
    "ver": "",
    "score": 1016,
    "arts": "Hiroyuki Takashima",
+   "fx": [
+    "불",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 144706,
     "u": "https://www.sakugabooru.com/data/ac712eb31da74e48bcd28dd6b3b96697.mp4"
@@ -125,6 +172,11 @@
    "ver": "",
    "score": 878,
    "arts": "Sute, Takahito Sakazume",
+   "fx": [
+    "물·액체",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 171086,
     "u": "https://www.sakugabooru.com/data/e4307110ef866ac1ac1bdfe8fab3e8fc.mp4"
@@ -141,6 +193,12 @@
    "ver": "",
    "score": 809,
    "arts": "Ryota Furukawa",
+   "fx": [
+    "번개",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 170552,
     "u": "https://www.sakugabooru.com/data/40b6a24e87905a5a48cddee10acda97b.mp4"
@@ -157,6 +215,13 @@
    "ver": "",
    "score": 738,
    "arts": "Q Kawa",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 245093,
     "u": "https://www.sakugabooru.com/data/3dba6510c832b294d56cc40bf86c7eb2.mp4"
@@ -173,6 +238,11 @@
    "ver": "",
    "score": 709,
    "arts": "Unknown",
+   "fx": [
+    "바람",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 166751,
     "u": "https://www.sakugabooru.com/data/02daf4260f24d0a2f2fb89bd3f666581.mp4"
@@ -189,6 +259,11 @@
    "ver": "",
    "score": 706,
    "arts": "Q Kawa",
+   "fx": [
+    "물·액체",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 245097,
     "u": "https://www.sakugabooru.com/data/d34e73ed85c415301372cb62c95d6481.mp4"
@@ -205,6 +280,14 @@
    "ver": "",
    "score": 650,
    "arts": "Q Kawa",
+   "fx": [
+    "불",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 232336,
     "u": "https://www.sakugabooru.com/data/0efcc23c9dbcb4971c0f6eb082e9ef61.mp4"
@@ -221,6 +304,11 @@
    "ver": "",
    "score": 618,
    "arts": "Akihito Sudou, Unknown, Yasuhiko Akiyama",
+   "fx": [
+    "불",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 171089,
     "u": "https://www.sakugabooru.com/data/1571ec41f009dc80e58923c79b48027b.mp4"
@@ -237,6 +325,9 @@
    "ver": "",
    "score": 540,
    "arts": "Akira Amemiya, Hiroyuki Takashima, Kai Ikarashi",
+   "fx": [
+    "물·액체"
+   ],
    "sk": {
     "p": 173110,
     "u": "https://www.sakugabooru.com/data/0170eb8ea076f97947746261e96b8f4d.mp4"
@@ -253,6 +344,12 @@
    "ver": "",
    "score": 534,
    "arts": "Evakoi, Hayato Kurosaki, Ryota Furukawa",
+   "fx": [
+    "불",
+    "연기",
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 173107,
     "u": "https://www.sakugabooru.com/data/9c63f30925401e2e57e9ab5e5500da70.mp4"
@@ -269,6 +366,14 @@
    "ver": "",
    "score": 534,
    "arts": "Jay1jay1jay1",
+   "fx": [
+    "물·액체",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 258857,
     "u": "https://www.sakugabooru.com/data/3c6a5c17fa705d54cd2cd74e694cea70.mp4"
@@ -285,6 +390,14 @@
    "ver": "",
    "score": 531,
    "arts": "Q Kawa",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 233319,
     "u": "https://www.sakugabooru.com/data/6d506cb890718cfc5d890ea36b0b23fc.mp4"
@@ -301,6 +414,15 @@
    "ver": "",
    "score": 523,
    "arts": "Hsu Injia, Q Kawa",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 258847,
     "u": "https://www.sakugabooru.com/data/ce8ee0f47ba2b05152a458a48bdb0679.mp4"
@@ -317,6 +439,11 @@
    "ver": "",
    "score": 522,
    "arts": "Hiroyuki Takashima, Sota Shigetsugu",
+   "fx": [
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 173103,
     "u": "https://www.sakugabooru.com/data/f56de76a5608b85c4ca0f996276baec1.mp4"

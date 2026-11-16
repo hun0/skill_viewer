@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘shingeki_no_kyojin_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘shingeki_no_kyojin_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=shingeki_no_kyojin_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Attack on Titan</a>",
  "roster": [
   {
@@ -13,6 +13,16 @@
    "ver": "",
    "score": 3588,
    "arts": "Arifumi Imai, Megumi Tomita, Yuuko Sera",
+   "fx": [
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 198240,
     "u": "https://www.sakugabooru.com/data/f6387e139717af0a8ee776b3c0c44d94.mp4"
@@ -29,6 +39,13 @@
    "ver": "",
    "score": 2490,
    "arts": "Arifumi Imai",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 297290,
     "u": "https://www.sakugabooru.com/data/8d43d5431e5c37abe115871d948a4f29.mp4"
@@ -45,6 +62,15 @@
    "ver": "",
    "score": 1923,
    "arts": "Q Kawa",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "임팩트 프레임",
+    "스미어",
+    "미사일"
+   ],
    "sk": {
     "p": 202128,
     "u": "https://www.sakugabooru.com/data/93274d9926b3d4929249039ddbc312bc.mp4"
@@ -61,6 +87,17 @@
    "ver": "",
    "score": 1850,
    "arts": "Arifumi Imai",
+   "fx": [
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어",
+    "미사일",
+    "CG"
+   ],
    "sk": {
     "p": 252931,
     "u": "https://www.sakugabooru.com/data/0c441c0fd5296b83941d05b9d5c4ac8f.mp4"
@@ -77,6 +114,16 @@
    "ver": "",
    "score": 1783,
    "arts": "Arifumi Imai, Kazuto Nakazawa, Naoki Yoshibe, Yasuyuki Ebara, Yukina Kosaka",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 208880,
     "u": "https://www.sakugabooru.com/data/858e52a86d7bef20e762b186e19edccb.mp4"
@@ -93,6 +140,14 @@
    "ver": "",
    "score": 1689,
    "arts": "Arifumi Imai",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "스파크",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 172516,
     "u": "https://www.sakugabooru.com/data/af99dc8b8f0becbf2a510a2e8b761d0e.mp4"
@@ -109,6 +164,14 @@
    "ver": "",
    "score": 1508,
    "arts": "Malcolm Wope",
+   "fx": [
+    "불",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 201811,
     "u": "https://www.sakugabooru.com/data/2ae8ca982be4614a9cdd0e4a95997101.mp4"
@@ -125,6 +188,11 @@
    "ver": "",
    "score": 1379,
    "arts": "Arifumi Imai",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스미어"
+   ],
    "sk": {
     "p": 177398,
     "u": "https://www.sakugabooru.com/data/99678e021be6e9c375a9fb62fc3b52bb.mp4"
@@ -141,6 +209,12 @@
    "ver": "",
    "score": 1379,
    "arts": "Unknown, Takashi Kojima",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 201809,
     "u": "https://www.sakugabooru.com/data/b934c4daf78a8253e9833cb6185df7ab.mp4"
@@ -157,6 +231,14 @@
    "ver": "",
    "score": 1337,
    "arts": "Arifumi Imai",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 198242,
     "u": "https://www.sakugabooru.com/data/2db1879fb2dd2834c8f5f510052b5228.mp4"
@@ -173,6 +255,14 @@
    "ver": "",
    "score": 1281,
    "arts": "Arifumi Imai",
+   "fx": [
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 172532,
     "u": "https://www.sakugabooru.com/data/b7f29fb4c37d6006739c4ad14a848c0a.mp4"
@@ -189,6 +279,12 @@
    "ver": "",
    "score": 1229,
    "arts": "Arifumi Imai",
+   "fx": [
+    "연기",
+    "바람",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 222405,
     "u": "https://www.sakugabooru.com/data/b4c314b95a644aded9d50436e1f48389.mp4"
@@ -205,6 +301,13 @@
    "ver": "",
    "score": 1209,
    "arts": "Arifumi Imai",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 262111,
     "u": "https://www.sakugabooru.com/data/db3d637dd4ffff905cd1872b641424f8.mp4"
@@ -221,6 +324,13 @@
    "ver": "",
    "score": 1114,
    "arts": "Arifumi Imai",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 222397,
     "u": "https://www.sakugabooru.com/data/2f5554f75ac54dbcb58ab83798ddb36c.mp4"
@@ -237,6 +347,13 @@
    "ver": "",
    "score": 1000,
    "arts": "Akira Hamaguchi",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 155268,
     "u": "https://www.sakugabooru.com/data/806a659d5c8d018cce586086f409abf9.mp4"
@@ -253,6 +370,13 @@
    "ver": "",
    "score": 844,
    "arts": "Chengxi Huang, Jay1jay1jay1",
+   "fx": [
+    "번개",
+    "물·액체",
+    "스파크",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 252913,
     "u": "https://www.sakugabooru.com/data/a115d55ca3ab3cbe49780011725d1e21.mp4"
@@ -269,6 +393,14 @@
    "ver": "",
    "score": 831,
    "arts": "Takuma Ebisu",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 222412,
     "u": "https://www.sakugabooru.com/data/baa5bbe3588053732a2448aaeaa4e9b3.mp4"
@@ -285,6 +417,13 @@
    "ver": "",
    "score": 774,
    "arts": "Arifumi Imai",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 165676,
     "u": "https://www.sakugabooru.com/data/b496e65f29a812da15c7709fb51caf04.mp4"
@@ -301,6 +440,15 @@
    "ver": "",
    "score": 767,
    "arts": "Arifumi Imai",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 233601,
     "u": "https://www.sakugabooru.com/data/1a09134ed542093e50c4e57adbc1ff9d.mp4"
@@ -317,6 +465,11 @@
    "ver": "",
    "score": 763,
    "arts": "Arifumi Imai",
+   "fx": [
+    "연기",
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 118880,
     "u": "https://www.sakugabooru.com/data/ee293c6e4c460cb7fb83b28abf60abb0.mp4"

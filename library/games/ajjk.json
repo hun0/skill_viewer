@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘jujutsu_kaisen_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘jujutsu_kaisen_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=jujutsu_kaisen_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Jujutsu Kaisen</a>",
  "roster": [
   {
@@ -13,6 +13,14 @@
    "ver": "",
    "score": 3639,
    "arts": "10+10, Gosei Oda, Hakuyu Go, Harumi Yamazaki, Kaito Tomioka, Keiichiro Watanabe, Nakaya Onsen, Naoki Miyajima, Rui, Shota Goshozono, Shouichi, Sota Shigetsugu, Sou Miyazaki, Weilin Zhang, Yoshiki Nakakoji",
+   "fx": [
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 252457,
     "u": "https://www.sakugabooru.com/data/12d655926dc87a75dea9136e03458006.mp4"
@@ -29,6 +37,20 @@
    "ver": "",
    "score": 3423,
    "arts": "Sou Miyazaki",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "변형"
+   ],
    "sk": {
     "p": 252420,
     "u": "https://www.sakugabooru.com/data/f80714402e1475df492237c8c7e91309.mp4"
@@ -45,6 +67,13 @@
    "ver": "",
    "score": 3334,
    "arts": "Hironori Tanaka, Saucelot, Takumi Sunakohara, Vincent Chansard",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편"
+   ],
    "sk": {
     "p": 252468,
     "u": "https://www.sakugabooru.com/data/03b87dae94c9db47fd820aa98c8f50f8.mp4"
@@ -61,6 +90,12 @@
    "ver": "",
    "score": 3090,
    "arts": "Keiichiro Watanabe",
+   "fx": [
+    "물·액체",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 146024,
     "u": "https://www.sakugabooru.com/data/aca2bc973b8dee387c43dcec9829848e.mp4"
@@ -77,6 +112,13 @@
    "ver": "",
    "score": 2762,
    "arts": "Keiichiro Watanabe",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 134442,
     "u": "https://www.sakugabooru.com/data/fa8b509d4f79962ad8aa1e0ef503e5c5.mp4"
@@ -93,6 +135,15 @@
    "ver": "",
    "score": 2731,
    "arts": "Bahi Jd, Hakuyu Go, Julian Bentley",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 252560,
     "u": "https://www.sakugabooru.com/data/1ac478a25b61230fd3955cdd79809a0e.mp4"
@@ -109,6 +160,12 @@
    "ver": "",
    "score": 2680,
    "arts": "Nakaya Onsen",
+   "fx": [
+    "물·액체",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 252410,
     "u": "https://www.sakugabooru.com/data/b373d130d6d1048251e4459ac01a144d.mp4"
@@ -125,6 +182,14 @@
    "ver": "",
    "score": 2463,
    "arts": "Hakuyu Go, Vincent Chansard",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 252460,
     "u": "https://www.sakugabooru.com/data/cc5c74f5089154a0fed6076ba8f95382.mp4"
@@ -141,6 +206,11 @@
    "ver": "",
    "score": 2398,
    "arts": "Vercreek",
+   "fx": [
+    "물·액체",
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 140472,
     "u": "https://www.sakugabooru.com/data/5670d412b3cbb90b1cffb5e75845aa1a.mp4"
@@ -157,6 +227,12 @@
    "ver": "",
    "score": 2335,
    "arts": "Hironori Tanaka, Kouki Fujimoto, Ren Onodera",
+   "fx": [
+    "물·액체",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 244246,
     "u": "https://www.sakugabooru.com/data/49c8149debce9f9841e6fe8295c80e7e.mp4"
@@ -173,6 +249,13 @@
    "ver": "",
    "score": 2261,
    "arts": "Tatsuya Yoshihara",
+   "fx": [
+    "물·액체",
+    "바람",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 184245,
     "u": "https://www.sakugabooru.com/data/377e3f253ad558cf7cd4c2ecafe36f67.mp4"
@@ -189,6 +272,15 @@
    "ver": "",
    "score": 2206,
    "arts": "Vercreek",
+   "fx": [
+    "번개",
+    "물·액체",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 144501,
     "u": "https://www.sakugabooru.com/data/d21045ae98f151f6d465d5ad20cefdf4.mp4"
@@ -205,6 +297,12 @@
    "ver": "",
    "score": 2185,
    "arts": "Kosuke Kato",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 240080,
     "u": "https://www.sakugabooru.com/data/6e12ca636a6bd47f55c083fd820a168d.mp4"
@@ -221,6 +319,12 @@
    "ver": "",
    "score": 2179,
    "arts": "Akira Hamaguchi, Hakuyu Go, Toshiyuki Sato",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "파편"
+   ],
    "sk": {
     "p": 252549,
     "u": "https://www.sakugabooru.com/data/36093d43c634730521a5b9be3935cd9f.mp4"
@@ -237,6 +341,11 @@
    "ver": "",
    "score": 2160,
    "arts": "Keiichiro Watanabe",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스미어"
+   ],
    "sk": {
     "p": 252403,
     "u": "https://www.sakugabooru.com/data/9f81299dd6050aabdad2babd060db656.mp4"
@@ -253,6 +362,12 @@
    "ver": "",
    "score": 2132,
    "arts": "Nakaya Onsen",
+   "fx": [
+    "물·액체",
+    "바람",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 164034,
     "u": "https://www.sakugabooru.com/data/1f7920badfd86e928d3d8cbdd5c1b3f2.mp4"
@@ -269,6 +384,12 @@
    "ver": "",
    "score": 2067,
    "arts": "Daniel Kim",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스미어",
+    "변형"
+   ],
    "sk": {
     "p": 247669,
     "u": "https://www.sakugabooru.com/data/5360317572eca580ba758b5eb76ab975.mp4"
@@ -285,6 +406,12 @@
    "ver": "",
    "score": 2063,
    "arts": "Hakuyu Go, Vincent Chansard",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 252458,
     "u": "https://www.sakugabooru.com/data/9f9530ad8a1aec21d00c739463f4aaa2.mp4"
@@ -301,6 +428,15 @@
    "ver": "",
    "score": 1914,
    "arts": "Kosuke Kato, Naoki Miyajima",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 255335,
     "u": "https://www.sakugabooru.com/data/19eaef4daa60f5e78b4d73789480fd80.mp4"
@@ -317,6 +453,13 @@
    "ver": "",
    "score": 1859,
    "arts": "Nakaya Onsen",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 252414,
     "u": "https://www.sakugabooru.com/data/eac5f7dd8f90dae6b9a319b6cc66ff6a.mp4"

@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘kimetsu_no_yaiba_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘kimetsu_no_yaiba_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=kimetsu_no_yaiba_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Demon Slayer</a>",
  "roster": [
   {
@@ -13,6 +13,12 @@
    "ver": "",
    "score": 2649,
    "arts": "Nozomu Abe",
+   "fx": [
+    "불",
+    "스파크",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 117031,
     "u": "https://www.sakugabooru.com/data/9d8498e8cf3092c9a6650acb0472e52b.mp4"
@@ -29,6 +35,16 @@
    "ver": "",
    "score": 2213,
    "arts": "Nozomu Abe",
+   "fx": [
+    "폭발",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 199401,
     "u": "https://www.sakugabooru.com/data/3d5d26d95dbb848e8439034c8d10a612.mp4"
@@ -45,6 +61,12 @@
    "ver": "",
    "score": 1927,
    "arts": "Masaru Kimura, Masayuki Kunihiro",
+   "fx": [
+    "불",
+    "물·액체",
+    "스파크",
+    "CG"
+   ],
    "sk": {
     "p": 84723,
     "u": "https://www.sakugabooru.com/data/dc6d4a63794315bcf793f1481578bdcd.mp4"
@@ -61,6 +83,17 @@
    "ver": "",
    "score": 1896,
    "arts": "Nozomu Abe",
+   "fx": [
+    "불",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 157527,
     "u": "https://www.sakugabooru.com/data/e6489143d16475d290087cc2ed874e74.mp4"
@@ -77,6 +110,15 @@
    "ver": "",
    "score": 1654,
    "arts": "Nozomu Abe",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "바람",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 236066,
     "u": "https://www.sakugabooru.com/data/f66b65734f11d6e44febb3443f69eff1.mp4"
@@ -93,6 +135,16 @@
    "ver": "",
    "score": 1515,
    "arts": "Nozomu Abe",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 192371,
     "u": "https://www.sakugabooru.com/data/631f0fe67d5f25301c34a668a284e112.mp4"
@@ -109,6 +161,12 @@
    "ver": "",
    "score": 1389,
    "arts": "Masayuki Kunihiro",
+   "fx": [
+    "연기",
+    "스파크",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 199400,
     "u": "https://www.sakugabooru.com/data/24183b122300ee20a5875ed8700f7bb6.mp4"
@@ -125,6 +183,16 @@
    "ver": "",
    "score": 1275,
    "arts": "Nozomu Abe",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 227487,
     "u": "https://www.sakugabooru.com/data/09e2c6d5d664b386c605fc755fe0e4aa.mp4"
@@ -141,6 +209,16 @@
    "ver": "",
    "score": 1267,
    "arts": "Nozomu Abe",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 83563,
     "u": "https://www.sakugabooru.com/data/c6c3451b29890089943589b1bb0e3ebd.mp4"
@@ -157,6 +235,11 @@
    "ver": "",
    "score": 1134,
    "arts": "Masayuki Kunihiro",
+   "fx": [
+    "바람",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 81944,
     "u": "https://www.sakugabooru.com/data/876826104a414bd5d25ad67cbd0e4d48.mp4"
@@ -173,6 +256,17 @@
    "ver": "",
    "score": 1128,
    "arts": "Nozomu Abe",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "변형",
+    "CG"
+   ],
    "sk": {
     "p": 259894,
     "u": "https://www.sakugabooru.com/data/d9339b4bffa06dea06f91adf3094cd24.mp4"
@@ -189,6 +283,16 @@
    "ver": "",
    "score": 1033,
    "arts": "Masaharu Koyama, Masaru Kimura, Shinichi Kurita",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 199399,
     "u": "https://www.sakugabooru.com/data/1f5250fa842fb44a7ba4fdfa712cba7e.mp4"
@@ -205,6 +309,12 @@
    "ver": "",
    "score": 1033,
    "arts": "Masayuki Kunihiro",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "CG"
+   ],
    "sk": {
     "p": 167976,
     "u": "https://www.sakugabooru.com/data/e9a51f0f7730f825a92437ea5fb2aba3.mp4"
@@ -221,6 +331,11 @@
    "ver": "",
    "score": 991,
    "arts": "Mitsuru Obunai",
+   "fx": [
+    "스파크",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 195943,
     "u": "https://www.sakugabooru.com/data/85f15247320b626001907f6cd0eba7ac.mp4"
@@ -237,6 +352,12 @@
    "ver": "",
    "score": 934,
    "arts": "Masayuki Kunihiro",
+   "fx": [
+    "물·액체",
+    "스파크",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 199444,
     "u": "https://www.sakugabooru.com/data/4c9436c892c8469770d78fc41cd3829f.mp4"
@@ -253,6 +374,15 @@
    "ver": "",
    "score": 913,
    "arts": "Masayuki Kunihiro",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 157603,
     "u": "https://www.sakugabooru.com/data/914247b6cfefc67138b31bdc74303047.mp4"
@@ -269,6 +399,14 @@
    "ver": "",
    "score": 869,
    "arts": "Nozomu Abe",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 246032,
     "u": "https://www.sakugabooru.com/data/03cc3add18326850bcf52756e559ac71.mp4"
@@ -285,6 +423,12 @@
    "ver": "",
    "score": 853,
    "arts": "Hironori Tanaka",
+   "fx": [
+    "바람",
+    "스파크",
+    "파편",
+    "CG"
+   ],
    "sk": {
     "p": 246107,
     "u": "https://www.sakugabooru.com/data/888caa84d024bfe470969aee064df32a.mp4"
@@ -301,6 +445,15 @@
    "ver": "",
    "score": 838,
    "arts": "Hironori Tanaka, Kazuhiro Miwa",
+   "fx": [
+    "불",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "임팩트 프레임",
+    "CG"
+   ],
    "sk": {
     "p": 157504,
     "u": "https://www.sakugabooru.com/data/ff33d84c46f8af15e48076f3273a43a2.mp4"
@@ -317,6 +470,13 @@
    "ver": "",
    "score": 823,
    "arts": "Masayuki Kunihiro",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 229077,
     "u": "https://www.sakugabooru.com/data/6e74aed18394e240ce995e6ccafe06c9.mp4"

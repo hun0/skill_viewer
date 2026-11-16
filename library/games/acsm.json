@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘chainsaw_man_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘chainsaw_man_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=chainsaw_man_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Chainsaw Man</a>",
  "roster": [
   {
@@ -13,6 +13,11 @@
    "ver": "",
    "score": 2118,
    "arts": "Keiichiro Watanabe",
+   "fx": [
+    "물·액체",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 220741,
     "u": "https://www.sakugabooru.com/data/e0d811db9dd8f097e18c21ccb548f271.mp4"
@@ -29,6 +34,12 @@
    "ver": "",
    "score": 2011,
    "arts": "Unknown, Benjamin Faure, Taiwei Lu, Tam Lu, Yen Bm",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 217103,
     "u": "https://www.sakugabooru.com/data/52c54c30fa55aa432861082683a63715.mp4"
@@ -45,6 +56,15 @@
    "ver": "",
    "score": 1935,
    "arts": "Unknown, Gem, Hironori Tanaka, Keiichiro Watanabe, Kouki Fujimoto, Kowei Lin, Ryu Nakayama, Sayaka Koiso, Shun Enokido, Takahito Sakazume, Tatsuya Yoshihara",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어",
+    "변형",
+    "CG"
+   ],
    "sk": {
     "p": 158339,
     "u": "https://www.sakugabooru.com/data/16d403697ff890538b3a46384be97d9e.mp4"
@@ -61,6 +81,16 @@
    "ver": "",
    "score": 1837,
    "arts": "Saucelot",
+   "fx": [
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 316592,
     "u": "https://www.sakugabooru.com/data/7339c658e6c40bf6cb6bef8b09db981b.mp4"
@@ -77,6 +107,11 @@
    "ver": "",
    "score": 1742,
    "arts": "Vercreek",
+   "fx": [
+    "폭발",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 316591,
     "u": "https://www.sakugabooru.com/data/aa3a3cc80ccd40b05453b90a64f0464b.mp4"
@@ -93,6 +128,13 @@
    "ver": "",
    "score": 1735,
    "arts": "Kouki Fujimoto",
+   "fx": [
+    "물·액체",
+    "연기",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 211479,
     "u": "https://www.sakugabooru.com/data/32c753effc18f0de37f3b147224312d9.mp4"
@@ -109,6 +151,14 @@
    "ver": "",
    "score": 1647,
    "arts": "Unknown, Julian Bentley, Tatsuya Yoshihara, Toru Iwazawa",
+   "fx": [
+    "번개",
+    "폭발",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 316606,
     "u": "https://www.sakugabooru.com/data/85005fd8c386de11d22f76d6305842de.mp4"
@@ -125,6 +175,13 @@
    "ver": "",
    "score": 1646,
    "arts": "Hironori Tanaka, Kouki Fujimoto",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 211950,
     "u": "https://www.sakugabooru.com/data/68d1a2ec258b93f62c686aca1ff5c45c.mp4"
@@ -141,6 +198,12 @@
    "ver": "",
    "score": 1507,
    "arts": "Hisashi Mori, Shinnosuke Tanaka",
+   "fx": [
+    "물·액체",
+    "연기",
+    "파편",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 211478,
     "u": "https://www.sakugabooru.com/data/c68e587fcb1d49dfbfcc7c69895ae3b3.mp4"
@@ -157,6 +220,13 @@
    "ver": "",
    "score": 1488,
    "arts": "Daniel Kim, Takafumi Mitani",
+   "fx": [
+    "물·액체",
+    "연기",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 212603,
     "u": "https://www.sakugabooru.com/data/1da6e16a1be22a2fac6a45cc721ddc4e.mp4"
@@ -173,6 +243,12 @@
    "ver": "",
    "score": 1324,
    "arts": "Benjamin Faure, Kaito Tomioka, Vercreek, Yen Bm",
+   "fx": [
+    "물·액체",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 217102,
     "u": "https://www.sakugabooru.com/data/c12530bf962d969b46821e64f2f86c8b.mp4"
@@ -189,6 +265,14 @@
    "ver": "",
    "score": 1322,
    "arts": "Yen Bm",
+   "fx": [
+    "번개",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 209166,
     "u": "https://www.sakugabooru.com/data/0496b976fb34861406e3e2c8741cc8b1.mp4"
@@ -205,6 +289,11 @@
    "ver": "",
    "score": 1306,
    "arts": "Keiichiro Watanabe",
+   "fx": [
+    "물·액체",
+    "스미어",
+    "변형"
+   ],
    "sk": {
     "p": 210920,
     "u": "https://www.sakugabooru.com/data/64d9baf9e8e5d4b807aeaf880df7f03f.mp4"
@@ -221,6 +310,16 @@
    "ver": "",
    "score": 1303,
    "arts": "Unknown, Hironori Tanaka, Julian Bentley, Kai Shibata, Kanta Suzuki",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 208628,
     "u": "https://www.sakugabooru.com/data/9b276895bd0ffe61c75e9d4877d5de82.mp4"
@@ -237,6 +336,15 @@
    "ver": "",
    "score": 1140,
    "arts": "Daniel Kim",
+   "fx": [
+    "폭발",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 316600,
     "u": "https://www.sakugabooru.com/data/8579136259b1f73c1b582e9112f45856.mp4"
@@ -253,6 +361,13 @@
    "ver": "",
    "score": 1127,
    "arts": "Shuu Sugita",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 316598,
     "u": "https://www.sakugabooru.com/data/7b50ea162204a38ec0a9abf2a83fb3b3.mp4"
@@ -269,6 +384,12 @@
    "ver": "",
    "score": 1085,
    "arts": "Tatsuya Yoshihara",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 208036,
     "u": "https://www.sakugabooru.com/data/97c24381ee5e8a768094302b13bcda03.mp4"
@@ -285,6 +406,10 @@
    "ver": "",
    "score": 1049,
    "arts": "Gem",
+   "fx": [
+    "물·액체",
+    "스미어"
+   ],
    "sk": {
     "p": 209785,
     "u": "https://www.sakugabooru.com/data/2516931a86a770278b3c126498c6a984.mp4"
@@ -301,6 +426,14 @@
    "ver": "",
    "score": 1024,
    "arts": "Kaito Tomioka",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "스미어",
+    "미사일"
+   ],
    "sk": {
     "p": 316602,
     "u": "https://www.sakugabooru.com/data/1e9eeccdcb0a3636f416bbecad86fead.mp4"
@@ -317,6 +450,11 @@
    "ver": "",
    "score": 1016,
    "arts": "Kaito Tomioka",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스미어"
+   ],
    "sk": {
     "p": 212528,
     "u": "https://www.sakugabooru.com/data/cdf4dc5e0b27f0e3d55ee86e0441cae6.mp4"

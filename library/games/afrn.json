@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘sousou_no_frieren_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘sousou_no_frieren_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=sousou_no_frieren_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Frieren</a>",
  "roster": [
   {
@@ -13,6 +13,17 @@
    "ver": "",
    "score": 4001,
    "arts": "Hironori Tanaka, Keiichiro Watanabe, Shingo Yamashita, Tatsuya Yoshihara, Yen Bm, Yutaka Nakamura",
+   "fx": [
+    "불",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 250896,
     "u": "https://www.sakugabooru.com/data/68f2a292b0ebb04475f27f789c231893.mp4"
@@ -29,6 +40,15 @@
    "ver": "",
    "score": 2264,
    "arts": "Vercreek",
+   "fx": [
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 251534,
     "u": "https://www.sakugabooru.com/data/f7e964369668d8c571cd5a16cb22f453.mp4"
@@ -45,6 +65,15 @@
    "ver": "",
    "score": 2212,
    "arts": "Kouki Fujimoto",
+   "fx": [
+    "불",
+    "폭발",
+    "빔",
+    "물·액체",
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 241278,
     "u": "https://www.sakugabooru.com/data/53ae06b8aeb6410d5e522e7ab22d3711.mp4"
@@ -61,6 +90,17 @@
    "ver": "",
    "score": 1793,
    "arts": "Kouki Fujimoto",
+   "fx": [
+    "불",
+    "번개",
+    "빔",
+    "물·액체",
+    "연기",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 262048,
     "u": "https://www.sakugabooru.com/data/dca376bf6a861ff6f45db32687090f90.mp4"
@@ -77,6 +117,13 @@
    "ver": "",
    "score": 1555,
    "arts": "Keiichiro Watanabe",
+   "fx": [
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 251551,
     "u": "https://www.sakugabooru.com/data/2c2fc67b0ccd6897f190e6fbe696ca77.mp4"
@@ -93,6 +140,13 @@
    "ver": "",
    "score": 1354,
    "arts": "Unknown, Hanwen Ye, Michael Sung, Toru Iwazawa",
+   "fx": [
+    "번개",
+    "빔",
+    "연기",
+    "바람",
+    "파편"
+   ],
    "sk": {
     "p": 268649,
     "u": "https://www.sakugabooru.com/data/3d02d29b42b086afd405dc3eea039fde.mp4"
@@ -109,6 +163,13 @@
    "ver": "",
    "score": 1299,
    "arts": "Hiroki Uchiyama",
+   "fx": [
+    "연기",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 250227,
     "u": "https://www.sakugabooru.com/data/bb4ccbba9c4fb51cbc573288fb893449.mp4"
@@ -125,6 +186,13 @@
    "ver": "",
    "score": 1205,
    "arts": "Masaaki Endo",
+   "fx": [
+    "불",
+    "연기",
+    "바람",
+    "스파크",
+    "파편"
+   ],
    "sk": {
     "p": 251549,
     "u": "https://www.sakugabooru.com/data/65fd46c16adeb8d0dacfe7afd3eb0fa0.mp4"
@@ -141,6 +209,13 @@
    "ver": "",
    "score": 1168,
    "arts": "Kanako Yoshida",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 241281,
     "u": "https://www.sakugabooru.com/data/3f159fd62ec7e12916279fe370116a4d.mp4"
@@ -157,6 +232,13 @@
    "ver": "",
    "score": 1139,
    "arts": "Kouki Fujimoto, Tatsuya Yoshihara, Toshiyuki Sato",
+   "fx": [
+    "빔",
+    "물·액체",
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 241286,
     "u": "https://www.sakugabooru.com/data/4276cefab3f3a98bd92e5f1b291bddbd.mp4"
@@ -173,6 +255,15 @@
    "ver": "",
    "score": 1055,
    "arts": "Hayato Kurosaki, Keiichiro Watanabe, Yutaka Nakamura",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 301777,
     "u": "https://www.sakugabooru.com/data/ffdfc45bfe4c66d01c5acc1c66de91fe.mp4"
@@ -189,6 +280,9 @@
    "ver": "",
    "score": 932,
    "arts": "Unknown",
+   "fx": [
+    "물·액체"
+   ],
    "sk": {
     "p": 241263,
     "u": "https://www.sakugabooru.com/data/01d1618e044aee190d6a19447a88acb6.mp4"
@@ -205,6 +299,13 @@
    "ver": "",
    "score": 895,
    "arts": "Hiroki Uchiyama",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 241283,
     "u": "https://www.sakugabooru.com/data/3d582e49fd690931638682a41f010d51.mp4"
@@ -221,6 +322,14 @@
    "ver": "",
    "score": 865,
    "arts": "Kouki Fujimoto",
+   "fx": [
+    "빔",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 249521,
     "u": "https://www.sakugabooru.com/data/68e1bd1fd7c0aca19fcee63321fc7a3c.mp4"
@@ -237,6 +346,14 @@
    "ver": "",
    "score": 778,
    "arts": "Kouta Mori",
+   "fx": [
+    "불",
+    "빔",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 298180,
     "u": "https://www.sakugabooru.com/data/8798c49ef6ebbfe8cc40048cebb709bb.mp4"
@@ -253,6 +370,14 @@
    "ver": "",
    "score": 775,
    "arts": "Tetsuta Sannomiya",
+   "fx": [
+    "빔",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 251830,
     "u": "https://www.sakugabooru.com/data/8ada890a8119b0ccc4ab3d1c45f800ea.mp4"
@@ -269,6 +394,15 @@
    "ver": "",
    "score": 741,
    "arts": "Kouki Fujimoto",
+   "fx": [
+    "폭발",
+    "빔",
+    "물·액체",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 301790,
     "u": "https://www.sakugabooru.com/data/c4fe144dbc925d2583d2e1069c262c0e.mp4"
@@ -285,6 +419,14 @@
    "ver": "",
    "score": 730,
    "arts": "Hanwen Ye, Toru Iwazawa",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 241272,
     "u": "https://www.sakugabooru.com/data/23a31eaa76ca2b4459aef5a146a845de.mp4"
@@ -301,6 +443,14 @@
    "ver": "",
    "score": 716,
    "arts": "Tatsuzou Nishita",
+   "fx": [
+    "번개",
+    "빔",
+    "연기",
+    "바람",
+    "스파크",
+    "파편"
+   ],
    "sk": {
     "p": 251829,
     "u": "https://www.sakugabooru.com/data/38627a6114324feaf7bffcc2598c8142.mp4"
@@ -317,6 +467,14 @@
    "ver": "",
    "score": 696,
    "arts": "Unknown, Hanwen Ye, Kako Matsumura, Nonno, Toru Iwazawa",
+   "fx": [
+    "빔",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 238377,
     "u": "https://www.sakugabooru.com/data/d85f0764907c6c7b9bff3c8124068153.mp4"

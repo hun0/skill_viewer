@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘one_piece effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘one_piece effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=one_piece+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · One Piece</a>",
  "roster": [
   {
@@ -13,6 +13,17 @@
    "ver": "",
    "score": 4908,
    "arts": "Akihiro Ota",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 217484,
     "u": "https://www.sakugabooru.com/data/08c15ccfb45da4643beb326e964bb2cc.mp4"
@@ -29,6 +40,18 @@
    "ver": "",
    "score": 4213,
    "arts": "Hiromi Ishigami, Isuta Meister, Masami Mori, Shuu Sugita, Takashi Hashimoto, Takeshi Maenami, Tetsuro Niregi",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 283898,
     "u": "https://www.sakugabooru.com/data/909b344d139cd83c04d231d96b070ce1.mp4"
@@ -45,6 +68,14 @@
    "ver": "",
    "score": 4143,
    "arts": "Katsumi Ishizuka",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 283895,
     "u": "https://www.sakugabooru.com/data/7f4db72f8f85e6daf43d6cf4535a982b.mp4"
@@ -61,6 +92,16 @@
    "ver": "",
    "score": 4052,
    "arts": "Weilin Zhang",
+   "fx": [
+    "불",
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 234269,
     "u": "https://www.sakugabooru.com/data/5b9403629c6f110163ce3ecc16ddd871.mp4"
@@ -77,6 +118,15 @@
    "ver": "",
    "score": 3910,
    "arts": "Keisuke Okura, Shuu Sugita, Sota Shigetsugu, Vincent Chansard, Yen Bm, Yuu Yoshiyama",
+   "fx": [
+    "번개",
+    "빔",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 236300,
     "u": "https://www.sakugabooru.com/data/dc395590485a0f43bec6ea770acf74c2.mp4"
@@ -93,6 +143,16 @@
    "ver": "",
    "score": 3601,
    "arts": "Luana Nguyen, Vincent Chansard",
+   "fx": [
+    "불",
+    "번개",
+    "빔",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 228603,
     "u": "https://www.sakugabooru.com/data/2d4adc8e59c9796c284459e4481cb5c9.mp4"
@@ -109,6 +169,13 @@
    "ver": "",
    "score": 3390,
    "arts": "Koudai Watanabe",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 233815,
     "u": "https://www.sakugabooru.com/data/bf95e98e93bef1d9a15941afe31ad33d.mp4"
@@ -125,6 +192,16 @@
    "ver": "",
    "score": 3272,
    "arts": "Takashi Kojima",
+   "fx": [
+    "불",
+    "얼음",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 188360,
     "u": "https://www.sakugabooru.com/data/22ba277def88315a9ef82b39afb222ec.mp4"
@@ -141,6 +218,13 @@
    "ver": "",
    "score": 3250,
    "arts": "Bahi Jd",
+   "fx": [
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 263683,
     "u": "https://www.sakugabooru.com/data/bf3e37e81d5cc455cd0f1b14f01e081f.mp4"
@@ -157,6 +241,17 @@
    "ver": "",
    "score": 3212,
    "arts": "Yen Bm",
+   "fx": [
+    "불",
+    "번개",
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 228604,
     "u": "https://www.sakugabooru.com/data/ee4c93f97e03455dff5ea78c1ed8db41.mp4"
@@ -173,6 +268,14 @@
    "ver": "",
    "score": 3106,
    "arts": "Akihiro Ota",
+   "fx": [
+    "불",
+    "번개",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 204501,
     "u": "https://www.sakugabooru.com/data/8673316bfc6c141fe291c2a9bb048cf5.mp4"
@@ -189,6 +292,10 @@
    "ver": "",
    "score": 3066,
    "arts": "Naoki Tate",
+   "fx": [
+    "연기",
+    "스미어"
+   ],
    "sk": {
     "p": 35126,
     "u": "https://www.sakugabooru.com/data/dc15aec5ac3d3440a6503452b4cf84d1.mp4"
@@ -205,6 +312,15 @@
    "ver": "",
    "score": 2953,
    "arts": "Unknown, Bahi Jd, Julian Bentley, Masami Mori, Yen Bm",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "변형"
+   ],
    "sk": {
     "p": 234967,
     "u": "https://www.sakugabooru.com/data/6cd9a96b8eeea24dc78cf8c174f2cc0a.mp4"
@@ -221,6 +337,15 @@
    "ver": "",
    "score": 2921,
    "arts": "Julien Cortey, Vincent Chansard",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 209006,
     "u": "https://www.sakugabooru.com/data/12662062c782b001e612b137ccf6764c.mp4"
@@ -237,6 +362,12 @@
    "ver": "",
    "score": 2900,
    "arts": "Takashi Kojima",
+   "fx": [
+    "연기",
+    "바람",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 283894,
     "u": "https://www.sakugabooru.com/data/44d918cf13a451671899b13294335a71.mp4"
@@ -253,6 +384,17 @@
    "ver": "",
    "score": 2851,
    "arts": "Vincent Chansard",
+   "fx": [
+    "불",
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 259237,
     "u": "https://www.sakugabooru.com/data/a2990c4401da1fe26c8da802b0c468d7.mp4"
@@ -269,6 +411,15 @@
    "ver": "",
    "score": 2823,
    "arts": "Vincent Chansard",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 216609,
     "u": "https://www.sakugabooru.com/data/b4bd817fa30294b7fb534e77e185f016.mp4"
@@ -285,6 +436,14 @@
    "ver": "",
    "score": 2807,
    "arts": "Hironori Tanaka",
+   "fx": [
+    "얼음",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 302080,
     "u": "https://www.sakugabooru.com/data/187e35ffc29c9dd9605e36164289d2d7.mp4"
@@ -301,6 +460,14 @@
    "ver": "",
    "score": 2791,
    "arts": "Sota Shigetsugu",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 172477,
     "u": "https://www.sakugabooru.com/data/3daac7c9aadde92d60f99d448a45dfc2.mp4"
@@ -317,6 +484,14 @@
    "ver": "",
    "score": 2768,
    "arts": "Akihiro Ota",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "연기",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 204496,
     "u": "https://www.sakugabooru.com/data/2dcb4f1e3ecc3801b21ec1c61819da51.mp4"

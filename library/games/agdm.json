@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘gundam effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘gundam effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=gundam+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Gundam</a>",
  "roster": [
   {
@@ -13,6 +13,11 @@
    "ver": "",
    "score": 918,
    "arts": "Akihiko Yamashita",
+   "fx": [
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 103108,
     "u": "https://www.sakugabooru.com/data/8a268adcdbbc5e8472cd3bad81994113.mp4"
@@ -29,6 +34,10 @@
    "ver": "",
    "score": 730,
    "arts": "Hirotoshi Takaya",
+   "fx": [
+    "스파크",
+    "파편"
+   ],
    "sk": {
     "p": 251153,
     "u": "https://www.sakugabooru.com/data/837fbdf14a95770ca9678332647f7526.mp4"
@@ -45,6 +54,12 @@
    "ver": "",
    "score": 529,
    "arts": "Unknown, Kazuki Ito, Nobuhiko Genma",
+   "fx": [
+    "폭발",
+    "빔",
+    "바람",
+    "파편"
+   ],
    "sk": {
     "p": 147443,
     "u": "https://www.sakugabooru.com/data/354b167023a9aa6176c9440709a9cd8c.mp4"
@@ -61,6 +76,15 @@
    "ver": "",
    "score": 486,
    "arts": "Hirotoshi Takaya, Shingo Tamagawa",
+   "fx": [
+    "불",
+    "빔",
+    "물·액체",
+    "연기",
+    "스파크",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 158583,
     "u": "https://www.sakugabooru.com/data/b485a81e94881bb4c7d1b06796f8aeb8.mp4"
@@ -77,6 +101,11 @@
    "ver": "",
    "score": 466,
    "arts": "Shigeki Kuhara, Yutaka Nakamura",
+   "fx": [
+    "번개",
+    "연기",
+    "파편"
+   ],
    "sk": {
     "p": 294834,
     "u": "https://www.sakugabooru.com/data/89a4fb56f587c709b1eb015144716cd8.mp4"
@@ -93,6 +122,15 @@
    "ver": "",
    "score": 417,
    "arts": "Hirotoshi Takaya",
+   "fx": [
+    "불",
+    "빔",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "CG"
+   ],
    "sk": {
     "p": 158585,
     "u": "https://www.sakugabooru.com/data/cab41387235d2aeff8a42345665aefbf.mp4"
@@ -109,6 +147,12 @@
    "ver": "",
    "score": 380,
    "arts": "Unknown, Takashi Tomioka",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "CG"
+   ],
    "sk": {
     "p": 158551,
     "u": "https://www.sakugabooru.com/data/a59a335548c6fc33300c7bc738e94611.mp4"
@@ -125,6 +169,11 @@
    "ver": "",
    "score": 347,
    "arts": "Shukou Murase",
+   "fx": [
+    "폭발",
+    "빔",
+    "연기"
+   ],
    "sk": {
     "p": 5708,
     "u": "https://www.sakugabooru.com/data/be35993d1514a818ee9aa1db4c8da6ce.webm"
@@ -141,6 +190,13 @@
    "ver": "",
    "score": 340,
    "arts": "Yasuomi Umetsu",
+   "fx": [
+    "폭발",
+    "빔",
+    "연기",
+    "파편",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 5168,
     "u": "https://www.sakugabooru.com/data/3258d53f1a4918cad540d7d28cedf3e1.webm"
@@ -157,6 +213,11 @@
    "ver": "",
    "score": 326,
    "arts": "Unknown, Kenichi Kangawa, Osamu Yamane, Shinya Tateyama",
+   "fx": [
+    "연기",
+    "스파크",
+    "CG"
+   ],
    "sk": {
     "p": 206362,
     "u": "https://www.sakugabooru.com/data/af415c56cf21e3f4f3c13043971b903c.mp4"
@@ -173,6 +234,13 @@
    "ver": "",
    "score": 307,
    "arts": "Masahito Yamashita, Masami Obari, Yousuke Kabashima",
+   "fx": [
+    "번개",
+    "빔",
+    "물·액체",
+    "연기",
+    "스파크"
+   ],
    "sk": {
     "p": 270392,
     "u": "https://www.sakugabooru.com/data/6a38ae932f8ea90a1907520c50985ae6.mp4"
@@ -189,6 +257,10 @@
    "ver": "",
    "score": 301,
    "arts": "Unknown, Hirotoshi Sano, Mitsuo Iso",
+   "fx": [
+    "폭발",
+    "물·액체"
+   ],
    "sk": {
     "p": 38709,
     "u": "https://www.sakugabooru.com/data/fb70237b2baee9da31be8d741b965de2.mp4"
@@ -205,6 +277,13 @@
    "ver": "",
    "score": 296,
    "arts": "Hirofumi Masuda, Seiichi Nakatani",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "연기",
+    "파편"
+   ],
    "sk": {
     "p": 56511,
     "u": "https://www.sakugabooru.com/data/73e0238e45a8563fe577fbf0505c1892.mp4"
@@ -221,6 +300,12 @@
    "ver": "",
    "score": 277,
    "arts": "Unknown, Mitsuo Iso",
+   "fx": [
+    "폭발",
+    "빔",
+    "연기",
+    "파편"
+   ],
    "sk": {
     "p": 216204,
     "u": "https://www.sakugabooru.com/data/c19258371ddfbac3144daa935e697f84.mp4"
@@ -237,6 +322,10 @@
    "ver": "",
    "score": 243,
    "arts": "Hiroyuki Nishimura",
+   "fx": [
+    "물·액체",
+    "스미어"
+   ],
    "sk": {
     "p": 262074,
     "u": "https://www.sakugabooru.com/data/73ffaf0767c522d0122ab320eb74c3f1.mp4"
@@ -253,6 +342,10 @@
    "ver": "",
    "score": 238,
    "arts": "Seiichi Nakatani",
+   "fx": [
+    "연기",
+    "파편"
+   ],
    "sk": {
     "p": 103008,
     "u": "https://www.sakugabooru.com/data/33267abdd0598ec303986aa6b776fd9b.mp4"
@@ -269,6 +362,14 @@
    "ver": "",
    "score": 238,
    "arts": "Unknown, Kanta Suzuki, Masami Obari, Yuu Yoshiyama",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 215190,
     "u": "https://www.sakugabooru.com/data/a381796e1535bdabc25d01c276a1755d.mp4"
@@ -285,6 +386,9 @@
    "ver": "",
    "score": 235,
    "arts": "Daisuke Shibukawa",
+   "fx": [
+    "빔"
+   ],
    "sk": {
     "p": 231004,
     "u": "https://www.sakugabooru.com/data/44155ab5091b888d4741acece1c3db7e.mp4"
@@ -301,6 +405,9 @@
    "ver": "",
    "score": 230,
    "arts": "Atsushi Shigeta",
+   "fx": [
+    "빔"
+   ],
    "sk": {
     "p": 287612,
     "u": "https://www.sakugabooru.com/data/87d90a38155bdeee4d6dcf42d421364a.mp4"
@@ -317,6 +424,12 @@
    "ver": "",
    "score": 225,
    "arts": "Hirotoshi Sano, Kouji Sugiura, Shukou Murase, Yutaka Nakamura",
+   "fx": [
+    "폭발",
+    "빔",
+    "연기",
+    "스파크"
+   ],
    "sk": {
     "p": 228636,
     "u": "https://www.sakugabooru.com/data/4c148a8f48aa7b9b187d28cd5fc6602a.mp4"

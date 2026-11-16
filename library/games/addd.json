@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘dandadan effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘dandadan effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=dandadan+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Dandadan</a>",
  "roster": [
   {
@@ -13,6 +13,14 @@
    "ver": "",
    "score": 839,
    "arts": "Genta Ishimori",
+   "fx": [
+    "번개",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 287174,
     "u": "https://www.sakugabooru.com/data/d6511d233d24f836b0950e342bf38e87.mp4"
@@ -29,6 +37,11 @@
    "ver": "",
    "score": 723,
    "arts": "Kinya Rikitoku, Shuuto Enomoto",
+   "fx": [
+    "물·액체",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 269710,
     "u": "https://www.sakugabooru.com/data/729b7047550cd2342b61d5672542bfa6.mp4"
@@ -45,6 +58,13 @@
    "ver": "",
    "score": 643,
    "arts": "Genta Ishimori",
+   "fx": [
+    "폭발",
+    "연기",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 290120,
     "u": "https://www.sakugabooru.com/data/bc67b2f8f7088c565ef1ecce9f274919.mp4"
@@ -61,6 +81,12 @@
    "ver": "",
    "score": 627,
    "arts": "Incylinder",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 267078,
     "u": "https://www.sakugabooru.com/data/816fc437d5ac6ae4cc82784610dc5eba.mp4"
@@ -77,6 +103,12 @@
    "ver": "",
    "score": 591,
    "arts": "Genta Ishimori, Shuuto Enomoto, Songlin Yao",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 269693,
     "u": "https://www.sakugabooru.com/data/40fb26197c5175a4f2f34769b565b5c9.mp4"
@@ -93,6 +125,12 @@
    "ver": "",
    "score": 553,
    "arts": "Unknown, Jason Yao, Nasiijau, Shuuto Enomoto, Yusaku Nagahama",
+   "fx": [
+    "연기",
+    "바람",
+    "스파크",
+    "파편"
+   ],
    "sk": {
     "p": 269690,
     "u": "https://www.sakugabooru.com/data/99a2b271d3a5af45852d117c3776586d.mp4"
@@ -109,6 +147,13 @@
    "ver": "",
    "score": 547,
    "arts": "0nepeach",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 287740,
     "u": "https://www.sakugabooru.com/data/40a5007deae1259ed33b7463faa860bb.mp4"
@@ -125,6 +170,12 @@
    "ver": "",
    "score": 514,
    "arts": "Hayato Kurosaki",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "스파크"
+   ],
    "sk": {
     "p": 268479,
     "u": "https://www.sakugabooru.com/data/2242dbd15d5ed4b7099d2e2748db0305.mp4"
@@ -141,6 +192,11 @@
    "ver": "",
    "score": 494,
    "arts": "Unknown",
+   "fx": [
+    "물·액체",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 270849,
     "u": "https://www.sakugabooru.com/data/8dbf50ba10c8b5f204c654f12383ca30.mp4"
@@ -157,6 +213,12 @@
    "ver": "",
    "score": 482,
    "arts": "Toshiyuki Sato",
+   "fx": [
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 288211,
     "u": "https://www.sakugabooru.com/data/2efd5a9a6b80f186eddf45c3a14e7ed2.mp4"
@@ -173,6 +235,13 @@
    "ver": "",
    "score": 482,
    "arts": "Unknown, Myoun",
+   "fx": [
+    "연기",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 267076,
     "u": "https://www.sakugabooru.com/data/77101db9a8cbcc54de10b52e6e340163.mp4"
@@ -189,6 +258,13 @@
    "ver": "",
    "score": 444,
    "arts": "Yuu Yoshiyama",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 287737,
     "u": "https://www.sakugabooru.com/data/5a4e1ae298202355f60302b2649e202f.mp4"
@@ -205,6 +281,11 @@
    "ver": "",
    "score": 439,
    "arts": "Unknown, Genta Ishimori",
+   "fx": [
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 290453,
     "u": "https://www.sakugabooru.com/data/d4b0620480a5823bfd2cdd2562d0165b.mp4"
@@ -221,6 +302,12 @@
    "ver": "",
    "score": 411,
    "arts": "0nepeach",
+   "fx": [
+    "빔",
+    "물·액체",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 271393,
     "u": "https://www.sakugabooru.com/data/75b48bcf134a7e2d22804f1c9d87fafa.mp4"
@@ -237,6 +324,13 @@
    "ver": "",
    "score": 396,
    "arts": "Kinya Rikitoku",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 288215,
     "u": "https://www.sakugabooru.com/data/3d4d30065a52cc6c7b8f707c47e8332a.mp4"
@@ -253,6 +347,10 @@
    "ver": "",
    "score": 384,
    "arts": "Jura",
+   "fx": [
+    "연기",
+    "파편"
+   ],
    "sk": {
     "p": 269688,
     "u": "https://www.sakugabooru.com/data/297ceae4f9fe3d3f4f3eebac6d84e0bc.mp4"
@@ -269,6 +367,11 @@
    "ver": "",
    "score": 366,
    "arts": "Unknown",
+   "fx": [
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 267074,
     "u": "https://www.sakugabooru.com/data/42b562872754d7c54e500ab53b2e41d0.mp4"
@@ -285,6 +388,13 @@
    "ver": "",
    "score": 331,
    "arts": "Kyohei Ebata",
+   "fx": [
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 287175,
     "u": "https://www.sakugabooru.com/data/4117cd9b651a80d5086a357a8bfe6c1f.mp4"
@@ -301,6 +411,10 @@
    "ver": "",
    "score": 327,
    "arts": "Unknown, Shuuto Enomoto, Xiao Lin",
+   "fx": [
+    "연기",
+    "파편"
+   ],
    "sk": {
     "p": 269689,
     "u": "https://www.sakugabooru.com/data/0ede947a72a16686f1a10796f837bb6d.mp4"
@@ -317,6 +431,9 @@
    "ver": "",
    "score": 326,
    "arts": "Zhilong Li",
+   "fx": [
+    "물·액체"
+   ],
    "sk": {
     "p": 270846,
     "u": "https://www.sakugabooru.com/data/fee6d5c6514a1fd7e76b2923bd445356.mp4"

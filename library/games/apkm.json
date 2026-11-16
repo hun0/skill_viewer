@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘pokemon effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘pokemon effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=pokemon+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Pokémon</a>",
  "roster": [
   {
@@ -13,6 +13,13 @@
    "ver": "",
    "score": 3017,
    "arts": "Unknown, Keiichiro Watanabe, Weilin Zhang",
+   "fx": [
+    "불",
+    "빔",
+    "연기",
+    "바람",
+    "파편"
+   ],
    "sk": {
     "p": 217828,
     "u": "https://www.sakugabooru.com/data/ed382f832821198bd45b6cfca2188b78.mp4"
@@ -29,6 +36,15 @@
    "ver": "",
    "score": 2348,
    "arts": "Yuki Hayashi, Yutaka Nakamura",
+   "fx": [
+    "번개",
+    "얼음",
+    "물·액체",
+    "연기",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 252543,
     "u": "https://www.sakugabooru.com/data/28cb9bef4772dc748d28a3e1cc4a80e5.mp4"
@@ -45,6 +61,11 @@
    "ver": "",
    "score": 2057,
    "arts": "Weilin Zhang",
+   "fx": [
+    "불",
+    "연기",
+    "파편"
+   ],
    "sk": {
     "p": 278007,
     "u": "https://www.sakugabooru.com/data/059e099c8cb99a07d4ee065bb7211a7b.mp4"
@@ -61,6 +82,12 @@
    "ver": "",
    "score": 1348,
    "arts": "Yoshimichi Kameda",
+   "fx": [
+    "번개",
+    "연기",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 266931,
     "u": "https://www.sakugabooru.com/data/8e29643a0b12107110725429c1704cc0.mp4"
@@ -77,6 +104,15 @@
    "ver": "",
    "score": 1293,
    "arts": "Hiromitsu Seki",
+   "fx": [
+    "불",
+    "번개",
+    "물·액체",
+    "연기",
+    "파편",
+    "스미어",
+    "미사일"
+   ],
    "sk": {
     "p": 217827,
     "u": "https://www.sakugabooru.com/data/670b702c0f1f620a774f62fedb71d586.mp4"
@@ -93,6 +129,14 @@
    "ver": "",
    "score": 1219,
    "arts": "Claire Launay, Osamu Murata, Takeshi Maenami, Washio",
+   "fx": [
+    "불",
+    "번개",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 209981,
     "u": "https://www.sakugabooru.com/data/b2c1ccc9895500a982370e8d7df24bdf.mp4"
@@ -109,6 +153,14 @@
    "ver": "",
    "score": 1166,
    "arts": "Unknown, Chikashi Kubota, Daiki Harashina, Hiroyuki Horiuchi, Maki Kawake, Osamu Murata, Shosuke Ishibashi, Shuhei Yasuda, Toshiyuki Sato, Yoshimichi Kameda",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 219589,
     "u": "https://www.sakugabooru.com/data/b413d5965530dcb33304e9ac3efb05f2.mp4"
@@ -125,6 +177,16 @@
    "ver": "",
    "score": 889,
    "arts": "Takeshi Maenami",
+   "fx": [
+    "번개",
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 282421,
     "u": "https://www.sakugabooru.com/data/3ecebc13f5fc9b9d9994f288e6e533a9.mp4"
@@ -141,6 +203,10 @@
    "ver": "",
    "score": 854,
    "arts": "Koudai Watanabe",
+   "fx": [
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 266117,
     "u": "https://www.sakugabooru.com/data/edd224d6d1ec43d129437a779a40853c.mp4"
@@ -157,6 +223,13 @@
    "ver": "",
    "score": 779,
    "arts": "Aito Ohashi",
+   "fx": [
+    "폭발",
+    "얼음",
+    "연기",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 219224,
     "u": "https://www.sakugabooru.com/data/53e6d4d8071900d2d48f925e4149586a.mp4"
@@ -173,6 +246,12 @@
    "ver": "",
    "score": 701,
    "arts": "Yuki Sato",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 181567,
     "u": "https://www.sakugabooru.com/data/47a3dc34f4e4d8dae0b9818e343ed2fc.mp4"
@@ -189,6 +268,13 @@
    "ver": "",
    "score": 646,
    "arts": "Aito Ohashi",
+   "fx": [
+    "번개",
+    "빔",
+    "연기",
+    "파편",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 219223,
     "u": "https://www.sakugabooru.com/data/a22fd913f0a37bf2e1688a5f8c524e04.mp4"
@@ -205,6 +291,13 @@
    "ver": "",
    "score": 643,
    "arts": "Yoh Yoshinari",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 190598,
     "u": "https://www.sakugabooru.com/data/b31bd78a57af055b9f9c856c5b3ae9f4.mp4"
@@ -221,6 +314,11 @@
    "ver": "",
    "score": 631,
    "arts": "Takeshi Maenami",
+   "fx": [
+    "불",
+    "번개",
+    "스미어"
+   ],
    "sk": {
     "p": 218611,
     "u": "https://www.sakugabooru.com/data/51f9f330b3d9969e40f2e6cc6fd16148.mp4"
@@ -237,6 +335,16 @@
    "ver": "",
    "score": 569,
    "arts": "Aito Ohashi",
+   "fx": [
+    "불",
+    "폭발",
+    "빔",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 154015,
     "u": "https://www.sakugabooru.com/data/eca202f68629077feb7ffd21d1c30ec6.mp4"
@@ -253,6 +361,14 @@
    "ver": "",
    "score": 568,
    "arts": "Yuuta Kiso",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "바람",
+    "파편",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 181574,
     "u": "https://www.sakugabooru.com/data/3b9c0bc8d3f8f09f59a68c10660d1e5c.mp4"
@@ -269,6 +385,16 @@
    "ver": "",
    "score": 564,
    "arts": "Yuhei Takahoshi, Yusuke Oshida",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 209979,
     "u": "https://www.sakugabooru.com/data/7b952b7aae411f1875af1dcf2e26a2d0.mp4"
@@ -285,6 +411,12 @@
    "ver": "",
    "score": 547,
    "arts": "Takeshi Maenami",
+   "fx": [
+    "번개",
+    "연기",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 201263,
     "u": "https://www.sakugabooru.com/data/13327f48c5442c545c124f7590ec2255.mp4"
@@ -301,6 +433,13 @@
    "ver": "",
    "score": 535,
    "arts": "Yasushi Nishiya",
+   "fx": [
+    "불",
+    "번개",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 248464,
     "u": "https://www.sakugabooru.com/data/6409df0a831c5becdfdb36cd8f422ea6.mp4"
@@ -317,6 +456,10 @@
    "ver": "",
    "score": 509,
    "arts": "Takeshi Maenami",
+   "fx": [
+    "불",
+    "스미어"
+   ],
    "sk": {
     "p": 243758,
     "u": "https://www.sakugabooru.com/data/aeb3ae2dd6f086cb257b6cba8587f6e0.mp4"

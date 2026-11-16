@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘my_hero_academia_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘my_hero_academia_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 50개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=my_hero_academia_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · My Hero Academia</a>",
  "roster": [
   {
@@ -13,6 +13,16 @@
    "ver": "",
    "score": 4879,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "불",
+    "번개",
+    "얼음",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 281209,
     "u": "https://www.sakugabooru.com/data/e82353d35c2366854a527c51d1b48728.mp4"
@@ -29,6 +39,13 @@
    "ver": "",
    "score": 3757,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "번개",
+    "폭발",
+    "연기",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 208545,
     "u": "https://www.sakugabooru.com/data/26d17257636f4eb1a51719df78eaa89b.mp4"
@@ -45,6 +62,14 @@
    "ver": "",
    "score": 3482,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 281605,
     "u": "https://www.sakugabooru.com/data/25deb205ea7b7270b4bc89b7e3d62b3c.mp4"
@@ -61,6 +86,15 @@
    "ver": "",
    "score": 3216,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "번개",
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 280456,
     "u": "https://www.sakugabooru.com/data/9a2b7d473a236871e3723b3f60ff6b52.mp4"
@@ -77,6 +111,15 @@
    "ver": "",
    "score": 2886,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "불",
+    "얼음",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 166565,
     "u": "https://www.sakugabooru.com/data/aed75925fe0d67f7e06b444427e66f75.mp4"
@@ -93,6 +136,13 @@
    "ver": "",
    "score": 2804,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "번개",
+    "연기",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 205025,
     "u": "https://www.sakugabooru.com/data/3c6c558a179909bc2203617a87a6c7c7.mp4"
@@ -109,6 +159,16 @@
    "ver": "",
    "score": 2625,
    "arts": "Norimitsu Suzuki",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "빔",
+    "얼음",
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 180104,
     "u": "https://www.sakugabooru.com/data/ac5f3e02849649a8ff15f411e5ff21e2.mp4"
@@ -125,6 +185,13 @@
    "ver": "",
    "score": 2520,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "얼음",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 281196,
     "u": "https://www.sakugabooru.com/data/08e42e2be4aee113655eb86a05238093.mp4"
@@ -141,6 +208,13 @@
    "ver": "",
    "score": 2386,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "불",
+    "연기",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 281606,
     "u": "https://www.sakugabooru.com/data/de2c1bfffdbe7b2cdec90d607333e751.mp4"
@@ -157,6 +231,14 @@
    "ver": "",
    "score": 2233,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "번개",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 280210,
     "u": "https://www.sakugabooru.com/data/a8623baafd28b7805b2237ca03c3fcfa.mp4"
@@ -173,6 +255,14 @@
    "ver": "",
    "score": 2205,
    "arts": "Hakuyu Go, Hironori Tanaka, Itsuki Tsuchigami, Kazuto Arai, Tatsuya Miki",
+   "fx": [
+    "번개",
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 195118,
     "u": "https://www.sakugabooru.com/data/0aa89062f3017255b558496c9713e488.mp4"
@@ -189,6 +279,13 @@
    "ver": "",
    "score": 2107,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 281565,
     "u": "https://www.sakugabooru.com/data/943e55497656719c920a020b404f1463.mp4"
@@ -205,6 +302,14 @@
    "ver": "",
    "score": 2084,
    "arts": "Hironori Tanaka, Jun Tsu-fon, Yutaka Nakamura",
+   "fx": [
+    "폭발",
+    "얼음",
+    "연기",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 290894,
     "u": "https://www.sakugabooru.com/data/d7fc199bdf8a06a7dbc364ce8c60447c.mp4"
@@ -221,6 +326,15 @@
    "ver": "",
    "score": 2051,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 281184,
     "u": "https://www.sakugabooru.com/data/98409b480551bae8689b8019b568de35.mp4"
@@ -237,6 +351,15 @@
    "ver": "",
    "score": 1901,
    "arts": "Yutaka Nakamura, Yuuta Kiso",
+   "fx": [
+    "번개",
+    "폭발",
+    "얼음",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 229832,
     "u": "https://www.sakugabooru.com/data/667a17b11fed52c6add8d7f97f219618.mp4"
@@ -253,6 +376,16 @@
    "ver": "",
    "score": 1750,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "번개",
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "CG"
+   ],
    "sk": {
     "p": 290900,
     "u": "https://www.sakugabooru.com/data/ca634c9c3954c910b5b46e9610ccc751.mp4"
@@ -269,6 +402,15 @@
    "ver": "",
    "score": 1492,
    "arts": "Shuu Sugita, Yuki Hayashi",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 281182,
     "u": "https://www.sakugabooru.com/data/6e6f037dcdef7b7f70b8841af73d3e23.mp4"
@@ -285,6 +427,11 @@
    "ver": "",
    "score": 1434,
    "arts": "Norimitsu Suzuki",
+   "fx": [
+    "폭발",
+    "스파크",
+    "파편"
+   ],
    "sk": {
     "p": 208549,
     "u": "https://www.sakugabooru.com/data/b6fbf0c631c2354d5f8d67ce4114bb96.mp4"
@@ -301,6 +448,11 @@
    "ver": "",
    "score": 1421,
    "arts": "Shuu Sugita",
+   "fx": [
+    "불",
+    "바람",
+    "임팩트 프레임"
+   ],
    "sk": {
     "p": 145784,
     "u": "https://www.sakugabooru.com/data/f0c6b727d527453675becf7495452135.mp4"
@@ -317,9 +469,748 @@
    "ver": "",
    "score": 1344,
    "arts": "Yutaka Nakamura",
+   "fx": [
+    "번개",
+    "빔",
+    "물·액체",
+    "연기",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 233386,
     "u": "https://www.sakugabooru.com/data/abf4575522e0fba59a213194e5ab9245.mp4"
+   }
+  },
+  {
+   "id": "amha-280342",
+   "ko": "Hideki Kakita, Yoshimichi Kameda",
+   "en": "My Hero Academia Movie 2: Heroes Rising · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia Movie 2: Heroes …",
+   "role": "",
+   "ver": "",
+   "score": 1319,
+   "arts": "Hideki Kakita, Yoshimichi Kameda",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 280342,
+    "u": "https://www.sakugabooru.com/data/192c7d4dc4d81b4fbc2442e0be7ccffc.mp4"
+   }
+  },
+  {
+   "id": "amha-210085",
+   "ko": "Haruka Iida, Yutaka Nakamura",
+   "en": "My Hero Academia · #088 (S4 #25)",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 1315,
+   "arts": "Haruka Iida, Yutaka Nakamura",
+   "fx": [
+    "불",
+    "연기",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
+   "sk": {
+    "p": 210085,
+    "u": "https://www.sakugabooru.com/data/3c71915500583f2dc7a95e561546ef1c.mp4"
+   }
+  },
+  {
+   "id": "amha-290889",
+   "ko": "Shuu Sugita",
+   "en": "My Hero Academia Movie 4: You're Next · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia Movie 4: You're …",
+   "role": "",
+   "ver": "",
+   "score": 1306,
+   "arts": "Shuu Sugita",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 290889,
+    "u": "https://www.sakugabooru.com/data/f8a95ec492f48f647953fd72234e3345.mp4"
+   }
+  },
+  {
+   "id": "amha-281261",
+   "ko": "Shuu Sugita, Takafumi Mitani",
+   "en": "My Hero Academia · #049 (S3 #11)",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 1306,
+   "arts": "Shuu Sugita, Takafumi Mitani",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임"
+   ],
+   "sk": {
+    "p": 281261,
+    "u": "https://www.sakugabooru.com/data/548692429f8437486711b26263c02db9.mp4"
+   }
+  },
+  {
+   "id": "amha-185235",
+   "ko": "Kai Ikarashi, Kazuhiro Miwa",
+   "en": "My Hero Academia · NCOP01",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 1305,
+   "arts": "Kai Ikarashi, Kazuhiro Miwa",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 185235,
+    "u": "https://www.sakugabooru.com/data/8920eb3f7e5c8dc21b5f278242fe58f2.mp4"
+   }
+  },
+  {
+   "id": "amha-290899",
+   "ko": "Hakuyu Go, Kohei Hirota 외 2명",
+   "en": "My Hero Academia Movie 4: You're Next · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia Movie 4: You're …",
+   "role": "",
+   "ver": "",
+   "score": 1287,
+   "arts": "Hakuyu Go, Kohei Hirota, Takafumi Mitani, Yuuta Kiso",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "얼음",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "CG"
+   ],
+   "sk": {
+    "p": 290899,
+    "u": "https://www.sakugabooru.com/data/852da410cd12c35b274c149473fd1def.mp4"
+   }
+  },
+  {
+   "id": "amha-214416",
+   "ko": "Hironori Tanaka, Shuuichiro Manabe 외 2명",
+   "en": "My Hero Academia · #025 (S2 #12)",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 1266,
+   "arts": "Hironori Tanaka, Shuuichiro Manabe, Takafumi Mitani, Yasuyuki Kai",
+   "fx": [
+    "불",
+    "폭발",
+    "얼음",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 214416,
+    "u": "https://www.sakugabooru.com/data/7430c90c1745de1aac6e31fb4b2a726c.mp4"
+   }
+  },
+  {
+   "id": "amha-218858",
+   "ko": "Yuki Hayashi",
+   "en": "My Hero Academia Movie 2: Heroes Rising · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia Movie 2: Heroes …",
+   "role": "",
+   "ver": "",
+   "score": 1263,
+   "arts": "Yuki Hayashi",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 218858,
+    "u": "https://www.sakugabooru.com/data/8c2d9e1652568bca115203944fed0c6c.mp4"
+   }
+  },
+  {
+   "id": "amha-281607",
+   "ko": "Norimitsu Suzuki",
+   "en": "My Hero Academia · #092 (S5 #04)",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 1263,
+   "arts": "Norimitsu Suzuki",
+   "fx": [
+    "번개",
+    "연기",
+    "스미어"
+   ],
+   "sk": {
+    "p": 281607,
+    "u": "https://www.sakugabooru.com/data/8e7dd09c0ed5afe8551f255ff3be1299.mp4"
+   }
+  },
+  {
+   "id": "amha-201737",
+   "ko": "Hakuyu Go, Hiroshi Tomioka 외 6명",
+   "en": "My Hero Academia · #012",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 1222,
+   "arts": "Hakuyu Go, Hiroshi Tomioka, Kenji Mizuhata, Ken Takahashi, Naoki Miyajima, Takumi Sunakohara, Toshi Sada, Toya Oshima",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 201737,
+    "u": "https://www.sakugabooru.com/data/d3bf8f8166a3b003310ade798d5acfa2.mp4"
+   }
+  },
+  {
+   "id": "amha-166566",
+   "ko": "Yukina Kosaka",
+   "en": "My Hero Academia · #096 (S5 #08) (2nd KA: Y",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 1217,
+   "arts": "Yukina Kosaka",
+   "fx": [
+    "불",
+    "연기",
+    "바람",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 166566,
+    "u": "https://www.sakugabooru.com/data/4c8fec567485d1ba8a37b01d12c436d9.mp4"
+   }
+  },
+  {
+   "id": "amha-208539",
+   "ko": "Yuki Sato",
+   "en": "My Hero Academia · #061 (S3 #23)",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 1198,
+   "arts": "Yuki Sato",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 208539,
+    "u": "https://www.sakugabooru.com/data/817b5be1ca69353290e680d843a190de.mp4"
+   }
+  },
+  {
+   "id": "amha-145787",
+   "ko": "Shuhei Fukuda",
+   "en": "My Hero Academia · #088 (S4 #25)",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 1171,
+   "arts": "Shuhei Fukuda",
+   "fx": [
+    "불",
+    "빔",
+    "연기",
+    "임팩트 프레임"
+   ],
+   "sk": {
+    "p": 145787,
+    "u": "https://www.sakugabooru.com/data/5d490ba217358b3f5a1b39434f69a298.mp4"
+   }
+  },
+  {
+   "id": "amha-290883",
+   "ko": "Yuki Hayashi",
+   "en": "My Hero Academia Movie 4: You're Next · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia Movie 4: You're …",
+   "role": "",
+   "ver": "",
+   "score": 1067,
+   "arts": "Yuki Hayashi",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "얼음",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 290883,
+    "u": "https://www.sakugabooru.com/data/b7e0da2684f0281f380c0bfed6f037ce.mp4"
+   }
+  },
+  {
+   "id": "amha-290895",
+   "ko": "Hironori Tanaka, Ittaku Koushou 외 1명",
+   "en": "My Hero Academia Movie 4: You're Next · BD (PN)",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia Movie 4: You're …",
+   "role": "",
+   "ver": "",
+   "score": 1048,
+   "arts": "Hironori Tanaka, Ittaku Koushou, Jun Tsu-fon",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 290895,
+    "u": "https://www.sakugabooru.com/data/75c0e0bad6698d1f0d3cb67616a49456.mp4"
+   }
+  },
+  {
+   "id": "amha-269006",
+   "ko": "Kohei Hirota",
+   "en": "My Hero Academia · #151 (S7 #13)",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 1022,
+   "arts": "Kohei Hirota",
+   "fx": [
+    "번개",
+    "바람",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 269006,
+    "u": "https://www.sakugabooru.com/data/4eb4d46218666e3c9bbc0e098228eee2.mp4"
+   }
+  },
+  {
+   "id": "amha-280455",
+   "ko": "Takafumi Mitani",
+   "en": "My Hero Academia Movie 2: Heroes Rising · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia Movie 2: Heroes …",
+   "role": "",
+   "ver": "",
+   "score": 1012,
+   "arts": "Takafumi Mitani",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "연기",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 280455,
+    "u": "https://www.sakugabooru.com/data/71ed6c54fbb0d0837643e45c697ac001.mp4"
+   }
+  },
+  {
+   "id": "amha-183749",
+   "ko": "Takafumi Mitani",
+   "en": "My Hero Academia · #063 (S3 #25)",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 1009,
+   "arts": "Takafumi Mitani",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "스미어"
+   ],
+   "sk": {
+    "p": 183749,
+    "u": "https://www.sakugabooru.com/data/93b57d1f0b32b09973a8aa6505042860.mp4"
+   }
+  },
+  {
+   "id": "amha-217324",
+   "ko": "Norimitsu Suzuki",
+   "en": "My Hero Academia · #118 (S6 #05)",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 1008,
+   "arts": "Norimitsu Suzuki",
+   "fx": [
+    "불",
+    "물·액체",
+    "스미어",
+    "CG"
+   ],
+   "sk": {
+    "p": 217324,
+    "u": "https://www.sakugabooru.com/data/69eec7c53e3f347fbae8131befcc4e0f.mp4"
+   }
+  },
+  {
+   "id": "amha-206116",
+   "ko": "Norimitsu Suzuki",
+   "en": "My Hero Academia · #114 (S6 #01)",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 964,
+   "arts": "Norimitsu Suzuki",
+   "fx": [
+    "물·액체",
+    "바람",
+    "스미어"
+   ],
+   "sk": {
+    "p": 206116,
+    "u": "https://www.sakugabooru.com/data/0627fd2810d332ec01e110ae0bfd53dd.mp4"
+   }
+  },
+  {
+   "id": "amha-281575",
+   "ko": "Kouki Fujimoto",
+   "en": "My Hero Academia · #072 (S4 #09)",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 931,
+   "arts": "Kouki Fujimoto",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 281575,
+    "u": "https://www.sakugabooru.com/data/e4f0bfbc66b04a5f22961bd82b83e688.mp4"
+   }
+  },
+  {
+   "id": "amha-280208",
+   "ko": "Yuuta Kiso",
+   "en": "My Hero Academia Movie 1: Two Heroes · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia Movie 1: Two Her…",
+   "role": "",
+   "ver": "",
+   "score": 918,
+   "arts": "Yuuta Kiso",
+   "fx": [
+    "번개",
+    "얼음",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "CG"
+   ],
+   "sk": {
+    "p": 280208,
+    "u": "https://www.sakugabooru.com/data/5069618fa18dde70ae352f274f3ccc2c.mp4"
+   }
+  },
+  {
+   "id": "amha-185231",
+   "ko": "Kazuhiro Miwa",
+   "en": "My Hero Academia · #004",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 899,
+   "arts": "Kazuhiro Miwa",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 185231,
+    "u": "https://www.sakugabooru.com/data/afaf65da97a10a7e8ee170d2137035c8.mp4"
+   }
+  },
+  {
+   "id": "amha-199689",
+   "ko": "Shuu Sugita, Yuki Hayashi",
+   "en": "My Hero Academia · NCOP04",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 898,
+   "arts": "Shuu Sugita, Yuki Hayashi",
+   "fx": [
+    "불",
+    "번개",
+    "얼음",
+    "연기",
+    "파편",
+    "변형"
+   ],
+   "sk": {
+    "p": 199689,
+    "u": "https://www.sakugabooru.com/data/8f627fa1fbda5c90363067f29a5de62b.mp4"
+   }
+  },
+  {
+   "id": "amha-290896",
+   "ko": "Vercreek",
+   "en": "My Hero Academia Movie 4: You're Next · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia Movie 4: You're …",
+   "role": "",
+   "ver": "",
+   "score": 895,
+   "arts": "Vercreek",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "바람",
+    "스미어",
+    "변형"
+   ],
+   "sk": {
+    "p": 290896,
+    "u": "https://www.sakugabooru.com/data/9d954cf27ebc49230a8de5a10899b801.mp4"
+   }
+  },
+  {
+   "id": "amha-253924",
+   "ko": "Shuu Sugita",
+   "en": "My Hero Academia · #030 (S2 #17)",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 877,
+   "arts": "Shuu Sugita",
+   "fx": [
+    "불",
+    "연기",
+    "바람",
+    "스파크",
+    "스미어"
+   ],
+   "sk": {
+    "p": 253924,
+    "u": "https://www.sakugabooru.com/data/fe3b2e7badc5d49fb9331b618108beac.mp4"
+   }
+  },
+  {
+   "id": "amha-166576",
+   "ko": "Norimitsu Suzuki",
+   "en": "My Hero Academia Movie 1: Two Heroes · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia Movie 1: Two Her…",
+   "role": "",
+   "ver": "",
+   "score": 876,
+   "arts": "Norimitsu Suzuki",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "스파크",
+    "스미어",
+    "미사일"
+   ],
+   "sk": {
+    "p": 166576,
+    "u": "https://www.sakugabooru.com/data/99f8281ca16d9ebaabd89b8a09b03dc0.mp4"
+   }
+  },
+  {
+   "id": "amha-292972",
+   "ko": "Isuta Meister, Kohei Hirota 외 1명",
+   "en": "My Hero Academia · #162 (S8 #03)",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 856,
+   "arts": "Isuta Meister, Kohei Hirota, Shuu Sugita",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 292972,
+    "u": "https://www.sakugabooru.com/data/8e3b67e0f95d5e1dec601561072f59ba.mp4"
+   }
+  },
+  {
+   "id": "amha-292976",
+   "ko": "Toshiyuki Sato",
+   "en": "My Hero Academia · #162 (S8 #03)",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia",
+   "role": "",
+   "ver": "",
+   "score": 828,
+   "arts": "Toshiyuki Sato",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
+   "sk": {
+    "p": 292976,
+    "u": "https://www.sakugabooru.com/data/17191357f0e4f17dad72f3778ea66374.mp4"
+   }
+  },
+  {
+   "id": "amha-290888",
+   "ko": "Kohei Hirota",
+   "en": "My Hero Academia Movie 4: You're Next · BD",
+   "zh": "",
+   "rarity": "",
+   "attr": "My Hero Academia Movie 4: You're …",
+   "role": "",
+   "ver": "",
+   "score": 826,
+   "arts": "Kohei Hirota",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 290888,
+    "u": "https://www.sakugabooru.com/data/26d83d1b59b2141a87f243979165b654.mp4"
    }
   }
  ],

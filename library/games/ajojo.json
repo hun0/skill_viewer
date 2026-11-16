@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘jojo's_bizarre_adventure_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘jojo's_bizarre_adventure_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=jojo's_bizarre_adventure_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · JoJo's Bizarre Adventure</a>",
  "roster": [
   {
@@ -13,6 +13,11 @@
    "ver": "",
    "score": 1621,
    "arts": "Mitsuo Iso",
+   "fx": [
+    "물·액체",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 114108,
     "u": "https://www.sakugabooru.com/data/558887b8ceebb109270ba3a73606a745.mp4"
@@ -29,6 +34,11 @@
    "ver": "",
    "score": 1386,
    "arts": "Toshiaki Hontani",
+   "fx": [
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 157775,
     "u": "https://www.sakugabooru.com/data/5b722779cd89f46a18b8868f8a788ce8.mp4"
@@ -45,6 +55,9 @@
    "ver": "",
    "score": 1382,
    "arts": "Kouki Fujimoto",
+   "fx": [
+    "스미어"
+   ],
    "sk": {
     "p": 204109,
     "u": "https://www.sakugabooru.com/data/910a8e36e1fe7dc60a36abd00821c4dc.mp4"
@@ -61,6 +74,11 @@
    "ver": "",
    "score": 1226,
    "arts": "Kai Shibata",
+   "fx": [
+    "물·액체",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 204107,
     "u": "https://www.sakugabooru.com/data/fcd14ff6a07a4535c4c512c71552f73b.mp4"
@@ -77,6 +95,11 @@
    "ver": "",
    "score": 1178,
    "arts": "Kai Shibata, Kanta Suzuki, Masamichi Ishiyama, Nobuhiro Nagata, Takahito Katayama, Takeshi Morita, Toru Iwazawa",
+   "fx": [
+    "물·액체",
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 310213,
     "u": "https://www.sakugabooru.com/data/1864262ddf40f45fb7bbb6dc61336ec9.mp4"
@@ -93,6 +116,11 @@
    "ver": "",
    "score": 1016,
    "arts": "Hironori Tanaka",
+   "fx": [
+    "물·액체",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 310111,
     "u": "https://www.sakugabooru.com/data/0fe9df69936280b3c25ac186ff10b35c.mp4"
@@ -109,6 +137,13 @@
    "ver": "",
    "score": 833,
    "arts": "Hideki Hamasu",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 114085,
     "u": "https://www.sakugabooru.com/data/2fa76f74962bcfd169b0d7357a894e13.mp4"
@@ -125,6 +160,10 @@
    "ver": "",
    "score": 777,
    "arts": "Shinya Takahashi",
+   "fx": [
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 158422,
     "u": "https://www.sakugabooru.com/data/f585335bb218b05f709fbd2577d381e7.mp4"
@@ -141,6 +180,9 @@
    "ver": "",
    "score": 745,
    "arts": "Nobuhiro Nagata, Yasutoshi Iwasaki",
+   "fx": [
+    "스미어"
+   ],
    "sk": {
     "p": 313442,
     "u": "https://www.sakugabooru.com/data/8b45bd4cdaa6d14d2f83af2515e1b1f8.mp4"
@@ -157,6 +199,11 @@
    "ver": "",
    "score": 591,
    "arts": "Daisuke Tsumagari, Shuu Sugita",
+   "fx": [
+    "물·액체",
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 310100,
     "u": "https://www.sakugabooru.com/data/4d11bbb2ed9a8c0e68472d3dafde7361.mp4"
@@ -173,6 +220,10 @@
    "ver": "",
    "score": 589,
    "arts": "Yasutoshi Iwasaki",
+   "fx": [
+    "연기",
+    "스미어"
+   ],
    "sk": {
     "p": 310085,
     "u": "https://www.sakugabooru.com/data/eb0304dea5e017e9058bbf076a5099a1.mp4"
@@ -189,6 +240,12 @@
    "ver": "",
    "score": 574,
    "arts": "Unknown, Norio Matsumoto",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편"
+   ],
    "sk": {
     "p": 114086,
     "u": "https://www.sakugabooru.com/data/21c3675f01dd7903326eb1cf5da546f2.mp4"
@@ -205,6 +262,11 @@
    "ver": "",
    "score": 565,
    "arts": "Takashi Kojima",
+   "fx": [
+    "물·액체",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 281037,
     "u": "https://www.sakugabooru.com/data/dfabbe30a53a098561428a40f41cee9e.mp4"
@@ -221,6 +283,11 @@
    "ver": "",
    "score": 559,
    "arts": "Nobuhiro Nagata",
+   "fx": [
+    "바람",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 310240,
     "u": "https://www.sakugabooru.com/data/ac79595d81af927eaf00d8c8644467c3.mp4"
@@ -237,6 +304,11 @@
    "ver": "",
    "score": 542,
    "arts": "Hironori Tanaka, Kouki Fujimoto",
+   "fx": [
+    "불",
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 159267,
     "u": "https://www.sakugabooru.com/data/50eec229f833410ecddc356b1182370d.mp4"
@@ -253,6 +325,10 @@
    "ver": "",
    "score": 480,
    "arts": "Toru Iwazawa",
+   "fx": [
+    "물·액체",
+    "스미어"
+   ],
    "sk": {
     "p": 204106,
     "u": "https://www.sakugabooru.com/data/32dd69f710aa12afed67b84139ababce.mp4"
@@ -269,6 +345,11 @@
    "ver": "",
    "score": 469,
    "arts": "Junichi Hayama",
+   "fx": [
+    "연기",
+    "바람",
+    "파편"
+   ],
    "sk": {
     "p": 114107,
     "u": "https://www.sakugabooru.com/data/11b6aa0053dd78322f8cf8b309e25c4c.mp4"
@@ -285,6 +366,11 @@
    "ver": "",
    "score": 450,
    "arts": "Nobuhiro Nagata, Takahito Katayama, Yasutoshi Iwasaki, Yuuta Shinohara",
+   "fx": [
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 313443,
     "u": "https://www.sakugabooru.com/data/3d625a556abe66a8e5812068e59036c9.mp4"
@@ -301,6 +387,10 @@
    "ver": "",
    "score": 405,
    "arts": "Unknown, Toshiharu Sugie",
+   "fx": [
+    "바람",
+    "스미어"
+   ],
    "sk": {
     "p": 36638,
     "u": "https://www.sakugabooru.com/data/c2b9f38db6e93f924960b575a952c458.mp4"
@@ -317,6 +407,12 @@
    "ver": "",
    "score": 401,
    "arts": "Hiroyuki Okiura",
+   "fx": [
+    "폭발",
+    "연기",
+    "스파크",
+    "파편"
+   ],
    "sk": {
     "p": 114094,
     "u": "https://www.sakugabooru.com/data/ec36625495fd542b0c4221b8f8cef39a.mp4"

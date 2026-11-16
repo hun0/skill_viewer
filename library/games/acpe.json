@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘cyberpunk:_edgerunners effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘cyberpunk:_edgerunners effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=cyberpunk:_edgerunners+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Cyberpunk: Edgerunners</a>",
  "roster": [
   {
@@ -13,6 +13,13 @@
    "ver": "",
    "score": 1206,
    "arts": "Ichigo Kanno",
+   "fx": [
+    "불",
+    "폭발",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 239348,
     "u": "https://www.sakugabooru.com/data/6f2322a018ccf6eb11fd5cb456738b21.mp4"
@@ -29,6 +36,15 @@
    "ver": "",
    "score": 1148,
    "arts": "Ichigo Kanno",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 203954,
     "u": "https://www.sakugabooru.com/data/24d96de0bf937c786b8cc23cd07448e5.mp4"
@@ -45,6 +61,10 @@
    "ver": "",
    "score": 842,
    "arts": "Toshiyuki Sato",
+   "fx": [
+    "물·액체",
+    "스미어"
+   ],
    "sk": {
     "p": 203927,
     "u": "https://www.sakugabooru.com/data/1fc9f71dacf4d1846a0f11a1574c0994.mp4"
@@ -61,6 +81,12 @@
    "ver": "",
    "score": 573,
    "arts": "Kai Ikarashi",
+   "fx": [
+    "물·액체",
+    "스파크",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 204006,
     "u": "https://www.sakugabooru.com/data/2bbd3cef0af13080850bfa55189222a6.mp4"
@@ -77,6 +103,12 @@
    "ver": "",
    "score": 562,
    "arts": "Unknown, Kai Ikarashi, Tatsuya Miki",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 204001,
     "u": "https://www.sakugabooru.com/data/84ecd9737a11031d88bbd8a3258e219b.mp4"
@@ -93,6 +125,13 @@
    "ver": "",
    "score": 477,
    "arts": "Ichigo Kanno",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 203917,
     "u": "https://www.sakugabooru.com/data/fc9f56704e53b268238a6731c896262a.mp4"
@@ -109,6 +148,10 @@
    "ver": "",
    "score": 444,
    "arts": "Toshiyuki Sato",
+   "fx": [
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 204912,
     "u": "https://www.sakugabooru.com/data/b9c70edceee629200dd1ca7fc926ab14.mp4"
@@ -125,6 +168,14 @@
    "ver": "",
    "score": 430,
    "arts": "Ichigo Kanno",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 204031,
     "u": "https://www.sakugabooru.com/data/19e5eb3bcdd4ff1bb2601eb35a672f7b.mp4"
@@ -141,6 +192,10 @@
    "ver": "",
    "score": 423,
    "arts": "Rino Kodama, Yuuto Kaneko",
+   "fx": [
+    "연기",
+    "스미어"
+   ],
    "sk": {
     "p": 203944,
     "u": "https://www.sakugabooru.com/data/b758f94e1584119030b07aa49eb367f4.mp4"
@@ -157,6 +212,12 @@
    "ver": "",
    "score": 406,
    "arts": "Unknown",
+   "fx": [
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 204030,
     "u": "https://www.sakugabooru.com/data/856512249b51b1e07d236001f3e7f21c.mp4"
@@ -173,6 +234,11 @@
    "ver": "",
    "score": 393,
    "arts": "Unknown",
+   "fx": [
+    "물·액체",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 204004,
     "u": "https://www.sakugabooru.com/data/9558941d220cfdf87ac316c2d86ca151.mp4"
@@ -189,6 +255,12 @@
    "ver": "",
    "score": 321,
    "arts": "Toshiyuki Sato",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 205105,
     "u": "https://www.sakugabooru.com/data/eaac94fdb1451c57490eb223d3f0a172.mp4"
@@ -205,6 +277,14 @@
    "ver": "",
    "score": 316,
    "arts": "Yuuto Kaneko",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "스파크",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 203918,
     "u": "https://www.sakugabooru.com/data/ca96c32d95268e28aad2f76eb039cdce.mp4"
@@ -221,6 +301,12 @@
    "ver": "",
    "score": 307,
    "arts": "Kai Ikarashi",
+   "fx": [
+    "폭발",
+    "물·액체",
+    "연기",
+    "스미어"
+   ],
    "sk": {
     "p": 204005,
     "u": "https://www.sakugabooru.com/data/b7ca03821a140312930872b5c7ace0d8.mp4"
@@ -237,6 +323,11 @@
    "ver": "",
    "score": 299,
    "arts": "Toshiyuki Sato",
+   "fx": [
+    "연기",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 204000,
     "u": "https://www.sakugabooru.com/data/997d8cf8a8fc01a4881811f3f7933502.mp4"
@@ -253,6 +344,14 @@
    "ver": "",
    "score": 291,
    "arts": "Akihiro Sato",
+   "fx": [
+    "폭발",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 203924,
     "u": "https://www.sakugabooru.com/data/55db1f84997ede76f658ff9302ec03c9.mp4"
@@ -269,6 +368,13 @@
    "ver": "",
    "score": 275,
    "arts": "Kazuki Chiba",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 203916,
     "u": "https://www.sakugabooru.com/data/e713e7a2ab4c5c20c03d00f256476092.mp4"
@@ -285,6 +391,11 @@
    "ver": "",
    "score": 255,
    "arts": "Akihiro Sato, Unknown",
+   "fx": [
+    "물·액체",
+    "스파크",
+    "스미어"
+   ],
    "sk": {
     "p": 204003,
     "u": "https://www.sakugabooru.com/data/632b2a00d105edb201e17d4614a9a10e.mp4"
@@ -301,6 +412,11 @@
    "ver": "",
    "score": 204,
    "arts": "Akihiro Sato",
+   "fx": [
+    "물·액체",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 204002,
     "u": "https://www.sakugabooru.com/data/b0a8c791ff7e286854be284f358eeedb.mp4"
@@ -317,6 +433,10 @@
    "ver": "",
    "score": 195,
    "arts": "Shimon Dohi",
+   "fx": [
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 204012,
     "u": "https://www.sakugabooru.com/data/88721f27c1374bea1857dc4720f6c325.mp4"

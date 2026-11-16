@@ -1,6 +1,6 @@
 {
- "note": "Sakugabooru에서 ‘naruto effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
- "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=naruto+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Naruto</a>",
+ "note": "Sakugabooru에서 ‘naruto -boruto:_naruto_next_generations -boruto:_naruto_the_movie effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 50개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
+ "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=naruto+-boruto:_naruto_next_generations+-boruto:_naruto_the_movie+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · Naruto</a>",
  "roster": [
   {
    "id": "anrt-121591",
@@ -13,6 +13,13 @@
    "ver": "",
    "score": 3621,
    "arts": "Norio Matsumoto",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 121591,
     "u": "https://www.sakugabooru.com/data/d7da4901a6c3531804da4fb0e1cf7a10.mp4"
@@ -29,6 +36,15 @@
    "ver": "",
    "score": 2815,
    "arts": "Hiroyuki Yamashita, Naoki Kobayashi",
+   "fx": [
+    "불",
+    "번개",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 201453,
     "u": "https://www.sakugabooru.com/data/b2f9ca17f1d2ece1c66ef845170f8b68.mp4"
@@ -45,6 +61,10 @@
    "ver": "",
    "score": 2761,
    "arts": "Norio Matsumoto",
+   "fx": [
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 252598,
     "u": "https://www.sakugabooru.com/data/7078ff1f87222172856f74f40bd0b248.mp4"
@@ -61,6 +81,14 @@
    "ver": "",
    "score": 2727,
    "arts": "Norio Matsumoto",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 164555,
     "u": "https://www.sakugabooru.com/data/21b8114adf5f2bee75af6e6f05e7a6a7.mp4"
@@ -77,6 +105,14 @@
    "ver": "",
    "score": 2668,
    "arts": "Gosei Oda, Keiichiro Watanabe, Ryu Nakayama, Shingo Fujii, Shingo Yamashita, Tatsurou Kawano",
+   "fx": [
+    "불",
+    "번개",
+    "물·액체",
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 175560,
     "u": "https://www.sakugabooru.com/data/5bce4f15039982ec50f5d6e028218a84.mp4"
@@ -93,6 +129,10 @@
    "ver": "",
    "score": 2639,
    "arts": "Norio Matsumoto",
+   "fx": [
+    "물·액체",
+    "스미어"
+   ],
    "sk": {
     "p": 164550,
     "u": "https://www.sakugabooru.com/data/ca1cf8ad1f127b9e92258337c0f809df.mp4"
@@ -109,6 +149,15 @@
    "ver": "",
    "score": 2539,
    "arts": "Hiroyuki Yamashita",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 221837,
     "u": "https://www.sakugabooru.com/data/2975c4d5fccbf6b7771d6e293d8abcd4.mp4"
@@ -125,6 +174,15 @@
    "ver": "",
    "score": 2140,
    "arts": "Unknown, Naoki Kobayashi, Norio Matsumoto",
+   "fx": [
+    "불",
+    "번개",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 173132,
     "u": "https://www.sakugabooru.com/data/67dd1468d78c98bfc6402f50d096f7a5.mp4"
@@ -141,6 +199,15 @@
    "ver": "",
    "score": 2132,
    "arts": "Unknown, Daisuke Tsumagari, Emi Kouno, Hiroyuki Yamashita, Keisuke Watanabe",
+   "fx": [
+    "불",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 196824,
     "u": "https://www.sakugabooru.com/data/4f13cd92fa56d711582059060923e9cc.mp4"
@@ -157,6 +224,13 @@
    "ver": "",
    "score": 1956,
    "arts": "Norio Matsumoto",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 164551,
     "u": "https://www.sakugabooru.com/data/084825337ce7a80cca94e4987c584d33.mp4"
@@ -173,6 +247,12 @@
    "ver": "",
    "score": 1946,
    "arts": "Norio Matsumoto",
+   "fx": [
+    "연기",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 167510,
     "u": "https://www.sakugabooru.com/data/b274cb5170eb9aeb0f4407fb874d0187.mp4"
@@ -189,6 +269,11 @@
    "ver": "",
    "score": 1925,
    "arts": "Shingo Yamashita",
+   "fx": [
+    "물·액체",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 111548,
     "u": "https://www.sakugabooru.com/data/362bc83e2493cad608553a1c914ad6a2.mp4"
@@ -205,6 +290,12 @@
    "ver": "",
    "score": 1832,
    "arts": "Norio Matsumoto",
+   "fx": [
+    "불",
+    "폭발",
+    "연기",
+    "스미어"
+   ],
    "sk": {
     "p": 121593,
     "u": "https://www.sakugabooru.com/data/ffef1c333990950fd8d2ce1adc033838.mp4"
@@ -221,6 +312,13 @@
    "ver": "",
    "score": 1811,
    "arts": "Hiroyuki Yamashita, Kenichi Fujisawa",
+   "fx": [
+    "물·액체",
+    "스파크",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 201452,
     "u": "https://www.sakugabooru.com/data/d64b6cc21700073218c002c2cb892972.mp4"
@@ -237,6 +335,12 @@
    "ver": "",
    "score": 1728,
    "arts": "Hiroyuki Yamashita, Norio Matsumoto",
+   "fx": [
+    "물·액체",
+    "스파크",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 175638,
     "u": "https://www.sakugabooru.com/data/0fb155d3c348ae258f80b0e277e9c5c6.mp4"
@@ -253,6 +357,14 @@
    "ver": "",
    "score": 1700,
    "arts": "Hiroyuki Yamashita, Norio Matsumoto",
+   "fx": [
+    "물·액체",
+    "연기",
+    "파편",
+    "스미어",
+    "변형",
+    "CG"
+   ],
    "sk": {
     "p": 242397,
     "u": "https://www.sakugabooru.com/data/fdfdb3995bd3c9a9261564dc7b5afb4a.mp4"
@@ -269,6 +381,14 @@
    "ver": "",
    "score": 1676,
    "arts": "Naoki Kobayashi",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 187168,
     "u": "https://www.sakugabooru.com/data/54cad5cfd831a34e5e99d2178984f9bb.mp4"
@@ -285,6 +405,9 @@
    "ver": "",
    "score": 1614,
    "arts": "Norio Matsumoto",
+   "fx": [
+    "물·액체"
+   ],
    "sk": {
     "p": 164558,
     "u": "https://www.sakugabooru.com/data/35795470489941e7fc061f2eb8182baf.mp4"
@@ -301,6 +424,12 @@
    "ver": "",
    "score": 1518,
    "arts": "Norio Matsumoto",
+   "fx": [
+    "스파크",
+    "파편",
+    "스미어",
+    "변형"
+   ],
    "sk": {
     "p": 167512,
     "u": "https://www.sakugabooru.com/data/037b78139251b717ed1a8507b4a990ec.mp4"
@@ -317,9 +446,670 @@
    "ver": "",
    "score": 1468,
    "arts": "Naoki Kobayashi",
+   "fx": [
+    "연기",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 156257,
     "u": "https://www.sakugabooru.com/data/b58c7ba136c821660332b4468c892348.mp4"
+   }
+  },
+  {
+   "id": "anrt-164559",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto (2002) · #133",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 1356,
+   "arts": "Norio Matsumoto",
+   "fx": [
+    "불",
+    "폭발",
+    "물·액체",
+    "연기"
+   ],
+   "sk": {
+    "p": 164559,
+    "u": "https://www.sakugabooru.com/data/ad7e86bb0018eeb6762255fe59cb2bb0.mp4"
+   }
+  },
+  {
+   "id": "anrt-278058",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto (2002) · OP1v2",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 1341,
+   "arts": "Norio Matsumoto",
+   "fx": [
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 278058,
+    "u": "https://www.sakugabooru.com/data/cc69e740e8c93901164ebd349fef9a9b.mp4"
+   }
+  },
+  {
+   "id": "anrt-111546",
+   "ko": "Shingo Yamashita",
+   "en": "Naruto Shippuuden · #167",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1339,
+   "arts": "Shingo Yamashita",
+   "fx": [
+    "연기",
+    "스파크",
+    "파편",
+    "변형"
+   ],
+   "sk": {
+    "p": 111546,
+    "u": "https://www.sakugabooru.com/data/d38f2e273004df99c60c30f7d7c70f4e.mp4"
+   }
+  },
+  {
+   "id": "anrt-206053",
+   "ko": "Naoki Kobayashi",
+   "en": "Naruto Shippuuden · NCED32",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1321,
+   "arts": "Naoki Kobayashi",
+   "fx": [
+    "스파크",
+    "스미어"
+   ],
+   "sk": {
+    "p": 206053,
+    "u": "https://www.sakugabooru.com/data/c2bb147933444062ed391b162f9360dd.mp4"
+   }
+  },
+  {
+   "id": "anrt-293483",
+   "ko": "Takafumi Hori",
+   "en": "Naruto Shippuuden · #026",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1318,
+   "arts": "Takafumi Hori",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임"
+   ],
+   "sk": {
+    "p": 293483,
+    "u": "https://www.sakugabooru.com/data/3853a97ab07f742c2ecda415eedbdda4.mp4"
+   }
+  },
+  {
+   "id": "anrt-86779",
+   "ko": "Shingo Yamashita",
+   "en": "Naruto Shippuuden · #167",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1305,
+   "arts": "Shingo Yamashita",
+   "fx": [
+    "폭발",
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 86779,
+    "u": "https://www.sakugabooru.com/data/ef471e0bf1569d194f20b1cc5cdd2b7c.mp4"
+   }
+  },
+  {
+   "id": "anrt-206021",
+   "ko": "Kenichi Kutsuna, Shingo Yamashita",
+   "en": "Naruto Shippuuden · NCED15",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1301,
+   "arts": "Kenichi Kutsuna, Shingo Yamashita",
+   "fx": [
+    "스파크",
+    "스미어"
+   ],
+   "sk": {
+    "p": 206021,
+    "u": "https://www.sakugabooru.com/data/42c75ed6df83007e8814161c74a775f9.mp4"
+   }
+  },
+  {
+   "id": "anrt-104230",
+   "ko": "Naoki Kobayashi",
+   "en": "Naruto Shippuuden · #345",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1263,
+   "arts": "Naoki Kobayashi",
+   "fx": [
+    "물·액체",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 104230,
+    "u": "https://www.sakugabooru.com/data/757f6dcf279f2626b4d99cd88c2c4976.mp4"
+   }
+  },
+  {
+   "id": "anrt-128498",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto (2002) · NCOP4 (ver. 2)",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 1257,
+   "arts": "Norio Matsumoto",
+   "fx": [
+    "스파크",
+    "스미어"
+   ],
+   "sk": {
+    "p": 128498,
+    "u": "https://www.sakugabooru.com/data/fc8ea29c5f6fbf28520a4956058be86a.mp4"
+   }
+  },
+  {
+   "id": "anrt-111555",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto Shippuuden · #167",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1220,
+   "arts": "Norio Matsumoto",
+   "fx": [
+    "폭발",
+    "빔",
+    "연기",
+    "파편"
+   ],
+   "sk": {
+    "p": 111555,
+    "u": "https://www.sakugabooru.com/data/4ae2ee1abc43b73199d561601d1dc3d6.mp4"
+   }
+  },
+  {
+   "id": "anrt-187166",
+   "ko": "Hiroyuki Yamashita, Kenichi Fujisawa",
+   "en": "Naruto Shippuuden · #322",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1203,
+   "arts": "Unknown, Hiroyuki Yamashita, Kenichi Fujisawa",
+   "fx": [
+    "바람",
+    "스미어",
+    "CG"
+   ],
+   "sk": {
+    "p": 187166,
+    "u": "https://www.sakugabooru.com/data/0d4b4d9f49c3e5c2378221472262f39a.mp4"
+   }
+  },
+  {
+   "id": "anrt-247818",
+   "ko": "Hiroyuki Yamashita",
+   "en": "Naruto Shippuuden · #120",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1199,
+   "arts": "Hiroyuki Yamashita",
+   "fx": [
+    "물·액체",
+    "스파크",
+    "스미어"
+   ],
+   "sk": {
+    "p": 247818,
+    "u": "https://www.sakugabooru.com/data/0f15fcce45176ec40dbd929cd4c934dd.mp4"
+   }
+  },
+  {
+   "id": "anrt-164560",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto (2002) · #133",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 1187,
+   "arts": "Norio Matsumoto",
+   "fx": [
+    "빔",
+    "물·액체",
+    "연기",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 164560,
+    "u": "https://www.sakugabooru.com/data/f1c04bfcf13bf4277d35c6f9329e0554.mp4"
+   }
+  },
+  {
+   "id": "anrt-252684",
+   "ko": "Tetsuya Takeuchi",
+   "en": "Naruto (2002) · #048",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 1172,
+   "arts": "Tetsuya Takeuchi",
+   "fx": [
+    "연기",
+    "스미어",
+    "CG"
+   ],
+   "sk": {
+    "p": 252684,
+    "u": "https://www.sakugabooru.com/data/296c17bfbe2c9612a89f4fa006f294ad.mp4"
+   }
+  },
+  {
+   "id": "anrt-77900",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto Shippuuden · Naruto x Uniqlo OVA",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 1150,
+   "arts": "Norio Matsumoto",
+   "fx": [
+    "물·액체",
+    "스파크"
+   ],
+   "sk": {
+    "p": 77900,
+    "u": "https://www.sakugabooru.com/data/2cb0f9304b1bb2b7654cd0950925ba80.mp4"
+   }
+  },
+  {
+   "id": "anrt-196844",
+   "ko": "Chengxi Huang, Naoki Kobayashi 외 1명",
+   "en": "Naruto Shippuuden · #477",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 987,
+   "arts": "Chengxi Huang, Naoki Kobayashi, Nobutaka Masuda",
+   "fx": [
+    "번개",
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 196844,
+    "u": "https://www.sakugabooru.com/data/1a1955a22f920f4d4dd331dd5e2b9bbd.mp4"
+   }
+  },
+  {
+   "id": "anrt-121919",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto (2002) · #071",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 980,
+   "arts": "Norio Matsumoto",
+   "fx": [
+    "불",
+    "물·액체"
+   ],
+   "sk": {
+    "p": 121919,
+    "u": "https://www.sakugabooru.com/data/f63fce90d213f269a5b37b3d881f4559.mp4"
+   }
+  },
+  {
+   "id": "anrt-252992",
+   "ko": "Hirofumi Suzuki, Tetsuya Takeuchi 외 1명",
+   "en": "Naruto (2002) · #019",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 977,
+   "arts": "Hirofumi Suzuki, Tetsuya Takeuchi, Toshiyuki Tsuru",
+   "fx": [
+    "물·액체",
+    "CG"
+   ],
+   "sk": {
+    "p": 252992,
+    "u": "https://www.sakugabooru.com/data/c112a1206b4b3e85e0bbe5a822207c42.mp4"
+   }
+  },
+  {
+   "id": "anrt-187170",
+   "ko": "Naoki Kobayashi",
+   "en": "Naruto Shippuuden · #322",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 963,
+   "arts": "Naoki Kobayashi",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "임팩트 프레임"
+   ],
+   "sk": {
+    "p": 187170,
+    "u": "https://www.sakugabooru.com/data/8413852f67c0a79e8d62104b991a9d6a.mp4"
+   }
+  },
+  {
+   "id": "anrt-248493",
+   "ko": "Norio Matsumoto, Ryo-timo",
+   "en": "Naruto Shippuuden · #123",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 962,
+   "arts": "Norio Matsumoto, Ryo-timo",
+   "fx": [
+    "번개",
+    "폭발",
+    "스미어",
+    "변형"
+   ],
+   "sk": {
+    "p": 248493,
+    "u": "https://www.sakugabooru.com/data/5e54b4d9669da741d0cad15c402710ed.mp4"
+   }
+  },
+  {
+   "id": "anrt-249802",
+   "ko": "Masaharu Watanabe, Masayuki Kouda",
+   "en": "Naruto Shippuuden · #135",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 958,
+   "arts": "Masaharu Watanabe, Masayuki Kouda",
+   "fx": [
+    "연기",
+    "바람",
+    "스파크",
+    "스미어"
+   ],
+   "sk": {
+    "p": 249802,
+    "u": "https://www.sakugabooru.com/data/24cedf4f6e0757118c4e6284fb425e6d.mp4"
+   }
+  },
+  {
+   "id": "anrt-167520",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto Movie 3: Guardians of the Crescent Moon",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Movie 3: Guardians of the …",
+   "role": "",
+   "ver": "",
+   "score": 944,
+   "arts": "Norio Matsumoto",
+   "fx": [
+    "불",
+    "연기",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 167520,
+    "u": "https://www.sakugabooru.com/data/b6bec1179e2c21d4df1afccf4c572d35.mp4"
+   }
+  },
+  {
+   "id": "anrt-201454",
+   "ko": "Hiroyuki Yamashita, Naoki Kobayashi",
+   "en": "Naruto Shippuuden · #375",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 913,
+   "arts": "Hiroyuki Yamashita, Naoki Kobayashi",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "스미어"
+   ],
+   "sk": {
+    "p": 201454,
+    "u": "https://www.sakugabooru.com/data/a5e283bffa287fbe203cdb83763c02fa.mp4"
+   }
+  },
+  {
+   "id": "anrt-128534",
+   "ko": "Kenichi Kutsuna, Ryo-timo",
+   "en": "Naruto (2002) · OP9",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 907,
+   "arts": "Kenichi Kutsuna, Ryo-timo",
+   "fx": [
+    "스미어"
+   ],
+   "sk": {
+    "p": 128534,
+    "u": "https://www.sakugabooru.com/data/76d3a972f7f481c1ed1e57ed40dfd1ac.mp4"
+   }
+  },
+  {
+   "id": "anrt-111553",
+   "ko": "Kenichi Kutsuna",
+   "en": "Naruto Shippuuden · #167",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 897,
+   "arts": "Kenichi Kutsuna",
+   "fx": [
+    "물·액체",
+    "연기",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 111553,
+    "u": "https://www.sakugabooru.com/data/e62b233374f644e12e7bb98417fe8575.mp4"
+   }
+  },
+  {
+   "id": "anrt-202574",
+   "ko": "Hiroyuki Yamashita, Naoki Kobayashi",
+   "en": "Naruto Shippuuden Movie 7: the Last",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden Movie 7: the La…",
+   "role": "",
+   "ver": "",
+   "score": 896,
+   "arts": "Hiroyuki Yamashita, Naoki Kobayashi",
+   "fx": [
+    "불",
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 202574,
+    "u": "https://www.sakugabooru.com/data/82c890e91b604f8616d46a2b614c5289.mp4"
+   }
+  },
+  {
+   "id": "anrt-121917",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto (2002) · #071",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 896,
+   "arts": "Norio Matsumoto",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "바람"
+   ],
+   "sk": {
+    "p": 121917,
+    "u": "https://www.sakugabooru.com/data/da1b2758d499e1ba4a0463cace0b80c6.mp4"
+   }
+  },
+  {
+   "id": "anrt-104106",
+   "ko": "Kenichi Fujisawa",
+   "en": "Naruto Shippuuden · #293",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 889,
+   "arts": "Kenichi Fujisawa",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 104106,
+    "u": "https://www.sakugabooru.com/data/2a6ff6c966257126d1ea57a21e952c84.mp4"
+   }
+  },
+  {
+   "id": "anrt-191844",
+   "ko": "Norio Matsumoto",
+   "en": "Naruto (2002) · #030",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto (2002)",
+   "role": "",
+   "ver": "",
+   "score": 889,
+   "arts": "Norio Matsumoto",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "변형"
+   ],
+   "sk": {
+    "p": 191844,
+    "u": "https://www.sakugabooru.com/data/71cf0aea434bbd0f3ffe2574de486956.mp4"
+   }
+  },
+  {
+   "id": "anrt-111551",
+   "ko": "Kenichi Kutsuna",
+   "en": "Naruto Shippuuden · #167",
+   "zh": "",
+   "rarity": "",
+   "attr": "Naruto Shippuuden",
+   "role": "",
+   "ver": "",
+   "score": 869,
+   "arts": "Kenichi Kutsuna",
+   "fx": [
+    "불",
+    "물·액체",
+    "연기",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 111551,
+    "u": "https://www.sakugabooru.com/data/f24ba0da50e2f889384b181b1bee614f.mp4"
    }
   }
  ],

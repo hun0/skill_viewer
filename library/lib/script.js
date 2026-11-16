@@ -10,7 +10,9 @@ const BILI_KEYS_BOSS = [["보스전","boss战"],["연출","演出"]];
 /* anime clip libraries (Sakugabooru): one entry per title, data carries a meta block */
 const ANI_KEYS = Object.keys(DATA).filter(k => DATA[k] && DATA[k].meta && DATA[k].meta.tag);
 ANI_KEYS.forEach(k => { const m = DATA[k].meta; GI18N[k] = [m.en, m.en, m.zh, m.zh]; });
+GI18N.aall = ["All anime", "All anime", "全部动画", "全部动画"];
 const SAKUGA_POST = id => `https://www.sakugabooru.com/post/show/${id}`;
+const fxHTML = (c, max) => !c.fx || !c.fx.length ? "" : `<span class="fxs" title="${esc(c.fx.join(" · "))}">${c.fx.slice(0, max).map(f => `<i>${esc(f)}</i>`).join("")}${c.fx.length > max ? `<i class="more">+${c.fx.length - max}</i>` : ""}</span>`;
 const linksOf = c => c.sk ? [{ url: c.sk.u, label: "원본 mp4" }] : (state.links[c.id] || []);
 const GAMES = [
   { key:"hsr", tab:"스타레일", name:"붕괴: 스타레일", bili:"崩坏星穹铁道", file:"HSR", group:"ver",
@@ -218,8 +220,10 @@ const GAMES = [
     colors:{} },
   ...ANI_KEYS.map(k => { const m = DATA[k].meta;
     return { key:k, tab:m.ko, name:m.ko, bili:"", file:k.toUpperCase(), group:"score", ani:true, tag:m.tag,
-      attrLabel:"작품", roleLabel:"", yt: c => `${m.en} ${c.ko} sakuga`, colors:{} }; })
-].filter(g => g.reel || (DATA[g.key] && DATA[g.key].roster && DATA[g.key].roster.length));
+      attrLabel:"작품", roleLabel:"이펙트", yt: c => `${m.en} ${c.ko} sakuga`, colors:{} }; }),
+  { key:"aall", tab:"전체", name:"애니 전체", bili:"", file:"ANI", group:"score", ani:true, allAni:true,
+    attrLabel:"작품", roleLabel:"이펙트", yt: c => `${c.attr} ${c.ko} sakuga`, colors:{} }
+].filter(g => g.reel || g.allAni || (DATA[g.key] && DATA[g.key].roster && DATA[g.key].roster.length));
 
 GAMES.forEach(g => {
   const d = DATA[g.key] || { roster: [] };
@@ -230,6 +234,19 @@ GAMES.forEach(g => {
   g.attrs.forEach(a => { g.attrVar[a] = g.colors[a] ? COLORS[g.colors[a]] : FALLBACK[fi++ % FALLBACK.length]; });
   g.released = g.roster.filter(c => !c.upcoming).length;
 });
+/* 애니 전체: every title's clips in one list; 작품 chips become the anime titles */
+(() => {
+  const all = GAMES.find(g => g.allAni); if (!all) return;
+  const pri = ["anrt","abrt","amha","aopm","afate"], rank = g => { const i = pri.indexOf(g.key); return i < 0 ? 99 : i; };
+  const anis = GAMES.filter(g => g.ani && !g.allAni).sort((a, b) => rank(a) - rank(b));
+  all.roster = anis.flatMap(g => g.roster.map(c => ({ ...c, attr: g.name, work: c.attr })));
+  all.attrs = anis.map(g => g.name); all.attrVar = {};
+  all.attrs.forEach((a, i) => { all.attrVar[a] = FALLBACK[i % FALLBACK.length]; });
+  all.released = all.roster.length;
+})();
+/* effect chips in a fixed, VFX-first order (element effects, then techniques like smears) */
+const FX_ORDER = ["불","번개","폭발","빔","얼음","물·액체","연기","바람","스파크","파편","임팩트 프레임","스미어","미사일","변형","CG"];
+GAMES.filter(g => g.ani).forEach(g => { const has = new Set(g.roster.flatMap(c => c.fx || [])); g.roleList = FX_ORDER.filter(f => has.has(f)); });
 
 const SNAP = DATA.snapshot || { links:{}, thumbs:{}, at:"" };
 const SPRITES = DATA.sprites || {};
@@ -330,24 +347,28 @@ function toast(msg) {
 function esc(s) { return String(s ?? "").replace(/[&<>"]/g, ch => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[ch])); }
 
 /* ---------- game switching ---------- */
-/* top level: 게임 (character libraries) | 영상 (video collections: 게임 / 애니) */
+/* top level: 게임 (character libraries + 게임영상 모음) | 애니 (Sakugabooru titles, 전체 first) */
+/* 전투 연출이 특히 화려한 작품: 클립 50개씩, 드롭다운 맨 위 */
+const ANI_TOP = ["anrt","abrt","amha","aopm","afate"].filter(k => ANI_KEYS.includes(k));
 const VIDEO_GROUPS = [
-  ["게임", ["vid"]],
-  ["애니", ANI_KEYS]
+  ["전체", ["aall"]],
+  ["화려한 전투 (50개)", ANI_TOP],
+  ["작품별", ANI_KEYS.filter(k => !ANI_TOP.includes(k))]
 ];
-const isVideo = g => !!(g && (g.reel || g.ani));
+const isVideo = g => !!(g && g.ani);
 const GAME_GROUPS = [
   ["수집형 RPG", ["hsr","zzz","ww","nte","gi","hi3","r99","pgr","nikke","ake","bd2","e7","dna","mgl","gbr","ap","sp"]],
   ["출시 예정", ["ao","an","hna"]],
   ["대전 격투", ["gbvs","gg","db","bb","dnf","kny","mt","nrt","opa","2xko"]],
   ["액션·로그라이트", ["hd1","hd2","d4"]],
-  ["MOBA·슈터·기타", ["lol","tft","val","ow","mr","sn","er"]]
+  ["MOBA·슈터·기타", ["lol","tft","val","ow","mr","sn","er"]],
+  ["영상 모음", ["vid"]]
 ];
 function buildTabs() {
   const sel = $("#gameSel"); sel.textContent = "";
   const video = isVideo(state.game);
-  document.querySelectorAll(".topsw button").forEach(b => b.setAttribute("aria-pressed", String((b.dataset.top === "video") === video)));
-  sel.setAttribute("aria-label", video ? "영상 모음 선택" : "게임 선택");
+  document.querySelectorAll(".topsw button").forEach(b => b.setAttribute("aria-pressed", String((b.dataset.top === "ani") === video)));
+  sel.setAttribute("aria-label", video ? "애니 선택" : "게임 선택");
   const used = new Set(GAMES.filter(g => isVideo(g) !== video).map(g => g.key));
   const add = (parent, g) => { const o = document.createElement("option"); o.value = g.key; o.textContent = `${gName(g)} (${g.roster.length})`; parent.appendChild(o); used.add(g.key); };
   (video ? VIDEO_GROUPS : GAME_GROUPS).forEach(([label, keys]) => {
@@ -360,16 +381,18 @@ function buildTabs() {
   sel.value = state.game.key;
 }
 $("#gameSel").addEventListener("change", e => { location.hash = e.target.value; });
-const LAST_TOP = { game: "hsr", video: "vid" };
+const LAST_TOP = { game: "hsr", ani: "aall" };
 document.querySelectorAll(".topsw button").forEach(b => b.onclick = () => { const k = LAST_TOP[b.dataset.top]; if (k && k !== state.game.key) location.hash = k; });
 function selectGame(key) {
   const g = GAMES.find(x => x.key === key) || GAMES[0];
   const topChanged = isVideo(g) !== isVideo(state.game) || !$("#gameSel").options.length;
-  state.game = g; LAST_TOP[isVideo(g) ? "video" : "game"] = g.key;
+  state.game = g; LAST_TOP[isVideo(g) ? "ani" : "game"] = g.key;
   if (topChanged) buildTabs();
   const so = $("#sort");
   so.querySelector('[value="ver-desc"]').textContent = g.ani ? "인기순" : "최신순";
-  so.querySelector('[value="ver-asc"]').textContent = g.ani ? "점수 낮은순" : "오래된순"; state.elems.clear(); state.paths.clear(); state.q = ""; $("#q").value = "";
+  so.querySelector('[value="ver-asc"]').textContent = g.ani ? "점수 낮은순" : "오래된순";
+  so.querySelector('[value="fx"]').hidden = !g.ani;
+  if (!g.ani && state.sort === "fx") { state.sort = "ver-desc"; so.value = "ver-desc"; } state.elems.clear(); state.paths.clear(); state.q = ""; $("#q").value = "";
   $("#gameSel").value = g.key;
   setHeader(g);
   buildChips(); render();
@@ -409,7 +432,7 @@ function setHeader(g) {
 }
 function grpHead(g, t) {
   const v = `<span class="ver">${esc(t)}</span>`;
-  if (g.reel) return v;
+  if (g.reel || g.ani) return v;
   if (g.key === "tft") return L(`${v}코스트`, `${v}-cost`, `${v}费`);
   if (/^\d{4}$/.test(t)) return L(`${v}년 출시`, `Released in ${v}`, `${v}年推出`);
   if (g.group === "year") return v;
@@ -476,7 +499,7 @@ function attrHit(c, q) {
   const gk = gameOf(c);
   const want = ELEM_OF[q];
   if (want) return [c.attr, c.role].some(v => elemOf(gk, v) === want);
-  return [c.attr, c.role].some(v => v && (String(v).toLowerCase() === q || (q.length > 1 && String(v).toLowerCase().includes(q)) || tr(String(v), gk).toLowerCase() === q));
+  return [c.attr, c.role, ...(c.fx || [])].some(v => v && (String(v).toLowerCase() === q || (q.length > 1 && String(v).toLowerCase().includes(q)) || tr(String(v), gk).toLowerCase() === q));
 }
 function searchHit(c, q) {
   if (state.smode === "tag") return tagHit(c, q);
@@ -486,11 +509,11 @@ function searchHit(c, q) {
 }
 function filtered() {
   const q = state.q.trim().toLowerCase();
-  const pool = crossSearch() ? GAMES.flatMap(g => [...g.roster, ...bossesOf(g)]) : state.game.roster;
+  const pool = crossSearch() ? GAMES.filter(g => !g.allAni).flatMap(g => [...g.roster, ...bossesOf(g)]) : state.game.roster;
   let list = pool.filter(c => {
     if (q && !searchHit(c, q)) return false;
     if (!crossSearch() && state.elems.size && !state.elems.has(c.attr)) return false;
-    if (!crossSearch() && state.paths.size && !state.paths.has(c.role)) return false;
+    if (!crossSearch() && state.paths.size && !(c.fx ? c.fx.some(f => state.paths.has(f)) : state.paths.has(c.role))) return false;
     if (state.onlyEmpty && linksOf(c).length) return false;
     return true;
   });
@@ -517,7 +540,7 @@ function render() {
   if (crossSearch()) {
     if (!list.length) { main.innerHTML = `<p class="nores">${state.smode === "tag" ? "이 태그가 달린 캐릭터가 없어요." : state.smode === "bm" ? "이 메모가 달린 캐릭터가 없어요." : state.smode === "attr" ? "이 속성·역할의 캐릭터가 없어요." : "조건에 맞는 캐릭터가 없어요."}</p>`; return; }
     const tot = document.createElement("p"); tot.className = "xsum"; tot.textContent = L(`모든 게임에서 ${list.length}명`, `${list.length} across all games`, `全部游戏共 ${list.length} 名`); main.appendChild(tot);
-    GAMES.forEach(gg => {
+    GAMES.filter(gg => !gg.allAni).forEach(gg => {
       const its = list.filter(c => gameOf(c) === gg.key); if (!its.length) return;
       const sec = document.createElement("section"); sec.className = "group";
       const h = document.createElement("h2"); h.innerHTML = `<span class="ver"></span><span class="gfill">${its.length}명</span>`; h.querySelector(".ver").textContent = gTab(gg);
@@ -543,21 +566,26 @@ function render() {
   if (!list.length && !bosses.length && !canAddBoss) { main.innerHTML = `<p class="nores">조건에 맞는 캐릭터가 없어요.</p>`; return; }
 
   const groups = [];
-  if (state.sort === "name") groups.push({ title:null, items:list });
+  if (g.ani && state.sort === "fx") {
+    /* 이펙트별: one section per effect tag (a clip with several tags shows in each), most common tag first */
+    g.roleList.filter(f => !state.paths.size || state.paths.has(f)).forEach(f => {
+      const its = list.filter(c => (c.fx || []).includes(f)); if (its.length) groups.push({ title:f, items:its });
+    });
+  } else if (state.sort === "name") groups.push({ title:null, items:list });
   else list.forEach(c => {
     const t = String(c.ver);
     const last = groups[groups.length-1];
     if (last && last.title === t) last.items.push(c); else groups.push({ title:t, items:[c] });
   });
 
-  if (state.view === "grid" && list.length) groups.splice(0, groups.length, { title:"", items:list });
+  if (state.view === "grid" && list.length && !(g.ani && state.sort === "fx")) groups.splice(0, groups.length, { title:"", items:list });
   groups.forEach(gr => {
     const sec = document.createElement("section"); sec.className = "group";
     if (gr.title) {
       const gf = gr.items.filter(c => linksOf(c).length).length;
       const up = gr.items.some(c => c.upcoming) ? '<span class="upcoming">출시 예정</span>' : "";
       const h = document.createElement("h2");
-      h.innerHTML = grpHead(g, gr.title) + up + `<span class="gfill">${gr.items.length}${g.reel ? "개" : "명"}</span>`;
+      h.innerHTML = grpHead(g, gr.title) + up + `<span class="gfill">${gr.items.length}${g.reel || g.ani ? "개" : "명"}</span>`;
       sec.appendChild(h);
     }
     const box = document.createElement("div"); box.className = state.view === "grid" ? "list cards" : "list";
@@ -605,16 +633,32 @@ function sakugaCmd(c) {
   const ext = (c.sk.u.match(/\.(\w+)$/) || [, "mp4"])[1];
   return `curl -L -o "${g.file}_${c.sk.p}_${safeName((c.arts || c.ko).split(",")[0])}.${ext}" "${c.sk.u}"`;
 }
+/* first playable link of a row, as a frame-viewer URL (YouTube or Sakugabooru mp4), or a plain link */
+function playHrefOf(c, items) {
+  if (c.sk) return sakugaHref(c);
+  for (const it of items) {
+    const yv = ytId(it.url);
+    if (yv) return `${VIEWER_URL}?_=${VCB}&v=${encodeURIComponent(yv.id)}${yv.t ? "&t=" + encodeURIComponent(String(yv.t).replace(/s$/, "")) : ""}&title=${encodeURIComponent(`${nm(c)} · ${it.label || "영상"}`)}&c=${encodeURIComponent(c.id)}`;
+  }
+  return items.length ? items[0].url : "";
+}
 function cardFor(c) {
   const g = GAMES.find(x => x.key === gameOf(c)) || state.game;
   const items = linksOf(c);
   const card = document.createElement("div");
   card.className = "card" + (items.length ? " done" : "") + (c.upcoming ? " up" : ""); card.dataset.g = g.key;
-  const th = thumbFor(c, c.boss ? "--danger" : (g.attrVar[c.attr] || "--muted"));
-  th.style.borderBottomColor = th.style.borderLeftColor; card.appendChild(th);
+  const href = playHrefOf(c, items);
+  const th = thumbFor(c, c.boss ? "--danger" : (g.attrVar[c.attr] || "--muted"), !!href);
+  th.style.borderBottomColor = th.style.borderLeftColor;
+  if (href) {
+    /* 간략히 보기: 썸네일을 누르면 바로 재생 (썸네일 바꾸기는 자세히 보기에서) */
+    const a = document.createElement("a"); a.className = "thumblink"; a.href = href; a.target = "_blank"; a.rel = "noopener";
+    a.title = "눌러서 재생"; a.setAttribute("aria-label", `${nm(c)} 영상 재생`);
+    a.appendChild(th); a.insertAdjacentHTML("beforeend", '<span class="tplay" aria-hidden="true">▶</span>'); card.appendChild(a);
+  } else card.appendChild(th);
   const body = document.createElement("div"); body.className = "cbody";
   const tags = c.boss ? "보스" : c.sk ? "" : [...new Set([c.attr, c.role].filter(Boolean))].map(esc).join(" · ");
-  body.innerHTML = `<div class="name"></div><div class="en"></div><div class="meta">${c.boss ? "" : rarityHTML(c)}${c.sk ? `<span class="score" title="Sakugabooru 점수">♥ ${c.score}</span>` : ""}<span>${tags}</span></div><div class="cfoot"></div>`;
+  body.innerHTML = `<div class="name"></div><div class="en"></div><div class="meta">${c.boss ? "" : rarityHTML(c)}${c.sk ? `<span class="score" title="Sakugabooru 점수">♥ ${c.score}</span>` : ""}<span>${tags}</span></div>${fxHTML(c, 3)}<div class="cfoot"></div>`;
   body.querySelector(".name").textContent = nm(c);
   body.querySelector(".en").textContent = sub(c) || "";
   const foot = body.querySelector(".cfoot");
@@ -665,7 +709,7 @@ function rowFor(c) {
     ? `<div class="name"></div>
     <div class="meta"><span>보스${c.dur ? " · " + esc(c.dur) : ""}</span><span class="en"></span></div>`
     : `<div class="name"></div>
-    <div class="meta">${rarityHTML(c)}${c.moonlight ? '<span class="ml">월광</span>' : ""}${c.sk ? `<span class="score" title="Sakugabooru 점수">♥ ${c.score}</span>` : ""}<span>${tags}</span><span class="en"></span>${c.code ? `<span class="code">${esc(c.code)}</span>` : ""}</div>`;
+    <div class="meta">${rarityHTML(c)}${c.moonlight ? '<span class="ml">월광</span>' : ""}${c.sk ? `<span class="score" title="Sakugabooru 점수">♥ ${c.score}</span>` : ""}<span>${tags}</span>${fxHTML(c, 99)}<span class="en"></span>${c.code ? `<span class="code">${esc(c.code)}</span>` : ""}</div>`;
   who.querySelector(".name").textContent = nm(c);
   who.querySelector(".en").textContent = sub(c) || "";
   who.prepend(thumbFor(c, c.boss ? "--danger" : (g.attrVar[c.attr] || "--muted")));
@@ -792,12 +836,13 @@ async function removeBoss(c) {
 /* ---------- thumbnails ---------- */
 let assets = null;
 const IS_TOUCH = matchMedia("(pointer: coarse)").matches;
-function thumbFor(c, colorVar) {
+function thumbFor(c, colorVar, noEdit) {
+  const edit = noEdit ? null : assets;
   const assetId = state.thumbs[c.id];
-  const box = document.createElement(assets ? "button" : "div");
+  const box = document.createElement(edit ? "button" : "div");
   box.className = "thumb" + (assetId ? " has" : "");
   box.style.borderLeftColor = `var(${colorVar})`;
-  if (assets) { box.type = "button"; box.id = `t-${c.id}`; box.dataset.cid = c.id; box.setAttribute("aria-label", `${nm(c)} 썸네일 ${assetId ? "바꾸기" : "넣기"}`); }
+  if (edit) { box.type = "button"; box.id = `t-${c.id}`; box.dataset.cid = c.id; box.setAttribute("aria-label", `${nm(c)} 썸네일 ${assetId ? "바꾸기" : "넣기"}`); }
   if (assetId) {
     const img = document.createElement("img");
     img.src = String(assetId).includes("/") ? assetId : "/_blob/" + assetId; img.alt = ""; img.loading = "lazy"; img.decoding = "async";
@@ -809,11 +854,11 @@ function thumbFor(c, colorVar) {
     i.style.backgroundSize = `${sp.cols * 100}% ${sp.rows * 100}%`;
     i.style.backgroundPosition = `${sp.cols > 1 ? sp.col / (sp.cols - 1) * 100 : 0}% ${sp.rows > 1 ? sp.row / (sp.rows - 1) * 100 : 0}%`;
     box.classList.add("has", "sp"); box.appendChild(i);
-    if (assets) box.insertAdjacentHTML("beforeend", '<span class="plus">+</span>');
+    if (edit) box.insertAdjacentHTML("beforeend", '<span class="plus">+</span>');
   } else {
-    box.innerHTML = `<span class="ph">${esc(nm(c).slice(0, 1))}</span>${assets ? '<span class="plus">+</span>' : ""}`;
+    box.innerHTML = `<span class="ph">${esc(nm(c).slice(0, 1))}</span>${edit ? '<span class="plus">+</span>' : ""}`;
   }
-  if (!assets) return box;
+  if (!edit) return box;
   if (state.armed === c.id) box.classList.add("armed");
   box.onclick = () => {
     if (IS_TOUCH || state.armed === c.id) { pickFile(c); return; }
@@ -848,7 +893,7 @@ function spriteFor(c) {
   return { file: sp.file, cols: sp.cols, rows: sp.rows, col: i % sp.cols, row: Math.floor(i / sp.cols) };
 }
 function findChar(id) {
-  for (const g of GAMES) { const c = g.roster.find(x => x.id === id) || bossesOf(g).find(x => x.id === id); if (c) return c; }
+  for (const g of GAMES.filter(x => !x.allAni)) { const c = g.roster.find(x => x.id === id) || bossesOf(g).find(x => x.id === id); if (c) return c; }
   return null;
 }
 function pickFile(c) {

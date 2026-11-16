@@ -1,5 +1,5 @@
 {
- "note": "Sakugabooru에서 ‘one-punch_man_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 20개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수예요.",
+ "note": "Sakugabooru에서 ‘one-punch_man_series effects fighting’ 태그를 점수순(order:score)으로 뽑은 인기 이펙트 전투 클립 50개예요. 이름 자리는 원화가(키 애니메이터), 아래 줄은 작품·화수, 태그는 Sakugabooru의 이펙트 종류 태그(불·번개·폭발·연기·스미어 등)를 옮긴 거예요.",
  "src": "출처: <a href=\"https://www.sakugabooru.com/post?tags=one-punch_man_series+effects+fighting+order%3Ascore\" target=\"_blank\" rel=\"noopener\">Sakugabooru · One-Punch Man</a>",
  "roster": [
   {
@@ -13,6 +13,15 @@
    "ver": "",
    "score": 4620,
    "arts": "Arifumi Imai",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 152980,
     "u": "https://www.sakugabooru.com/data/36d5033c5e469696091f9baea0d52ae7.mp4"
@@ -29,6 +38,15 @@
    "ver": "",
    "score": 4358,
    "arts": "Gosei Oda, Yutaka Nakamura",
+   "fx": [
+    "번개",
+    "빔",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 162980,
     "u": "https://www.sakugabooru.com/data/c39d4afe02df73654599c9bf15072d1c.mp4"
@@ -45,6 +63,15 @@
    "ver": "",
    "score": 3571,
    "arts": "Yoshimichi Kameda",
+   "fx": [
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 194936,
     "u": "https://www.sakugabooru.com/data/14917798351e4fc27054e62ebf566fc6.mp4"
@@ -61,6 +88,17 @@
    "ver": "",
    "score": 2911,
    "arts": "Gen Asano, Toya Oshima, Yoshimichi Kameda",
+   "fx": [
+    "불",
+    "번개",
+    "물·액체",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "변형"
+   ],
    "sk": {
     "p": 191821,
     "u": "https://www.sakugabooru.com/data/2e9d9c3fe5ba9d800388fa0730ba28b3.mp4"
@@ -77,6 +115,13 @@
    "ver": "",
    "score": 2555,
    "arts": "Norifumi Kugai",
+   "fx": [
+    "물·액체",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 193721,
     "u": "https://www.sakugabooru.com/data/c033cc65caa1bf967de2ec7117118377.mp4"
@@ -93,6 +138,14 @@
    "ver": "",
    "score": 2248,
    "arts": "Arifumi Imai",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 214992,
     "u": "https://www.sakugabooru.com/data/2eeef19f6eea1b6ee9cda7b521a5e354.mp4"
@@ -109,6 +162,14 @@
    "ver": "",
    "score": 2096,
    "arts": "Norifumi Kugai, Yoshimichi Kameda",
+   "fx": [
+    "번개",
+    "빔",
+    "물·액체",
+    "임팩트 프레임",
+    "스미어",
+    "변형"
+   ],
    "sk": {
     "p": 194937,
     "u": "https://www.sakugabooru.com/data/fd7e2148938f6288f87c1deb326b0f4b.mp4"
@@ -125,6 +186,13 @@
    "ver": "",
    "score": 1852,
    "arts": "Gosei Oda",
+   "fx": [
+    "물·액체",
+    "연기",
+    "파편",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 285162,
     "u": "https://www.sakugabooru.com/data/a985faad5c049ef32ad82b03d2336fc6.mp4"
@@ -141,6 +209,14 @@
    "ver": "",
    "score": 1826,
    "arts": "Unknown, Toshi Sada, Yoshimichi Kameda",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 242731,
     "u": "https://www.sakugabooru.com/data/7fc794cfcc9fa3ea2923ad9acceb77a1.mp4"
@@ -157,6 +233,15 @@
    "ver": "",
    "score": 1791,
    "arts": "Toshiyuki Sato",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "연기",
+    "바람",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 285174,
     "u": "https://www.sakugabooru.com/data/413439baeb7ea25bd85b2932d4cd2bb9.mp4"
@@ -173,6 +258,13 @@
    "ver": "",
    "score": 1771,
    "arts": "Kenichiro Aoki",
+   "fx": [
+    "물·액체",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 109100,
     "u": "https://www.sakugabooru.com/data/f53d73d82912c76421dc1d1bf8b949ad.mp4"
@@ -189,6 +281,13 @@
    "ver": "",
    "score": 1593,
    "arts": "Hidehiko Sawada",
+   "fx": [
+    "불",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 310818,
     "u": "https://www.sakugabooru.com/data/0ba188688470775265fb348d0714f735.mp4"
@@ -205,6 +304,14 @@
    "ver": "",
    "score": 1527,
    "arts": "Keiichiro Watanabe",
+   "fx": [
+    "불",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 193844,
     "u": "https://www.sakugabooru.com/data/fbc4a997232702c2c9e50e5f1f00e8e3.mp4"
@@ -221,6 +328,11 @@
    "ver": "",
    "score": 1367,
    "arts": "Bahi Jd",
+   "fx": [
+    "물·액체",
+    "연기",
+    "스미어"
+   ],
    "sk": {
     "p": 194447,
     "u": "https://www.sakugabooru.com/data/e9066cc10b557a39189beddc9dd5b068.mp4"
@@ -237,6 +349,11 @@
    "ver": "",
    "score": 1288,
    "arts": "Kenichi Fujisawa",
+   "fx": [
+    "연기",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 107823,
     "u": "https://www.sakugabooru.com/data/cbbf40494074141bedaadbbd947e02de.mp4"
@@ -253,6 +370,12 @@
    "ver": "",
    "score": 1284,
    "arts": "Unknown, Norimoto Tokura, Sushio, Taiki Imamura, Toshiyuki Sato",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "파편"
+   ],
    "sk": {
     "p": 212077,
     "u": "https://www.sakugabooru.com/data/30f5dd920ff77641e55e19112082c279.mp4"
@@ -269,6 +392,10 @@
    "ver": "",
    "score": 1137,
    "arts": "Yoshimichi Kameda",
+   "fx": [
+    "연기",
+    "스미어"
+   ],
    "sk": {
     "p": 211584,
     "u": "https://www.sakugabooru.com/data/fab33f1f07765005bc3959c5eb7e3b18.mp4"
@@ -285,6 +412,12 @@
    "ver": "",
    "score": 1084,
    "arts": "Kenichiro Aoki",
+   "fx": [
+    "연기",
+    "바람",
+    "임팩트 프레임",
+    "스미어"
+   ],
    "sk": {
     "p": 154172,
     "u": "https://www.sakugabooru.com/data/f5c4859aab7613c0f3ef46e6a70e1f4e.mp4"
@@ -301,6 +434,14 @@
    "ver": "",
    "score": 1081,
    "arts": "Naoki Kobayashi",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
    "sk": {
     "p": 212075,
     "u": "https://www.sakugabooru.com/data/f6ed35beb228f0510770d8e3b7e31061.mp4"
@@ -317,9 +458,710 @@
    "ver": "",
    "score": 1025,
    "arts": "Kenichiro Aoki",
+   "fx": [
+    "폭발",
+    "빔",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
    "sk": {
     "p": 137097,
     "u": "https://www.sakugabooru.com/data/bff10e46427a0d718c026e730911cd83.mp4"
+   }
+  },
+  {
+   "id": "aopm-285169",
+   "ko": "Shosuke Ishibashi",
+   "en": "One-punch Man · #02",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 1023,
+   "arts": "Shosuke Ishibashi",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 285169,
+    "u": "https://www.sakugabooru.com/data/a0dcc804b0d98543abdb89c7d7cc93dd.mp4"
+   }
+  },
+  {
+   "id": "aopm-285176",
+   "ko": "Toshiyuki Sato",
+   "en": "One-punch Man · #09",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 1021,
+   "arts": "Toshiyuki Sato",
+   "fx": [
+    "불",
+    "번개",
+    "빔",
+    "연기",
+    "스파크",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 285176,
+    "u": "https://www.sakugabooru.com/data/c0292dccc97b76ef6047ab65b2962f35.mp4"
+   }
+  },
+  {
+   "id": "aopm-211583",
+   "ko": "Norifumi Kugai",
+   "en": "One-punch Man",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 1020,
+   "arts": "Norifumi Kugai",
+   "fx": [
+    "파편"
+   ],
+   "sk": {
+    "p": 211583,
+    "u": "https://www.sakugabooru.com/data/9d9ccbad28126dce0dd9ef676f5a1820.mp4"
+   }
+  },
+  {
+   "id": "aopm-194913",
+   "ko": "Hiroyuki Aoyama",
+   "en": "One-punch Man · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 1014,
+   "arts": "Hiroyuki Aoyama",
+   "fx": [
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "변형"
+   ],
+   "sk": {
+    "p": 194913,
+    "u": "https://www.sakugabooru.com/data/d16f448d8c0da7d6000607789dee91ef.mp4"
+   }
+  },
+  {
+   "id": "aopm-243092",
+   "ko": "Keisuke Kojima, Ryu Nakayama 외 1명",
+   "en": "One-punch Man · #02",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 987,
+   "arts": "Keisuke Kojima, Ryu Nakayama, Shun Enokido",
+   "fx": [
+    "불",
+    "번개",
+    "빔",
+    "연기",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 243092,
+    "u": "https://www.sakugabooru.com/data/f8fa7f1b038f44e14228768f216012eb.mp4"
+   }
+  },
+  {
+   "id": "aopm-125781",
+   "ko": "Yuji Takagi",
+   "en": "One-punch Man 2 · #03",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man 2",
+   "role": "",
+   "ver": "",
+   "score": 970,
+   "arts": "Yuji Takagi",
+   "fx": [
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 125781,
+    "u": "https://www.sakugabooru.com/data/37a4eb205fe7592e8756541017b089aa.mp4"
+   }
+  },
+  {
+   "id": "aopm-212076",
+   "ko": "Arifumi Imai",
+   "en": "One-punch Man · NCOP",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 956,
+   "arts": "Arifumi Imai",
+   "fx": [
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 212076,
+    "u": "https://www.sakugabooru.com/data/de3a40df63dccf98f22961df1b06ce69.mp4"
+   }
+  },
+  {
+   "id": "aopm-194835",
+   "ko": "Tomohiro Shinoda",
+   "en": "One-punch Man · #11",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 932,
+   "arts": "Tomohiro Shinoda",
+   "fx": [
+    "번개",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "변형"
+   ],
+   "sk": {
+    "p": 194835,
+    "u": "https://www.sakugabooru.com/data/cda273a8097151a322f2149307723149.mp4"
+   }
+  },
+  {
+   "id": "aopm-195305",
+   "ko": "Chikashi Kubota",
+   "en": "One-punch Man · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 919,
+   "arts": "Chikashi Kubota",
+   "fx": [
+    "불",
+    "번개",
+    "빔",
+    "연기",
+    "바람",
+    "임팩트 프레임"
+   ],
+   "sk": {
+    "p": 195305,
+    "u": "https://www.sakugabooru.com/data/aab2e6891194134a3c23032779738acf.mp4"
+   }
+  },
+  {
+   "id": "aopm-110769",
+   "ko": "Kenichiro Aoki",
+   "en": "One-punch Man 2 (OVA) · OVA4",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man 2 (OVA)",
+   "role": "",
+   "ver": "",
+   "score": 895,
+   "arts": "Kenichiro Aoki",
+   "fx": [
+    "연기",
+    "스미어"
+   ],
+   "sk": {
+    "p": 110769,
+    "u": "https://www.sakugabooru.com/data/7cb33a9f866751e07f1c3d078a9022c5.mp4"
+   }
+  },
+  {
+   "id": "aopm-80734",
+   "ko": "Kenichiro Aoki",
+   "en": "One-punch Man 2 · #10",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man 2",
+   "role": "",
+   "ver": "",
+   "score": 887,
+   "arts": "Kenichiro Aoki",
+   "fx": [
+    "물·액체",
+    "연기",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 80734,
+    "u": "https://www.sakugabooru.com/data/bd691be2e27d31a8a3ca28ce0c5dadb0.mp4"
+   }
+  },
+  {
+   "id": "aopm-137130",
+   "ko": "Yoshimichi Kameda",
+   "en": "One-punch Man 2 · #12 (PN)",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man 2",
+   "role": "",
+   "ver": "",
+   "score": 860,
+   "arts": "Yoshimichi Kameda",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어",
+    "CG"
+   ],
+   "sk": {
+    "p": 137130,
+    "u": "https://www.sakugabooru.com/data/80d22ea9684717940b7c5e8f554ca5d9.mp4"
+   }
+  },
+  {
+   "id": "aopm-242755",
+   "ko": "Gosei Oda, Hakuyu Go",
+   "en": "One-punch Man · #04 (Action",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 855,
+   "arts": "Gosei Oda, Hakuyu Go",
+   "fx": [
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 242755,
+    "u": "https://www.sakugabooru.com/data/1b0646e9136c406a6fed77ab30f3d606.mp4"
+   }
+  },
+  {
+   "id": "aopm-105743",
+   "ko": "Kenichiro Aoki",
+   "en": "One-punch Man 2 · #02",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man 2",
+   "role": "",
+   "ver": "",
+   "score": 819,
+   "arts": "Kenichiro Aoki",
+   "fx": [
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 105743,
+    "u": "https://www.sakugabooru.com/data/1d49fef93d296d129c1785eb155d5479.mp4"
+   }
+  },
+  {
+   "id": "aopm-137095",
+   "ko": "Kenichiro Aoki",
+   "en": "One-punch Man 2 · #06",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man 2",
+   "role": "",
+   "ver": "",
+   "score": 797,
+   "arts": "Kenichiro Aoki",
+   "fx": [
+    "폭발",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 137095,
+    "u": "https://www.sakugabooru.com/data/40da36baac0c76794b1e20f8210415a3.mp4"
+   }
+  },
+  {
+   "id": "aopm-214995",
+   "ko": "Isao Hayashi, Norimoto Tokura",
+   "en": "One-punch Man · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 718,
+   "arts": "Isao Hayashi, Norimoto Tokura",
+   "fx": [
+    "번개",
+    "폭발",
+    "빔",
+    "연기",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 214995,
+    "u": "https://www.sakugabooru.com/data/5cc5182354e8571befa059a4514871a2.mp4"
+   }
+  },
+  {
+   "id": "aopm-194916",
+   "ko": "Hidehiko Sawada",
+   "en": "One-punch Man · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 705,
+   "arts": "Hidehiko Sawada",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 194916,
+    "u": "https://www.sakugabooru.com/data/22ad32f0cb96767be19951b3b2324c47.mp4"
+   }
+  },
+  {
+   "id": "aopm-138017",
+   "ko": "Toshiyuki Sato",
+   "en": "One-punch Man · #02",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 699,
+   "arts": "Toshiyuki Sato",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 138017,
+    "u": "https://www.sakugabooru.com/data/9a52959081250c6ad9e89e8cde21e263.mp4"
+   }
+  },
+  {
+   "id": "aopm-170547",
+   "ko": "Arifumi Imai",
+   "en": "One-punch Man · #08",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 693,
+   "arts": "Arifumi Imai",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 170547,
+    "u": "https://www.sakugabooru.com/data/0e5f4304000dba9dca156edbb5af4f63.mp4"
+   }
+  },
+  {
+   "id": "aopm-296848",
+   "ko": "Kenichiro Aoki",
+   "en": "One-punch Man 3 · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man 3",
+   "role": "",
+   "ver": "",
+   "score": 667,
+   "arts": "Kenichiro Aoki",
+   "fx": [
+    "불",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 296848,
+    "u": "https://www.sakugabooru.com/data/22c50e416f6fc0636bcff6966bb5ed65.mp4"
+   }
+  },
+  {
+   "id": "aopm-194915",
+   "ko": "Gosei Oda, Satoshi Iwataki 외 1명",
+   "en": "One-punch Man · #12 (Action",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 665,
+   "arts": "Gosei Oda, Satoshi Iwataki, Takashi Tomioka",
+   "fx": [
+    "불",
+    "번개",
+    "폭발",
+    "빔",
+    "연기",
+    "바람",
+    "파편"
+   ],
+   "sk": {
+    "p": 194915,
+    "u": "https://www.sakugabooru.com/data/a3896b060c5f145b545a4ecd4352b221.mp4"
+   }
+  },
+  {
+   "id": "aopm-250784",
+   "ko": "Kenichiro Aoki",
+   "en": "One-punch Man 3",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man 3",
+   "role": "",
+   "ver": "",
+   "score": 664,
+   "arts": "Kenichiro Aoki",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "바람",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 250784,
+    "u": "https://www.sakugabooru.com/data/3ee8f9ce923fa46c20a9b7f25c53c48b.mp4"
+   }
+  },
+  {
+   "id": "aopm-285168",
+   "ko": "Hidehiko Sawada",
+   "en": "One-punch Man · #02",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 652,
+   "arts": "Hidehiko Sawada",
+   "fx": [
+    "번개",
+    "물·액체",
+    "연기",
+    "바람",
+    "스파크",
+    "파편",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 285168,
+    "u": "https://www.sakugabooru.com/data/075c52e8cbde7278d244a8d71b87763f.mp4"
+   }
+  },
+  {
+   "id": "aopm-194448",
+   "ko": "Takashi Tomioka",
+   "en": "One-punch Man · #09",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 641,
+   "arts": "Takashi Tomioka",
+   "fx": [
+    "물·액체",
+    "연기",
+    "바람"
+   ],
+   "sk": {
+    "p": 194448,
+    "u": "https://www.sakugabooru.com/data/211f3a631c76d20b93c167b489406bca.mp4"
+   }
+  },
+  {
+   "id": "aopm-214991",
+   "ko": "Fumiaki Kouta",
+   "en": "One-punch Man · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 634,
+   "arts": "Fumiaki Kouta",
+   "fx": [
+    "폭발",
+    "물·액체",
+    "연기",
+    "바람",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 214991,
+    "u": "https://www.sakugabooru.com/data/d063b85b42e9b96c1cc5ee5be7558bb1.mp4"
+   }
+  },
+  {
+   "id": "aopm-105740",
+   "ko": "Kenichiro Aoki",
+   "en": "One-punch Man 2 · #01",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man 2",
+   "role": "",
+   "ver": "",
+   "score": 625,
+   "arts": "Kenichiro Aoki",
+   "fx": [
+    "번개",
+    "폭발",
+    "연기",
+    "바람",
+    "임팩트 프레임",
+    "스미어"
+   ],
+   "sk": {
+    "p": 105740,
+    "u": "https://www.sakugabooru.com/data/18c526f432788052743a1c48b8fafefe.mp4"
+   }
+  },
+  {
+   "id": "aopm-194831",
+   "ko": "Sejoon Kim",
+   "en": "One-punch Man · #11",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 618,
+   "arts": "Sejoon Kim",
+   "fx": [
+    "연기",
+    "스파크",
+    "스미어"
+   ],
+   "sk": {
+    "p": 194831,
+    "u": "https://www.sakugabooru.com/data/9b0532100b901cca3039d9b940cf3f8c.mp4"
+   }
+  },
+  {
+   "id": "aopm-242783",
+   "ko": "Itsuki Tsuchigami",
+   "en": "One-punch Man · #06",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 613,
+   "arts": "Itsuki Tsuchigami",
+   "fx": [
+    "폭발",
+    "연기",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 242783,
+    "u": "https://www.sakugabooru.com/data/c9f1ee6e8f83cd403a85d7a07b5ad88f.mp4"
+   }
+  },
+  {
+   "id": "aopm-137096",
+   "ko": "Kenichiro Aoki",
+   "en": "One-punch Man 2 · #12",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man 2",
+   "role": "",
+   "ver": "",
+   "score": 605,
+   "arts": "Kenichiro Aoki",
+   "fx": [
+    "물·액체",
+    "연기",
+    "파편",
+    "스미어"
+   ],
+   "sk": {
+    "p": 137096,
+    "u": "https://www.sakugabooru.com/data/0778b6ffaaee6ab1f266d0e5d05b4a1f.mp4"
+   }
+  },
+  {
+   "id": "aopm-242754",
+   "ko": "Yuuki Watanabe",
+   "en": "One-punch Man · #04",
+   "zh": "",
+   "rarity": "",
+   "attr": "One-punch Man",
+   "role": "",
+   "ver": "",
+   "score": 574,
+   "arts": "Yuuki Watanabe",
+   "fx": [
+    "연기",
+    "바람",
+    "스미어"
+   ],
+   "sk": {
+    "p": 242754,
+    "u": "https://www.sakugabooru.com/data/ae3a5d149e6426cd057889870ff36d94.mp4"
    }
   }
  ],
