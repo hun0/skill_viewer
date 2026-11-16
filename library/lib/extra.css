@@ -236,3 +236,6 @@ html[lang="zh-CN"] .about summary::after { content: " · 详情"; }
 .thumblink .tplay { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; border-radius: 50%; background: rgba(0,0,0,.55); color: #fff; font-size: 18px; line-height: 44px; text-align: center; padding-left: 3px; opacity: 0; transition: opacity .15s; pointer-events: none; }
 .thumblink:hover .tplay, .thumblink:focus-visible .tplay { opacity: 1; }
 @media (pointer: coarse) { .thumblink .tplay { opacity: .85; width: 36px; height: 36px; line-height: 36px; font-size: 15px; } }
+
+#tagQuick .tqnote { width: 100%; order: -2; color: var(--accent); }
+#tagQuick .tqclear { order: -1; }

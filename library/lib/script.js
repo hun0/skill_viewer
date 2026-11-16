@@ -467,6 +467,8 @@ function matches(c, q) {
 }
 /* 태그 검색: my own tags plus the anime effect tags (in Korean, English or Chinese) */
 function fxHit(c, q) { return (c.fx || []).some(f => [f, ...(DICT[f] || [])].some(v => String(v).toLowerCase().includes(q))); }
+/* several tags in the search box, separated by commas: a row must carry all of them */
+function tagTerms(q) { return String(q).split(/[,，]/).map(t => t.trim().toLowerCase()).filter(Boolean); }
 function tagHit(c, q) { return (state.tags[c.id] || []).some(t => t.toLowerCase().includes(q)) || fxHit(c, q); }
 function bmHit(bm, q) { return [bm.note, bm.title].some(v => v && String(v).toLowerCase().includes(q)); }
 function crossSearch() { return state.smode !== "name" && !!state.q.trim(); }
@@ -504,7 +506,7 @@ function attrHit(c, q) {
   return [c.attr, c.role, ...(c.fx || [])].some(v => v && (String(v).toLowerCase() === q || (q.length > 1 && String(v).toLowerCase().includes(q)) || tr(String(v), gk).toLowerCase() === q));
 }
 function searchHit(c, q) {
-  if (state.smode === "tag") return tagHit(c, q);
+  if (state.smode === "tag") return tagTerms(q).every(t => tagHit(c, t));
   if (state.smode === "bm") return (state.bms[c.id] || []).some(b => bmHit(b, q));
   if (state.smode === "attr") return attrHit(c, q);
   return matches(c, q);
@@ -991,7 +993,7 @@ function searchFor(mode, text) {
   state.smode = mode; $("#smode").value = mode; state.q = text; $("#q").value = text; setPlaceholder(); render(); window.scrollTo(0, 0);
 }
 function setPlaceholder() {
-  $("#q").placeholder = state.smode === "tag" ? "태그 검색 (모든 게임)" : state.smode === "bm" ? "북마크 메모 검색 (모든 게임)" : state.smode === "all" ? "이름 검색 (모든 게임)" : state.smode === "attr" ? "속성·역할 검색 (모든 게임) 예: 불, 탱커" : "이름 검색 (한글·영문·중문)";
+  $("#q").placeholder = state.smode === "tag" ? "태그 검색 (모든 게임) · 여러 개는 쉼표로" : state.smode === "bm" ? "북마크 메모 검색 (모든 게임)" : state.smode === "all" ? "이름 검색 (모든 게임)" : state.smode === "attr" ? "속성·역할 검색 (모든 게임) 예: 불, 탱커" : "이름 검색 (한글·영문·중문)";
   buildAttrQuick(); buildTagQuick();
   $("#chiprow").classList.toggle("xhide", state.smode !== "name");
 }
@@ -1016,17 +1018,26 @@ function buildTagQuick() {
   const box = $("#tagQuick"); if (!box) return;
   box.hidden = state.smode !== "tag";
   if (box.hidden) return;
-  const cur = state.q.trim().toLowerCase();
+  const cur = tagTerms(state.q);
   box.textContent = "";
   const mine = Object.values(state.tags).flat().reduce((m, t) => m.set(t, (m.get(t) || 0) + 1), new Map());
   const own = [...mine.entries()].filter(([t]) => !FX_ORDER.includes(t)).sort((a, b) => b[1] - a[1]).slice(0, 40).map(x => x[0]);
+  if (cur.length > 1) { const n = document.createElement("span"); n.className = "flabel tqnote"; n.textContent = `${cur.length}개 태그가 모두 붙은 것만`; box.appendChild(n); }
+  if (cur.length) { const x = document.createElement("button"); x.type = "button"; x.className = "chip tqclear"; x.textContent = "모두 해제"; x.onclick = () => { state.q = ""; $("#q").value = ""; buildTagQuick(); render(); }; box.appendChild(x); }
   [["이펙트", FX_ORDER], ["내 태그", own]].forEach(([label, list]) => {
     if (!list.length) return;
     const l = document.createElement("span"); l.className = "flabel"; l.textContent = label; box.appendChild(l);
     list.forEach(t => {
       const b = document.createElement("button"); b.type = "button"; b.className = "chip";
-      b.setAttribute("aria-pressed", String(cur === t.toLowerCase())); b.textContent = t;
-      b.onclick = () => { state.q = cur === t.toLowerCase() ? "" : t; $("#q").value = state.q; buildTagQuick(); render(); window.scrollTo(0, 0); };
+      const names = [t, ...(DICT[t] || [])].map(v => String(v).toLowerCase());
+      const on = cur.some(x => names.includes(x));
+      b.setAttribute("aria-pressed", String(on)); b.textContent = t;
+      b.onclick = () => {
+        const canon = x => [...FX_ORDER, ...own].find(y => [y, ...(DICT[y] || [])].some(v => String(v).toLowerCase() === x)) || x;
+        const now = tagTerms(state.q).map(canon);
+        state.q = (on ? now.filter(x => x !== t) : [...now, t]).join(", ");
+        $("#q").value = state.q; buildTagQuick(); render(); window.scrollTo(0, 0);
+      };
       box.appendChild(b);
     });
   });
