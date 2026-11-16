@@ -204,7 +204,9 @@ const P = {
   play() { if (S.mode === "file") vid.play(); else if (S.ytReady) S.yt.playVideo(); S.playing = true; loop(); },
   pause() { if (S.mode === "file") vid.pause(); else if (S.ytReady) S.yt.pauseVideo(); S.playing = false; },
   seek(t) {
-    if (S.mode === "file") { vid.currentTime = t; return; }
+    /* native video: never queue seeks. While one is in flight keep only the latest target and jump there when it lands,
+       so dragging stays smooth even on a remote mp4 (Sakugabooru) where every seek has to fetch and decode */
+    if (S.mode === "file") { if (vid.seeking) { S.fpend = t; return; } S.fpend = null; vid.currentTime = t; return; }
     if (!S.ytReady) return;
     S.pending = t;
     if (!S.timer) S.timer = setTimeout(() => { S.timer = null; if (S.pending != null) { S.yt.seekTo(S.pending, true); S.pending = null; } }, 40);
@@ -317,6 +319,7 @@ function openSrc(url, title, page) {
   $("#yt").classList.add("hide");
   closeFile();
   S.mode = "file"; S.fileName = url; S.cur = 0; S.dur = 0; S.playing = false; S.a = S.b = null;
+  vid.preload = "auto"; /* buffer the whole clip, so scrubbing inside it does not wait on the network */
   vid.src = url; vid.classList.remove("hide"); vid.playbackRate = S.rate; applyMute();
   $("#title").textContent = title || decodeURIComponent(url.split("/").pop());
   const ext = $("#ext"); ext.href = page || url; ext.textContent = page && page.includes("sakugabooru") ? "Sakugabooru ↗" : "원본 ↗"; ext.classList.remove("hide");
@@ -324,9 +327,13 @@ function openSrc(url, title, page) {
   msg("불러오는 중…"); bmRender();
   vid.onloadedmetadata = () => { S.dur = vid.duration; msg(""); const t0 = S.startAt; S.startAt = null; if (t0) seekTo(t0, true); sync(); };
   vid.onerror = () => msg("영상을 불러오지 못했어요. 위의 ‘다운로드’로 원본을 열어 보세요.");
-  vid.onseeked = () => { if (!S.playing) { S.cur = vid.currentTime; sync(); } };
+  vid.onseeked = onVidSeeked;
   vid.onpause = () => { S.playing = false; sync(); };
   vid.onplay = () => { S.playing = true; loop(); };
+}
+function onVidSeeked() {
+  if (S.fpend != null) { const t = S.fpend; S.fpend = null; vid.currentTime = t; return; }
+  if (!S.playing && !drag) { S.cur = vid.currentTime; sync(); }
 }
 function openFile(f) {
   if (!f) return;
@@ -337,7 +344,7 @@ function openFile(f) {
   vid.src = URL.createObjectURL(f); vid.classList.remove("hide"); vid.playbackRate = S.rate;
   $("#title").textContent = f.name; msg(""); bmRender();
   vid.onloadedmetadata = () => { S.dur = vid.duration; sync(); };
-  vid.onseeked = () => { if (!S.playing) { S.cur = vid.currentTime; sync(); } };
+  vid.onseeked = onVidSeeked;
   vid.onpause = () => { S.playing = false; sync(); };
   vid.onplay = () => { S.playing = true; loop(); };
 }
@@ -352,7 +359,7 @@ pad.addEventListener("pointermove", e => {
   if (!drag.moved) { drag.moved = true; if (S.playing) P.pause(); }
   seekTo(drag.t0 + Math.round(dx / S.sens) / S.fps);
 });
-pad.addEventListener("pointerup", () => { if (drag && !drag.moved) toggle(); drag = null; });
+pad.addEventListener("pointerup", () => { if (drag && !drag.moved) toggle(); drag = null; if (S.mode === "file" && !vid.seeking && !S.playing) { S.cur = vid.currentTime; sync(); } });
 pad.addEventListener("pointercancel", () => { drag = null; });
 $("#pp").onclick = toggle;
 document.querySelectorAll("[data-step]").forEach(b => b.onclick = () => step(+b.dataset.step));
