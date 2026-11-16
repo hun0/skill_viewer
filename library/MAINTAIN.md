@@ -22,6 +22,7 @@
   - **이펙트 태그**: Sakugabooru 일반 태그 중 `fire lightning explosions beams ice liquid smoke wind sparks debris impact_frames smears missiles morphing cgi` → `불 번개 폭발 빔 얼음 물·액체 연기 바람 스파크 파편 임팩트 프레임 스미어 미사일 변형 CG`. 애니에서는 두 번째 칩 줄('이펙트')이 이 태그 필터이고, 정렬의 '이펙트별'은 태그마다 섹션으로 묶어 보여 줘요(여러 태그가 붙은 클립은 여러 섹션에). 칩 순서는 `FX_ORDER`
   - Sakugabooru는 컨테이너에서 막혀 있어서 Chrome으로 `post.json?api_version=2&include_tags=1`을 받아요(태그 종류로 원화가·작품 구분). 브라우저 도구 결과가 약 1000자에서 잘리고 base64는 막히므로, 압축 텍스트를 950자씩 나눠 받고 FNV-1a 해시로 조각마다 검증했어요. 미리보기(`/data/preview/<md5>.jpg`, 300×169)는 같은 페이지 캔버스에 120px 정사각(가운데 자르기)으로 깔고 `zoom save_to_disk`로 캡처해 80px 시트(10열, 20개면 2행·50개면 5행)로 만들었어요
   - 재생·다운로드: ▶와 간략히 보기의 썸네일 클릭은 프레임 뷰어 `?src=<mp4>&page=<글 주소>`(네이티브 video라 프레임 단위 정확). Sakugabooru는 CORS를 안 열어 줘서 스크립트 저장이 안 되고, 아티팩트는 `download` 속성 링크를 막아요. 그래서 ⬇는 원본 mp4를 새 탭으로 열고(우클릭 → 저장), 작품 단위로는 헤더의 ‘전체 다운로드 명령 복사’(curl)를 써요
+- **태그 검색**: 검색 기준 ‘태그’는 내가 단 태그와 애니 이펙트 태그(한·영·중 이름)를 함께 찾아요. 이 모드에서는 검색창 아래 `#tagQuick`에 이펙트 태그와 내 태그(많이 쓴 순 40개)가 칩으로 떠서 눌러 고를 수 있어요(`buildTagQuick`)
 - **간략히 보기 썸네일**: 누르면 첫 영상이 바로 재생돼요(프레임 뷰어). 썸네일 바꾸기(붙여넣기·끌어다 놓기)는 자세히 보기에서만
 - `sprites/<게임>.webp` + `<게임>.json` — 나무위키 이미지로 만든 캐릭터 썸네일 시트(80px 칸, 16열). json의 `ids` 순서가 칸 순서
 - `sprites/blobs.json` — 각 시트가 아티팩트에 올라가 있는 asset id

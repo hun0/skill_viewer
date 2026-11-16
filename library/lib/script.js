@@ -465,7 +465,9 @@ function toggle(set, v) { set.has(v) ? set.delete(v) : set.add(v); }
 function matches(c, q) {
   return [c.ko, c.en, c.zh, c.code, c.arts].some(v => v && String(v).toLowerCase().includes(q));
 }
-function tagHit(c, q) { return (state.tags[c.id] || []).some(t => t.toLowerCase().includes(q)); }
+/* 태그 검색: my own tags plus the anime effect tags (in Korean, English or Chinese) */
+function fxHit(c, q) { return (c.fx || []).some(f => [f, ...(DICT[f] || [])].some(v => String(v).toLowerCase().includes(q))); }
+function tagHit(c, q) { return (state.tags[c.id] || []).some(t => t.toLowerCase().includes(q)) || fxHit(c, q); }
 function bmHit(bm, q) { return [bm.note, bm.title].some(v => v && String(v).toLowerCase().includes(q)); }
 function crossSearch() { return state.smode !== "name" && !!state.q.trim(); }
 /* element search across games: every game's own word for an element maps to one group */
@@ -538,7 +540,7 @@ function render() {
   const list = filtered();
   const q = state.q.trim().toLowerCase();
   if (crossSearch()) {
-    if (!list.length) { main.innerHTML = `<p class="nores">${state.smode === "tag" ? "이 태그가 달린 캐릭터가 없어요." : state.smode === "bm" ? "이 메모가 달린 캐릭터가 없어요." : state.smode === "attr" ? "이 속성·역할의 캐릭터가 없어요." : "조건에 맞는 캐릭터가 없어요."}</p>`; return; }
+    if (!list.length) { main.innerHTML = `<p class="nores">${state.smode === "tag" ? "이 태그가 달린 클립·캐릭터가 없어요." : state.smode === "bm" ? "이 메모가 달린 캐릭터가 없어요." : state.smode === "attr" ? "이 속성·역할의 캐릭터가 없어요." : "조건에 맞는 캐릭터가 없어요."}</p>`; return; }
     const tot = document.createElement("p"); tot.className = "xsum"; tot.textContent = L(`모든 게임에서 ${list.length}명`, `${list.length} across all games`, `全部游戏共 ${list.length} 名`); main.appendChild(tot);
     GAMES.filter(gg => !gg.allAni).forEach(gg => {
       const its = list.filter(c => gameOf(c) === gg.key); if (!its.length) return;
@@ -947,7 +949,7 @@ async function clearThumb(c) {
 }
 
 /* ---------- effect tags under the thumbnail ---------- */
-function allTags() { const m = new Map(); Object.values(state.tags).forEach(l => (l || []).forEach(t => m.set(t, (m.get(t) || 0) + 1))); return [...m.entries()].sort((a, b) => b[1] - a[1]).map(x => x[0]); }
+function allTags() { const m = new Map(); Object.values(state.tags).forEach(l => (l || []).forEach(t => m.set(t, (m.get(t) || 0) + 1))); FX_ORDER.forEach(f => m.set(f, (m.get(f) || 0) + 0.5)); return [...m.entries()].sort((a, b) => b[1] - a[1]).map(x => x[0]); }
 function refreshTagList() { const dl = $("#tagList"); dl.textContent = ""; allTags().forEach(t => { const o = document.createElement("option"); o.value = t; dl.appendChild(o); }); }
 function tagRow(c) {
   const wrap = document.createElement("div"); wrap.className = "tags";
@@ -990,7 +992,7 @@ function searchFor(mode, text) {
 }
 function setPlaceholder() {
   $("#q").placeholder = state.smode === "tag" ? "태그 검색 (모든 게임)" : state.smode === "bm" ? "북마크 메모 검색 (모든 게임)" : state.smode === "all" ? "이름 검색 (모든 게임)" : state.smode === "attr" ? "속성·역할 검색 (모든 게임) 예: 불, 탱커" : "이름 검색 (한글·영문·중문)";
-  buildAttrQuick();
+  buildAttrQuick(); buildTagQuick();
   $("#chiprow").classList.toggle("xhide", state.smode !== "name");
 }
 function buildAttrQuick() {
@@ -1006,6 +1008,27 @@ function buildAttrQuick() {
     b.appendChild(document.createTextNode(g.k));
     b.onclick = () => { state.q = ELEM_OF[cur] === g.k ? "" : g.k; $("#q").value = state.q; buildAttrQuick(); render(); };
     box.appendChild(b);
+  });
+}
+
+/* 태그 모드: 이펙트 태그 + 내가 단 태그를 칩으로 띄워 눌러서 고르기 (한 번 더 누르면 해제) */
+function buildTagQuick() {
+  const box = $("#tagQuick"); if (!box) return;
+  box.hidden = state.smode !== "tag";
+  if (box.hidden) return;
+  const cur = state.q.trim().toLowerCase();
+  box.textContent = "";
+  const mine = Object.values(state.tags).flat().reduce((m, t) => m.set(t, (m.get(t) || 0) + 1), new Map());
+  const own = [...mine.entries()].filter(([t]) => !FX_ORDER.includes(t)).sort((a, b) => b[1] - a[1]).slice(0, 40).map(x => x[0]);
+  [["이펙트", FX_ORDER], ["내 태그", own]].forEach(([label, list]) => {
+    if (!list.length) return;
+    const l = document.createElement("span"); l.className = "flabel"; l.textContent = label; box.appendChild(l);
+    list.forEach(t => {
+      const b = document.createElement("button"); b.type = "button"; b.className = "chip";
+      b.setAttribute("aria-pressed", String(cur === t.toLowerCase())); b.textContent = t;
+      b.onclick = () => { state.q = cur === t.toLowerCase() ? "" : t; $("#q").value = state.q; buildTagQuick(); render(); window.scrollTo(0, 0); };
+      box.appendChild(b);
+    });
   });
 }
 
@@ -1264,7 +1287,7 @@ function hScroll(el) {
 hScroll($("#chiprow"));
 $("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
 $("#smode").addEventListener("change", e => { state.smode = e.target.value; setPlaceholder(); render(); });
-$("#q").addEventListener("input", () => { if (state.smode === "attr") buildAttrQuick(); });
+$("#q").addEventListener("input", () => { if (state.smode === "attr") buildAttrQuick(); if (state.smode === "tag") buildTagQuick(); });
 $("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
 $("#onlyEmpty").onclick = e => { state.onlyEmpty = !state.onlyEmpty; e.currentTarget.setAttribute("aria-pressed", state.onlyEmpty); render(); };
 $("#filterBtn").onclick = () => { const f = $("#filters"); const o = !f.classList.contains("open"); f.classList.toggle("open", o); $("#filterBtn").setAttribute("aria-expanded", o); };
@@ -1275,6 +1298,7 @@ buildTabs();
 const fromHash = () => (location.hash || "").replace("#", "");
 window.addEventListener("hashchange", () => selectGame(fromHash()));
 selectGame(fromHash());
+refreshTagList();
 document.querySelectorAll(".lang button").forEach(b => b.onclick = () => setLang(b.dataset.lang));
 function setView(v) {
   state.view = v; try { localStorage.setItem("hfx-lib-view", v); } catch {}
@@ -1325,7 +1349,7 @@ function useSnapshot() {
   db.collection("tags").onSnapshot(snap => {
     const m = {};
     snap.docs.forEach(d => { const v = d.data(); if (v && Array.isArray(v.tags) && v.tags.length) m[d.id] = v.tags.map(String); });
-    state.tags = m; refreshTagList(); render();
+    state.tags = m; refreshTagList(); buildTagQuick(); render();
   }, () => {});
   db.collection("bookmarks").onSnapshot(snap => {
     const m = {};
