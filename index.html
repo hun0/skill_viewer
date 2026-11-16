@@ -114,6 +114,7 @@
   <div class="top">
     <div class="title" id="title">프레임 뷰어</div>
     <a id="ext" target="_blank" rel="noopener" class="hide">유튜브 ↗</a>
+    <a id="dl" target="_blank" rel="noopener" class="hide" download title="새 탭에서 열리면 영상 위에서 우클릭 → ‘동영상을 다른 이름으로 저장’">⬇ 다운로드</a>
     <button id="mute" type="button" aria-label="음소거" aria-pressed="false" title="음소거 (M)">🔊</button>
     <button id="fs" type="button" aria-label="전체화면">⛶</button>
   </div>
@@ -163,7 +164,7 @@
   <p class="help">영상 위를 좌우로 끌면 멈추고 프레임 이동 · 탭하면 재생/정지 · 타임라인을 누르면 그 위치부터 재생<br>키보드: ← → 5초 이동, Shift+← → 또는 , . 1프레임, Space 재생, M 음소거, F 전체화면, B 북마크 메모<br>북마크는 이 기기에 저장돼요. ‘라이브러리로 보내기’를 누른 뒤 스킬 연출 라이브러리에서 붙여넣기(Ctrl+V)하면 캐릭터 줄 아래에 올라가요.<br><a href="bookmarklet.html" style="color:var(--muted)">유튜브에서 바로 북마크하는 버튼 설치하기</a></p>
 
   <div class="open">
-    <input type="url" id="url" placeholder="유튜브 링크 붙여넣기" aria-label="유튜브 링크">
+    <input type="url" id="url" placeholder="유튜브 또는 mp4 링크 붙여넣기" aria-label="영상 링크">
     <div class="row">
       <button type="button" id="go">링크 열기</button>
       <label class="file">기기 영상 열기<input type="file" id="file" accept="video/*"></label>
@@ -254,7 +255,7 @@ async function openYT(id, start, title) {
   S.mode = "yt"; S.vid = id; S.ytReady = false; S.cur = start || 0; S.dur = 0; S.playing = false; S.a = S.b = null;
   $("#yt").classList.remove("hide"); fitYT();
   $("#title").textContent = title || "유튜브 영상";
-  const ext = $("#ext"); ext.href = `https://www.youtube.com/watch?v=${id}${start ? "&t=" + start : ""}`; ext.classList.remove("hide");
+  const ext = $("#ext"); ext.href = `https://www.youtube.com/watch?v=${id}${start ? "&t=" + start : ""}`; ext.textContent = "유튜브 ↗"; ext.classList.remove("hide");
   msg("불러오는 중…"); bmRender();
   const YT = await loadYT();
   const vars = { controls: 0, playsinline: 1, rel: 0, modestbranding: 1, disablekb: 1, iv_load_policy: 3, fs: 0, start: start || 0 };
@@ -306,7 +307,25 @@ window.addEventListener("resize", fitYT);
 if (window.ResizeObserver) new ResizeObserver(() => fitYT()).observe(document.getElementById("stage"));
 
 /* ---------- local file ---------- */
-function closeFile() { if (vid.src) { URL.revokeObjectURL(vid.src); vid.removeAttribute("src"); vid.load(); } vid.classList.add("hide"); }
+function closeFile() { if (vid.src) { if (vid.src.startsWith("blob:")) URL.revokeObjectURL(vid.src); vid.removeAttribute("src"); vid.load(); } vid.classList.add("hide"); $("#dl").classList.add("hide"); }
+/* a direct video URL (Sakugabooru mp4/webm): plays in the native player, so frame stepping is exact */
+function isDirectVideo(u) { try { const x = new URL(u); return /^https?:$/.test(x.protocol) && /\.(mp4|webm|mov|m4v)$/i.test(x.pathname); } catch { return false; } }
+function openSrc(url, title, page) {
+  if (S.yt && S.ytReady) S.yt.pauseVideo();
+  $("#yt").classList.add("hide");
+  closeFile();
+  S.mode = "file"; S.fileName = url; S.cur = 0; S.dur = 0; S.playing = false; S.a = S.b = null;
+  vid.src = url; vid.classList.remove("hide"); vid.playbackRate = S.rate; applyMute();
+  $("#title").textContent = title || decodeURIComponent(url.split("/").pop());
+  const ext = $("#ext"); ext.href = page || url; ext.textContent = page && page.includes("sakugabooru") ? "Sakugabooru ↗" : "원본 ↗"; ext.classList.remove("hide");
+  const dl = $("#dl"); dl.href = url; dl.classList.remove("hide");
+  msg("불러오는 중…"); bmRender();
+  vid.onloadedmetadata = () => { S.dur = vid.duration; msg(""); const t0 = S.startAt; S.startAt = null; if (t0) seekTo(t0, true); sync(); };
+  vid.onerror = () => msg("영상을 불러오지 못했어요. 위의 ‘다운로드’로 원본을 열어 보세요.");
+  vid.onseeked = () => { if (!S.playing) { S.cur = vid.currentTime; sync(); } };
+  vid.onpause = () => { S.playing = false; sync(); };
+  vid.onplay = () => { S.playing = true; loop(); };
+}
 function openFile(f) {
   if (!f) return;
   if (S.yt && S.ytReady) S.yt.pauseVideo();
@@ -367,7 +386,7 @@ $("#fs").onclick = toggleFs;
 document.addEventListener("fullscreenchange", () => { document.body.classList.toggle("fs", !!document.fullscreenElement || document.body.classList.contains("pfs")); setTimeout(fitYT, 50); });
 /* if focus ends up inside the YouTube frame, hand it back so the keyboard shortcuts keep working */
 window.addEventListener("blur", () => setTimeout(() => { const a = document.activeElement; if (a && a.tagName === "IFRAME") a.blur(); }, 0));
-$("#go").onclick = () => { const y = ytIdFrom($("#url").value); if (!y) { msg("유튜브 링크를 확인해 주세요."); return; } history.replaceState(null, "", `?v=${y.id}${y.t ? "&t=" + y.t : ""}`); openYT(y.id, y.t); };
+$("#go").onclick = () => { const raw = $("#url").value.trim(); if (isDirectVideo(raw)) { history.replaceState(null, "", `?src=${encodeURIComponent(raw)}`); openSrc(raw); return; } const y = ytIdFrom(raw); if (!y) { msg("유튜브 링크를 확인해 주세요."); return; } history.replaceState(null, "", `?v=${y.id}${y.t ? "&t=" + y.t : ""}`); openYT(y.id, y.t); };
 $("#url").addEventListener("keydown", e => { if (e.key === "Enter") $("#go").click(); });
 $("#file").onchange = e => openFile(e.target.files[0]);
 document.addEventListener("keydown", e => {
@@ -620,6 +639,7 @@ const y0 = q.get("v") ? { id: q.get("v"), t: parseInt(q.get("t") || "0", 10) || 
 S.char = q.get("c") || null;
 S.startAt = parseFloat(q.get("at")) || null;
 if (y0) { $("#url").value = `https://www.youtube.com/watch?v=${y0.id}`; openYT(y0.id, y0.t, q.get("title")); }
+else if (q.get("src") && isDirectVideo(q.get("src"))) { $("#url").value = q.get("src"); openSrc(q.get("src"), q.get("title"), q.get("page")); }
 sync(); bmRender();
 </script>
 </body>
