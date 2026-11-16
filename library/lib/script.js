@@ -11,6 +11,8 @@ const BILI_KEYS_BOSS = [["보스전","boss战"],["연출","演出"]];
 const ANI_KEYS = Object.keys(DATA).filter(k => DATA[k] && DATA[k].meta && DATA[k].meta.tag);
 ANI_KEYS.forEach(k => { const m = DATA[k].meta; GI18N[k] = [m.en, m.en, m.zh, m.zh]; });
 GI18N.aall = ["All anime", "All anime", "全部动画", "全部动画"];
+const ANI_PRI = ["anrt","abrt","amha","aopm","afate"];
+const aniRank = g => { const i = ANI_PRI.indexOf(g.key); return i < 0 ? 99 : i; };
 const SAKUGA_POST = id => `https://www.sakugabooru.com/post/show/${id}`;
 const fxHTML = (c, max) => !c.fx || !c.fx.length ? "" : `<span class="fxs" title="${esc(c.fx.join(" · "))}">${c.fx.slice(0, max).map(f => `<i>${esc(f)}</i>`).join("")}${c.fx.length > max ? `<i class="more">+${c.fx.length - max}</i>` : ""}</span>`;
 const linksOf = c => c.sk ? [{ url: c.sk.u, label: "원본 mp4" }] : (state.links[c.id] || []);
@@ -237,8 +239,7 @@ GAMES.forEach(g => {
 /* 애니 전체: every title's clips in one list; 작품 chips become the anime titles */
 (() => {
   const all = GAMES.find(g => g.allAni); if (!all) return;
-  const pri = ["anrt","abrt","amha","aopm","afate"], rank = g => { const i = pri.indexOf(g.key); return i < 0 ? 99 : i; };
-  const anis = GAMES.filter(g => g.ani && !g.allAni).sort((a, b) => rank(a) - rank(b));
+  const anis = GAMES.filter(g => g.ani && !g.allAni).sort((a, b) => aniRank(a) - aniRank(b));
   all.roster = anis.flatMap(g => g.roster.map(c => ({ ...c, attr: g.name, work: c.attr })));
   all.attrs = anis.map(g => g.name); all.attrVar = {};
   all.attrs.forEach((a, i) => { all.attrVar[a] = FALLBACK[i % FALLBACK.length]; });
@@ -387,7 +388,7 @@ function selectGame(key) {
   const g = GAMES.find(x => x.key === key) || GAMES[0];
   const topChanged = isVideo(g) !== isVideo(state.game) || !$("#gameSel").options.length;
   state.game = g; LAST_TOP[isVideo(g) ? "ani" : "game"] = g.key;
-  if (topChanged) buildTabs();
+  if (topChanged) { buildTabs(); setPlaceholder(); }
   const so = $("#sort");
   so.querySelector('[value="ver-desc"]').textContent = g.ani ? "인기순" : "최신순";
   so.querySelector('[value="ver-asc"]').textContent = g.ani ? "점수 낮은순" : "오래된순";
@@ -472,6 +473,11 @@ function tagTerms(q) { return String(q).split(/[,，]/).map(t => t.trim().toLowe
 function tagHit(c, q) { return (state.tags[c.id] || []).some(t => t.toLowerCase().includes(q)) || fxHit(c, q); }
 function bmHit(bm, q) { return [bm.note, bm.title].some(v => v && String(v).toLowerCase().includes(q)); }
 function crossSearch() { return state.smode !== "name" && !!state.q.trim(); }
+/* '전체' search modes stay inside the current top level: 게임 searches games only, 애니 searches anime only */
+function scopeGames() {
+  const v = isVideo(state.game), list = GAMES.filter(g => !g.allAni && isVideo(g) === v);
+  return v ? list.sort((a, b) => aniRank(a) - aniRank(b)) : list;
+}
 /* element search across games: every game's own word for an element maps to one group */
 const ELEM_GROUPS = [
   { k:"불", c:"fire", w:["불","화염","연소","용융","작열","열기","화","fire","pyro","ignis","fusion","heat","火","炎","燃烧","热熔","灼热"] },
@@ -502,6 +508,7 @@ function elemOf(gk, v) {
 function attrHit(c, q) {
   const gk = gameOf(c);
   const want = ELEM_OF[q];
+  if (c.fx && c.fx.some(f => f.toLowerCase().includes(q) || (want && ELEM_OF[f.toLowerCase()] === want))) return true;
   if (want) return [c.attr, c.role].some(v => elemOf(gk, v) === want);
   return [c.attr, c.role, ...(c.fx || [])].some(v => v && (String(v).toLowerCase() === q || (q.length > 1 && String(v).toLowerCase().includes(q)) || tr(String(v), gk).toLowerCase() === q));
 }
@@ -513,7 +520,7 @@ function searchHit(c, q) {
 }
 function filtered() {
   const q = state.q.trim().toLowerCase();
-  const pool = crossSearch() ? GAMES.filter(g => !g.allAni).flatMap(g => [...g.roster, ...bossesOf(g)]) : state.game.roster;
+  const pool = crossSearch() ? scopeGames().flatMap(g => [...g.roster, ...bossesOf(g)]) : state.game.roster;
   let list = pool.filter(c => {
     if (q && !searchHit(c, q)) return false;
     if (!crossSearch() && state.elems.size && !state.elems.has(c.attr)) return false;
@@ -543,11 +550,12 @@ function render() {
   const q = state.q.trim().toLowerCase();
   if (crossSearch()) {
     if (!list.length) { main.innerHTML = `<p class="nores">${state.smode === "tag" ? "이 태그가 달린 클립·캐릭터가 없어요." : state.smode === "bm" ? "이 메모가 달린 캐릭터가 없어요." : state.smode === "attr" ? "이 속성·역할의 캐릭터가 없어요." : "조건에 맞는 캐릭터가 없어요."}</p>`; return; }
-    const tot = document.createElement("p"); tot.className = "xsum"; tot.textContent = L(`모든 게임에서 ${list.length}명`, `${list.length} across all games`, `全部游戏共 ${list.length} 名`); main.appendChild(tot);
-    GAMES.filter(gg => !gg.allAni).forEach(gg => {
+    const tot = document.createElement("p"); tot.className = "xsum"; const ani = isVideo(state.game);
+    tot.textContent = ani ? L(`모든 애니에서 ${list.length}개`, `${list.length} across all anime`, `全部动画共 ${list.length} 个`) : L(`모든 게임에서 ${list.length}명`, `${list.length} across all games`, `全部游戏共 ${list.length} 名`); main.appendChild(tot);
+    scopeGames().forEach(gg => {
       const its = list.filter(c => gameOf(c) === gg.key); if (!its.length) return;
       const sec = document.createElement("section"); sec.className = "group";
-      const h = document.createElement("h2"); h.innerHTML = `<span class="ver"></span><span class="gfill">${its.length}명</span>`; h.querySelector(".ver").textContent = gTab(gg);
+      const h = document.createElement("h2"); h.innerHTML = `<span class="ver"></span><span class="gfill">${its.length}${ani ? "개" : "명"}</span>`; h.querySelector(".ver").textContent = gTab(gg);
       sec.appendChild(h);
       const box = document.createElement("div"); box.className = state.view === "grid" ? "list cards" : "list";
       its.forEach(c => box.appendChild(itemFor(c))); sec.appendChild(box); main.appendChild(sec);
@@ -907,6 +915,7 @@ function pickFile(c) {
 }
 document.addEventListener("paste", e => {
   if (!assets || !state.armed) return;
+  if (e.clipboardData && (e.clipboardData.getData("text") || "").includes("HFXTH1:")) return; /* frame-viewer thumbnail code: handled below */
   const t = e.target;
   if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA")) return;
   const item = [...(e.clipboardData ? e.clipboardData.items : [])].find(i => i.type.startsWith("image/"));
@@ -931,7 +940,7 @@ async function setThumb(c, file) {
     let blob = file;
     try { blob = await shrink(file); } catch {}
     const res = await assets.upload(blob, { type: blob.type || "image/png" });
-    await db.collection("thumbs").doc(c.id).set({ asset: res.id, game: state.game.key, updatedAt: new Date().toISOString() });
+    await db.collection("thumbs").doc(c.id).set({ asset: res.id, game: gameOf(c), updatedAt: new Date().toISOString() });
     state.thumbs[c.id] = res.id; state.armed = null; render();
     toast(`${nm(c)}: 썸네일 저장됨`);
     if (old && old !== res.id) { try { await assets.delete(old); } catch {} }
@@ -993,7 +1002,10 @@ function searchFor(mode, text) {
   state.smode = mode; $("#smode").value = mode; state.q = text; $("#q").value = text; setPlaceholder(); render(); window.scrollTo(0, 0);
 }
 function setPlaceholder() {
-  $("#q").placeholder = state.smode === "tag" ? "태그 검색 (모든 게임) · 여러 개는 쉼표로" : state.smode === "bm" ? "북마크 메모 검색 (모든 게임)" : state.smode === "all" ? "이름 검색 (모든 게임)" : state.smode === "attr" ? "속성·역할 검색 (모든 게임) 예: 불, 탱커" : "이름 검색 (한글·영문·중문)";
+  const ani = isVideo(state.game);
+  $("#q").placeholder = ani
+    ? (state.smode === "tag" ? "태그 검색 (모든 애니) · 여러 개는 쉼표로" : state.smode === "bm" ? "북마크 메모 검색 (모든 애니)" : state.smode === "all" ? "원화가·작품 검색 (모든 애니)" : state.smode === "attr" ? "이펙트 검색 (모든 애니) 예: 불, 번개" : "원화가·작품 검색")
+    : (state.smode === "tag" ? "태그 검색 (모든 게임) · 여러 개는 쉼표로" : state.smode === "bm" ? "북마크 메모 검색 (모든 게임)" : state.smode === "all" ? "이름 검색 (모든 게임)" : state.smode === "attr" ? "속성·역할 검색 (모든 게임) 예: 불, 탱커" : "이름 검색 (한글·영문·중문)");
   buildAttrQuick(); buildTagQuick();
   $("#chiprow").classList.toggle("xhide", state.smode !== "name");
 }
@@ -1003,6 +1015,14 @@ function buildAttrQuick() {
   if (box.hidden) return;
   const cur = state.q.trim().toLowerCase();
   box.textContent = "";
+  if (isVideo(state.game)) {
+    FX_ORDER.forEach(f => {
+      const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.setAttribute("aria-pressed", String(cur === f.toLowerCase())); b.textContent = f;
+      b.onclick = () => { state.q = cur === f.toLowerCase() ? "" : f; $("#q").value = state.q; buildAttrQuick(); render(); };
+      box.appendChild(b);
+    });
+    return;
+  }
   ELEM_GROUPS.forEach(g => {
     const b = document.createElement("button");
     b.type = "button"; b.className = "chip"; b.setAttribute("aria-pressed", String(ELEM_OF[cur] === g.k));
@@ -1175,9 +1195,33 @@ function askChar(list) {
   step();
   if (!dlg.open) dlg.showModal();
 }
+/* 프레임 뷰어 '이 프레임을 썸네일로': HFXTH1:<base64url JSON {v, c: row id, img: data URL}> */
+function decodeThumb(text) {
+  const m = String(text || "").match(/HFXTH1:([A-Za-z0-9_-]+)/); if (!m) return null;
+  try {
+    let b = m[1].replace(/-/g, "+").replace(/_/g, "/"); while (b.length % 4) b += "=";
+    const bin = atob(b), bytes = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    const o = JSON.parse(new TextDecoder().decode(bytes));
+    return o && typeof o.c === "string" && /^data:image\/(jpeg|png|webp);base64,/.test(o.img || "") && o.img.length < 400000 ? o : null;
+  } catch { return null; }
+}
+async function importThumb(o) {
+  const c = findChar(o.c);
+  if (!c) { toast("이 썸네일의 캐릭터를 찾지 못했어요"); return; }
+  if (!assets || !db || state.readonly) { toast("이 화면에서는 썸네일을 바꿀 수 없어요 (편집 권한 필요)"); return; }
+  const blob = await (await fetch(o.img)).blob();
+  if (gameOf(c) !== state.game.key && !(state.game.allAni && c.sk)) location.hash = gameOf(c);
+  await setThumb(c, blob);
+}
 document.addEventListener("paste", async e => {
   const t = e.target;
   const text = e.clipboardData ? e.clipboardData.getData("text") : "";
+  if (text && text.includes("HFXTH1:")) {
+    if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA")) return;
+    e.preventDefault(); e.stopImmediatePropagation();
+    const o = decodeThumb(text); if (o) await importThumb(o); else toast("썸네일 코드를 읽지 못했어요");
+    return;
+  }
   if (!text || !text.includes("HFXBM1:")) return;
   if (t && t.id !== "bmPaste" && (t.tagName === "INPUT" || t.tagName === "TEXTAREA")) return;
   e.preventDefault();
