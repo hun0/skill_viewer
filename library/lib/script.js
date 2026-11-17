@@ -324,6 +324,16 @@ function reelForm(g) {
     <input type="text" id="reel-memo" placeholder="메모 (선택)" aria-label="메모" maxlength="80">
     <button class="btn primary" type="submit">추가</button>`;
   f.onsubmit = e => { e.preventDefault(); addReel(g, f); };
+  /* rows with a YouTube link but no thumbnail yet: the frame viewer fetches their YouTube thumbnails in one go */
+  const miss = g.roster.filter(c => !state.thumbs[c.id]).map(c => ({ i: c.id, v: ((linksOf(c).map(it => ytId(it.url)).find(Boolean)) || {}).id })).filter(x => x.v);
+  if (miss.length && !IS_MOBILE) {
+    const bytes = new TextEncoder().encode(JSON.stringify({ v: 1, items: miss.slice(0, 200) })); let bin = ""; bytes.forEach(x => { bin += String.fromCharCode(x); });
+    const a = document.createElement("a"); a.className = "btn fillbtn"; a.target = "_blank"; a.rel = "noopener";
+    a.href = `${VIEWER_URL}?_=${VCB}#ytthumbs=${btoa(bin).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "")}`;
+    a.title = "썸네일 없는 유튜브 영상의 썸네일을 프레임 뷰어에서 한 번에 받아요. 뷰어에서 ‘복사하기’ → 여기서 Ctrl+V";
+    a.innerHTML = `유튜브 썸네일 가져오기 <b>${miss.length}</b>`;
+    f.appendChild(a);
+  }
   return f;
 }
 
@@ -955,7 +965,7 @@ function pickFile(c) {
 }
 document.addEventListener("paste", e => {
   if (!assets || !state.armed) return;
-  if (e.clipboardData && (e.clipboardData.getData("text") || "").includes("HFXTH1:")) return; /* frame-viewer thumbnail code: handled below */
+  if (e.clipboardData && /HFXTH[12]:/.test(e.clipboardData.getData("text") || "")) return; /* frame-viewer thumbnail code: handled below */
   const t = e.target;
   if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA")) return;
   const item = [...(e.clipboardData ? e.clipboardData.items : [])].find(i => i.type.startsWith("image/"));
@@ -972,21 +982,23 @@ async function shrink(file) {
   const blob = await new Promise(r => cv.toBlob(r, "image/webp", 0.86));
   return blob && blob.type === "image/webp" ? blob : await new Promise(r => cv.toBlob(r, "image/jpeg", 0.88));
 }
-async function setThumb(c, file) {
-  if (!assets || !db) return;
+async function setThumb(c, file, quiet) {
+  if (!assets || !db) return false;
   const old = state.thumbs[c.id];
   try {
-    toast(`${nm(c)}: 썸네일 올리는 중…`);
+    if (!quiet) toast(`${nm(c)}: 썸네일 올리는 중…`);
     let blob = file;
     try { blob = await shrink(file); } catch {}
     const res = await assets.upload(blob, { type: blob.type || "image/png" });
     await db.collection("thumbs").doc(c.id).set({ asset: res.id, game: gameOf(c), updatedAt: new Date().toISOString() });
     state.thumbs[c.id] = res.id; state.armed = null; render();
-    toast(`${nm(c)}: 썸네일 저장됨`);
+    if (!quiet) toast(`${nm(c)}: 썸네일 저장됨`);
     if (old && old !== res.id) { try { await assets.delete(old); } catch {} }
+    return true;
   } catch (e) {
     const code = e && e.code;
     toast(code === "too_large" ? "이미지가 너무 커요" : code === "unsupported_type" ? "PNG·JPG·WebP 이미지만 넣을 수 있어요" : code === "quota_or_state" ? "저장 공간이 가득 찼어요" : "썸네일을 저장하지 못했어요");
+    return false;
   }
 }
 async function clearThumb(c) {
@@ -1236,6 +1248,26 @@ function askChar(list) {
   if (!dlg.open) dlg.showModal();
 }
 /* 프레임 뷰어 '이 프레임을 썸네일로': HFXTH1:<base64url JSON {v, c: row id, img: data URL}> */
+function decodeThumbs(text) {
+  /* HFXTH2: many rows at once (유튜브 썸네일 가져오기) */
+  const m = String(text || "").match(/HFXTH2:([A-Za-z0-9_-]+)/); if (!m) return null;
+  try {
+    let b = m[1].replace(/-/g, "+").replace(/_/g, "/"); while (b.length % 4) b += "=";
+    const bin = atob(b), bytes = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    const o = JSON.parse(new TextDecoder().decode(bytes));
+    return (o.items || []).filter(x => x && typeof x.c === "string" && /^data:image\/(jpeg|png|webp);base64,/.test(x.img || "") && x.img.length < 400000);
+  } catch { return null; }
+}
+async function importThumbs(list) {
+  if (!assets || !db || state.readonly) { toast("이 화면에서는 썸네일을 바꿀 수 없어요 (편집 권한 필요)"); return; }
+  let ok = 0;
+  for (let i = 0; i < list.length; i++) {
+    const c = findChar(list[i].c); if (!c) continue;
+    toast(`썸네일 넣는 중… ${i + 1}/${list.length}`);
+    if (await setThumb(c, await (await fetch(list[i].img)).blob(), true)) ok++;
+  }
+  toast(`썸네일 ${ok}개 저장됨`);
+}
 function decodeThumb(text) {
   const m = String(text || "").match(/HFXTH1:([A-Za-z0-9_-]+)/); if (!m) return null;
   try {
@@ -1256,6 +1288,12 @@ async function importThumb(o) {
 document.addEventListener("paste", async e => {
   const t = e.target;
   const text = e.clipboardData ? e.clipboardData.getData("text") : "";
+  if (text && text.includes("HFXTH2:")) {
+    if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA")) return;
+    e.preventDefault(); e.stopImmediatePropagation();
+    const l = decodeThumbs(text); if (l && l.length) await importThumbs(l); else toast("썸네일 코드를 읽지 못했어요");
+    return;
+  }
   if (text && text.includes("HFXTH1:")) {
     if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA")) return;
     e.preventDefault(); e.stopImmediatePropagation();
