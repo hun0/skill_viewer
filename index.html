@@ -35,7 +35,9 @@
   .time { display: flex; gap: 14px; justify-content: center; font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 15px; }
   .time .f { color: var(--accent); }
   .time .d { color: var(--muted); }
-  #seek { width: max(50%, min(100%, calc((100dvh - 300px) * 16 / 9))); max-width: 1280px; margin: 0 auto; accent-color: var(--accent); height: 28px; }
+  #seek, #bufbar { width: max(50%, min(100%, calc((100dvh - 300px) * 16 / 9))); max-width: 1280px; margin: 0 auto; accent-color: var(--accent); height: 28px; }
+  #bufbar { position: relative; height: 3px; margin-top: -6px; border-radius: 2px; background: rgba(127,127,127,.18); overflow: hidden; }
+  #bufbar i { position: absolute; top: 0; bottom: 0; background: rgba(127,127,127,.55); }
   .ctl { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
   .ctl button { min-width: 58px; padding: 13px 10px; font-size: 15px; }
   .ctl .pp { min-width: 76px; background: var(--accent); color: #111; border-color: var(--accent); }
@@ -86,7 +88,8 @@
     .top { grid-column: 1 / -1; }
     .main { display: flex; flex-direction: column; justify-content: center; gap: 8px; min-width: 0; min-height: 0; container-type: size; }
     .main .stage { width: min(100cqw, calc((100cqh - 64px) * 16 / 9)); max-width: none; flex: none; }
-    .main #seek { width: min(100cqw, calc((100cqh - 64px) * 16 / 9)); max-width: none; height: 30px; }
+    .main #seek, .main #bufbar { width: min(100cqw, calc((100cqh - 64px) * 16 / 9)); max-width: none; height: 30px; }
+    .main #bufbar { height: 3px; }
     .side { display: flex; flex-direction: column; gap: 10px; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding-bottom: 6px; scrollbar-width: thin; }
     .side .ctl { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; flex-wrap: nowrap; }
     .side .ctl button { min-width: 0; padding: 14px 4px; font-size: 15px; }
@@ -107,7 +110,7 @@
   body.fs .stage { width: min(100%, calc((100dvh - 110px) * 16 / 9)); }
   @media (min-width: 640px) and (min-aspect-ratio: 5/4) {
     body.fs { grid-template-columns: minmax(0, 1fr); }
-    body.fs .main .stage, body.fs .main #seek { width: min(100cqw, calc((100cqh - 64px) * 16 / 9)); }
+    body.fs .main .stage, body.fs .main #seek, body.fs .main #bufbar { width: min(100cqw, calc((100cqh - 64px) * 16 / 9)); }
   }
 </style>
 </head>
@@ -132,6 +135,7 @@
 
   <div class="time"><span id="t">0:00.00</span><span class="f" id="f">F 0</span><span class="d" id="d"></span></div>
   <input type="range" id="seek" min="0" max="1000" step="1" value="0" aria-label="재생 위치">
+  <div id="bufbar" class="hide" aria-hidden="true" title="받아진 구간"></div>
   </div>
 
   <div class="side" id="side">
@@ -203,7 +207,7 @@ const P = {
   time() { return S.mode === "file" ? vid.currentTime : (S.yt && S.ytReady ? S.yt.getCurrentTime() : S.cur); },
   duration() { return S.mode === "file" ? (vid.duration || 0) : (S.yt && S.ytReady ? S.yt.getDuration() : 0); },
   play() { if (S.mode === "file") vid.play(); else if (S.ytReady) S.yt.playVideo(); S.playing = true; loop(); },
-  pause() { if (S.mode === "file") vid.pause(); else if (S.ytReady) S.yt.pauseVideo(); S.playing = false; },
+  pause() { bufHold = false; if (S.mode === "file") vid.pause(); else if (S.ytReady) S.yt.pauseVideo(); S.playing = false; },
   seek(t) {
     /* native video: never queue seeks. While one is in flight keep only the latest target and jump there when it lands,
        so dragging stays smooth even on a remote mp4 (Sakugabooru) where every seek has to fetch and decode */
@@ -312,7 +316,8 @@ window.addEventListener("resize", fitYT);
 if (window.ResizeObserver) new ResizeObserver(() => fitYT()).observe(document.getElementById("stage"));
 
 /* ---------- local file ---------- */
-function closeFile() { if (vid.src) { if (vid.src.startsWith("blob:")) URL.revokeObjectURL(vid.src); vid.removeAttribute("src"); vid.load(); } vid.classList.add("hide"); $("#dl").classList.add("hide"); }
+function closeFile() { bufHold = false; const bb = $("#bufbar"); if (bb) bb.classList.add("hide"); closeFile0(); }
+function closeFile0() { if (vid.src) { if (vid.src.startsWith("blob:")) URL.revokeObjectURL(vid.src); vid.removeAttribute("src"); vid.load(); } vid.classList.add("hide"); $("#dl").classList.add("hide"); }
 /* a direct video URL (Sakugabooru mp4/webm): plays in the native player, so frame stepping is exact */
 function isDirectVideo(u) { try { const x = new URL(u); return /^https?:$/.test(x.protocol) && /\.(mp4|webm|mov|m4v)$/i.test(x.pathname); } catch { return false; } }
 function openSrc(url, title, page) {
@@ -329,9 +334,45 @@ function openSrc(url, title, page) {
   vid.onloadedmetadata = () => { S.dur = vid.duration; msg(""); const t0 = S.startAt; S.startAt = null; if (t0) seekTo(t0, true); sync(); };
   vid.onerror = () => msg("영상을 불러오지 못했어요. 위의 ‘다운로드’로 원본을 열어 보세요.");
   vid.onseeked = onVidSeeked;
-  vid.onpause = () => { S.playing = false; sync(); };
+  vid.onpause = () => { if (bufHold) return; S.playing = false; sync(); };
   vid.onplay = () => { S.playing = true; loop(); };
 }
+/* ---------- remote mp4 (Sakugabooru): steadier playback on a slow server ----------
+   The browser resumes as soon as a sliver arrives, so a high-bitrate clip on a slow host stutters over and over.
+   On a stall, hold until a few seconds are buffered (or the clip is fully in), show how much has arrived, then go on. */
+let bufHold = false;
+const HOLD_AHEAD = 3;
+function bufferedAhead() {
+  const t = vid.currentTime;
+  for (let i = 0; i < vid.buffered.length; i++) if (vid.buffered.start(i) <= t + 0.1 && vid.buffered.end(i) > t) return vid.buffered.end(i) - t;
+  return 0;
+}
+function bufferedPct() {
+  const d = vid.duration; if (!d || !vid.buffered.length) return 0;
+  let got = 0; for (let i = 0; i < vid.buffered.length; i++) got += vid.buffered.end(i) - vid.buffered.start(i);
+  return Math.min(100, Math.round(got / d * 100));
+}
+function showBuf() {
+  const bar = $("#bufbar"); if (!bar) return;
+  const remote = S.mode === "file" && /^https?:/.test(vid.currentSrc || "");
+  bar.classList.toggle("hide", !remote);
+  if (!remote || !vid.duration) return;
+  const segs = []; for (let i = 0; i < vid.buffered.length; i++) segs.push(`<i style="left:${vid.buffered.start(i) / vid.duration * 100}%;width:${(vid.buffered.end(i) - vid.buffered.start(i)) / vid.duration * 100}%"></i>`);
+  bar.innerHTML = segs.join("");
+}
+function holdCheck() {
+  if (!bufHold) return;
+  const rem = (vid.duration || 0) - vid.currentTime, pct = bufferedPct();
+  if (bufferedAhead() >= Math.min(HOLD_AHEAD, Math.max(0.2, rem - 0.1)) || pct >= 100) { bufHold = false; msg(""); vid.play().catch(() => {}); return; }
+  msg(`영상을 받는 중이라 잠깐 멈췄어요… ${pct}% 받음`);
+  setTimeout(holdCheck, 250);
+}
+vid.addEventListener("waiting", () => {
+  if (S.mode !== "file" || !S.playing || bufHold || vid.seeking || !/^https?:/.test(vid.currentSrc || "")) return;
+  bufHold = true; vid.pause(); holdCheck();
+});
+vid.addEventListener("progress", showBuf);
+vid.addEventListener("loadedmetadata", showBuf);
 function onVidSeeked() {
   if (S.fpend != null) { const t = S.fpend; S.fpend = null; vid.currentTime = t; return; }
   if (!S.playing && !drag) { S.cur = vid.currentTime; sync(); }
@@ -346,7 +387,7 @@ function openFile(f) {
   $("#title").textContent = f.name; msg(""); bmRender();
   vid.onloadedmetadata = () => { S.dur = vid.duration; sync(); };
   vid.onseeked = onVidSeeked;
-  vid.onpause = () => { S.playing = false; sync(); };
+  vid.onpause = () => { if (bufHold) return; S.playing = false; sync(); };
   vid.onplay = () => { S.playing = true; loop(); };
 }
 
