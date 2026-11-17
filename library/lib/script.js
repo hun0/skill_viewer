@@ -684,10 +684,6 @@ function sakugaCmd(c) {
   return `curl -L -o "${g.file}_${c.sk.p}_${safeName((c.arts || c.ko).split(",")[0])}.${ext}" "${c.sk.u}"`;
 }
 /* first playable link of a row, as a frame-viewer URL (YouTube or Sakugabooru mp4), or a plain link */
-function ytdropViewerHref(url, title, id) {
-  const y = ytId(url);
-  return `${VIEWER_URL}?_=${VCB}${y ? "&v=" + encodeURIComponent(y.id) : ""}&title=${encodeURIComponent(title || "")}&c=${encodeURIComponent(id || "")}&ytdrop=${encodeURIComponent(url)}`;
-}
 function playHrefOf(c, items) {
   if (c.sk) return sakugaHref(c);
   for (const it of items) {
@@ -735,12 +731,12 @@ function cardFor(c) {
     const e = document.createElement("span"); e.className = "empty-hint"; e.textContent = c.upcoming ? "출시 후 추가" : "아직 링크 없음"; foot.appendChild(e);
   }
   if (items.length > 1) { const n = document.createElement("span"); n.className = "cnum"; n.textContent = `+${items.length - 1}`; foot.appendChild(n); }
-  if (c.reel && first) {
-    /* ⬇: the frame viewer hands this YouTube link to the YT Drop app (ytdrop://), which downloads it */
-    const yd = document.createElement("a"); yd.className = "cplay cdl"; yd.target = "_blank"; yd.rel = "noopener";
-    yd.href = ytdropViewerHref(first.it.url, nm(c), c.id);
-    yd.textContent = "⬇"; yd.title = "YT Drop으로 받기 (PC에 YT Drop 필요)"; yd.setAttribute("aria-label", `${nm(c)} YT Drop으로 받기`);
-    foot.appendChild(yd);
+  if (!c.sk && items.length) {
+    /* ⬇ in the compact view too: copies the same yt-dlp command as ‘다운로드 명령 복사’ in the detailed view */
+    const dl = document.createElement("button"); dl.type = "button"; dl.className = "cplay cdl";
+    dl.textContent = "⬇"; dl.title = "다운로드 명령 복사 (yt-dlp)"; dl.setAttribute("aria-label", `${nm(c)} 영상 다운로드 명령어 복사`);
+    dl.onclick = () => copyText(dlCommand(c, items), `${nm(c)}: 다운로드 명령어를 복사했어요. 터미널에 붙여넣으세요`);
+    foot.appendChild(dl);
   }
   if (c.reel && !state.readonly && state.mode === "db") {
     /* 영상 모음 card: edit the memo or delete right here */
@@ -851,7 +847,7 @@ function rowFor(c) {
   const side = document.createElement("div"); side.className = "side";
   const ytSearch = `https://www.youtube.com/results?search_query=${encodeURIComponent(g.yt(c))}`;
   side.innerHTML = c.sk ? `<a class="yt" target="_blank" rel="noopener" href="${esc(SAKUGA_POST(c.sk.p))}">Sakugabooru ↗</a>`
-    : c.reel ? (() => { const u = items.map(it => it.url).find(x => ytId(x)); return u ? `<a class="yt" target="_blank" rel="noopener" href="${esc(ytdropViewerHref(u, nm(c), c.id))}" title="PC에 YT Drop 필요">⬇ YT Drop으로 받기</a>` : ""; })()
+    : c.reel ? ""
     : `<a class="yt" target="_blank" rel="noopener" href="${esc(ytSearch)}">유튜브에서 찾기 ↗</a>`;
   if (c.custom && !state.readonly && state.mode === "db") {
     const rmLbl = c.reel ? "삭제" : "보스 삭제";
@@ -1386,7 +1382,9 @@ function dlCommand(c, items) {
   const br = cookieBrowser();
   const cookie = br ? `--cookies-from-browser ${br} ` : "";
   return items.map((it, i) => {
-    const name = `${state.game.file}_${c.ver}_${safeName(c.ko)}_${safeName(it.label || "영상" + (i + 1))}`;
+    const g = GAMES.find(x => x.key === gameOf(c)) || state.game;
+    const lbl = it.label && it.label !== c.ko ? it.label : items.length > 1 ? "영상" + (i + 1) : "";
+    const name = [g.file, c.ver, safeName(c.ko), lbl && safeName(lbl)].filter(Boolean).join("_");
     return `yt-dlp ${cookie}-f "bv*+ba/b" --merge-output-format mp4 -o "${name}.%(ext)s" "${cleanUrl(it.url)}"`;
   }).join("\n");
 }

@@ -18,8 +18,6 @@
   .top { display: flex; align-items: center; gap: 8px; }
   .title { flex: 1; min-width: 0; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .top a { color: var(--muted); font-size: 13px; text-decoration: none; white-space: nowrap; }
-  .top .linkish { background: none; border: 0; min-height: 0; padding: 0 2px; color: var(--muted); font: inherit; font-size: 13px; white-space: nowrap; cursor: pointer; }
-  .top .linkish:hover { color: var(--fg); }
   .stage { position: relative; width: max(50%, min(100%, calc((100dvh - 300px) * 16 / 9))); max-width: 1280px; margin: 0 auto; aspect-ratio: 16 / 9; background: #000; border-radius: 10px; overflow: hidden; }
   body.fs .stage { max-width: none; }
   body.pfs { overflow: hidden; }
@@ -118,7 +116,6 @@
     <div class="title" id="title">프레임 뷰어</div>
     <a id="ext" target="_blank" rel="noopener" class="hide">유튜브 ↗</a>
     <a id="dl" target="_blank" rel="noopener" class="hide" download title="새 탭에서 열리면 영상 위에서 우클릭 → ‘동영상을 다른 이름으로 저장’">⬇ 다운로드</a>
-    <button type="button" id="ytdropBtn" class="linkish hide" title="YT Drop으로 이 영상을 받아요 (PC에 YT Drop이 설치돼 있어야 해요)">⬇ YT Drop</button>
     <button id="mute" type="button" aria-label="음소거" aria-pressed="false" title="음소거 (M)">🔊</button>
     <button id="fs" type="button" aria-label="전체화면">⛶</button>
   </div>
@@ -156,7 +153,6 @@
     <span class="lbl">구간</span>
     <span class="seg"><button type="button" data-ab="a">A</button><button type="button" data-ab="b">B</button><button type="button" data-ab="x">해제</button></span>
   </div>
-  <div class="fill hide" id="ydBox"><span class="grow" id="ydTxt"></span><button type="button" id="ydGo">⬇ YT Drop으로 받기</button><button type="button" id="ydX" class="ghost">닫기</button></div>
   <div class="fill hide" id="ytth"><span class="grow" id="ytthTxt"></span><button type="button" id="ytthCopy" class="hide">복사하기</button><button type="button" id="ytthX" class="ghost">닫기</button></div>
   <div class="fill hide" id="fill"><span class="grow" id="fillTxt"></span><button type="button" id="fillGo">📸 한번에 채우기</button><button type="button" id="fillCopy" class="hide">결과 복사</button><button type="button" id="fillX" class="ghost">닫기</button></div>
   <section class="bm" aria-label="북마크">
@@ -265,7 +261,6 @@ async function openYT(id, start, title) {
   $("#yt").classList.remove("hide"); fitYT();
   $("#title").textContent = title || "유튜브 영상";
   const ext = $("#ext"); ext.href = `https://www.youtube.com/watch?v=${id}${start ? "&t=" + start : ""}`; ext.textContent = "유튜브 ↗"; ext.classList.remove("hide");
-  S.ytUrl = `https://www.youtube.com/watch?v=${id}`; $("#ytdropBtn").classList.remove("hide");
   msg("불러오는 중…"); bmRender();
   const YT = await loadYT();
   const vars = { controls: 0, playsinline: 1, rel: 0, modestbranding: 1, disablekb: 1, iv_load_policy: 3, fs: 0, start: start || 0 };
@@ -317,16 +312,7 @@ window.addEventListener("resize", fitYT);
 if (window.ResizeObserver) new ResizeObserver(() => fitYT()).observe(document.getElementById("stage"));
 
 /* ---------- local file ---------- */
-/* ---------- YT Drop: hand a YouTube link to the user's YT Drop app through its ytdrop:// link (Windows asks once to allow it) ---------- */
-function ytdropHref(url) { return "ytdrop://get?url=" + encodeURIComponent(url); }
-function sendToYtdrop(url) {
-  if (!url) return;
-  location.href = ytdropHref(url);
-  msg("YT Drop으로 보냈어요. 브라우저가 ‘YT Drop 열기’를 물으면 허용하세요. 아무 반응이 없으면 YT Drop이 설치·업데이트돼 있는지 확인해 주세요.");
-  setTimeout(() => msg(""), 8000);
-}
-$("#ytdropBtn").onclick = () => sendToYtdrop(S.ytUrl);
-function closeFile() { if (vid.src) { if (vid.src.startsWith("blob:")) URL.revokeObjectURL(vid.src); vid.removeAttribute("src"); vid.load(); } vid.classList.add("hide"); $("#dl").classList.add("hide"); $("#ytdropBtn").classList.add("hide"); }
+function closeFile() { if (vid.src) { if (vid.src.startsWith("blob:")) URL.revokeObjectURL(vid.src); vid.removeAttribute("src"); vid.load(); } vid.classList.add("hide"); $("#dl").classList.add("hide"); }
 /* a direct video URL (Sakugabooru mp4/webm): plays in the native player, so frame stepping is exact */
 function isDirectVideo(u) { try { const x = new URL(u); return /^https?:$/.test(x.protocol) && /\.(mp4|webm|mov|m4v)$/i.test(x.pathname); } catch { return false; } }
 function openSrc(url, title, page) {
@@ -734,15 +720,6 @@ if (S.char) $("#thumbBtn").classList.remove("hide");
 S.startAt = parseFloat(q.get("at")) || null;
 if (y0) { $("#url").value = `https://www.youtube.com/watch?v=${y0.id}`; openYT(y0.id, y0.t, q.get("title")); }
 else if (q.get("src") && isDirectVideo(q.get("src"))) { $("#url").value = q.get("src"); openSrc(q.get("src"), q.get("title"), q.get("page")); }
-/* ?ytdrop=<YouTube url>: opened from the library's ⬇ button. Chrome only launches an app link from a click,
-   so show a one-click panel (and try once right away, which works where the browser allows it) */
-if (q.get("ytdrop") && ytIdFrom(q.get("ytdrop"))) {
-  const u = q.get("ytdrop");
-  $("#ydTxt").textContent = "이 영상을 YT Drop으로 받아요. 브라우저가 ‘YT Drop 열기’를 물으면 허용하세요 (‘항상 허용’을 체크하면 다음부터 안 물어요).";
-  $("#ydBox").classList.remove("hide");
-  $("#ydGo").onclick = () => sendToYtdrop(u);
-  $("#ydX").onclick = () => $("#ydBox").classList.add("hide");
-}
 sync(); bmRender();
 </script>
 </body>
