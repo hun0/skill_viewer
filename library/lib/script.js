@@ -216,7 +216,7 @@ const GAMES = [
     yt: c => `2XKO ${c.en} all supers`,
     colors:{ "챔피언":"fire" },
     roles:["챔피언"] },
-  { key:"vid", tab:"영상 모음", name:"게임영상 모음", bili:"", file:"VID", group:"reel", reel:true,
+  { key:"vid", tab:"영상 모음", name:"영상 모음", bili:"", file:"VID", group:"reel", reel:true,
     attrLabel:"게임", roleLabel:"분류",
     yt: c => `${c.attr || ""} ${c.ko}`.trim(),
     colors:{} },
@@ -260,42 +260,69 @@ const verNum = v => String(v).split(".").map(x => Number(x) || 0).reduce((a,b,i)
 const sortKey = c => state.game.ani ? (c.score || 0) : (state.game.group === "year" || state.game.reel) ? (c.date || String(c.ver)) : verNum(c.ver);
 const cmp = (a, b) => { const x = sortKey(a), y = sortKey(b); return x < y ? -1 : x > y ? 1 : 0; };
 
-/* ---------- 게임영상 모음: rows the user adds (stored in the bosses collection with game "vid") ---------- */
-const REEL_ETC = "기타";
+/* ---------- 영상 모음: links the user drops in, with an optional memo (bosses collection, game "vid") ---------- */
+function reelAutoName(url) {
+  const y = ytId(url || "");
+  if (y) return `유튜브 영상 · ${y.id}${y.t ? " @" + y.t : ""}`;
+  try { const u = new URL(url); return `${u.hostname.replace(/^www\./, "")} 영상`; } catch { return "영상"; }
+}
 function syncReels() {
   const g = GAMES.find(x => x.reel); if (!g) return;
   g.roster = Object.entries(state.bosses)
     .filter(([, b]) => b && b.game === g.key)
-    .map(([id, b]) => ({ id, ko: b.ko, en: "", zh: "", attr: b.sub || "", role: "", ver: b.sub || REEL_ETC, date: b.createdAt || "", custom: true, reel: true }));
-  g.attrs = [...new Set(g.roster.map(c => c.attr).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ko"));
-  g.roleList = [];
-  let fi = 0; g.attrVar = {};
-  g.attrs.forEach(a => { g.attrVar[a] = FALLBACK[fi++ % FALLBACK.length]; });
+    .map(([id, b]) => { const first = (state.links[id] || [])[0];
+      return { id, ko: b.ko || reelAutoName(first && first.url), memo: b.ko || "", en: "", zh: "", attr: "", role: "", ver: "", date: b.createdAt || "", custom: true, reel: true }; });
+  g.attrs = []; g.roleList = []; g.attrVar = {};
   g.released = g.roster.length;
   const o = document.querySelector(`#gameSel option[value="${g.key}"]`);
   if (o) o.textContent = `${gName(g)} (${g.roster.length})`;
-  if (state.game === g && g.attrs.join("\u0001") !== (g._chipKey || "")) { g._chipKey = g.attrs.join("\u0001"); buildChips(); }
 }
-const reelCmp = (a, b) => (a.ver === REEL_ETC) - (b.ver === REEL_ETC) || String(a.ver).localeCompare(String(b.ver), "ko");
 async function addReel(g, form) {
-  const title = form.querySelector("#reel-title").value.trim();
-  const game = form.querySelector("#reel-game").value.trim();
-  if (!title || !db) return;
-  const id = `${g.key}-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
-  const doc = { game: g.key, ko: title, sub: game, createdAt: new Date().toISOString() };
-  state.bosses = { ...state.bosses, [id]: doc };
-  form.querySelector("#reel-title").value = ""; form.querySelector("#reel-game").value = ""; render();
-  if (state.view === "grid") setView("list");
-  try { await db.collection("bosses").doc(id).set(doc); toast(`'${title}' 추가됨. 아래 항목에 영상 링크를 붙여넣으세요`); }
-  catch { const n = { ...state.bosses }; delete n[id]; state.bosses = n; render(); toast("항목을 추가하지 못했어요"); }
+  const raw = form.querySelector("#reel-links").value;
+  const memo = form.querySelector("#reel-memo").value.trim();
+  const urls = [...new Set((raw.match(/https?:\/\/[^\s<>"']+/g) || []))];
+  if (!urls.length) { toast("붙여넣은 내용에서 링크를 찾지 못했어요"); return; }
+  if (!db) return;
+  const now = Date.now(), made = [];
+  urls.forEach((url, i) => {
+    const id = `${g.key}-${(now + i).toString(36)}${Math.random().toString(36).slice(2, 6)}`;
+    const doc = { game: g.key, ko: memo, createdAt: new Date(now + i).toISOString() };
+    state.bosses = { ...state.bosses, [id]: doc };
+    state.links[id] = [{ url, label: memo || "영상" }];
+    made.push([id, doc, url]);
+  });
+  form.querySelector("#reel-links").value = ""; form.querySelector("#reel-memo").value = ""; render();
+  try {
+    for (const [id, doc, url] of made) {
+      await db.collection("bosses").doc(id).set(doc);
+      await db.collection("links").doc(id).set({ items: [{ url, label: memo || "영상" }], game: g.key, ko: memo, en: "", ver: "", updatedAt: new Date().toISOString() });
+    }
+    toast(made.length > 1 ? `영상 ${made.length}개 추가됨` : "영상 추가됨");
+  } catch { toast("일부 영상을 저장하지 못했어요. 새로고침 후 확인해 주세요"); }
+}
+async function editReelMemo(c, nameEl) {
+  if (state.readonly || state.mode !== "db") return;
+  const inp = document.createElement("input"); inp.type = "text"; inp.className = "memoedit"; inp.value = c.memo || ""; inp.maxLength = 80;
+  inp.placeholder = "메모 (비우면 링크 이름)"; inp.setAttribute("aria-label", "메모 수정");
+  nameEl.replaceWith(inp); inp.focus(); inp.select();
+  let done = false;
+  const finish = async save => {
+    if (done) return; done = true;
+    const v = inp.value.trim();
+    if (!save || v === (c.memo || "")) { render(); return; }
+    const b = state.bosses[c.id] || { game: "vid", createdAt: new Date().toISOString() };
+    const doc = { ...b, ko: v };
+    state.bosses = { ...state.bosses, [c.id]: doc }; render();
+    try { await db.collection("bosses").doc(c.id).set(doc); toast("메모 저장됨"); } catch { toast("메모를 저장하지 못했어요"); }
+  };
+  inp.onkeydown = e => { if (e.key === "Enter") { e.preventDefault(); finish(true); } else if (e.key === "Escape") finish(false); };
+  inp.onblur = () => finish(true);
 }
 function reelForm(g) {
   const f = document.createElement("form"); f.className = "bossadd reeladd";
-  const games = [...new Set([...g.attrs, ...GAMES.filter(x => !x.reel).map(x => x.name)])];
-  f.innerHTML = `<input type="text" id="reel-title" placeholder="제목 (예: 붕스 3.x 궁극기 모음)" aria-label="새 영상 모음 제목" maxlength="60" required>
-    <input type="text" id="reel-game" list="reel-games" placeholder="게임 (선택, 같은 게임끼리 묶여요)" aria-label="게임 이름" maxlength="40">
-    <datalist id="reel-games">${games.map(n => `<option value="${esc(n)}">`).join("")}</datalist>
-    <button class="btn primary" type="submit">모음 추가</button>`;
+  f.innerHTML = `<input type="text" id="reel-links" placeholder="영상 링크 붙여넣기 (여러 개면 한 번에)" aria-label="영상 링크" required>
+    <input type="text" id="reel-memo" placeholder="메모 (선택)" aria-label="메모" maxlength="80">
+    <button class="btn primary" type="submit">추가</button>`;
   f.onsubmit = e => { e.preventDefault(); addReel(g, f); };
   return f;
 }
@@ -357,22 +384,24 @@ const VIDEO_GROUPS = [
   ["작품별", ANI_KEYS.filter(k => !ANI_TOP.includes(k))]
 ];
 const isVideo = g => !!(g && g.ani);
+const topOf = g => !g ? "game" : g.ani ? "ani" : g.reel ? "reel" : "game";
 const GAME_GROUPS = [
   ["수집형 RPG", ["hsr","zzz","ww","nte","gi","hi3","r99","pgr","nikke","ake","bd2","e7","dna","mgl","gbr","ap","sp"]],
   ["출시 예정", ["ao","an","hna"]],
   ["대전 격투", ["gbvs","gg","db","bb","dnf","kny","mt","nrt","opa","2xko"]],
   ["액션·로그라이트", ["hd1","hd2","d4"]],
-  ["MOBA·슈터·기타", ["lol","tft","val","ow","mr","sn","er"]],
-  ["영상 모음", ["vid"]]
+  ["MOBA·슈터·기타", ["lol","tft","val","ow","mr","sn","er"]]
 ];
 function buildTabs() {
   const sel = $("#gameSel"); sel.textContent = "";
-  const video = isVideo(state.game);
-  document.querySelectorAll(".topsw button").forEach(b => b.setAttribute("aria-pressed", String((b.dataset.top === "ani") === video)));
+  const top = topOf(state.game), video = top === "ani";
+  document.querySelectorAll(".topsw button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.top === top)));
   sel.setAttribute("aria-label", video ? "애니 선택" : "게임 선택");
-  const used = new Set(GAMES.filter(g => isVideo(g) !== video).map(g => g.key));
+  sel.hidden = top === "reel";
+  document.body.dataset.top = top;
+  const used = new Set(GAMES.filter(g => topOf(g) !== top).map(g => g.key));
   const add = (parent, g) => { const o = document.createElement("option"); o.value = g.key; o.textContent = `${gName(g)} (${g.roster.length})`; parent.appendChild(o); used.add(g.key); };
-  (video ? VIDEO_GROUPS : GAME_GROUPS).forEach(([label, keys]) => {
+  (top === "ani" ? VIDEO_GROUPS : top === "reel" ? [["영상 모음", ["vid"]]] : GAME_GROUPS).forEach(([label, keys]) => {
     const og = document.createElement("optgroup"); og.label = label; og.dataset.ko = label;
     keys.forEach(k => { const g = GAMES.find(x => x.key === k); if (g) add(og, g); });
     if (og.children.length) sel.appendChild(og);
@@ -382,12 +411,12 @@ function buildTabs() {
   sel.value = state.game.key;
 }
 $("#gameSel").addEventListener("change", e => { location.hash = e.target.value; });
-const LAST_TOP = { game: "hsr", ani: "aall" };
+const LAST_TOP = { game: "hsr", ani: "aall", reel: "vid" };
 document.querySelectorAll(".topsw button").forEach(b => b.onclick = () => { const k = LAST_TOP[b.dataset.top]; if (k && k !== state.game.key) location.hash = k; });
 function selectGame(key) {
   const g = GAMES.find(x => x.key === key) || GAMES[0];
-  const topChanged = isVideo(g) !== isVideo(state.game) || !$("#gameSel").options.length;
-  state.game = g; LAST_TOP[isVideo(g) ? "ani" : "game"] = g.key;
+  const topChanged = topOf(g) !== topOf(state.game) || !$("#gameSel").options.length;
+  state.game = g; LAST_TOP[topOf(g)] = g.key;
   if (topChanged) { buildTabs(); setPlaceholder(); }
   const so = $("#sort");
   so.querySelector('[value="ver-desc"]').textContent = g.ani ? "인기순" : "최신순";
@@ -416,9 +445,9 @@ function setHeader(g) {
   }
   if (g.reel) {
     const n = g.roster.length;
-    $("#gsub").textContent = L(`스킬 모음 같은 게임 영상을 직접 모아 두는 곳이에요 · ${n}개` + (DATA.dist ? ". ▶ 보기를 누르면 프레임 뷰어로 열려요." : ""),
-      `Your own collection of game videos such as skill compilations · ${n}` + (DATA.dist ? ". Press ▶ to open a video in the frame viewer." : ""),
-      `自行收集的游戏视频（如技能合集）· ${n} 个` + (DATA.dist ? "。点 ▶ 即可在逐帧查看器中打开。" : ""));
+    $("#gsub").textContent = L(`스킬 모음 같은 영상 링크를 던져 넣어 두는 곳이에요 · ${n}개 · 최근에 넣은 순` + (DATA.dist ? ". ▶ 보기를 누르면 프레임 뷰어로 열려요." : ""),
+      `Drop in video links such as skill compilations · ${n} · newest first` + (DATA.dist ? ". Press ▶ to open a video in the frame viewer." : ""),
+      `随手存放视频链接（如技能合集）· ${n} 个 · 按添加时间` + (DATA.dist ? "。点 ▶ 即可在逐帧查看器中打开。" : ""));
     $("#gsrc").hidden = true; $("#gnote").hidden = true;
     $("#elemLabel").textContent = g.attrLabel; $("#pathLabel").textContent = g.roleLabel;
     return;
@@ -475,7 +504,7 @@ function bmHit(bm, q) { return [bm.note, bm.title].some(v => v && String(v).toLo
 function crossSearch() { return state.smode !== "name" && !!state.q.trim(); }
 /* '전체' search modes stay inside the current top level: 게임 searches games only, 애니 searches anime only */
 function scopeGames() {
-  const v = isVideo(state.game), list = GAMES.filter(g => !g.allAni && isVideo(g) === v);
+  const v = isVideo(state.game), t = topOf(state.game), list = GAMES.filter(g => !g.allAni && topOf(g) === t);
   return v ? list.sort((a, b) => aniRank(a) - aniRank(b)) : list;
 }
 /* element search across games: every game's own word for an element maps to one group */
@@ -531,7 +560,6 @@ function filtered() {
   if (state.sort === "name") list.sort((a,b) => nm(a).localeCompare(nm(b), LANG));
   else if (state.sort === "ver-asc") list.sort(cmp);
   else list.sort((a,b) => cmp(b,a));
-  if (!crossSearch() && state.game.reel && state.sort !== "name") list.sort(reelCmp);
   return list;
 }
 
@@ -567,7 +595,7 @@ function render() {
     if (!state.readonly && state.mode === "db") main.appendChild(reelForm(g));
     if (!list.length) {
       const p = document.createElement("p"); p.className = "nores";
-      p.textContent = g.roster.length ? "조건에 맞는 영상 모음이 없어요." : (state.readonly ? "아직 올라온 영상 모음이 없어요." : "아직 영상 모음이 없어요. 위에서 제목을 적고 ‘모음 추가’를 누른 뒤, 생긴 항목에 영상 링크를 붙여넣으세요.");
+      p.textContent = g.roster.length ? "조건에 맞는 영상이 없어요." : (state.readonly ? "아직 올라온 영상이 없어요." : "아직 영상이 없어요. 위에 링크를 붙여넣고 ‘추가’를 누르세요. 메모는 선택이에요.");
       main.appendChild(p); return;
     }
   }
@@ -693,6 +721,17 @@ function cardFor(c) {
     const e = document.createElement("span"); e.className = "empty-hint"; e.textContent = c.upcoming ? "출시 후 추가" : "아직 링크 없음"; foot.appendChild(e);
   }
   if (items.length > 1) { const n = document.createElement("span"); n.className = "cnum"; n.textContent = `+${items.length - 1}`; foot.appendChild(n); }
+  if (c.reel && !state.readonly && state.mode === "db") {
+    /* 영상 모음 card: edit the memo or delete right here */
+    const ed = document.createElement("button"); ed.type = "button"; ed.className = "cicon"; ed.textContent = "✎"; ed.title = "메모 수정"; ed.setAttribute("aria-label", `${nm(c)} 메모 수정`);
+    ed.onclick = () => editReelMemo(c, body.querySelector(".name")); foot.appendChild(ed);
+    const rm = document.createElement("button"); rm.type = "button"; rm.className = "cicon"; rm.textContent = "🗑"; rm.title = "삭제"; rm.setAttribute("aria-label", `${nm(c)} 삭제`);
+    rm.onclick = () => {
+      if (rm.dataset.armed) { removeBoss(c); return; }
+      rm.dataset.armed = "1"; rm.textContent = "한 번 더"; setTimeout(() => { if (rm.isConnected) { delete rm.dataset.armed; rm.textContent = "🗑"; } }, 3000);
+    };
+    foot.appendChild(rm);
+  }
   card.appendChild(body);
   return card;
 }
@@ -791,9 +830,10 @@ function rowFor(c) {
   const side = document.createElement("div"); side.className = "side";
   const ytSearch = `https://www.youtube.com/results?search_query=${encodeURIComponent(g.yt(c))}`;
   side.innerHTML = c.sk ? `<a class="yt" target="_blank" rel="noopener" href="${esc(SAKUGA_POST(c.sk.p))}">Sakugabooru ↗</a>`
-    : `<a class="yt" target="_blank" rel="noopener" href="${esc(ytSearch)}">유튜브에서 찾기 ↗</a>`;
+    : c.reel ? "" : `<a class="yt" target="_blank" rel="noopener" href="${esc(ytSearch)}">유튜브에서 찾기 ↗</a>`;
   if (c.custom && !state.readonly && state.mode === "db") {
-    const rmLbl = c.reel ? "모음 삭제" : "보스 삭제";
+    const rmLbl = c.reel ? "삭제" : "보스 삭제";
+    if (c.reel) { const ed = document.createElement("button"); ed.type = "button"; ed.className = "yt"; ed.textContent = "메모 수정"; ed.onclick = () => editReelMemo(c, who.querySelector(".name")); side.appendChild(ed); }
     const rm = document.createElement("button"); rm.type = "button"; rm.className = "yt rmboss"; rm.textContent = rmLbl;
     rm.onclick = () => {
       if (rm.dataset.armed) { removeBoss(c); return; }
@@ -1397,7 +1437,7 @@ function useSnapshot() {
   });
   db.collection("bosses").onSnapshot(snap => {
     const m = {};
-    snap.docs.forEach(d => { const v = d.data(); if (v && v.game && v.ko) m[d.id] = { game: v.game, ko: v.ko, zh: v.zh || "", sub: v.sub || "", createdAt: v.createdAt || "" }; });
+    snap.docs.forEach(d => { const v = d.data(); if (v && v.game && (v.ko || v.game === "vid")) m[d.id] = { game: v.game, ko: v.ko || "", zh: v.zh || "", sub: v.sub || "", createdAt: v.createdAt || "" }; });
     state.bosses = m; render();
   }, () => {});
   try { const u = await claude.use("user"); if (u && u.id) state.me = await u.id(); } catch {}

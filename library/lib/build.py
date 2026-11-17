@@ -46,7 +46,7 @@ for f in glob.glob(f"{B}/../snap/thumbs/*.json"):
 snap_bosses = {}
 for f in glob.glob(f"{B}/../snap/bosses/*.json"):
     d = json.load(open(f, encoding="utf-8"))
-    if d.get("game") and d.get("ko"): snap_bosses[os.path.basename(f)[:-5]] = {"game": d["game"], "ko": d["ko"], "zh": d.get("zh",""), "sub": d.get("sub",""), "createdAt": d.get("createdAt","")}
+    if d.get("game") and (d.get("ko") or d.get("game") == "vid"): snap_bosses[os.path.basename(f)[:-5]] = {"game": d["game"], "ko": d.get("ko",""), "zh": d.get("zh",""), "sub": d.get("sub",""), "createdAt": d.get("createdAt","")}
 snap_bms = {}
 for f in glob.glob(f"{B}/../snap/bookmarks/*.json"):
     d = json.load(open(f, encoding="utf-8"))

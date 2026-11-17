@@ -239,3 +239,15 @@ html[lang="zh-CN"] .about summary::after { content: " · 详情"; }
 
 #tagQuick .tqnote { width: 100%; order: -2; color: var(--accent); }
 #tagQuick .tqclear { order: -1; }
+
+.cfoot .cicon { margin-left: auto; font: inherit; font-size: 13px; min-width: 30px; min-height: 30px; padding: 0 8px; border: 1px solid var(--line); border-radius: 6px; background: none; color: var(--muted); cursor: pointer; }
+.cfoot .cicon + .cicon { margin-left: 4px; }
+.cfoot .cicon:hover { color: var(--fg); border-color: var(--muted); }
+.memoedit { width: 100%; font: inherit; font-size: 14px; font-weight: 600; padding: 4px 8px; border: 1px solid var(--accent); border-radius: 6px; background: var(--surface); color: var(--fg); }
+.reeladd #reel-links { flex: 2 1 280px; }
+.reeladd #reel-memo { flex: 1 1 180px; }
+
+body[data-top="reel"] #chiprow { display: none; }
+.thumblink, .thumblink:hover { text-decoration: none; }
+.cfoot .cplay { white-space: nowrap; }
+.cfoot .cicon { min-width: 28px; padding: 0 6px; }
