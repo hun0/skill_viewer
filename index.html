@@ -588,7 +588,7 @@ async function frameToThumb() {
   if (!ok) { const ta = document.createElement("textarea"); ta.value = code; document.body.appendChild(ta); ta.select(); try { ok = document.execCommand("copy"); } catch {} ta.remove(); }
   if (!ok) { hud("복사하지 못했어요"); return; }
   const pv = $("#thumbPrev"); pv.src = img; pv.classList.remove("hide"); clearTimeout(pv._t); pv._t = setTimeout(() => pv.classList.add("hide"), 5000);
-  msg(`${fmt(S.cur)} 프레임을 썸네일로 복사했어요. 라이브러리 페이지에서 Ctrl+V 하면 바로 들어가요.`);
+  msg(`${fmt(S.cur)} 프레임을 썸네일로 복사했어요. 라이브러리 페이지를 한 번 클릭하고 Ctrl+V 하면 바로 들어가요.`);
   setTimeout(() => msg(""), 5000);
 }
 $("#thumbBtn").onclick = frameToThumb;
@@ -707,7 +707,7 @@ $("#fillX").onclick = () => { FILL.job = null; FILL.results = []; $("#fill").cla
     let ok = false;
     try { await navigator.clipboard.writeText(code); ok = true; } catch {}
     if (!ok) { const ta = document.createElement("textarea"); ta.value = code; document.body.appendChild(ta); ta.select(); try { ok = document.execCommand("copy"); } catch {} ta.remove(); }
-    txt.textContent = ok ? `복사했어요. 라이브러리 페이지로 돌아가 Ctrl+V 하면 썸네일 ${out.length}개가 들어가요.` : "복사하지 못했어요. 다시 눌러 주세요.";
+    txt.textContent = ok ? `복사했어요. 라이브러리 페이지로 돌아가 화면을 한 번 클릭하고 Ctrl+V 하면 썸네일 ${out.length}개가 들어가요 (영상 링크 칸에 붙여넣어도 돼요).` : "복사하지 못했어요. 다시 눌러 주세요.";
   };
   $("#ytthX").onclick = () => box.classList.add("hide");
 })();
