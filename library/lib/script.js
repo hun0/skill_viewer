@@ -1248,6 +1248,13 @@ function askChar(list) {
   if (!dlg.open) dlg.showModal();
 }
 /* 프레임 뷰어 '이 프레임을 썸네일로': HFXTH1:<base64url JSON {v, c: row id, img: data URL}> */
+/* data: URL → Blob without fetch(): the artifact's CSP blocks fetch() of data: URLs */
+function dataUrlToBlob(u) {
+  const m = String(u).match(/^data:([^;,]+)(;base64)?,(.*)$/); if (!m) throw new Error("bad data url");
+  const bin = m[2] ? atob(m[3]) : decodeURIComponent(m[3]), b = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) b[i] = bin.charCodeAt(i);
+  return new Blob([b], { type: m[1] });
+}
 function decodeThumbs(text) {
   /* HFXTH2: many rows at once (유튜브 썸네일 가져오기) */
   const m = String(text || "").match(/HFXTH2:([A-Za-z0-9_-]+)/); if (!m) return null;
@@ -1260,13 +1267,13 @@ function decodeThumbs(text) {
 }
 async function importThumbs(list) {
   if (!assets || !db || state.readonly) { toast("이 화면에서는 썸네일을 바꿀 수 없어요 (편집 권한 필요)"); return; }
-  let ok = 0;
+  let ok = 0, miss = 0;
   for (let i = 0; i < list.length; i++) {
-    const c = findChar(list[i].c); if (!c) continue;
+    const c = findChar(list[i].c); if (!c) { miss++; continue; }
     toast(`썸네일 넣는 중… ${i + 1}/${list.length}`);
-    if (await setThumb(c, await (await fetch(list[i].img)).blob(), true)) ok++;
+    try { if (await setThumb(c, dataUrlToBlob(list[i].img), true)) ok++; } catch { miss++; }
   }
-  toast(`썸네일 ${ok}개 저장됨`);
+  toast(miss ? `썸네일 ${ok}개 저장됨 · ${miss}개는 항목을 찾지 못했어요 (새로고침 후 다시)` : `썸네일 ${ok}개 저장됨`);
 }
 function decodeThumb(text) {
   const m = String(text || "").match(/HFXTH1:([A-Za-z0-9_-]+)/); if (!m) return null;
@@ -1281,7 +1288,7 @@ async function importThumb(o) {
   const c = findChar(o.c);
   if (!c) { toast("이 썸네일의 캐릭터를 찾지 못했어요"); return; }
   if (!assets || !db || state.readonly) { toast("이 화면에서는 썸네일을 바꿀 수 없어요 (편집 권한 필요)"); return; }
-  const blob = await (await fetch(o.img)).blob();
+  const blob = dataUrlToBlob(o.img);
   if (gameOf(c) !== state.game.key && !(state.game.allAni && c.sk)) location.hash = gameOf(c);
   await setThumb(c, blob);
 }
@@ -1289,13 +1296,12 @@ document.addEventListener("paste", async e => {
   const t = e.target;
   const text = e.clipboardData ? e.clipboardData.getData("text") : "";
   if (text && text.includes("HFXTH2:")) {
-    if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA")) return;
+    /* handled anywhere, the link box included, so pasting works even if the page itself never got focus */
     e.preventDefault(); e.stopImmediatePropagation();
     const l = decodeThumbs(text); if (l && l.length) await importThumbs(l); else toast("썸네일 코드를 읽지 못했어요");
     return;
   }
   if (text && text.includes("HFXTH1:")) {
-    if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA")) return;
     e.preventDefault(); e.stopImmediatePropagation();
     const o = decodeThumb(text); if (o) await importThumb(o); else toast("썸네일 코드를 읽지 못했어요");
     return;
@@ -1459,10 +1465,12 @@ function useSnapshot() {
   } catch {}
   state.mode = "db";
   if (state.readonly && !(await (async () => { try { const u = await claude.use("user"); return u && u.can && (await u.can("data.write")) === false; } catch { return false; } })())) state.readonly = false;
-  // one subscription per game keeps each query well under the 1000-document window
+  // one subscription per game keeps each query well under the 1000-document window.
+  // Anime titles carry their clip links in the data (c.sk), so they get none: too many live
+  // subscriptions made the later ones (bosses, thumbs, tags…) fail silently.
   const perGame = {};
   let linkErr = false;
-  GAMES.forEach(g => {
+  GAMES.filter(g => !g.ani).forEach(g => {
     db.collection("links").where("game", "==", g.key).onSnapshot(snap => {
       const m = {};
       snap.docs.forEach(d => { const v = d.data(); if (v && Array.isArray(v.items)) m[d.id] = v.items; });
