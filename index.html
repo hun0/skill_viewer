@@ -153,6 +153,7 @@
     <span class="lbl">구간</span>
     <span class="seg"><button type="button" data-ab="a">A</button><button type="button" data-ab="b">B</button><button type="button" data-ab="x">해제</button></span>
   </div>
+  <div class="fill hide" id="ytth"><span class="grow" id="ytthTxt"></span><button type="button" id="ytthCopy" class="hide">복사하기</button><button type="button" id="ytthX" class="ghost">닫기</button></div>
   <div class="fill hide" id="fill"><span class="grow" id="fillTxt"></span><button type="button" id="fillGo">📸 한번에 채우기</button><button type="button" id="fillCopy" class="hide">결과 복사</button><button type="button" id="fillX" class="ghost">닫기</button></div>
   <section class="bm" aria-label="북마크">
     <form class="bm-add" id="bmForm">
@@ -667,6 +668,48 @@ $("#fillX").onclick = () => { FILL.job = null; FILL.results = []; $("#fill").cla
     history.replaceState(null, "", location.pathname + location.search);
     if (FILL.job.length && !new URLSearchParams(location.search).get("v")) openYT(FILL.job[0].vid, Math.floor(FILL.job[0].t), "썸네일 채우기");
   } catch {}
+})();
+
+/* ---------- 유튜브 썸네일 가져오기: #ytthumbs=<base64url {items:[{i: library row id, v: YouTube id}]}> from the library.
+   i.ytimg.com allows cross-origin reads, so no screen capture is needed: load each video's thumbnail, then copy
+   HFXTH2:<base64url {v:2, items:[{c, img}]}> for the library to paste (Ctrl+V) as row thumbnails ---------- */
+(async () => {
+  const m = location.hash.match(/ytthumbs=([A-Za-z0-9_-]+)/);
+  if (!m) return;
+  let items = [];
+  try {
+    let b = m[1].replace(/-/g, "+").replace(/_/g, "/"); while (b.length % 4) b += "=";
+    const bin = atob(b), u = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
+    items = (JSON.parse(new TextDecoder().decode(u)).items || []).filter(x => x && /^[\w-]{1,80}$/.test(x.i) && /^[\w-]{11}$/.test(x.v)).slice(0, 200);
+  } catch {}
+  history.replaceState(null, "", location.pathname + location.search);
+  if (!items.length) return;
+  const box = $("#ytth"), txt = $("#ytthTxt"), copy = $("#ytthCopy");
+  box.classList.remove("hide"); txt.textContent = `유튜브 썸네일 ${items.length}개 받는 중…`;
+  const load = v => new Promise(res => {
+    const im = new Image(); im.crossOrigin = "anonymous";
+    im.onload = () => {
+      /* hqdefault is 4:3 with black bars; mqdefault is a clean 16:9 */
+      if (im.naturalWidth < 200) { res(null); return; }
+      const c = document.createElement("canvas"); c.width = 320; c.height = 180; c.getContext("2d").drawImage(im, 0, 0, 320, 180);
+      try { res(c.toDataURL("image/jpeg", 0.85)); } catch { res(null); }
+    };
+    im.onerror = () => res(null);
+    im.src = `https://i.ytimg.com/vi/${v}/mqdefault.jpg`;
+  });
+  const out = []; let fail = 0;
+  for (const it of items) { const img = await load(it.v); if (img) out.push({ c: it.i, img }); else fail++; txt.textContent = `유튜브 썸네일 받는 중… ${out.length + fail}/${items.length}`; }
+  if (!out.length) { txt.textContent = "썸네일을 하나도 받지 못했어요. 영상이 비공개이거나 삭제됐을 수 있어요."; return; }
+  txt.textContent = `썸네일 ${out.length}개 준비됐어요${fail ? ` (${fail}개 실패)` : ""}. ‘복사하기’를 누른 뒤 라이브러리 페이지에서 Ctrl+V 하세요.`;
+  copy.classList.remove("hide");
+  const code = "HFXTH2:" + b64url(JSON.stringify({ v: 2, items: out }));
+  copy.onclick = async () => {
+    let ok = false;
+    try { await navigator.clipboard.writeText(code); ok = true; } catch {}
+    if (!ok) { const ta = document.createElement("textarea"); ta.value = code; document.body.appendChild(ta); ta.select(); try { ok = document.execCommand("copy"); } catch {} ta.remove(); }
+    txt.textContent = ok ? `복사했어요. 라이브러리 페이지로 돌아가 Ctrl+V 하면 썸네일 ${out.length}개가 들어가요.` : "복사하지 못했어요. 다시 눌러 주세요.";
+  };
+  $("#ytthX").onclick = () => box.classList.add("hide");
 })();
 
 /* ---------- boot from query string: ?v=ID&t=12&title=... or ?url=... ---------- */
