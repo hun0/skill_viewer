@@ -684,6 +684,10 @@ function sakugaCmd(c) {
   return `curl -L -o "${g.file}_${c.sk.p}_${safeName((c.arts || c.ko).split(",")[0])}.${ext}" "${c.sk.u}"`;
 }
 /* first playable link of a row, as a frame-viewer URL (YouTube or Sakugabooru mp4), or a plain link */
+function ytdropViewerHref(url, title, id) {
+  const y = ytId(url);
+  return `${VIEWER_URL}?_=${VCB}${y ? "&v=" + encodeURIComponent(y.id) : ""}&title=${encodeURIComponent(title || "")}&c=${encodeURIComponent(id || "")}&ytdrop=${encodeURIComponent(url)}`;
+}
 function playHrefOf(c, items) {
   if (c.sk) return sakugaHref(c);
   for (const it of items) {
@@ -731,6 +735,13 @@ function cardFor(c) {
     const e = document.createElement("span"); e.className = "empty-hint"; e.textContent = c.upcoming ? "출시 후 추가" : "아직 링크 없음"; foot.appendChild(e);
   }
   if (items.length > 1) { const n = document.createElement("span"); n.className = "cnum"; n.textContent = `+${items.length - 1}`; foot.appendChild(n); }
+  if (c.reel && first) {
+    /* ⬇: the frame viewer hands this YouTube link to the YT Drop app (ytdrop://), which downloads it */
+    const yd = document.createElement("a"); yd.className = "cplay cdl"; yd.target = "_blank"; yd.rel = "noopener";
+    yd.href = ytdropViewerHref(first.it.url, nm(c), c.id);
+    yd.textContent = "⬇"; yd.title = "YT Drop으로 받기 (PC에 YT Drop 필요)"; yd.setAttribute("aria-label", `${nm(c)} YT Drop으로 받기`);
+    foot.appendChild(yd);
+  }
   if (c.reel && !state.readonly && state.mode === "db") {
     /* 영상 모음 card: edit the memo or delete right here */
     const ed = document.createElement("button"); ed.type = "button"; ed.className = "cicon"; ed.textContent = "✎"; ed.title = "메모 수정"; ed.setAttribute("aria-label", `${nm(c)} 메모 수정`);
@@ -840,7 +851,8 @@ function rowFor(c) {
   const side = document.createElement("div"); side.className = "side";
   const ytSearch = `https://www.youtube.com/results?search_query=${encodeURIComponent(g.yt(c))}`;
   side.innerHTML = c.sk ? `<a class="yt" target="_blank" rel="noopener" href="${esc(SAKUGA_POST(c.sk.p))}">Sakugabooru ↗</a>`
-    : c.reel ? "" : `<a class="yt" target="_blank" rel="noopener" href="${esc(ytSearch)}">유튜브에서 찾기 ↗</a>`;
+    : c.reel ? (() => { const u = items.map(it => it.url).find(x => ytId(x)); return u ? `<a class="yt" target="_blank" rel="noopener" href="${esc(ytdropViewerHref(u, nm(c), c.id))}" title="PC에 YT Drop 필요">⬇ YT Drop으로 받기</a>` : ""; })()
+    : `<a class="yt" target="_blank" rel="noopener" href="${esc(ytSearch)}">유튜브에서 찾기 ↗</a>`;
   if (c.custom && !state.readonly && state.mode === "db") {
     const rmLbl = c.reel ? "삭제" : "보스 삭제";
     if (c.reel) { const ed = document.createElement("button"); ed.type = "button"; ed.className = "yt"; ed.textContent = "메모 수정"; ed.onclick = () => editReelMemo(c, who.querySelector(".name")); side.appendChild(ed); }
